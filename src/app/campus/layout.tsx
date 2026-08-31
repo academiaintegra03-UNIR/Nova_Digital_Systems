@@ -1,10 +1,12 @@
-import { BarChart3, Bot, BookOpen, ClipboardList, Compass, HelpCircle, Home, Users } from "lucide-react";
+import { BarChart3, Bot, BookOpen, CalendarClock, ClipboardList, Compass, HelpCircle, Home, Layers, Users } from "lucide-react";
 import { requireRole } from "@/lib/auth/require-role";
 import { DashboardShell, type DashboardNavItem } from "@/components/layout/dashboard-shell";
 
 const navItems: DashboardNavItem[] = [
   { href: "/campus", label: "Inicio", icon: <Home /> },
   { href: "/campus/mi-grupo", label: "Mi grupo", icon: <Users /> },
+  { href: "/campus/mis-materias", label: "Mis materias", icon: <Layers /> },
+  { href: "/campus/mis-clases", label: "Mis clases", icon: <CalendarClock /> },
   { href: "/campus/mi-ruta", label: "Mi ruta", icon: <Compass /> },
   { href: "/campus/cursos", label: "Mis cursos", icon: <BookOpen /> },
   { href: "/campus/banco-preguntas", label: "Banco de preguntas", icon: <HelpCircle /> },
@@ -20,7 +22,7 @@ export default async function CampusLayout({ children }: { children: React.React
     <DashboardShell
       panelLabel="Campus"
       navItems={navItems}
-      pageSubtitle="Datos de prueba — panel del estudiante"
+      pageSubtitle="Tu campus"
       profile={profile}
     >
       {children}

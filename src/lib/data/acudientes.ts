@@ -1,29 +1,5 @@
 // Ported verbatim from reference/prototipos/Panel Acudientes.dc.html (mock/demo data).
-import type { Invoice, InboxMessage, ProgressItem, Stat, StudentReport } from "@/lib/types/panels";
-
-export const guardianName = "Luisa Gómez";
-export const guardianMeta = "Acudiente de Mariana";
-
-export const studentSummary = {
-  name: "Mariana Gómez",
-  meta: "Grado 11° · Plan: Esquema personalizado",
-  status: "Al día",
-};
-
-export const statCards: Stat[] = [
-  { label: "Avance general", value: "64%" },
-  { label: "Asistencia", value: "95%" },
-  { label: "Actividades completadas", value: "22/26" },
-  { label: "Simulacros realizados", value: "5" },
-];
-
-export const nextClass = {
-  title: "Álgebra: sistemas de ecuaciones",
-  meta: "Hoy · 4:00 p.m. · Profesor Andrés Rojas",
-};
-
-export const recentTutorMessage =
-  "Mariana avanza bien en geometría. Vamos a reforzar trigonometría antes del próximo simulacro.";
+import type { Invoice, InboxMessage, ProgressItem, StudentReport } from "@/lib/types/panels";
 
 export const areaPerformance: ProgressItem[] = [
   { name: "Razonamiento cuantitativo", pct: 78 },

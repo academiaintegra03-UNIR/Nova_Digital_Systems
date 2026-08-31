@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -X POST http://localhost:3000/api/diagnostico/submit -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(node -e ' *)",
+      "Bash(tail -30 /tmp/dev.log | grep -i \"diagnostico\\\\|error\" )",
+      "Read(//tmp/**)",
+      "Bash(tail -60 /tmp/dev.log)"
+    ]
+  }
+}

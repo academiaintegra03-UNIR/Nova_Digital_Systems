@@ -1,21 +1,5 @@
 // Ported verbatim from reference/prototipos/Panel Tutores.dc.html (mock/demo data).
-import type { AssignedStudent, ClassSlot, GeneratedReport, GradingItem, InboxMessage, WeekClass } from "@/lib/types/panels";
-
-export const tutorName = "Andrés Rojas";
-export const tutorMeta = "Tutor de matemáticas";
-
-export const todayClasses: ClassSlot[] = [
-  { time: "2:00 p.m.", name: "Geometría — Grupo A", group: "11°A · 8 estudiantes" },
-  { time: "4:00 p.m.", name: "Álgebra: sistemas de ecuaciones", group: "Individual · Mariana Gómez" },
-  { time: "6:00 p.m.", name: "Refuerzo Saber 11", group: "11°B · 6 estudiantes" },
-];
-
-export const weekClasses: WeekClass[] = [
-  { day: "Mar", name: "Trigonometría", time: "3:00 p.m." },
-  { day: "Mié", name: "Simulacro corto", time: "5:00 p.m." },
-  { day: "Jue", name: "Precálculo", time: "4:00 p.m." },
-  { day: "Vie", name: "Simulacro completo", time: "9:00 a.m." },
-];
+import type { AssignedStudent, GeneratedReport, GradingItem, InboxMessage } from "@/lib/types/panels";
 
 export const assignedStudents: AssignedStudent[] = [
   { name: "Mariana Gómez", group: "11°A", due: "Taller factorización", alert: "Ninguna", tone: "success" },

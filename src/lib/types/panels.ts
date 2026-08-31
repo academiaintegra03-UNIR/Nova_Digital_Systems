@@ -24,13 +24,6 @@ export interface ToneLabel {
 }
 
 // ---- Campus (estudiante) ----
-export interface UpcomingTask {
-  name: string;
-  course: string;
-  due: string;
-  tone: StatusTone;
-}
-
 export interface RouteDetailModule {
   name: string;
   lessons: number;
@@ -87,19 +80,6 @@ export interface InboxMessage {
 }
 
 // ---- Colegios panel ----
-export interface AttentionStudent {
-  name: string;
-  reason: string;
-}
-
-export interface SchoolStudentRow {
-  name: string;
-  group: string;
-  pct: number;
-  status: string;
-  tone: StatusTone;
-}
-
 export interface SchoolSimulation {
   name: string;
   date: string;
@@ -111,18 +91,6 @@ export interface SchoolReport {
 }
 
 // ---- Tutores ----
-export interface ClassSlot {
-  time: string;
-  name: string;
-  group: string;
-}
-
-export interface WeekClass {
-  day: string;
-  name: string;
-  time: string;
-}
-
 export interface AssignedStudent {
   name: string;
   group: string;
@@ -180,6 +148,92 @@ export interface GrupoEstudianteOption extends EstudianteOption {
   colegioId: string | null;
   colegioNombre: string | null;
   numeroDocumento: string | null;
+}
+
+export interface Materia {
+  id: string;
+  name: string;
+}
+
+/** Clase programada, con los nombres ya resueltos — mismo shape para las
+ * vistas de admin, tutor y estudiante. */
+export interface ClaseRow {
+  id: string;
+  grupoId: string;
+  grupoNombre: string;
+  materiaId: string;
+  materiaNombre: string;
+  tutorId: string | null;
+  tutorNombre: string | null;
+  nombre: string;
+  scheduledAt: string;
+  durationMinutes: number | null;
+  meetingLink: string | null;
+  recordingLink: string | null;
+}
+
+/** Vínculo grupo↔materia ("este grupo tiene esta materia"), nombres ya
+ * resueltos — mismo shape para las vistas de tutor y estudiante. */
+export interface GrupoMateriaRow {
+  id: string;
+  grupoId: string;
+  grupoNombre: string;
+  materiaId: string;
+  materiaNombre: string;
+}
+
+export type ActividadEstado = "pendiente" | "entregada";
+
+export interface ActividadRow {
+  id: string;
+  grupoId: string;
+  materiaId: string;
+  tutorId: string | null;
+  titulo: string;
+  descripcion: string | null;
+  fechaLimite: string | null;
+  recursoLink: string | null;
+  createdAt: string;
+}
+
+/** La entrega del propio estudiante para una actividad — null si todavía
+ * no existe la fila (equivale a "pendiente"). */
+export interface ActividadEntregaEstudiante {
+  actividadId: string;
+  estado: ActividadEstado;
+  entregadoAt: string | null;
+  respuestaLink: string | null;
+}
+
+/** Fila del roster que ve el tutor: un estudiante del grupo + su estado
+ * de entrega para una actividad puntual. */
+export interface ActividadEntregaRoster {
+  studentId: string;
+  studentNombre: string;
+  estado: ActividadEstado;
+  entregadoAt: string | null;
+  respuestaLink: string | null;
+}
+
+export interface ForoHiloRow {
+  id: string;
+  grupoId: string;
+  materiaId: string;
+  autorId: string | null;
+  autorNombre: string;
+  titulo: string;
+  mensajesCount: number;
+  createdAt: string;
+  ultimaActividad: string;
+}
+
+export interface ForoMensajeRow {
+  id: string;
+  hiloId: string;
+  autorId: string | null;
+  autorNombre: string;
+  mensaje: string;
+  createdAt: string;
 }
 
 export interface AdminUserRow {

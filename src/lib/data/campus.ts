@@ -1,43 +1,5 @@
 // Ported verbatim from reference/prototipos/Campus Estudiante.dc.html (mock/demo data).
-import type {
-  AvailableSim,
-  CourseProgress,
-  ProgressItem,
-  RouteDetailModule,
-  SimAttempt,
-  Stat,
-  UpcomingTask,
-} from "@/lib/types/panels";
-
-export const studentMeta = "Grado 11° · Bogotá";
-
-export const statCards: Stat[] = [
-  { label: "Avance general", value: "64%" },
-  { label: "Horas de estudio (mes)", value: "18h" },
-  { label: "Simulacros realizados", value: "5" },
-  { label: "Precisión banco de preguntas", value: "78%" },
-];
-
-export const routeModules: ProgressItem[] = [
-  { name: "Álgebra básica", pct: 100 },
-  { name: "Geometría", pct: 72 },
-  { name: "Trigonometría", pct: 40 },
-  { name: "Estadística", pct: 10 },
-];
-
-export const upcomingTasks: UpcomingTask[] = [
-  { name: "Taller de factorización", course: "Álgebra básica", due: "Vence hoy", tone: "error" },
-  { name: "Quiz de ángulos", course: "Geometría", due: "Vence en 2 días", tone: "warning" },
-  { name: "Simulacro corto", course: "Saber 11", due: "Vence en 5 días", tone: "info" },
-];
-
-export const masteredTopics = ["Ecuaciones lineales", "Perímetro y área", "Proporciones"];
-export const weakTopics = ["Factorización", "Trigonometría"];
-
-export const tutorMessage = {
-  text: "Buen avance en geometría esta semana. Repasemos trigonometría antes del simulacro del viernes.",
-  from: "Prof. Andrés Rojas · hace 1 día",
-};
+import type { AvailableSim, CourseProgress, ProgressItem, RouteDetailModule, SimAttempt } from "@/lib/types/panels";
 
 export const routeDetail: RouteDetailModule[] = [
   { name: "Álgebra básica", lessons: 12, status: "Completado" },

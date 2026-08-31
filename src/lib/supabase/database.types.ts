@@ -6,6 +6,8 @@
  * to `never`). Once `supabase login` is set up locally, replace with:
  *   pnpm dlx supabase gen types typescript --project-id <ref> > src/lib/supabase/database.types.ts
  */
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
+
 export type UserRole =
   | "estudiante"
   | "acudiente"
@@ -289,6 +291,270 @@ export interface Database {
           expires_at?: string | null;
           seat_limit_override?: number | null;
           created_at?: string;
+        };
+        Relationships: [];
+      };
+      materias: {
+        Row: { id: string; name: string; created_at: string };
+        Insert: { id?: string; name: string; created_at?: string };
+        Update: { id?: string; name?: string; created_at?: string };
+        Relationships: [];
+      };
+      clases: {
+        Row: {
+          id: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id: string | null;
+          nombre: string;
+          scheduled_at: string;
+          duration_minutes: number | null;
+          meeting_link: string | null;
+          recording_link: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id?: string | null;
+          nombre: string;
+          scheduled_at: string;
+          duration_minutes?: number | null;
+          meeting_link?: string | null;
+          recording_link?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          grupo_id?: string;
+          materia_id?: string;
+          tutor_id?: string | null;
+          nombre?: string;
+          scheduled_at?: string;
+          duration_minutes?: number | null;
+          meeting_link?: string | null;
+          recording_link?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      grupo_materias: {
+        Row: { id: string; grupo_id: string; materia_id: string; tutor_id: string | null; created_at: string };
+        Insert: {
+          id?: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          grupo_id?: string;
+          materia_id?: string;
+          tutor_id?: string | null;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
+      actividades: {
+        Row: {
+          id: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id: string | null;
+          titulo: string;
+          descripcion: string | null;
+          fecha_limite: string | null;
+          recurso_link: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id?: string | null;
+          titulo: string;
+          descripcion?: string | null;
+          fecha_limite?: string | null;
+          recurso_link?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          grupo_id?: string;
+          materia_id?: string;
+          tutor_id?: string | null;
+          titulo?: string;
+          descripcion?: string | null;
+          fecha_limite?: string | null;
+          recurso_link?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      actividad_entregas: {
+        Row: {
+          id: string;
+          actividad_id: string;
+          tutor_id: string | null;
+          student_id: string;
+          estado: "pendiente" | "entregada";
+          respuesta_link: string | null;
+          entregado_at: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          actividad_id: string;
+          tutor_id?: string | null;
+          student_id: string;
+          estado?: "pendiente" | "entregada";
+          respuesta_link?: string | null;
+          entregado_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          actividad_id?: string;
+          tutor_id?: string | null;
+          student_id?: string;
+          estado?: "pendiente" | "entregada";
+          respuesta_link?: string | null;
+          entregado_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      foro_hilos: {
+        Row: {
+          id: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id: string | null;
+          autor_id: string | null;
+          titulo: string;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id?: string | null;
+          autor_id?: string | null;
+          titulo: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          grupo_id?: string;
+          materia_id?: string;
+          tutor_id?: string | null;
+          autor_id?: string | null;
+          titulo?: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      foro_mensajes: {
+        Row: {
+          id: string;
+          hilo_id: string;
+          tutor_id: string | null;
+          autor_id: string | null;
+          mensaje: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          hilo_id: string;
+          tutor_id?: string | null;
+          autor_id?: string | null;
+          mensaje: string;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          hilo_id?: string;
+          tutor_id?: string | null;
+          autor_id?: string | null;
+          mensaje?: string;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
+      diagnosticos: {
+        Row: {
+          id: string;
+          created_at: string;
+          banco_id: string;
+          grado: string | null;
+          estudiante_nombre: string;
+          estudiante_edad: number | null;
+          estudiante_email: string | null;
+          colegio: string | null;
+          acudiente_email: string | null;
+          acudiente_telefono: string | null;
+          aciertos: number;
+          total_preguntas: number;
+          puntaje_global: number;
+          enfoque_score: number;
+          desenfoques_count: number;
+          perfil_dominante: string | null;
+          desglose_materias: Json;
+          analisis_ia: string | null;
+        };
+        Insert: {
+          id?: string;
+          created_at?: string;
+          banco_id: string;
+          grado?: string | null;
+          estudiante_nombre: string;
+          estudiante_edad?: number | null;
+          estudiante_email?: string | null;
+          colegio?: string | null;
+          acudiente_email?: string | null;
+          acudiente_telefono?: string | null;
+          aciertos: number;
+          total_preguntas: number;
+          puntaje_global: number;
+          enfoque_score: number;
+          desenfoques_count?: number;
+          perfil_dominante?: string | null;
+          desglose_materias?: Json;
+          analisis_ia?: string | null;
+        };
+        Update: {
+          id?: string;
+          created_at?: string;
+          banco_id?: string;
+          grado?: string | null;
+          estudiante_nombre?: string;
+          estudiante_edad?: number | null;
+          estudiante_email?: string | null;
+          colegio?: string | null;
+          acudiente_email?: string | null;
+          acudiente_telefono?: string | null;
+          aciertos?: number;
+          total_preguntas?: number;
+          puntaje_global?: number;
+          enfoque_score?: number;
+          desenfoques_count?: number;
+          perfil_dominante?: string | null;
+          desglose_materias?: Json;
+          analisis_ia?: string | null;
         };
         Relationships: [];
       };

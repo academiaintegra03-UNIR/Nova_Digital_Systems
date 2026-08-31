@@ -1,0 +1,1922 @@
+[
+  {
+    "id": "MAT-09-001",
+    "numero": 1,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes opciones representa un número irracional?",
+    "opciones": {
+      "A": "√9",
+      "B": "3/4",
+      "C": "-5",
+      "D": "√2"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-002",
+    "numero": 2,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La distancia entre la Tierra y el Sol es de aproximadamente 149.600.000 kilómetros.\n\n¿Cuál es la expresión de esta distancia en notación científica?",
+    "opciones": {
+      "A": "1,496 × 10^6",
+      "B": "1,496 × 10^7",
+      "C": "1,496 × 10^8",
+      "D": "1,496 × 10^9"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-003",
+    "numero": 3,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un cultivo de bacterias se duplica cada hora. Si inicialmente hay 100 bacterias,\n\n¿cuántas habrá después de 5 horas?",
+    "opciones": {
+      "A": "200",
+      "B": "500",
+      "C": "1600",
+      "D": "3200"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-004",
+    "numero": 4,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787250859/5f2a0b96-8b71-4f17-a160-0d26464d0f14.png Observa atentamente los triángulos.\n\nLuego de observarlos, ¿Cuál de las siguientes afirmaciones es verdadera?",
+    "opciones": {
+      "A": "Los triángulos son congruentes.",
+      "B": "Los triángulos son semejantes.",
+      "C": "Los triángulos no son ni congruentes ni semejantes.",
+      "D": "No hay suficiente información para determinar la relación entre los triángulos."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-005",
+    "numero": 5,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un mapa tiene una escala de 1:50.000. Si la distancia entre dos puntos en el mapa es de 5 cm,\n\n¿cuál es la distancia real entre esos puntos?",
+    "opciones": {
+      "A": "250 metros",
+      "B": "2.5 kilómetros",
+      "C": "25 kilómetros",
+      "D": "250 kilómetros"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-006",
+    "numero": 6,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un arquitecto está diseñando un edificio a escala 1:100. Si la altura del edificio en el plano es de 25 cm,\n\n¿cuál será la altura real del edificio?",
+    "opciones": {
+      "A": "2.5 metros",
+      "B": "25 metros",
+      "C": "250 metros",
+      "D": "2500 metros"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-007",
+    "numero": 7,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes instrumentos se utiliza para medir ángulos?",
+    "opciones": {
+      "A": "Regla",
+      "B": "Transportador",
+      "C": "Balanza",
+      "D": "Cronómetro"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-008",
+    "numero": 8,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un jardín rectangular tiene 10 metros de largo y 5 metros de ancho.\n\n¿Cuál es el área del jardín?",
+    "opciones": {
+      "A": "15 metros cuadrados",
+      "B": "30 metros cuadrados",
+      "C": "50 metros cuadrados",
+      "D": "100 metros cuadrados"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-009",
+    "numero": 9,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En una clase de 25 estudiantes, las notas de un examen de matemáticas fueron las siguientes: 7, 8, 6, 9, 5, 8, 7, 6, 10, 4, 8, 7, 9, 6, 5, 7, 8, 9, 10, 6, 7, 8, 9, 5, 8\n\n¿Cuál es la moda de las notas?",
+    "opciones": {
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "8"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-010",
+    "numero": 10,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Se lanza un dado justo de seis caras.\n\n¿Cuál es la probabilidad de obtener un número par?",
+    "opciones": {
+      "A": "1/6",
+      "B": "1/3",
+      "C": "1/2",
+      "D": "2/3"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-011",
+    "numero": 11,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes expresiones es equivalente a 3(x + 2)?",
+    "opciones": {
+      "A": "3x + 2",
+      "B": "3x + 6",
+      "C": "x + 6",
+      "D": "x + 5"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-012",
+    "numero": 12,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un automóvil viaja a una velocidad constante de 60 km/h.\n\n¿Cuál de las siguientes funciones representa la distancia (d) recorrida por el automóvil en función del tiempo (t) en horas?",
+    "opciones": {
+      "A": "d = 60t",
+      "B": "d = t/60",
+      "C": "d = 60 + t",
+      "D": "d = 60/t"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-09-013",
+    "numero": 13,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La gráfica de una función cuadrática tiene la forma de una parábola.\n\n¿Cuál de las siguientes características indica que la parábola se abre hacia abajo?",
+    "opciones": {
+      "A": "El coeficiente del término cuadrático es positivo.",
+      "B": "El coeficiente del término cuadrático es negativo.",
+      "C": "El término lineal es positivo.",
+      "D": "El término lineal es negativo."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-014",
+    "numero": 14,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "El modelo de la doble hélice del ADN propuesto por Watson y Crick describe la estructura del material hereditario.\n\n¿Cuál de las siguientes afirmaciones sobre este modelo es INCORRECTA?",
+    "opciones": {
+      "A": "El ADN está formado por dos cadenas complementarias que se enrollan entre sí.",
+      "B": "Las bases nitrogenadas se unen mediante puentes de hidrógeno: adenina (A) con timina (T), y citosina (C) con guanina (G).",
+      "C": "La secuencia de bases nitrogenadas en el ADN determina la información genética.",
+      "D": "El ADN se encuentra en el citoplasma de las células eucariotas."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-015",
+    "numero": 15,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La reproducción sexual ofrece varias ventajas en comparación con la reproducción asexual.\n\n¿Cuál de las siguientes NO es una ventaja de la reproducción sexual?",
+    "opciones": {
+      "A": "Aumenta la diversidad genética en la población.",
+      "B": "Permite una mayor adaptación a cambios ambientales.",
+      "C": "Favorece la eliminación de mutaciones perjudiciales.",
+      "D": "Permite una reproducción más rápida y eficiente en condiciones estables."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-016",
+    "numero": 16,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes criterios NO se utiliza para clasificar organismos en grupos taxonómicos?",
+    "opciones": {
+      "A": "Presencia o ausencia de núcleo celular (procariota vs. eucariota)",
+      "B": "Tipo de nutrición (autótrofa vs. heterótrofa)",
+      "C": "Número de patas o extremidades",
+      "D": "Tipo de reproducción (sexual vs. asexual)"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-017",
+    "numero": 17,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Las hormonas vegetales, como las auxinas y las giberelinas, desempeñan un papel crucial en el crecimiento y desarrollo de las plantas.\n\n¿Cuál de las siguientes afirmaciones sobre las hormonas vegetales es INCORRECTA?",
+    "opciones": {
+      "A": "Las auxinas promueven el alargamiento celular y el crecimiento de los tallos.",
+      "B": "Las giberelinas estimulan la germinación de las semillas y el crecimiento de los frutos.",
+      "C": "Las hormonas vegetales se producen en glándulas endocrinas especializadas.",
+      "D": "Las hormonas vegetales actúan en pequeñas cantidades y pueden tener efectos a distancia."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-018",
+    "numero": 18,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La teoría de la evolución por selección natural, propuesta por Charles Darwin, se basa en varios principios clave.\n\n¿Cuál de las siguientes afirmaciones describe MEJOR el concepto de \"supervivencia del más apto\" en este contexto?",
+    "opciones": {
+      "A": "Los individuos más fuertes y agresivos siempre sobreviven y se reproducen.",
+      "B": "Los individuos que mejor se adaptan a su entorno tienen más probabilidades de sobrevivir y transmitir sus genes.",
+      "C": "Los individuos con mutaciones aleatorias siempre son más aptos que los demás.",
+      "D": "Los individuos que cooperan entre sí tienen menos probabilidades de sobrevivir."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-019",
+    "numero": 19,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Durante la era Mesozoica, los dinosaurios dominaron la Tierra.\n\n¿Cuál de las siguientes características fue una adaptación CLAVE que permitió a los dinosaurios herbívoros prosperar en ese ambiente?",
+    "opciones": {
+      "A": "Desarrollo de plumas para regular la temperatura corporal.",
+      "B": "Capacidad de volar para escapar de los depredadores.",
+      "C": "Dientes especializados para masticar y digerir plantas.",
+      "D": "Desarrollo de glándulas venenosas para defenderse de los depredadores."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-020",
+    "numero": 20,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un bloque de madera y un bloque de hierro del mismo tamaño se colocan en una balanza.\n\n¿Cuál de las siguientes afirmaciones es correcta?",
+    "opciones": {
+      "A": "Ambos bloques tienen la misma masa y el mismo peso.",
+      "B": "Ambos bloques tienen la misma masa, pero el bloque de hierro tiene mayor peso.",
+      "C": "Ambos bloques tienen el mismo peso, pero el bloque de hierro tiene mayor masa.",
+      "D": "Ambos bloques tienen diferente masa y diferente peso."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-021",
+    "numero": 21,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Se calienta un gas ideal en un recipiente cerrado a volumen constante.\n\n¿Cuál de las siguientes variables de estado del gas aumentará?",
+    "opciones": {
+      "A": "Presión",
+      "B": "Volumen",
+      "C": "Masa",
+      "D": "Densidad"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-022",
+    "numero": 22,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La luz blanca se descompone en diferentes colores al pasar a través de un prisma.\n\n¿Cuál de los siguientes fenómenos explica esta dispersión de la luz?",
+    "opciones": {
+      "A": "Reflexión",
+      "B": "Refracción",
+      "C": "Difracción",
+      "D": "Interferencia"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-023",
+    "numero": 23,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La biodiversidad es esencial para el equilibrio de los ecosistemas y el bienestar humano.\n\n¿Cuál de las siguientes acciones contribuye DIRECTAMENTE a la conservación de la biodiversidad?",
+    "opciones": {
+      "A": "Utilizar pesticidas y fertilizantes químicos en la agricultura.",
+      "B": "Promover la deforestación para expandir áreas urbanas y agrícolas.",
+      "C": "Introducir especies exóticas en nuevos hábitats.",
+      "D": "Establecer áreas protegidas y corredores biológicos."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-024",
+    "numero": 24,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Las ondas estacionarias son un fenómeno que se produce cuando dos ondas de la misma frecuencia y amplitud se propagan en direcciones opuestas.\n\n¿En cuál de los siguientes instrumentos musicales NO se pueden observar ondas estacionarias?",
+    "opciones": {
+      "A": "Tambor",
+      "B": "Flauta",
+      "C": "Violín",
+      "D": "Triángulo"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-025",
+    "numero": 25,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La tecnología ha influido significativamente en la sexualidad y reproducción humana.\n\n¿Cuál de las siguientes opciones representa un impacto DIRECTO de la tecnología en este ámbito?",
+    "opciones": {
+      "A": "Aumento de la tasa de natalidad en países desarrollados.",
+      "B": "Mayor acceso a información sobre sexualidad y reproducción.",
+      "C": "Disminución de la tasa de enfermedades de transmisión sexual.",
+      "D": "Incremento en el número de parejas que optan por no tener hijos."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-09-026",
+    "numero": 26,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La contaminación atmosférica es un problema ambiental grave con consecuencias para la salud humana y el medio ambiente.\n\n¿Cuál de las siguientes opciones es una fuente renovable de energía que NO contribuye a la contaminación atmosférica?",
+    "opciones": {
+      "A": "Carbón",
+      "B": "Petróleo",
+      "C": "Gas natural",
+      "D": "Energía solar"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-027",
+    "numero": 27,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes revoluciones tuvo un impacto significativo en la independencia de las colonias americanas en el siglo XIX?",
+    "opciones": {
+      "A": "Revolución Industrial",
+      "B": "Revolución Francesa",
+      "C": "Revolución Rusa",
+      "D": "Revolución Gloriosa"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-028",
+    "numero": 28,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Durante el siglo XIX, Colombia experimentó cambios sociales significativos.\n\n¿Cuál de los siguientes NO fue un cambio importante en este período?",
+    "opciones": {
+      "A": "Abolición de la esclavitud",
+      "B": "Separación de Panamá",
+      "C": "Establecimiento de la República de la Nueva Granada",
+      "D": "Implementación del voto universal para mujeres"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-029",
+    "numero": 29,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál fue una de las principales consecuencias económicas de los procesos de independencia en América Latina?",
+    "opciones": {
+      "A": "Fortalecimiento de los lazos comerciales con España.",
+      "B": "Aumento de la producción agrícola y minera.",
+      "C": "Disminución de la desigualdad social y económica.",
+      "D": "Dependencia económica de potencias extranjeras como Gran Bretaña y Estados Unidos."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-030",
+    "numero": 30,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes factores NO ha sido una causa histórica de migración y desplazamiento en Colombia?",
+    "opciones": {
+      "A": "Conflicto armado interno",
+      "B": "Desastres naturales como terremotos e inundaciones",
+      "C": "Búsqueda de mejores oportunidades económicas",
+      "D": "Desarrollo de energías renovables"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-031",
+    "numero": 31,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La diversidad étnica y cultural de Colombia se refleja en la variedad de formas en que las comunidades se relacionan con el medio ambiente.\n\n¿Cuál de los siguientes ejemplos ilustra esta diversidad?",
+    "opciones": {
+      "A": "La agricultura industrializada a gran escala en la región Andina.",
+      "B": "La minería a cielo abierto en la Amazonía.",
+      "C": "Las prácticas de conservación y manejo sostenible de recursos naturales por parte de comunidades indígenas.",
+      "D": "La construcción de grandes represas hidroeléctricas en áreas rurales."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-032",
+    "numero": 32,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Los desplazamientos forzados en Colombia han tenido un impacto significativo en la organización social y económica del país.\n\n¿Cuál de las siguientes opciones NO es una consecuencia común de los desplazamientos?",
+    "opciones": {
+      "A": "Pérdida de tierras y medios de vida para las comunidades desplazadas.",
+      "B": "Aumento de la pobreza y la desigualdad social.",
+      "C": "Mayor cohesión social y fortalecimiento de las comunidades de acogida.",
+      "D": "Problemas de salud mental y física en las personas desplazadas."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-033",
+    "numero": 33,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La Constitución de 1886 y la Constitución de 1991 marcaron hitos importantes en la historia política de Colombia.\n\n¿Cuál de las siguientes opciones representa una diferencia clave en la participación ciudadana establecida por estas dos constituciones?",
+    "opciones": {
+      "A": "La Constitución de 1886 estableció el sufragio universal para hombres y mujeres, mientras que la Constitución de 1991 restringió el voto a los hombres mayores de 21 años.",
+      "B": "La Constitución de 1886 limitó la participación ciudadana a través de un sistema electoral indirecto, mientras que la Constitución de 1991 estableció el voto popular directo.",
+      "C": "La Constitución de 1886 garantizó la libertad de expresión y asociación, mientras que la Constitución de 1991 restringió estos derechos fundamentales.",
+      "D": "La Constitución de 1886 estableció un sistema presidencialista, mientras que la Constitución de 1991 adoptó un sistema parlamentario."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-034",
+    "numero": 34,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Durante los siglos XIX y XX, diversas organizaciones sociales desempeñaron un papel importante en la política colombiana.\n\n¿Cuál de las siguientes organizaciones NO tuvo una participación activa en la política durante este período?",
+    "opciones": {
+      "A": "Partidos políticos tradicionales como el Partido Liberal y el Partido Conservador.",
+      "B": "Sindicatos y movimientos obreros.",
+      "C": "Organizaciones campesinas y movimientos indígenas.",
+      "D": "Organizaciones ecologistas y defensoras del medio ambiente."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-035",
+    "numero": 35,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La Constitución de 1886 y la Constitución de 1991 difieren en los mecanismos de participación ciudadana que establecen.\n\n¿Cuál de las siguientes opciones representa una innovación introducida por la Constitución de 1991 en este aspecto?",
+    "opciones": {
+      "A": "Establecimiento del sufragio universal para hombres mayores de 21 años.",
+      "B": "Creación de mecanismos de democracia directa como el plebiscito, el referendo y la consulta popular.",
+      "C": "Fortalecimiento del poder ejecutivo y limitación de la participación del Congreso.",
+      "D": "Eliminación de los partidos políticos y promoción de un sistema de gobierno unipartidista."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-036",
+    "numero": 36,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Durante los siglos XIX y XX, los procesos políticos en Colombia estuvieron influenciados por eventos internacionales.\n\n¿Cuál de los siguientes eventos internacionales tuvo un impacto significativo en la política colombiana durante este período?",
+    "opciones": {
+      "A": "La Revolución Industrial",
+      "B": "La Guerra Fría",
+      "C": "La Primera Guerra Mundial",
+      "D": "La caída del Imperio Romano"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-037",
+    "numero": 37,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes corrientes de pensamiento tuvo una influencia significativa en los movimientos independentistas de América Latina durante el siglo XIX?",
+    "opciones": {
+      "A": "Positivismo",
+      "B": "Marxismo",
+      "C": "Ilustración",
+      "D": "Existencialismo"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-038",
+    "numero": 38,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La modernización de Colombia durante los siglos XIX y XX trajo consigo importantes transformaciones.\n\n¿Cuál de los siguientes aspectos NO fue una característica de este proceso?",
+    "opciones": {
+      "A": "Expansión de la infraestructura de transporte y comunicación.",
+      "B": "Crecimiento de las ciudades y desarrollo de la industria.",
+      "C": "Fortalecimiento de las instituciones democráticas y la participación ciudadana.",
+      "D": "Aumento de la dependencia económica de la agricultura y la minería."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-09-039",
+    "numero": 39,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Las comunidades indígenas en Colombia tienen una rica tradición de saberes científicos relacionados con el uso de plantas medicinales y la conservación del medio ambiente.\n\n¿Cuál de las siguientes disciplinas académicas se relaciona más directamente con el estudio de estos saberes?",
+    "opciones": {
+      "A": "Física",
+      "B": "Química",
+      "C": "Etnobotánica",
+      "D": "Astronomía"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-040",
+    "numero": 40,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En un debate sobre la implementación de energías renovables en una comunidad, un participante presenta un argumento basado en datos científicos sobre el cambio climático y sus efectos.\n\n¿Cuál de las siguientes opciones describe MEJOR la estrategia argumentativa utilizada por este participante?",
+    "opciones": {
+      "A": "Apelación a la emoción, buscando generar empatía y preocupación en la audiencia.",
+      "B": "Ataque personal, desacreditando a los oponentes en lugar de refutar sus argumentos.",
+      "C": "Apelación a la autoridad, citando a expertos y estudios científicos para respaldar su posición.",
+      "D": "Generalización apresurada, utilizando un ejemplo aislado para sacar conclusiones generales."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-041",
+    "numero": 41,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Durante una reunión de trabajo, un equipo discute sobre la mejor manera de organizar un proyecto. Surgen diferentes opiniones y propuestas.\n\n¿Cuál de las siguientes acciones sería MÁS efectiva para llegar a un acuerdo y avanzar en el proyecto?",
+    "opciones": {
+      "A": "Insistir en la propia opinión sin escuchar las ideas de los demás.",
+      "B": "Interrumpir constantemente a los demás para imponer la propia visión.",
+      "C": "Reconocer y valorar los aportes de los demás, buscando puntos en común y soluciones consensuadas.",
+      "D": "Abandonar la discusión y dejar que otros tomen la decisión final."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-042",
+    "numero": 42,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Al planificar un texto expositivo sobre el cambio climático,\n\n¿cuál de las siguientes opciones NO es una estrategia adecuada para organizar las ideas?",
+    "opciones": {
+      "A": "Presentar una introducción que contextualice el tema y plantee la tesis principal.",
+      "B": "Desarrollar los argumentos principales en párrafos separados, utilizando ejemplos y evidencias.",
+      "C": "Incluir una conclusión que resuma las ideas principales y ofrezca una reflexión final.",
+      "D": "Utilizar un lenguaje técnico y especializado que solo los expertos puedan entender."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-043",
+    "numero": 43,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un estudiante está escribiendo un ensayo sobre la importancia de la educación.\n\n¿Cuál de las siguientes oraciones NO cumple con las reglas de coherencia y cohesión textual?",
+    "opciones": {
+      "A": "La educación es fundamental para el desarrollo personal y social de los individuos.",
+      "B": "Además de proporcionar conocimientos, la educación fomenta el pensamiento crítico y la creatividad.",
+      "C": "Sin embargo, el acceso a una educación de calidad sigue siendo un desafío en muchas partes del mundo.",
+      "D": "Los gatos son animales domésticos muy populares y requieren cuidados especiales."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-044",
+    "numero": 44,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En la oración \"El libro que me prestaste es muy interesante\",\n\n¿qué función sintáctica cumple la palabra \"que\"?",
+    "opciones": {
+      "A": "Sujeto",
+      "B": "Objeto directo",
+      "C": "Pronombre relativo",
+      "D": "Adjetivo posesivo"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-045",
+    "numero": 45,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un texto y responde la pregunta: \"La inteligencia artificial (IA) está transformando rápidamente nuestra sociedad y plantea desafíos éticos y sociales importantes. A medida que los algoritmos de IA se vuelven más sofisticados, es crucial considerar el impacto potencial en áreas como el empleo, la privacidad y la toma de decisiones.\"\n\n¿Cuál es la intención principal del autor en este fragmento?",
+    "opciones": {
+      "A": "Advertir sobre los peligros de la inteligencia artificial.",
+      "B": "Presentar un panorama equilibrado sobre la inteligencia artificial, destacando tanto sus beneficios como sus desafíos.",
+      "C": "Promover el uso irrestricto de la inteligencia artificial en todos los ámbitos de la sociedad.",
+      "D": "Argumentar a favor de la creación de leyes que limiten drásticamente el desarrollo de la inteligencia artificial."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-046",
+    "numero": 46,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un poema y responde la pregunta: \"El río corre, entre piedras y flores, susurrando secretos al oído del viento.\"\n\n¿Qué significado simbólico podría atribuirse al río en este poema?",
+    "opciones": {
+      "A": "La fugacidad del tiempo.",
+      "B": "La fuerza de la naturaleza.",
+      "C": "El fluir de la vida y las emociones.",
+      "D": "La soledad y el aislamiento."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-047",
+    "numero": 47,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes medios de comunicación masiva se caracteriza por transmitir información en tiempo real, a través de señales de radio y televisión?",
+    "opciones": {
+      "A": "Periódico",
+      "B": "Revista",
+      "C": "Radiodifusión",
+      "D": "Libro"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-048",
+    "numero": 48,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Al buscar información sobre un tema controversial en diferentes medios de comunicación,\n\n¿cuál de las siguientes estrategias es MÁS recomendable para formar una opinión informada y crítica?",
+    "opciones": {
+      "A": "Confiar únicamente en la información presentada en un solo medio de comunicación.",
+      "B": "Consultar diversas fuentes de información, comparando y contrastando diferentes perspectivas.",
+      "C": "Ignorar las opiniones de expertos y basarse únicamente en la opinión personal.",
+      "D": "Aceptar la información presentada en los medios sin cuestionarla ni analizarla."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-049",
+    "numero": 49,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un discurso político transmitido por televisión utiliza imágenes emotivas, música inspiradora y lenguaje persuasivo para conectar con la audiencia.\n\n¿Cuál de los siguientes elementos del discurso es MÁS probable que refleje la ideología y los intereses del político?",
+    "opciones": {
+      "A": "El vestuario del político.",
+      "B": "La duración del discurso.",
+      "C": "El uso de metáforas y analogías.",
+      "D": "La selección de los temas abordados y los argumentos presentados."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-050",
+    "numero": 50,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes opciones NO es una característica del lenguaje como sistema simbólico?",
+    "opciones": {
+      "A": "Utiliza signos arbitrarios para representar ideas y conceptos.",
+      "B": "Permite la comunicación y transmisión de información entre individuos.",
+      "C": "Es un sistema cerrado y limitado que no puede evolucionar ni cambiar.",
+      "D": "Puede ser verbal (oral o escrito) o no verbal (gestos, imágenes, etc.)."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-051",
+    "numero": 51,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de una conversación y responde la pregunta: | Persona 1: ¿Me pasas la sal, por favor? | Persona 2: ¡Claro! Aquí tienes.\n\n¿Cuál es el componente de la comunicación que se evidencia en la respuesta de la Persona 2?",
+    "opciones": {
+      "A": "Emisor",
+      "B": "Receptor",
+      "C": "Mensaje",
+      "D": "Canal"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-09-052",
+    "numero": 52,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente texto y responde la pregunta: \"El perro ladró fuertemente. El cartero dejó caer las cartas y salió corriendo.\"\n\n¿Qué tipo de coherencia se establece principalmente en este texto?",
+    "opciones": {
+      "A": "Coherencia local",
+      "B": "Coherencia global",
+      "C": "Coherencia temática",
+      "D": "Coherencia pragmática"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-053",
+    "numero": 53,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following dialogue between two students and answer the question. | Dialogue: | Student 1: \"Hey, did you finish the math worksheet?\" | Student 2: \"Not yet. I'm stuck on question number 5. It's about calculating the area of a triangle.\" | Student 1: \"Oh, I remember that one. You need to use the formula: base times height divided by two.\" | Student 2: \"Ah, right! Thanks for reminding me.\"\n\nWhat is the problem that Student 2 is having?",
+    "opciones": {
+      "A": "He doesn't understand how to calculate the area of a triangle.",
+      "B": "He forgot the formula for the area of a triangle.",
+      "C": "He doesn't know what a triangle is.",
+      "D": "He can't find the math worksheet."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-054",
+    "numero": 54,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following instructions for a classroom activity and answer the question. | Instructions: | Form groups of four. | Choose a historical figure you want to research. | Find information about their life, achievements, and impact on society. | Create a poster or presentation to share your findings with the class.\n\nWhich of the following is NOT a step in the instructions?",
+    "opciones": {
+      "A": "Choose a historical figure to research.",
+      "B": "Write a five-paragraph essay about the historical figure.",
+      "C": "Find information about the historical figure's life and achievements.",
+      "D": "Create a presentation to share with the class."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-055",
+    "numero": 55,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following text message exchange between two friends and answer the question. | Text Messages: | Friend 1: Hey! What are you up to? | Friend 2: Not much, just finished my homework. You? | Friend 1: Same here. Wanna hang out at the park later? | Friend 2: Sure! What time? | Friend 1: How about 4 pm? | Friend 2: Sounds good! See you there.\n\nWhat are the friends planning to do?",
+    "opciones": {
+      "A": "Do their homework together.",
+      "B": "Go to the park at 4 pm.",
+      "C": "Watch a movie at home.",
+      "D": "Have dinner at a restaurant."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-056",
+    "numero": 56,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following instructions for a writing assignment and answer the question. | Instructions: | Write a paragraph about your favorite holiday. Include the following information: What is the holiday? When is it celebrated? What do you usually do on this holiday? Why is it your favorite holiday?\n\nWhich of the following would be the most appropriate way to start the paragraph?",
+    "opciones": {
+      "A": "My favorite holiday is Christmas because I love getting presents.",
+      "B": "I celebrate many holidays throughout the year, but my favorite is...",
+      "C": "Holidays are a time for family and friends to come together.",
+      "D": "There are many different holidays celebrated around the world."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-057",
+    "numero": 57,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following text and answer the question. | Text: | The Great Wall of China is one of the most iconic landmarks in the world. It stretches for thousands of miles across northern China and was built over centuries by different dynasties. The wall was primarily constructed to protect the Chinese empire from invaders, but it also served as a trade route and a symbol of China's power and unity.\n\nWhat is the main purpose of this text?",
+    "opciones": {
+      "A": "To argue for the importance of preserving historical landmarks.",
+      "B": "To describe the Great Wall of China and its significance.",
+      "C": "To narrate the history of the different Chinese dynasties.",
+      "D": "To persuade the reader to visit the Great Wall of China."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-058",
+    "numero": 58,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following text and answer the question. | Text: | Many people believe that video games are a waste of time and can have negative effects on children. However, research has shown that video games can also have positive benefits. They can improve problem-solving skills, hand-eye coordination, and even social skills when played with others. Additionally, some educational video games can help students learn new concepts and practice skills in a fun and engaging way.\n\nWhich of the following statements BEST summarizes the main idea of the text?",
+    "opciones": {
+      "A": "Video games are always harmful to children.",
+      "B": "Video games are a waste of time.",
+      "C": "Video games can have both positive and negative effects.",
+      "D": "Video games should be used in all schools."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-059",
+    "numero": 59,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following paragraph and choose the best title for it. | Paragraph: | Last weekend, I went to the beach with my family. We built sandcastles, swam in the ocean, and played volleyball. The weather was perfect, and we had a delicious picnic lunch. It was a great way to relax and spend time together.\n\nChoose the best title for it.",
+    "opciones": {
+      "A": "A Day at the Park",
+      "B": "My Summer Vacation",
+      "C": "A Fun Day at the Beach",
+      "D": "My Family's Favorite Activities"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-09-060",
+    "numero": 60,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Read the following sentences and choose the option that best combines them into a single, grammatically correct sentence. | Sentences: | 1. The students were assigned a research project. | 2. The project was about climate change. | 3. They had to present their findings to the class.\n\nChoose the option that best combines them into a single, grammatically correct sentence.",
+    "opciones": {
+      "A": "The students were assigned a research project about climate change, and they had to present their findings to the class.",
+      "B": "The students were assigned a research project, it was about climate change, and they had to present their findings to the class.",
+      "C": "The students were assigned a research project about climate change they had to present their findings to the class.",
+      "D": "The students were assigned a research project about climate change, they had to present their findings to the class."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  }
+]

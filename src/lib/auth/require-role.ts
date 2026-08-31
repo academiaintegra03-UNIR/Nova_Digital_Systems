@@ -29,3 +29,22 @@ export async function requireRole(role: Role): Promise<Profile> {
 
   return profile;
 }
+
+/**
+ * Same as requireRole, but accepts any of several roles — for actions
+ * shared across panels (ej. crear materias: admin o tutor).
+ */
+export async function requireAnyRole(roles: Role[]): Promise<Profile> {
+  const profile = await getAuthenticatedProfile();
+  const homePath = roleOptionFor(roles[0])?.homePath ?? "/";
+
+  if (!profile) {
+    redirect(`/login?next=${encodeURIComponent(homePath)}`);
+  }
+
+  if (!roles.includes(profile.role)) {
+    redirect(roleOptionFor(profile.role)?.homePath ?? "/");
+  }
+
+  return profile;
+}

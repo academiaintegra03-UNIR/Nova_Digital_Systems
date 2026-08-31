@@ -1,0 +1,3458 @@
+[
+  {
+    "id": "MAT-10-001",
+    "numero": 1,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251183/7460f23d-872c-46b3-867b-92e4f644a6eb.png Observa la secuencia de las fichas de dominó. Luego de hacer la observación,\n\n¿Cuál de los siguientes pares de números representa la cantidad de puntos rojos y azules, respectivamente, en la ficha que completa correctamente la secuencia?",
+    "opciones": {
+      "A": "1, 5",
+      "B": "0, 4",
+      "C": "0, 6",
+      "D": "4, 0"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-002",
+    "numero": 2,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La temperatura en grados Celsius (C) y Fahrenheit (F) se relaciona mediante la siguiente ecuación: F = (9/5)C + 32 Si la temperatura en Fahrenheit es de 86°F,\n\n¿cuál es la temperatura equivalente en grados Celsius?",
+    "opciones": {
+      "A": "16°C",
+      "B": "20°C",
+      "C": "30°C",
+      "D": "45°C"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-003",
+    "numero": 3,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251245/ec5ee9dd-9f90-4f1f-9cdf-b82e6f7e8b1e.png Dos triángulos rectángulos son semejantes si tienen un ángulo agudo congruente. En la figura, los triángulos CAB y EAD son semejantes. Si AB = 6 cm, AC = 8 cm y AD = 9 cm,\n\n¿cuál es la longitud de AE?",
+    "opciones": {
+      "A": "10 cm",
+      "B": "12 cm",
+      "C": "14 cm",
+      "D": "16 cm"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-004",
+    "numero": 4,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un cono circular recto tiene un radio de 5 cm y una altura de 12 cm.\n\n¿Cuál es el volumen aproximado del cono? (Usa π ≈ 3.14)",
+    "opciones": {
+      "A": "94.2 cm³",
+      "B": "314 cm³",
+      "C": "471 cm³",
+      "D": "628 cm³"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-005",
+    "numero": 5,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251315/0e6c5024-3098-42fa-89d9-c2a1f0ad2c2c.png La tabla muestra la relación entre el número de horas de estudio (x) y la calificación obtenida en un examen (y) por un grupo de estudiantes.\n\n¿Cuál de las siguientes ecuaciones representa correctamente la relación entre las horas de estudio y la calificación?",
+    "opciones": {
+      "A": "y = 10x + 50",
+      "B": "y = 50x + 10",
+      "C": "y = 20x + 40",
+      "D": "y = 40x + 20"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-006",
+    "numero": 6,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251382/dfc4856a-75af-463e-be90-6251c774a979.png El gráfico de barras muestra la distribución de las edades de los participantes en un taller.\n\n¿Cuál es la mediana de las edades de los participantes?",
+    "opciones": {
+      "A": "20 años",
+      "B": "22 años",
+      "C": "24 años",
+      "D": "27 años"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-007",
+    "numero": 7,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En una clase de 25 estudiantes, se registraron las siguientes calificaciones en un examen de matemáticas: 85, 72, 93, 68, 80, 75, 88, 95, 70, 82, 78, 85, 90, 72, 85, 92, 65, 75, 88, 80, 78, 95, 82, 75, 85\n\n¿Cuál es la mediana de las calificaciones?",
+    "opciones": {
+      "A": "78",
+      "B": "80",
+      "C": "82",
+      "D": "85"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-008",
+    "numero": 8,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Una bolsa contiene 5 canicas rojas, 3 canicas azules y 2 canicas verdes. Si se extraen dos canicas al azar sin reemplazo,\n\n¿cuál es la probabilidad de que ambas sean rojas?",
+    "opciones": {
+      "A": "1/9",
+      "B": "1/5",
+      "C": "2/9",
+      "D": "1/2"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-009",
+    "numero": 9,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un granjero tiene 100 metros de cerca y desea construir un corral rectangular de área máxima.\n\n¿Cuáles deberían ser las dimensiones del corral para lograr este objetivo?",
+    "opciones": {
+      "A": "20 metros de largo y 30 metros de ancho.",
+      "B": "25 metros de largo y 25 metros de ancho.",
+      "C": "40 metros de largo y 10 metros de ancho.",
+      "D": "50 metros de largo y 0 metros de ancho."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-010",
+    "numero": 10,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251421/711257d5-e809-485f-aec9-1df182637b46.png Un grupo de estudiantes está realizando un experimento para determinar la relación entre la concentración de una solución y su absorbancia de luz. Obtienen los datos de la tabla de la imagen. Para analizar estos datos y determinar la relación entre las variables,\n\n¿cuál sería el siguiente paso MÁS adecuado en su plan de investigación?",
+    "opciones": {
+      "A": "Calcular la media y la desviación estándar de la absorbancia.",
+      "B": "Graficar los datos en un diagrama de dispersión con la concentración en el eje x y la absorbancia en el eje y.",
+      "C": "Realizar una prueba de hipótesis para determinar si la diferencia entre las absorbancias es estadísticamente significativa.",
+      "D": "Repetir el experimento con diferentes concentraciones para confirmar los resultados."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-011",
+    "numero": 11,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un poste de luz de 15 metros de altura proyecta una sombra de 20 metros de longitud en el suelo.\n\n¿Cuál es la distancia desde la punta del poste hasta el extremo de la sombra?",
+    "opciones": {
+      "A": "10 metros",
+      "B": "15 metros",
+      "C": "25 metros",
+      "D": "35 metros"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-012",
+    "numero": 12,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En un triángulo ABC, el ángulo A mide 45°, el lado a (opuesto al ángulo A) mide 10 cm y el lado b (opuesto al ángulo B) mide 12 cm.\n\n¿Cuál es la medida aproximada del ángulo B?",
+    "opciones": {
+      "A": "33.6°",
+      "B": "56.4°",
+      "C": "63.4°",
+      "D": "116.6°"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-013",
+    "numero": 13,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En un estudio sobre el tiempo que los adolescentes pasan usando redes sociales al día, se obtuvieron los siguientes datos (en horas): 1, 2, 3, 1, 4, 2, 2, 3, 5, 1, 2, 3, 4, 2, 3\n\n¿Cuál es la moda de este conjunto de datos?",
+    "opciones": {
+      "A": "1 hora",
+      "B": "2 horas",
+      "C": "3 horas",
+      "D": "4 horas"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-014",
+    "numero": 14,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Se lanza un dado justo de seis caras dos veces.\n\n¿Cuál es la probabilidad de obtener un número par en el primer lanzamiento y un número impar en el segundo lanzamiento?",
+    "opciones": {
+      "A": "1/12",
+      "B": "1/6",
+      "C": "1/4",
+      "D": "1/2"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-015",
+    "numero": 15,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un grupo de amigos decide alquilar un bote para un paseo. El costo total del alquiler es de $240. Si dos amigos más se unen al grupo, el costo por persona se reduce en $6.\n\n¿Cuántas personas había originalmente en el grupo?",
+    "opciones": {
+      "A": "6",
+      "B": "8",
+      "C": "10",
+      "D": "12"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "MAT-10-016",
+    "numero": 16,
+    "materia": "Matemáticas",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251458/9b87eddf-bd69-4517-8a57-f7a3b55379be.png La tabla muestra la cantidad de horas que un grupo de estudiantes dedica a estudiar cada día.\n\n¿Cuál es la media (promedio) de horas de estudio de este grupo de estudiantes?",
+    "opciones": {
+      "A": "1.8 horas",
+      "B": "2 horas",
+      "C": "2.2 horas",
+      "D": "2.5 horas"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-017",
+    "numero": 17,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La mitosis es un proceso fundamental para el crecimiento y desarrollo de los organismos.\n\n¿Cuál de las siguientes afirmaciones sobre la mitosis es INCORRECTA?",
+    "opciones": {
+      "A": "La mitosis produce dos células hijas genéticamente idénticas a la célula madre.",
+      "B": "La mitosis es un proceso continuo que se divide en varias fases: profase, metafase, anafase y telofase.",
+      "C": "Durante la mitosis, el material genético se duplica y se distribuye equitativamente entre las células hijas.",
+      "D": "La mitosis es el proceso responsable de la formación de gametos (óvulos y espermatozoides)."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-018",
+    "numero": 18,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En un cruce entre dos plantas de guisantes, una con semillas amarillas (dominante) y otra con semillas verdes (recesivo), se obtiene una descendencia con una proporción de 3:1 de plantas con semillas amarillas a plantas con semillas verdes.\n\n¿Cuál es el genotipo más probable de la planta progenitora con semillas amarillas?",
+    "opciones": {
+      "A": "AA (homocigoto dominante)",
+      "B": "Aa (heterocigoto)",
+      "C": "aa (homocigoto recesivo)",
+      "D": "No se puede determinar con la información proporcionada."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-019",
+    "numero": 19,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes acciones es la MÁS efectiva para prevenir la propagación de enfermedades infecciosas transmitidas por el aire en una escuela?",
+    "opciones": {
+      "A": "Lavarse las manos regularmente con agua y jabón.",
+      "B": "Cubrirse la boca y la nariz al toser o estornudar.",
+      "C": "Evitar compartir alimentos y bebidas con otros estudiantes.",
+      "D": "Desinfectar las superficies de contacto frecuente."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-020",
+    "numero": 20,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La resistencia a los antibióticos es un problema creciente de salud pública.\n\n¿Cuál de los siguientes factores es el PRINCIPAL responsable del desarrollo de esta resistencia?",
+    "opciones": {
+      "A": "La falta de higiene personal.",
+      "B": "El consumo excesivo de alimentos procesados.",
+      "C": "El uso inadecuado y excesivo de antibióticos.",
+      "D": "La exposición a la radiación solar."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-021",
+    "numero": 21,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En un ecosistema de bosque templado, los lobos grises son depredadores tope que se alimentan principalmente de ciervos. Si una enfermedad reduce drásticamente la población de lobos,\n\n¿cuál de los siguientes efectos sería el MÁS probable a corto plazo?",
+    "opciones": {
+      "A": "Aumento de la población de ciervos.",
+      "B": "Disminución de la población de plantas.",
+      "C": "Aumento de la población de otros depredadores.",
+      "D": "Disminución de la diversidad de especies vegetales."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-022",
+    "numero": 22,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La eutrofización es un proceso que ocurre en cuerpos de agua debido al exceso de nutrientes, como nitrógeno y fósforo.\n\n¿Cuál de las siguientes opciones NO es una consecuencia de la eutrofización?",
+    "opciones": {
+      "A": "Proliferación excesiva de algas.",
+      "B": "Disminución de la concentración de oxígeno disuelto en el agua.",
+      "C": "Aumento de la biodiversidad acuática.",
+      "D": "Muerte masiva de peces y otros organismos acuáticos."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-023",
+    "numero": 23,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Los bosques tropicales son ecosistemas con una alta biodiversidad.\n\n¿Cuál de las siguientes afirmaciones describe mejor una relación de competencia entre organismos en un bosque tropical?",
+    "opciones": {
+      "A": "Las plantas trepadoras utilizan los troncos de los árboles para alcanzar la luz solar.",
+      "B": "Los jaguares cazan ciervos y otros mamíferos pequeños para alimentarse.",
+      "C": "Diferentes especies de árboles compiten por la luz solar en la copa del bosque.",
+      "D": "Las aves se alimentan de insectos que viven en la corteza de los árboles."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-024",
+    "numero": 24,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes prácticas contribuye más efectivamente a la sostenibilidad de los recursos pesqueros?",
+    "opciones": {
+      "A": "Pescar únicamente en temporada alta para maximizar las capturas.",
+      "B": "Utilizar redes de arrastre para capturar una mayor cantidad de peces en menos tiempo.",
+      "C": "Establecer y respetar cuotas de pesca basadas en estudios científicos de población de peces.",
+      "D": "Pescar en áreas cercanas a la costa para reducir el gasto de combustible de las embarcaciones."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-025",
+    "numero": 25,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La fotosíntesis es un proceso vital para la vida en la Tierra.\n\n¿Cuál de las siguientes afirmaciones describe MEJOR la relación entre la fotosíntesis y la respiración celular?",
+    "opciones": {
+      "A": "La fotosíntesis y la respiración celular son procesos opuestos que ocurren en diferentes organismos.",
+      "B": "La fotosíntesis produce oxígeno y glucosa, mientras que la respiración celular consume oxígeno y glucosa para producir energía.",
+      "C": "La fotosíntesis ocurre solo en plantas, mientras que la respiración celular ocurre solo en animales.",
+      "D": "La fotosíntesis y la respiración celular son procesos independientes que no tienen relación entre sí."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-026",
+    "numero": 26,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Los ecosistemas están en constante cambio debido a factores naturales y humanos.\n\n¿Cuál de los siguientes ejemplos ilustra una relación entre un fenómeno biológico y un cambio en el entorno que afecta a otras especies?",
+    "opciones": {
+      "A": "La migración de las aves en respuesta a los cambios estacionales.",
+      "B": "La disminución de la población de abejas debido al uso de pesticidas.",
+      "C": "La adaptación de los cactus a climas secos mediante el almacenamiento de agua.",
+      "D": "El crecimiento de un árbol a medida que recibe más luz solar."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-027",
+    "numero": 27,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "El oído interno es fundamental para el equilibrio del cuerpo humano.\n\n¿Cuál de las siguientes estructuras del oído interno es responsable de detectar la aceleración lineal y la posición de la cabeza?",
+    "opciones": {
+      "A": "Cóclea",
+      "B": "Canales semicirculares",
+      "C": "Huesecillos del oído medio (martillo, yunque y estribo)",
+      "D": "Vestíbulo (utrículo y sáculo)"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-028",
+    "numero": 28,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Los ecosistemas pueden ser clasificados según diferentes criterios.\n\n¿Cuál de las siguientes opciones NO es un tipo de ecosistema terrestre?",
+    "opciones": {
+      "A": "Bosque tropical",
+      "B": "Desierto",
+      "C": "Arrecife de coral",
+      "D": "Tundra"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-029",
+    "numero": 29,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un grupo de científicos está investigando el efecto de un nuevo fertilizante en el crecimiento de las plantas.\n\n¿Cuál de las siguientes preguntas NO podría ser respondida directamente a partir de los resultados de esta investigación?",
+    "opciones": {
+      "A": "¿El nuevo fertilizante aumenta la altura de las plantas en comparación con un fertilizante tradicional?",
+      "B": "¿El nuevo fertilizante afecta el tiempo que tardan las plantas en florecer?",
+      "C": "¿El nuevo fertilizante es más costoso de producir que el fertilizante tradicional?",
+      "D": "¿El nuevo fertilizante altera la composición química del suelo?"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-030",
+    "numero": 30,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un estudiante realizó un experimento para investigar el efecto de la temperatura en la velocidad de una reacción química. Después de analizar los resultados, concluyó que \"la velocidad de la reacción aumenta a medida que aumenta la temperatura\".\n\n¿Cuál de las siguientes opciones representa la MEJOR manera de comunicar este resultado en un informe científico?",
+    "opciones": {
+      "A": "La reacción fue más rápida cuando hacía más calor.",
+      "B": "Creo que la temperatura hace que la reacción vaya más rápido.",
+      "C": "Los datos sugieren una correlación positiva entre la temperatura y la velocidad de reacción.",
+      "D": "La temperatura es el único factor que afecta la velocidad de la reacción."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-031",
+    "numero": 31,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes sustancias químicas NO es un componente principal del protoplasma celular?",
+    "opciones": {
+      "A": "Agua",
+      "B": "Proteínas",
+      "C": "Lípidos",
+      "D": "Dióxido de carbono"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-032",
+    "numero": 32,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La reproducción sexual es un proceso fundamental para la vida.\n\n¿Cuál de las siguientes afirmaciones describe MEJOR la importancia de la meiosis en la reproducción sexual?",
+    "opciones": {
+      "A": "La meiosis produce células hijas idénticas a la célula madre, asegurando la continuidad genética.",
+      "B": "La meiosis reduce a la mitad el número de cromosomas en los gametos, permitiendo la restauración del número diploide tras la fecundación.",
+      "C": "La meiosis aumenta la variabilidad genética al generar nuevas combinaciones de alelos.",
+      "D": "La meiosis es responsable del crecimiento y reparación de tejidos en organismos multicelulares."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-033",
+    "numero": 33,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes cambios de estado de la materia implica la absorción de energía térmica?",
+    "opciones": {
+      "A": "Condensación",
+      "B": "Solidificación",
+      "C": "Sublimación",
+      "D": "Deposición"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-034",
+    "numero": 34,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En la siguiente reacción ácido-base: NH ₃ + H ₂ O ⇌ NH ₄ ⁺ + OH ⁻\n\n¿Cuál es el ácido conjugado del amoníaco (NH ₃ )?",
+    "opciones": {
+      "A": "H ₂ O",
+      "B": "NH ₄ ⁺",
+      "C": "OH ⁻",
+      "D": "Ninguno de los anteriores"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-035",
+    "numero": 35,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes sustancias químicas es esencial para la salud humana y se encuentra en alimentos como la sal de mesa y algunos vegetales?",
+    "opciones": {
+      "A": "Ácido clorhídrico (HCl)",
+      "B": "Cloruro de sodio (NaCl)",
+      "C": "Hidróxido de sodio (NaOH)",
+      "D": "Ácido sulfúrico (H ₂ SO ₄ )"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-036",
+    "numero": 36,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "El pH es una medida de la acidez o alcalinidad de una solución.\n\n¿Cuál de las siguientes afirmaciones sobre el pH es correcta?",
+    "opciones": {
+      "A": "Una solución con pH 7 es neutra, ni ácida ni alcalina.",
+      "B": "Una solución con pH menor a 7 es alcalina.",
+      "C": "Una solución con pH mayor a 7 es ácida.",
+      "D": "El pH no tiene relación con la concentración de iones hidrógeno (H ⁺ ) en una solución."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-037",
+    "numero": 37,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes procesos se considera una práctica de la protoquímica?",
+    "opciones": {
+      "A": "La síntesis de aspirina en un laboratorio moderno.",
+      "B": "La destilación de alcohol en la Edad Media.",
+      "C": "La electrólisis del agua para producir hidrógeno y oxígeno.",
+      "D": "El uso de microscopios electrónicos para observar moléculas."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-038",
+    "numero": 38,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál fue la contribución más importante de Antoine Lavoisier a la química?",
+    "opciones": {
+      "A": "La invención del microscopio.",
+      "B": "El descubrimiento de la radioactividad.",
+      "C": "La ley de conservación de la masa.",
+      "D": "La tabla periódica de los elementos."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-039",
+    "numero": 39,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "John Dalton es conocido por su teoría atómica.\n\n¿Cuál de las siguientes afirmaciones es una de las ideas centrales de su teoría?",
+    "opciones": {
+      "A": "Los átomos son divisibles en electrones y protones.",
+      "B": "Todos los átomos de un elemento son idénticos en masa y propiedades.",
+      "C": "Los elementos pueden transformarse en otros elementos mediante reacciones químicas.",
+      "D": "Los átomos son visibles al microscopio óptico."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-040",
+    "numero": 40,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál fue un descubrimiento clave en la revolución de la química orgánica del siglo XIX?",
+    "opciones": {
+      "A": "La identificación del electrón.",
+      "B": "La síntesis de urea a partir de compuestos inorgánicos.",
+      "C": "La formulación de la teoría del enlace químico.",
+      "D": "El desarrollo de la espectroscopía de masas."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-041",
+    "numero": 41,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "El ácido sulfúrico (H ₂ SO ₄ ) es un compuesto químico utilizado en diversas industrias. Si se tiene una muestra de 196 gramos de ácido sulfúrico puro,\n\n¿cuántos moles de ácido sulfúrico hay en la muestra? (Masas atómicas: H = 1, S = 32, O = 16)",
+    "opciones": {
+      "A": "1 mol",
+      "B": "2 moles",
+      "C": "3 moles",
+      "D": "4 moles"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-042",
+    "numero": 42,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La combustión completa del metano (CH ₄ ) produce dióxido de carbono (CO ₂ ) y agua (H ₂ O). Si se queman 16 gramos de metano,\n\n¿qué volumen de dióxido de carbono se produce a condiciones normales de temperatura y presión (CNTP)? (Volumen molar de un gas en CNTP = 22.4 L/mol)",
+    "opciones": {
+      "A": "11.2 L",
+      "B": "22.4 L",
+      "C": "33.6 L",
+      "D": "44.8 L"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-043",
+    "numero": 43,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Una solución acuosa de cloruro de sodio (NaCl) tiene una concentración de 0.5 mol/L. Si se toman 500 mL de esta solución,\n\n¿cuántos gramos de NaCl hay disueltos? (Masa molar de NaCl = 58.5 g/mol)",
+    "opciones": {
+      "A": "14.625 g",
+      "B": "29.25 g",
+      "C": "58.5 g",
+      "D": "117 g"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-044",
+    "numero": 44,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La reacción de combustión del metano (CH ₄ ) se representa por la siguiente ecuación: CH ₄ + 2O ₂ → CO ₂ + 2H ₂ O\n\n¿Cuál de las siguientes afirmaciones describe correctamente esta reacción y la ley de conservación de la masa?",
+    "opciones": {
+      "A": "Se forman nuevas sustancias, pero la masa total de los reactivos es mayor que la masa total de los productos.",
+      "B": "Se forman nuevas sustancias, y la masa total de los reactivos es igual a la masa total de los productos.",
+      "C": "Los átomos de carbono se transforman en átomos de oxígeno, y la masa total se conserva.",
+      "D": "Los átomos de hidrógeno desaparecen durante la reacción, violando la ley de conservación de la masa."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-045",
+    "numero": 45,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "El agua (H ₂ O) y el peróxido de hidrógeno (H ₂ O ₂ ) son dos sustancias diferentes.\n\n¿Cuál de las siguientes afirmaciones explica correctamente esta diferencia?",
+    "opciones": {
+      "A": "Ambas sustancias tienen la misma fórmula química, pero diferentes propiedades debido a la cantidad de átomos de oxígeno.",
+      "B": "El agua es un elemento, mientras que el peróxido de hidrógeno es un compuesto.",
+      "C": "Ambas sustancias son compuestos, pero tienen diferentes propiedades debido a la disposición de los átomos en sus moléculas.",
+      "D": "El agua es una mezcla homogénea, mientras que el peróxido de hidrógeno es una mezcla heterogénea."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-046",
+    "numero": 46,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Se tienen tres muestras desconocidas: X, Y y Z. La muestra X conduce la electricidad, la muestra Y es un líquido incoloro que no conduce la electricidad, y la muestra Z es un sólido cristalino que se disuelve en agua y forma una solución que conduce la electricidad.\n\n¿Cuál de las siguientes combinaciones podría representar correctamente las muestras X, Y y Z?",
+    "opciones": {
+      "A": "X: Hierro, Y: Alcohol, Z: Sal de mesa",
+      "B": "X: Cobre, Y: Agua destilada, Z: Azúcar",
+      "C": "X: Grafito, Y: Aceite, Z: Arena",
+      "D": "X: Plata, Y: Vinagre, Z: Diamante"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-047",
+    "numero": 47,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En una reacción de combustión completa de metano (CH ₄ ) con oxígeno (O ₂ ), se producen dióxido de carbono (CO ₂ ) y agua (H ₂ O). Si se queman 16 gramos de metano,\n\n¿cuántos gramos de dióxido de carbono se producirán?",
+    "opciones": {
+      "A": "8 gramos",
+      "B": "16 gramos",
+      "C": "32 gramos",
+      "D": "44 gramos"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-048",
+    "numero": 48,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La solubilidad de un gas en un líquido aumenta cuando:",
+    "opciones": {
+      "A": "Aumenta la temperatura del líquido.",
+      "B": "Disminuye la presión sobre el líquido.",
+      "C": "Aumenta la presión sobre el líquido.",
+      "D": "El gas es más polar."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-049",
+    "numero": 49,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un gas ideal se encuentra en un recipiente con un pistón móvil que permite variar su volumen. Se le suministra calor al gas, y este se expande realizando trabajo sobre el pistón.\n\n¿Cuál de las siguientes afirmaciones es correcta según la primera ley de la termodinámica?",
+    "opciones": {
+      "A": "La energía interna del gas disminuye.",
+      "B": "La energía interna del gas aumenta.",
+      "C": "La energía interna del gas permanece constante.",
+      "D": "El trabajo realizado por el gas es igual al calor suministrado."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-050",
+    "numero": 50,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En un sistema termodinámico aislado que contiene un gas ideal, se produce una expansión adiabática irreversible.\n\n¿Cuál de las siguientes afirmaciones describe correctamente los cambios en la energía interna (U), la entropía (S) y la temperatura (T) del gas durante este proceso?",
+    "opciones": {
+      "A": "U disminuye, S aumenta, T disminuye.",
+      "B": "U permanece constante, S aumenta, T disminuye.",
+      "C": "U aumenta, S disminuye, T aumenta.",
+      "D": "U permanece constante, S permanece constante, T permanece constante."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-051",
+    "numero": 51,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La radiación ultravioleta (UV) del sol puede causar daño en la piel y aumentar el riesgo de cáncer.\n\n¿Cuál de las siguientes opciones es una medida de protección basada en principios físicos para reducir la exposición a la radiación UV?",
+    "opciones": {
+      "A": "Tomar suplementos de vitamina D.",
+      "B": "Aplicar protector solar con un factor de protección solar (FPS) adecuado.",
+      "C": "Evitar la exposición al sol durante las horas de menor intensidad.",
+      "D": "Usar ropa de colores claros y tejidos ligeros."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-052",
+    "numero": 52,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "El ruido excesivo puede causar daño auditivo y otros problemas de salud.\n\n¿Cuál de las siguientes opciones es una medida de prevención basada en principios físicos para reducir la exposición al ruido?",
+    "opciones": {
+      "A": "Utilizar tapones para los oídos o auriculares con cancelación de ruido.",
+      "B": "Escuchar música a un volumen moderado.",
+      "C": "Evitar lugares con altos niveles de ruido.",
+      "D": "Realizar ejercicios de relajación para reducir el estrés causado por el ruido."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-053",
+    "numero": 53,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251543/3b66b5e0-21b1-4b3e-bd84-6143e99a6184.png La imagen muestra un fenómeno ondulatorio común.\n\n¿Qué tipo de onda se representa y cuál es la dirección de propagación de la energía en este caso?",
+    "opciones": {
+      "A": "Onda longitudinal; la energía se propaga en la misma dirección que la vibración de las partículas del medio.",
+      "B": "Onda transversal; la energía se propaga perpendicularmente a la dirección de la vibración de las partículas del medio.",
+      "C": "Onda superficial; la energía se propaga a lo largo de la interfaz entre dos medios.",
+      "D": "Onda electromagnética; la energía se propaga a través del espacio sin necesidad de un medio material."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-054",
+    "numero": 54,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251611/ceb0d785-ad6e-44a8-b8db-ded3f39685ed.png La imagen ilustra la ley de la reflexión de la luz. Si el ángulo de incidencia ( θ i) fuese de 30°,\n\n¿cuál sería el ángulo de reflexión ( θ r)?",
+    "opciones": {
+      "A": "15°",
+      "B": "30°",
+      "C": "45°",
+      "D": "60°"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-055",
+    "numero": 55,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251717/6aba7fed-a838-4a7e-8c22-7085640479fa.png La imagen muestra a dos personas en un tren en movimiento. La persona A está sentada, mientras que la persona B camina hacia adelante en la misma dirección que el tren. Desde el punto de vista de un observador parado en el andén,\n\n¿cuál de las siguientes afirmaciones es correcta según el principio de la relatividad de Galileo?",
+    "opciones": {
+      "A": "La persona A está en reposo y la persona B está en movimiento.",
+      "B": "La persona A está en movimiento y la persona B está en reposo.",
+      "C": "Ambas personas están en reposo.",
+      "D": "Ambas personas están en movimiento, pero la persona B se mueve más rápido que la persona A."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-056",
+    "numero": 56,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251851/221f5fe5-0e59-4ce5-8d95-15be9ba9a3cb.png La imagen muestra un objeto sobre una superficie horizontal. Se aplica una fuerza horizontal (F) al objeto, pero este permanece en reposo debido a la fuerza de fricción (f) que actúa en sentido contrario.\n\n¿Cuál de las siguientes afirmaciones describe correctamente la relación entre la masa del objeto, la fuerza aplicada y la fuerza de fricción, según las leyes de Newton?",
+    "opciones": {
+      "A": "La masa del objeto no afecta la fuerza de fricción.",
+      "B": "La fuerza de fricción es igual a la fuerza aplicada, independientemente de la masa del objeto.",
+      "C": "La fuerza de fricción es proporcional a la masa del objeto y actúa en sentido contrario a la fuerza aplicada.",
+      "D": "La fuerza de fricción es inversamente proporcional a la masa del objeto y actúa en la misma dirección que la fuerza aplicada."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-057",
+    "numero": 57,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787251913/22eeb74b-4a83-427a-8380-5b764b0a21dc.png La imagen muestra un circuito simple en serie. Si la batería proporciona un voltaje (V) de 12 voltios y la resistencia (R) es de 4 ohmios,\n\n¿cuál será la corriente (I) que circula por el circuito, según la ley de Ohm?",
+    "opciones": {
+      "A": "1 amperio",
+      "B": "2 amperios",
+      "C": "3 amperios",
+      "D": "4 amperios"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-058",
+    "numero": 58,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787252031/1fc6203b-fe92-4e15-a255-59702031c399.png La imagen muestra un objeto en caída libre desde una altura (h). Si ignoramos la resistencia del aire,\n\n¿cuál de las siguientes ecuaciones describe correctamente la velocidad (v) del objeto en función del tiempo (t), la aceleración debida a la gravedad (g) y la altura inicial (h), según los modelos básicos de cinemática?",
+    "opciones": {
+      "A": "v = gt",
+      "B": "v = gt + h",
+      "C": "v = √ (2gh)",
+      "D": "v = √ (2gh) + gt"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-059",
+    "numero": 59,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Una onda sonora viaja a través del aire con una velocidad de 340 m/s y tiene una frecuencia de 500 Hz.\n\n¿Cuál es la longitud de onda de esta onda sonora?",
+    "opciones": {
+      "A": "0.68 m",
+      "B": "1.47 m",
+      "C": "170 m",
+      "D": "170,000 m"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-060",
+    "numero": 60,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un automóvil se desplaza a una velocidad constante de 20 m/s. Al frenar, experimenta una desaceleración constante de 5 m/s² hasta detenerse por completo.\n\n¿Cuál es la distancia total recorrida por el automóvil desde que comienza a frenar hasta que se detiene?",
+    "opciones": {
+      "A": "10 m",
+      "B": "20 m",
+      "C": "40 m",
+      "D": "80 m"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-061",
+    "numero": 61,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un refrigerador funciona extrayendo calor del interior y liberándolo al exterior.\n\n¿Cuál de las leyes de la termodinámica explica este proceso?",
+    "opciones": {
+      "A": "Primera ley de la termodinámica (conservación de la energía)",
+      "B": "Segunda ley de la termodinámica (entropía)",
+      "C": "Tercera ley de la termodinámica (cero absoluto)",
+      "D": "Ley de la gravitación universal"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-062",
+    "numero": 62,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Una onda transversal se propaga a lo largo de una cuerda tensa.\n\n¿Cuál de las siguientes afirmaciones sobre el movimiento de las partículas de la cuerda es VERDADERA?",
+    "opciones": {
+      "A": "Las partículas de la cuerda se mueven en la misma dirección que la onda.",
+      "B": "Las partículas de la cuerda se mueven perpendicularmente a la dirección de la onda.",
+      "C": "Las partículas de la cuerda se mueven en círculos.",
+      "D": "Las partículas de la cuerda no se mueven, solo vibran en su lugar."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-063",
+    "numero": 63,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un ciclista se desplaza hacia el norte a una velocidad de 10 m/s. Luego, gira hacia el este y mantiene la misma rapidez.\n\n¿Cuál de los siguientes vectores representa mejor la aceleración del ciclista durante el giro?",
+    "opciones": {
+      "A": "Un vector apuntando hacia el norte.",
+      "B": "Un vector apuntando hacia el este.",
+      "C": "Un vector apuntando hacia el sur.",
+      "D": "Un vector apuntando hacia el oeste."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "CN-10-064",
+    "numero": 64,
+    "materia": "Ciencias Naturales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Un bloque de masa 2 kg se encuentra en reposo sobre una superficie horizontal sin fricción. Se aplica una fuerza horizontal constante de 10 N al bloque.\n\n¿Cuál será la velocidad del bloque después de 4 segundos?",
+    "opciones": {
+      "A": "5 m/s",
+      "B": "10 m/s",
+      "C": "20 m/s",
+      "D": "40 m/s"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-065",
+    "numero": 65,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente párrafo y responde la pregunta: \"La proliferación de noticias falsas en internet ha generado una creciente preocupación en la sociedad. No obstante, existen herramientas y estrategias que pueden ayudar a los usuarios a identificar información confiable. Por ejemplo, verificar la fuente de la noticia, contrastarla con otras fuentes y analizar la evidencia presentada son pasos clave para discernir entre la verdad y la mentira en el mundo digital.\"\n\n¿Cuál es la función del marcador textual \"no obstante\" en el párrafo?",
+    "opciones": {
+      "A": "Introducir una causa.",
+      "B": "Indicar una consecuencia.",
+      "C": "Establecer un contraste.",
+      "D": "Añadir información."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-066",
+    "numero": 66,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente párrafo y responde la pregunta: \"La contaminación lumínica es un problema creciente en las ciudades modernas. El exceso de luz artificial durante la noche no solo dificulta la observación de las estrellas, sino que también afecta la salud humana y los ecosistemas. Para mitigar este problema, se pueden implementar medidas como reducir la intensidad de la iluminación, utilizar luces dirigidas hacia abajo y apagar las luces innecesarias.\"\n\n¿Cuál es la oración principal del párrafo?",
+    "opciones": {
+      "A": "La contaminación lumínica es un problema creciente en las ciudades modernas.",
+      "B": "El exceso de luz artificial durante la noche dificulta la observación de las estrellas.",
+      "C": "La contaminación lumínica afecta la salud humana y los ecosistemas.",
+      "D": "Se pueden implementar medidas para mitigar el problema de la contaminación lumínica."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-067",
+    "numero": 67,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de una crónica periodística sobre un barrio de Bogotá: \"La Candelaria, con sus calles empedradas y casas coloniales, es un museo viviente de la historia de la ciudad. Sin embargo, detrás de su fachada pintoresca, se esconden problemáticas sociales como la gentrificación y el turismo descontrolado.\"\n\n¿Cuál de los siguientes elementos locales del texto contribuye a crear una imagen CONTRASTANTE del barrio La Candelaria?",
+    "opciones": {
+      "A": "La mención de las calles empedradas y casas coloniales.",
+      "B": "El uso de la expresión \"museo viviente\".",
+      "C": "La referencia a la gentrificación y el turismo descontrolado.",
+      "D": "La descripción de la fachada como pintoresca."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-068",
+    "numero": 68,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un discurso de Martin Luther King Jr. pronunciado en 1963: \"Tengo un sueño que mis cuatro hijos pequeños vivirán un día en una nación donde no serán juzgados por el color de su piel, sino por el contenido de su carácter.\"\n\n¿Cuál de las siguientes opciones describe mejor el propósito principal de Martin Luther King Jr. al pronunciar este discurso?",
+    "opciones": {
+      "A": "Celebrar la diversidad cultural de Estados Unidos.",
+      "B": "Abogar por la igualdad de derechos para los afroamericanos.",
+      "C": "Criticar la violencia racial en Estados Unidos.",
+      "D": "Promover la integración racial en las escuelas."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-069",
+    "numero": 69,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un artículo de opinión sobre la inteligencia artificial: \"La inteligencia artificial tiene el potencial de transformar nuestras vidas de maneras inimaginables. Sin embargo, también plantea importantes desafíos éticos y sociales, como la pérdida de empleos y la discriminación algorítmica.\"\n\n¿Cuál de las siguientes opciones representa una perspectiva diferente a la presentada en el texto?",
+    "opciones": {
+      "A": "La inteligencia artificial es una herramienta poderosa que puede mejorar la eficiencia y la productividad.",
+      "B": "La inteligencia artificial debe ser desarrollada y utilizada de manera responsable, teniendo en cuenta sus posibles impactos negativos.",
+      "C": "La inteligencia artificial es una amenaza existencial para la humanidad y debe ser prohibida.",
+      "D": "La inteligencia artificial puede ser utilizada para resolver problemas globales como el cambio climático y la pobreza."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-070",
+    "numero": 70,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Has leído dos artículos sobre el cambio climático. El primero, publicado en una revista científica, presenta datos y evidencia sobre el impacto humano en el calentamiento global. El segundo, publicado en un blog personal, cuestiona la existencia del cambio climático y argumenta que es un fenómeno natural.\n\n¿Cuál de los siguientes criterios es más importante para evaluar la fiabilidad de estos artículos?",
+    "opciones": {
+      "A": "La extensión de los artículos.",
+      "B": "La cantidad de imágenes y gráficos utilizados.",
+      "C": "La calidad y credibilidad de las fuentes de información citadas.",
+      "D": "La opinión personal del autor sobre el tema."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-071",
+    "numero": 71,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un ensayo argumentativo: \"La contaminación del aire es un problema global que afecta la salud de millones de personas. Los principales causantes de esta contaminación son los vehículos motorizados, las industrias y la quema de combustibles fósiles. Para combatir este problema, es necesario implementar medidas como la promoción del transporte público, la inversión en energías renovables y la regulación de las emisiones industriales.\"\n\n¿Cuál es la función principal del primer párrafo en este ensayo?",
+    "opciones": {
+      "A": "Presentar la tesis del ensayo.",
+      "B": "Refutar argumentos contrarios.",
+      "C": "Proporcionar ejemplos concretos.",
+      "D": "Introducir el tema y contextualizar el problema."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-072",
+    "numero": 72,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de una noticia: \"Un estudio reciente publicado en la revista 'Nature' revela que el deshielo de los glaciares está ocurriendo a un ritmo acelerado. Los científicos advierten que este fenómeno podría tener graves consecuencias para el medio ambiente y la economía global.\"\n\n¿Cuál es la función principal de la cita a la revista 'Nature' en este fragmento?",
+    "opciones": {
+      "A": "Proporcionar evidencia científica para respaldar la afirmación sobre el deshielo acelerado.",
+      "B": "Promocionar la revista 'Nature' como una fuente confiable de información científica.",
+      "C": "Desviar la atención del lector hacia un tema diferente.",
+      "D": "Cuestionar la validez del estudio sobre el deshielo de los glaciares."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-073",
+    "numero": 73,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de una reseña de un videojuego: \"El nuevo título de la saga 'Galaxy Warriors' es una obra maestra de la ciencia ficción. Sus gráficos impresionantes, su jugabilidad adictiva y su historia épica te mantendrán pegado a la pantalla durante horas. ¡No te pierdas esta experiencia intergaláctica!\"\n\n¿Cuál es la intención comunicativa predominante del autor en este fragmento?",
+    "opciones": {
+      "A": "Informar objetivamente sobre las características del videojuego.",
+      "B": "Persuadir al lector para que compre el videojuego.",
+      "C": "Expresar su opinión personal sobre la calidad del videojuego.",
+      "D": "Narrar los eventos principales de la historia del videojuego."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-074",
+    "numero": 74,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un artículo de opinión: \"La propuesta de reducir la jornada laboral a cuatro días es una idea absurda. ¿Acaso los trabajadores no tienen suficiente tiempo libre? ¿No se dan cuenta de que esta medida perjudicaría gravemente a la economía? Es evidente que quienes defienden esta propuesta están desconectados de la realidad.\"\n\n¿Cuál de las siguientes figuras retóricas utiliza el autor en este fragmento?",
+    "opciones": {
+      "A": "Ironía",
+      "B": "Sarcasmo",
+      "C": "Metáfora",
+      "D": "Hipérbole"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-075",
+    "numero": 75,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un artículo sobre el cambio climático: \"El cambio climático es un fenómeno complejo causado principalmente por la actividad humana. La quema de combustibles fósiles, la deforestación y la agricultura intensiva son algunas de las actividades que generan gases de efecto invernadero, los cuales atrapan el calor en la atmósfera y provocan el aumento de la temperatura global. Este aumento de temperatura tiene consecuencias negativas para el medio ambiente, como el derretimiento de los glaciares, el aumento del nivel del mar y la intensificación de eventos climáticos extremos.\"\n\n¿Cuál de las siguientes opciones caracteriza mejor la idea principal del texto",
+    "opciones": {
+      "A": "El cambio climático es un fenómeno natural que no puede ser evitado.",
+      "B": "La actividad humana es la principal causa del cambio climático y sus consecuencias negativas.",
+      "C": "El cambio climático solo afecta a ciertas regiones del planeta.",
+      "D": "La tecnología puede resolver todos los problemas relacionados con el cambio climático."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-076",
+    "numero": 76,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un artículo sobre la educación en línea publicado en la revista Forbes: \"La educación en línea ha demostrado ser una herramienta poderosa para democratizar el acceso al conocimiento. Permite a estudiantes de todo el mundo acceder a cursos de alta calidad impartidos por expertos en diversas disciplinas, sin las limitaciones geográficas o económicas de la educación tradicional. Además, la flexibilidad de horarios y la posibilidad de aprender a su propio ritmo hacen que la educación en línea sea una opción atractiva para aquellos que buscan compaginar sus estudios con otras responsabilidades.\"\n\n¿Cuál de las siguientes afirmaciones representa una controversia que el autor busca refutar en este fragmento?",
+    "opciones": {
+      "A": "La educación en línea es una herramienta poderosa para democratizar el acceso al conocimiento.",
+      "B": "La educación en línea permite a estudiantes de todo el mundo acceder a cursos de alta calidad.",
+      "C": "La educación en línea es solo para aquellos que no pueden acceder a la educación tradicional.",
+      "D": "La flexibilidad de horarios y el aprendizaje a su propio ritmo son ventajas de la educación en línea."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-077",
+    "numero": 77,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes opciones representa una falacia de apelación a la autoridad?",
+    "opciones": {
+      "A": "El cambio climático es una realidad porque 97% de los científicos están de acuerdo en ello.",
+      "B": "Mi madre dice que el chocolate es malo para la salud, así que no deberías comerlo.",
+      "C": "Los estudiantes que estudian más horas tienden a sacar mejores notas en los exámenes.",
+      "D": "Si quieres mejorar tu salud, debes hacer ejercicio regularmente y llevar una dieta equilibrada."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-078",
+    "numero": 78,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes afirmaciones contiene una falacia de falsa causa?",
+    "opciones": {
+      "A": "Las personas que tienen mascotas son más felices porque las mascotas les hacen compañía.",
+      "B": "Desde que empezamos a reciclar en casa, nuestra salud ha mejorado significativamente.",
+      "C": "El consumo excesivo de azúcar puede llevar a problemas de salud como la diabetes.",
+      "D": "Si estudias con regularidad, es probable que mejores tu rendimiento académico."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-079",
+    "numero": 79,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "https://res.cloudinary.com/dewh4igy9/image/upload/v1787252136/9bed5566-9327-461d-9e19-04055b2ef591.png Observe la imagen. Considerando la información presentada en la tabla del gráfico,\n\n¿cuál de las siguientes afirmaciones es una implicación válida del aumento del nivel del mar?",
+    "opciones": {
+      "A": "El aumento del nivel del mar es un fenómeno natural que no tiene relación con la actividad humana.",
+      "B": "Las ciudades costeras con mayor densidad de población serán las más afectadas por el aumento del nivel del mar.",
+      "C": "El aumento del nivel del mar podría provocar inundaciones, erosión costera y desplazamiento de comunidades.",
+      "D": "La única solución para el aumento del nivel del mar es construir barreras de protección en todas las costas."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "LEN-10-080",
+    "numero": 80,
+    "materia": "Lenguaje",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Estás buscando información sobre la historia de la música rock. Te encuentras con dos libros: Libro 1: \"Rock and Roll: An Uncensored History\" (Rock and Roll: Una Historia Sin Censura), escrito por un periodista musical independiente y publicado en 2023. Libro 2: \"A History of Rock Music\" (Una Historia de la Música Rock), escrito por un profesor de musicología de una universidad reconocida y publicado en 1995 por una editorial académica.\n\n¿Cuál de los dos libros podría ser más útil para tu investigación, considerando la procedencia de cada uno?",
+    "opciones": {
+      "A": "El Libro 1, porque al ser más reciente, probablemente incluya información sobre desarrollos más actuales en la música rock.",
+      "B": "El Libro 2, porque al ser escrito por un académico y publicado por una editorial universitaria, es más probable que presente una perspectiva más objetiva y fundamentada.",
+      "C": "El Libro 1, porque al ser escrito por un periodista independiente, es más probable que ofrezca una visión más crítica y menos convencional de la historia del rock.",
+      "D": "El Libro 2, porque al ser más antiguo, es más probable que se base en fuentes primarias y testimonios de figuras clave de la época."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-081",
+    "numero": 81,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes opciones NO es una forma común de organización social?",
+    "opciones": {
+      "A": "Familia",
+      "B": "Tribu",
+      "C": "Estado",
+      "D": "Clima"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-082",
+    "numero": 82,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Los movimientos sociales a lo largo de la historia han luchado por diversas causas.\n\n¿Cuál de los siguientes movimientos sociales se caracteriza por buscar la igualdad de derechos y oportunidades para las mujeres?",
+    "opciones": {
+      "A": "Movimiento obrero",
+      "B": "Movimiento ecologista",
+      "C": "Movimiento feminista",
+      "D": "Movimiento estudiantil"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-083",
+    "numero": 83,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En un sistema capitalista,\n\n¿cuál es la principal forma de producción económica y cómo se relaciona con el poder político?",
+    "opciones": {
+      "A": "Producción comunitaria, donde el poder político se distribuye equitativamente entre todos los miembros de la sociedad.",
+      "B": "Producción estatal, donde el gobierno controla todos los medios de producción y toma las decisiones económicas.",
+      "C": "Producción privada, donde los individuos y las empresas son dueños de los medios de producción y buscan maximizar sus ganancias.",
+      "D": "Producción feudal, donde los señores feudales son dueños de la tierra y los campesinos trabajan para ellos a cambio de protección."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-084",
+    "numero": 84,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes conceptos se refiere a la forma en que una sociedad produce, distribuye y consume bienes y servicios?",
+    "opciones": {
+      "A": "Cultura",
+      "B": "Política",
+      "C": "Economía",
+      "D": "Geografía"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-085",
+    "numero": 85,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de las siguientes características NO es propia de un Estado Social de Derecho?",
+    "opciones": {
+      "A": "Protección de los derechos fundamentales de los ciudadanos.",
+      "B": "Intervención del Estado en la economía para garantizar el bienestar social.",
+      "C": "Concentración del poder en una sola persona o grupo.",
+      "D": "Búsqueda de la igualdad de oportunidades para todos los ciudadanos."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-086",
+    "numero": 86,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La arquitectura de una ciudad puede revelar mucho sobre su historia y las culturas que la han influenciado.\n\n¿Cuál de los siguientes ejemplos ilustra la conexión de una sociedad con su pasado y otras culturas a través de su arquitectura?",
+    "opciones": {
+      "A": "Un edificio moderno de oficinas con fachada de vidrio y acero en el centro de una ciudad.",
+      "B": "Una iglesia colonial construida en el siglo XVI con elementos arquitectónicos españoles e indígenas.",
+      "C": "Un centro comercial con tiendas de marcas internacionales y restaurantes de comida rápida.",
+      "D": "Un estadio deportivo diseñado para albergar eventos masivos y competencias internacionales."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-087",
+    "numero": 87,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Los conflictos y los saberes de las culturas en diferentes épocas han dejado huellas en la sociedad actual.\n\n¿Cuál de los siguientes ejemplos NO representa una manifestación de esta herencia cultural?",
+    "opciones": {
+      "A": "La celebración de festividades religiosas con raíces indígenas y españolas.",
+      "B": "El uso de técnicas agrícolas tradicionales transmitidas de generación en generación.",
+      "C": "La adopción de tecnologías digitales y redes sociales en la comunicación diaria.",
+      "D": "La preservación de lenguas indígenas y sus expresiones artísticas."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-088",
+    "numero": 88,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿En qué siglo se desarrolló la Revolución Industrial, un proceso de transformación económica y social que marcó el inicio de la era industrial?",
+    "opciones": {
+      "A": "Siglo XV",
+      "B": "Siglo XVI",
+      "C": "Siglo XVII",
+      "D": "Siglo XVIII"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-089",
+    "numero": 89,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿En qué región del mundo se originó la democracia como sistema de gobierno, donde los ciudadanos participan en la toma de decisiones políticas?",
+    "opciones": {
+      "A": "Mesopotamia",
+      "B": "Egipto",
+      "C": "Grecia",
+      "D": "China"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-090",
+    "numero": 90,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "El Apartheid fue un sistema de segregación racial institucionalizado.\n\n¿En qué país se implementó y en qué período histórico?",
+    "opciones": {
+      "A": "Estados Unidos, siglo XIX",
+      "B": "Sudáfrica, siglo XX",
+      "C": "India, siglo XX",
+      "D": "Australia, siglo XIX"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-091",
+    "numero": 91,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes eventos históricos en Colombia se relaciona directamente con la lucha por la autonomía y el reconocimiento de los derechos de las comunidades afrodescendientes?",
+    "opciones": {
+      "A": "La fundación de la ciudad de Medellín.",
+      "B": "El Tratado de Paz entre el Gobernador de Cartagena y Benkos Biohó.",
+      "C": "La prohibición del uso oficial de lenguas indígenas por parte de Carlos III.",
+      "D": "La Guerra de los Mil Días."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-092",
+    "numero": 92,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "¿Cuál de los siguientes eventos históricos colombianos tuvo lugar durante el siglo XX y tuvo un impacto significativo en la política y la sociedad del país?",
+    "opciones": {
+      "A": "El Grito de Independencia.",
+      "B": "La Guerra Civil entre Centralistas y Federalistas.",
+      "C": "El asesinato de Jorge Eliécer Gaitán.",
+      "D": "La Constitución de 1843."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-093",
+    "numero": 93,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un discurso y responde la pregunta: \"Compatriotas, la patria exige de nosotros grandes sacrificios. La independencia no se obtiene sin esfuerzo ni valentía. Debemos unirnos como un solo pueblo para enfrentar al enemigo común y construir un futuro de libertad y justicia para todos.\"\n\n¿En qué contexto histórico y político es más probable que se haya pronunciado este discurso?",
+    "opciones": {
+      "A": "La Guerra de los Mil Días en Colombia (1899- 1902)",
+      "B": "El Bogotazo tras el asesinato de Jorge Eliécer Gaitán (1948)",
+      "C": "El proceso de paz entre el gobierno colombiano y las FARC (2012-2016)",
+      "D": "El movimiento estudiantil de 1968 en México"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-094",
+    "numero": 94,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Lee el siguiente fragmento de un diario personal y responde la pregunta: \"Hoy he visto cómo las máquinas reemplazan a los hombres en la fábrica. El ruido ensordecedor y el ritmo frenético de las máquinas me asustan. Temo por el futuro de los trabajadores y por el mío propio.\"\n\n¿En qué contexto económico y social es más probable que se haya escrito este fragmento?",
+    "opciones": {
+      "A": "La Revolución Industrial en Inglaterra (siglo XVIII - XIX)",
+      "B": "La Gran Depresión en Estados Unidos (1929- 1939)",
+      "C": "La globalización económica en el siglo XXI",
+      "D": "La crisis del petróleo de 1973"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-095",
+    "numero": 95,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "En el contexto de la organización política de Colombia,\n\n¿cuál de las siguientes entidades representa el nivel de gobierno más cercano a los ciudadanos y se encarga de asuntos locales como el alumbrado público, la recolección de basuras y el mantenimiento de parques?",
+    "opciones": {
+      "A": "El Congreso de la República",
+      "B": "La Alcaldía Municipal",
+      "C": "La Gobernación Departamental",
+      "D": "La Presidencia de la República"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "SOC-10-096",
+    "numero": 96,
+    "materia": "Ciencias Sociales",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "La Constitución Política de 1991 establece que Colombia es un Estado Social de Derecho.\n\n¿Cuál de las siguientes opciones NO es una característica fundamental de este tipo de Estado?",
+    "opciones": {
+      "A": "Reconocimiento y protección de los derechos fundamentales de los ciudadanos.",
+      "B": "Intervención del Estado en la economía para promover la justicia social y la igualdad de oportunidades.",
+      "C": "Separación de poderes (ejecutivo, legislativo y judicial) para garantizar un sistema de controles y equilibrios.",
+      "D": "Establecimiento de un sistema de gobierno unipartidista donde un solo partido político tiene el poder absoluto."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-097",
+    "numero": 97,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following text and choose the best answer. Text: Maria is a student who loves to learn. She is always curious and asks a lot of questions. In her free time, she enjoys reading books and watching documentaries about different topics. She also likes to spend time with her friends and family.\n\nWhich word best describes Maria?",
+    "opciones": {
+      "A": "Lazy",
+      "B": "Inquisitive",
+      "C": "Bored",
+      "D": "Shy"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-098",
+    "numero": 98,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following text and choose the best answer. Text: Although the weather forecast predicted rain, the sun was shining brightly. The birds were singing, and a gentle breeze was blowing. It was a perfect day for a picnic.\n\nWhat can you infer about the weather forecast?",
+    "opciones": {
+      "A": "It was accurate.",
+      "B": "It was completely wrong.",
+      "C": "It predicted sunny weather.",
+      "D": "It predicted a storm."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-099",
+    "numero": 99,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following text message and answer the question. Text Message: Hey! The party starts at 7 pm at my house. Don't forget to bring a snack to share. Can't wait to see you!\n\nWhat is the main purpose of the text message?",
+    "opciones": {
+      "A": "To invite someone to a party.",
+      "B": "To ask for help with homework.",
+      "C": "To apologize for missing a class.",
+      "D": "To remind someone to buy groceries."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-100",
+    "numero": 100,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Choose the best response to complete the following conversation. Conversation: Friend 1: \"I had the strangest dream last night. I was flying over a city of giant mushrooms!\" Friend 2: \"Wow, that sounds interesting! ______________________\"\n\nChoose the best response to complete the conversation.",
+    "opciones": {
+      "A": "What did you eat for dinner?",
+      "B": "Did you study for the math test?",
+      "C": "What happened next?",
+      "D": "Can you lend me your notes?"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-101",
+    "numero": 101,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following text and choose the best answer. Text: The Amazon rainforest is a vast and diverse ecosystem located in South America. It is home to millions of species of plants and animals, including jaguars, monkeys, and colorful birds. The Amazon River, which flows through the rainforest, is the largest river in the world by volume.\n\nWhat is the main topic of this text?",
+    "opciones": {
+      "A": "The animals of the Amazon rainforest.",
+      "B": "The Amazon River.",
+      "C": "The Amazon rainforest.",
+      "D": "South America."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-102",
+    "numero": 102,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following text and choose the best answer. Text: To make a delicious chocolate cake, you will need the following ingredients: flour, sugar, cocoa powder, eggs, milk, butter, and baking powder. First, preheat the oven to 350 degrees Fahrenheit. Then, mix the dry ingredients in one bowl and the wet ingredients in another bowl. Combine the two mixtures and pour the batter into a greased baking pan. Bake for 30 minutes, or until a toothpick inserted into the center comes out clean.\n\nWhat type of text is this?",
+    "opciones": {
+      "A": "Narrative",
+      "B": "Descriptive",
+      "C": "Expository",
+      "D": "Instructive"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-103",
+    "numero": 103,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following excerpt from a speech and answer the question. Excerpt: \"My fellow citizens, we stand at a crossroads. The challenges we face are great, but our potential is even greater. Together, we can build a brighter future for our nation. Let us embrace unity, compassion, and progress as we move forward.\"\n\nWhat is the main purpose of this excerpt?",
+    "opciones": {
+      "A": "Informative (Referential)",
+      "B": "Expressive (Emotive)",
+      "C": "Persuasive (Conative)",
+      "D": "Metalinguistic"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-104",
+    "numero": 104,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following poem and answer the question. Poem: The sun dips below the horizon, Painting the sky with hues of gold and crimson. A gentle breeze whispers through the trees, Carrying the scent of blooming jasmine.\n\nWhat is the main purpose of this poem?",
+    "opciones": {
+      "A": "Informative (Referential)",
+      "B": "Expressive (Emotive)",
+      "C": "Persuasive (Conative)",
+      "D": "Poetic"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-105",
+    "numero": 105,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Choose the best connector to complete the sentence.\n\nSentence: I love to travel, _____ I don't like flying.",
+    "opciones": {
+      "A": "so",
+      "B": "but",
+      "C": "because",
+      "D": "and"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-106",
+    "numero": 106,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Choose the best connector to complete the sentence.\n\nSentence: She studied hard for the exam, _____ she got a good grade.",
+    "opciones": {
+      "A": "neither",
+      "B": "nor",
+      "C": "therefore",
+      "D": "unless"
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-107",
+    "numero": 107,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following conversation and answer the question. Conversation: Person A: \"Hey, are you free to hang out this weekend?\" Person B: \"Actually, I'm pretty busy. I have a lot of homework and chores to do.\"\n\nWhat is the most likely reason Person B said they are busy?",
+    "opciones": {
+      "A": "They don't want to hang out with Person A.",
+      "B": "They have other plans for the weekend.",
+      "C": "They genuinely have a lot to do.",
+      "D": "They are trying to be polite."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "ING-10-108",
+    "numero": 108,
+    "materia": "Inglés",
+    "competencia": "",
+    "componente": "",
+    "enunciado": "Instructions: Read the following text and answer the question. Text: \"The new smartphone model is finally here! It boasts a revolutionary camera, a lightning-fast processor, and a sleek design that will turn heads. Don't miss out on the chance to own the future of technology.\"\n\nWhat is the main purpose of this text?",
+    "opciones": {
+      "A": "To inform the reader about the features of a new smartphone.",
+      "B": "To persuade the reader to buy the new smartphone.",
+      "C": "To compare the new smartphone with other models.",
+      "D": "To explain how the new smartphone was developed."
+    },
+    "comentarios": {
+      "A": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "opción correcta",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "",
+        "pedagogico": ""
+      }
+    }
+  }
+]

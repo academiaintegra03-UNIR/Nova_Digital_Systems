@@ -18,7 +18,7 @@ export default async function ColegiosPanelLayout({ children }: { children: Reac
     <DashboardShell
       panelLabel="Panel de colegios"
       navItems={navItems}
-      pageSubtitle="Datos de prueba — panel institucional"
+      pageSubtitle="Panel institucional"
       profile={profile}
     >
       {children}

@@ -18,7 +18,7 @@ export default async function AcudientesLayout({ children }: { children: React.R
     <DashboardShell
       panelLabel="Panel de acudientes"
       navItems={navItems}
-      pageSubtitle="Datos de prueba — panel del acudiente"
+      pageSubtitle="Panel del acudiente"
       profile={profile}
     >
       {children}
