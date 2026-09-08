@@ -231,3 +231,49 @@ export async function deleteMensajeAction(formData: FormData): Promise<MateriasA
   revalidatePath(`/tutores/materias`);
   return { success: true };
 }
+
+export async function createRecursoAction(formData: FormData): Promise<MateriasActionState> {
+  const caller = await requireRole("tutor");
+
+  const grupoId = String(formData.get("grupo_id") ?? "");
+  const materiaId = String(formData.get("materia_id") ?? "");
+  const titulo = String(formData.get("titulo") ?? "").trim();
+  const tipo = String(formData.get("tipo") ?? "link");
+  const url = String(formData.get("url") ?? "").trim();
+  if (!grupoId || !materiaId || !titulo || !url) return { error: "Completa el título y el link del recurso." };
+  if (tipo !== "pdf" && tipo !== "link") return { error: "Tipo de recurso inválido." };
+
+  const admin = createAdminClient();
+  if (!(await verifyGrupoIsMine(admin, grupoId, caller.id))) return { error: "Ese grupo no es tuyo." };
+
+  const { error } = await admin
+    .from("materia_recursos")
+    .insert({ grupo_id: grupoId, materia_id: materiaId, tutor_id: caller.id, titulo, tipo, url });
+  if (error) {
+    console.error("Failed to create recurso:", error);
+    return { error: "No se pudo agregar el recurso." };
+  }
+
+  revalidatePath("/tutores/materias");
+  return { success: true };
+}
+
+export async function deleteRecursoAction(formData: FormData): Promise<MateriasActionState> {
+  const caller = await requireRole("tutor");
+
+  const id = String(formData.get("id") ?? "");
+  if (!id) return { error: "Falta el recurso a eliminar." };
+
+  const admin = createAdminClient();
+  const { data: existing } = await admin.from("materia_recursos").select("tutor_id").eq("id", id).single();
+  if (!existing || existing.tutor_id !== caller.id) return { error: "Ese recurso no es tuyo." };
+
+  const { error } = await admin.from("materia_recursos").delete().eq("id", id);
+  if (error) {
+    console.error("Failed to delete recurso:", error);
+    return { error: "No se pudo eliminar el recurso." };
+  }
+
+  revalidatePath("/tutores/materias");
+  return { success: true };
+}

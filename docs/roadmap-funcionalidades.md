@@ -176,6 +176,16 @@ confirmarla en el momento de implementar.)* Si se necesita sin límite de
 tiempo en llamadas grupales, la alternativa es Google Workspace de pago
 (ver workspace.google.com/pricing).
 
+⚠️ **Esto no aplica en este caso**: la cuenta de Google que se usa para
+las clases tiene **Google One Pro** (nivel Premium, 2 TB), que incluye
+las funciones Premium de Meet — entre ellas, llamadas grupales sin el
+tope de 60 minutos y grabación de la reunión. En la práctica el tope de
+la tabla de arriba no aplica y no hace falta Google Workspace para esto.
+*(Beneficio de Meet según el comparativo de planes de Google One, no
+verificado en vivo contra el dashboard de esa cuenta específica —
+confirmar ahí los beneficios exactos del plan antes de depender de esto
+para una clase real, sobre todo la grabación.)*
+
 ### Dominio propio
 
 No es un servicio con capa gratis — es una compra anual recurrente.

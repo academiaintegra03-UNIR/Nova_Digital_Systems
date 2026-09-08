@@ -236,6 +236,16 @@ export interface ForoMensajeRow {
   createdAt: string;
 }
 
+export interface RecursoRow {
+  id: string;
+  grupoId: string;
+  materiaId: string;
+  titulo: string;
+  tipo: "pdf" | "link";
+  url: string;
+  createdAt: string;
+}
+
 export interface AdminUserRow {
   id: string;
   name: string;

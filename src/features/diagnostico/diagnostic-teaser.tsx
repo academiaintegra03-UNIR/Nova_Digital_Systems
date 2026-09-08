@@ -1,8 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { CheckCircle2, ExternalLink, Loader2 } from "lucide-react";
-import type { BancoId, Opcion } from "@/lib/diagnostico/types";
+import { CheckCircle2, Download, ExternalLink, Loader2 } from "lucide-react";
+import { BANCO_LABEL, type BancoId, type Opcion } from "@/lib/diagnostico/types";
+import { buildDiagnosticoPdf, diagnosticoReportFilename } from "@/lib/diagnostico/report-pdf";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,11 +14,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ProgressRow } from "@/components/shared/progress-row";
 
-const BATERIAS: { id: BancoId; label: string }[] = [
-  { id: "general", label: "Batería Diagnóstica General (14 reactivos)" },
-  { id: "noveno", label: "Curso Pre-ICFES Grado 9° (60 reactivos)" },
-  { id: "decimo", label: "Curso Pre-ICFES Grado 10° (108 reactivos)" },
-];
+const BATERIAS: { id: BancoId; label: string }[] = (Object.entries(BANCO_LABEL) as [BancoId, string][]).map(
+  ([id, label]) => ({ id, label })
+);
 
 interface PreguntaPublica {
   id: string;
@@ -65,15 +64,23 @@ interface LeadForm {
   bancoId: BancoId;
 }
 
-const LEAD_INICIAL: LeadForm = {
-  estudianteNombre: "",
-  estudianteEdad: "",
-  estudianteEmail: "",
-  colegio: "",
-  acudienteEmail: "",
-  acudienteTelefono: "",
-  bancoId: "general",
-};
+export interface CuentaConocida {
+  nombre: string;
+  colegio: string | null;
+  email: string | null;
+}
+
+function getLeadInicial(cuentaConocida?: CuentaConocida): LeadForm {
+  return {
+    estudianteNombre: cuentaConocida?.nombre ?? "",
+    estudianteEdad: "",
+    estudianteEmail: cuentaConocida?.email ?? "",
+    colegio: cuentaConocida?.colegio ?? "",
+    acudienteEmail: "",
+    acudienteTelefono: "",
+    bancoId: "general",
+  };
+}
 
 /** El grado ya lo indica la batería elegida — no hace falta pedirlo
  * aparte (el selector de batería ya distingue 9°/10°/general). */
@@ -91,9 +98,9 @@ function formatTiempo(segundos: number): string {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
-export function DiagnosticTeaser() {
+export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaConocida } = {}) {
   const [paso, setPaso] = React.useState<Paso>("lead");
-  const [lead, setLead] = React.useState<LeadForm>(LEAD_INICIAL);
+  const [lead, setLead] = React.useState<LeadForm>(() => getLeadInicial(cuentaConocida));
   const [error, setError] = React.useState<string>();
   const [isLoadingBanco, setIsLoadingBanco] = React.useState(false);
 
@@ -104,6 +111,7 @@ export function DiagnosticTeaser() {
   const [segundosRestantes, setSegundosRestantes] = React.useState(0);
   const desenfoquesRef = React.useRef(0);
   const [resultado, setResultado] = React.useState<SubmitResponse | null>(null);
+  const [isDownloading, setIsDownloading] = React.useState(false);
 
   const enExamen = paso === "examen";
 
@@ -181,7 +189,7 @@ export function DiagnosticTeaser() {
       setError("Escribe el nombre del estudiante.");
       return;
     }
-    if (!lead.acudienteEmail.trim() && !lead.acudienteTelefono.trim()) {
+    if (!cuentaConocida && !lead.acudienteEmail.trim() && !lead.acudienteTelefono.trim()) {
       setError("Deja al menos un correo o teléfono del acudiente para enviarle el resultado.");
       return;
     }
@@ -207,7 +215,7 @@ export function DiagnosticTeaser() {
 
   function reiniciar() {
     setPaso("lead");
-    setLead(LEAD_INICIAL);
+    setLead(getLeadInicial(cuentaConocida));
     setBanco(null);
     setResultado(null);
     setError(undefined);
@@ -216,10 +224,18 @@ export function DiagnosticTeaser() {
   if (paso === "lead") {
     return (
       <div className="mx-auto max-w-2xl px-4 py-14 sm:px-8">
-        <div className="mb-2.5 text-center text-xs font-bold tracking-wide text-[#2FA6A1] uppercase">
-          Gratis · Sin compromiso
-        </div>
-        <h1 className="mb-3.5 text-center text-3xl font-extrabold text-primary">Diagnóstico académico</h1>
+        {cuentaConocida ? (
+          <h1 className="mb-3.5 text-center text-3xl font-extrabold text-primary">
+            Hola, {cuentaConocida.nombre.split(" ")[0]} — hagamos tu diagnóstico
+          </h1>
+        ) : (
+          <>
+            <div className="mb-2.5 text-center text-xs font-bold tracking-wide text-[#2FA6A1] uppercase">
+              Gratis · Sin compromiso
+            </div>
+            <h1 className="mb-3.5 text-center text-3xl font-extrabold text-primary">Diagnóstico académico</h1>
+          </>
+        )}
         <p className="mb-8 text-center text-base leading-relaxed text-foreground/80">
           Un vistazo breve y claro al nivel actual del estudiante: identificamos fortalezas y las áreas donde
           más conviene reforzar. No usamos puntajes garantizados ni predicciones — solo una recomendación
@@ -235,20 +251,35 @@ export function DiagnosticTeaser() {
                 </Alert>
               ) : null}
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1.6fr_1fr]">
-                <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="dx-estudiante">Nombre completo del estudiante</Label>
-                  <Input
-                    id="dx-estudiante"
-                    placeholder="Ej. Jimmy Alejandro"
-                    value={lead.estudianteNombre}
-                    onChange={(e) => setLead((l) => ({ ...l, estudianteNombre: e.target.value }))}
-                    required
-                    disabled={isLoadingBanco}
-                  />
+              {!cuentaConocida ? (
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1.6fr_1fr]">
+                  <div className="flex flex-col gap-1.5">
+                    <Label htmlFor="dx-estudiante">Nombre completo del estudiante</Label>
+                    <Input
+                      id="dx-estudiante"
+                      placeholder="Ej. Jimmy Alejandro"
+                      value={lead.estudianteNombre}
+                      onChange={(e) => setLead((l) => ({ ...l, estudianteNombre: e.target.value }))}
+                      required
+                      disabled={isLoadingBanco}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <Label htmlFor="dx-edad">Edad</Label>
+                    <Input
+                      id="dx-edad"
+                      type="number"
+                      min={1}
+                      placeholder="Ej. 17"
+                      value={lead.estudianteEdad}
+                      onChange={(e) => setLead((l) => ({ ...l, estudianteEdad: e.target.value }))}
+                      disabled={isLoadingBanco}
+                    />
+                  </div>
                 </div>
+              ) : (
                 <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="dx-edad">Edad</Label>
+                  <Label htmlFor="dx-edad">Edad (opcional)</Label>
                   <Input
                     id="dx-edad"
                     type="number"
@@ -259,7 +290,7 @@ export function DiagnosticTeaser() {
                     disabled={isLoadingBanco}
                   />
                 </div>
-              </div>
+              )}
 
               <div className="flex flex-col gap-1.5">
                 <Label htmlFor="dx-bateria">Selecciona la batería diagnóstica a presentar</Label>
@@ -281,62 +312,73 @@ export function DiagnosticTeaser() {
                 </Select>
               </div>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="dx-acudiente-email">Correo del acudiente (para el reporte oficial)</Label>
-                  <Input
-                    id="dx-acudiente-email"
-                    type="email"
-                    placeholder="Ej. acudiente@correo.com"
-                    value={lead.acudienteEmail}
-                    onChange={(e) => setLead((l) => ({ ...l, acudienteEmail: e.target.value }))}
-                    disabled={isLoadingBanco}
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="dx-estudiante-email">Correo del estudiante (opcional — copia)</Label>
-                  <Input
-                    id="dx-estudiante-email"
-                    type="email"
-                    placeholder="Ej. estudiante@correo.com"
-                    value={lead.estudianteEmail}
-                    onChange={(e) => setLead((l) => ({ ...l, estudianteEmail: e.target.value }))}
-                    disabled={isLoadingBanco}
-                  />
-                </div>
-              </div>
+              {!cuentaConocida ? (
+                <>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="dx-acudiente-email">Correo del acudiente (para el reporte oficial)</Label>
+                      <Input
+                        id="dx-acudiente-email"
+                        type="email"
+                        placeholder="Ej. acudiente@correo.com"
+                        value={lead.acudienteEmail}
+                        onChange={(e) => setLead((l) => ({ ...l, acudienteEmail: e.target.value }))}
+                        disabled={isLoadingBanco}
+                      />
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="dx-estudiante-email">Correo del estudiante (opcional — copia)</Label>
+                      <Input
+                        id="dx-estudiante-email"
+                        type="email"
+                        placeholder="Ej. estudiante@correo.com"
+                        value={lead.estudianteEmail}
+                        onChange={(e) => setLead((l) => ({ ...l, estudianteEmail: e.target.value }))}
+                        disabled={isLoadingBanco}
+                      />
+                    </div>
+                  </div>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="dx-acudiente-tel">Celular del acudiente (WhatsApp)</Label>
-                  <Input
-                    id="dx-acudiente-tel"
-                    type="tel"
-                    placeholder="Ej. +57 300 123 4567"
-                    value={lead.acudienteTelefono}
-                    onChange={(e) => setLead((l) => ({ ...l, acudienteTelefono: e.target.value }))}
-                    disabled={isLoadingBanco}
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="dx-colegio">Colegio o institución educativa (opcional)</Label>
-                  <Input
-                    id="dx-colegio"
-                    placeholder="Ej. Colegio Santa María"
-                    value={lead.colegio}
-                    onChange={(e) => setLead((l) => ({ ...l, colegio: e.target.value }))}
-                    disabled={isLoadingBanco}
-                  />
-                </div>
-              </div>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="dx-acudiente-tel">Celular del acudiente (WhatsApp)</Label>
+                      <Input
+                        id="dx-acudiente-tel"
+                        type="tel"
+                        placeholder="Ej. +57 300 123 4567"
+                        value={lead.acudienteTelefono}
+                        onChange={(e) => setLead((l) => ({ ...l, acudienteTelefono: e.target.value }))}
+                        disabled={isLoadingBanco}
+                      />
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="dx-colegio">Colegio o institución educativa (opcional)</Label>
+                      <Input
+                        id="dx-colegio"
+                        placeholder="Ej. Colegio Santa María"
+                        value={lead.colegio}
+                        onChange={(e) => setLead((l) => ({ ...l, colegio: e.target.value }))}
+                        disabled={isLoadingBanco}
+                      />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <p className="text-xs text-muted-foreground">
+                  Tu reporte llega automáticamente a tu acudiente registrado — no hace falta que dejes su
+                  contacto aquí.
+                </p>
+              )}
 
               <Button type="submit" size="lg" className="mt-2" disabled={isLoadingBanco}>
                 {isLoadingBanco ? "Cargando..." : "Comenzar diagnóstico"}
               </Button>
-              <p className="text-center text-xs text-muted-foreground">
-                Si el estudiante es menor de edad, se asume el consentimiento del acudiente al dejar sus datos
-                de contacto arriba.
-              </p>
+              {!cuentaConocida ? (
+                <p className="text-center text-xs text-muted-foreground">
+                  Si el estudiante es menor de edad, se asume el consentimiento del acudiente al dejar sus datos
+                  de contacto arriba.
+                </p>
+              ) : null}
             </form>
           </CardContent>
         </Card>
@@ -428,8 +470,46 @@ export function DiagnosticTeaser() {
   }
 
   // resultado
-  if (!resultado) return null;
+  if (!resultado || !banco) return null;
   const { resultado: r, analisisIA, whatsappLink } = resultado;
+  const bancoLabel = BATERIAS.find((b) => b.id === banco.bancoId)?.label ?? banco.bancoId;
+
+  async function handleDescargarPdf() {
+    setIsDownloading(true);
+    try {
+      const doc = await buildDiagnosticoPdf({
+        estudianteNombre: lead.estudianteNombre,
+        estudianteEdad: lead.estudianteEdad || undefined,
+        colegio: lead.colegio || undefined,
+        grado: GRADO_POR_BANCO[lead.bancoId],
+        bancoLabel,
+        createdAt: new Date().toISOString(),
+        puntajeGlobal: r.puntajeGlobal,
+        aciertos: r.aciertos,
+        totalPreguntas: r.totalPreguntas,
+        enfoqueScore: r.enfoqueScore,
+        perfilDominante: r.perfilDominante,
+        desgloseMaterias: r.desgloseMaterias,
+        analisisIA,
+      });
+      doc.save(
+        diagnosticoReportFilename({
+          estudianteNombre: lead.estudianteNombre,
+          bancoLabel,
+          createdAt: new Date().toISOString(),
+          puntajeGlobal: r.puntajeGlobal,
+          aciertos: r.aciertos,
+          totalPreguntas: r.totalPreguntas,
+          enfoqueScore: r.enfoqueScore,
+          perfilDominante: r.perfilDominante,
+          desgloseMaterias: r.desgloseMaterias,
+          analisisIA,
+        })
+      );
+    } finally {
+      setIsDownloading(false);
+    }
+  }
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-14 sm:px-8">
@@ -470,6 +550,10 @@ export function DiagnosticTeaser() {
       ) : null}
 
       <div className="flex flex-col items-center gap-3">
+        <Button variant="outline" className="w-full gap-2 sm:w-auto" onClick={handleDescargarPdf} disabled={isDownloading}>
+          {isDownloading ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : <Download className="size-4" aria-hidden="true" />}
+          Descargar reporte (PDF)
+        </Button>
         {whatsappLink ? (
           <Button size="lg" asChild>
             <a href={whatsappLink} target="_blank" rel="noreferrer" className="gap-1.5">

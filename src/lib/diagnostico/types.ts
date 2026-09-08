@@ -1,5 +1,14 @@
 export type BancoId = "general" | "noveno" | "decimo";
 
+/** Etiquetas compartidas por el cliente (selector de batería), la ruta
+ * de submit (correo/WhatsApp) y el dashboard de admin — un solo lugar
+ * para no repetir los mismos 3 nombres en varios archivos. */
+export const BANCO_LABEL: Record<BancoId, string> = {
+  general: "Batería Diagnóstica General (14 reactivos)",
+  noveno: "Curso Pre-ICFES Grado 9° (60 reactivos)",
+  decimo: "Curso Pre-ICFES Grado 10° (108 reactivos)",
+};
+
 export type Perfil = "Soberano" | "Operario" | "Cínico" | "Seguidor";
 
 export type Opcion = "A" | "B" | "C" | "D";

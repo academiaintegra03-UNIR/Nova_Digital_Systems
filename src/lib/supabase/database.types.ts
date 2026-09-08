@@ -501,6 +501,7 @@ export interface Database {
           created_at: string;
           banco_id: string;
           grado: string | null;
+          profile_id: string | null;
           estudiante_nombre: string;
           estudiante_edad: number | null;
           estudiante_email: string | null;
@@ -521,6 +522,7 @@ export interface Database {
           created_at?: string;
           banco_id: string;
           grado?: string | null;
+          profile_id?: string | null;
           estudiante_nombre: string;
           estudiante_edad?: number | null;
           estudiante_email?: string | null;
@@ -541,6 +543,7 @@ export interface Database {
           created_at?: string;
           banco_id?: string;
           grado?: string | null;
+          profile_id?: string | null;
           estudiante_nombre?: string;
           estudiante_edad?: number | null;
           estudiante_email?: string | null;
@@ -555,6 +558,39 @@ export interface Database {
           perfil_dominante?: string | null;
           desglose_materias?: Json;
           analisis_ia?: string | null;
+        };
+        Relationships: [];
+      };
+      materia_recursos: {
+        Row: {
+          id: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id: string | null;
+          titulo: string;
+          tipo: "pdf" | "link";
+          url: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          grupo_id: string;
+          materia_id: string;
+          tutor_id?: string | null;
+          titulo: string;
+          tipo?: "pdf" | "link";
+          url: string;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          grupo_id?: string;
+          materia_id?: string;
+          tutor_id?: string | null;
+          titulo?: string;
+          tipo?: "pdf" | "link";
+          url?: string;
+          created_at?: string;
         };
         Relationships: [];
       };

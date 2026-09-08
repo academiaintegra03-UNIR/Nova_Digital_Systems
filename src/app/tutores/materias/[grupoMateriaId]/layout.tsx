@@ -43,7 +43,9 @@ export default async function TutorMateriaCursoLayout({
           { href: base, label: "Inicio" },
           { href: `${base}/clases`, label: "Clases" },
           { href: `${base}/actividades`, label: "Actividades" },
+          { href: `${base}/recursos`, label: "Recursos" },
           { href: `${base}/foro`, label: "Foro" },
+          { href: `${base}/asistente`, label: "Asistente" },
         ]}
       />
 
@@ -58,7 +60,9 @@ export default async function TutorMateriaCursoLayout({
           links={[
             { href: `${base}/clases`, label: "Clases" },
             { href: `${base}/actividades`, label: "Actividades" },
+            { href: `${base}/recursos`, label: "Recursos" },
             { href: `${base}/foro`, label: "Foro" },
+            { href: `${base}/asistente`, label: "Asistente" },
           ]}
         />
       </div>

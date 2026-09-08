@@ -41,7 +41,9 @@ export default async function CampusMiMateriaCursoLayout({
           { href: base, label: "Inicio" },
           { href: `${base}/clases`, label: "Clases" },
           { href: `${base}/actividades`, label: "Actividades" },
+          { href: `${base}/recursos`, label: "Recursos" },
           { href: `${base}/foro`, label: "Foro" },
+          { href: `${base}/asistente`, label: "Asistente" },
         ]}
       />
 
@@ -56,7 +58,9 @@ export default async function CampusMiMateriaCursoLayout({
           links={[
             { href: `${base}/clases`, label: "Clases" },
             { href: `${base}/actividades`, label: "Actividades" },
+            { href: `${base}/recursos`, label: "Recursos" },
             { href: `${base}/foro`, label: "Foro" },
+            { href: `${base}/asistente`, label: "Asistente" },
           ]}
         />
       </div>

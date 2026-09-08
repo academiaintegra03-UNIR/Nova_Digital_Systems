@@ -89,20 +89,29 @@ export default async function CampusHomePage() {
         />
         <div className="relative">
           <div className="mb-1 text-xl font-bold">Hola, {firstName} 👋</div>
-          <div className="text-sm text-[#EAF6F5]">
-            {nextClass ? (
-              <>
-                Tu próxima clase es <strong>{formatScheduled(nextClass.scheduledAt)}</strong> —{" "}
-                {nextClass.materiaNombre}: {nextClass.nombre}.
-              </>
-            ) : (
-              "No tienes clases programadas por ahora."
-            )}
-          </div>
+          {nextClass ? (
+            <div className="text-sm text-[#EAF6F5]">
+              <div className="mb-0.5 text-xs font-bold tracking-wide uppercase text-white/70">Próxima clase</div>
+              <div className="text-base font-bold text-white">
+                {nextClass.materiaNombre}: {nextClass.nombre}
+              </div>
+              <div>{formatScheduled(nextClass.scheduledAt)}</div>
+            </div>
+          ) : (
+            <div className="text-sm text-[#EAF6F5]">No tienes clases programadas por ahora.</div>
+          )}
         </div>
-        <Button className="relative shrink-0 bg-white text-primary hover:bg-white/90" asChild>
-          <Link href="/campus/mis-clases">Ver mis clases</Link>
-        </Button>
+        {nextClass?.meetingLink ? (
+          <Button className="relative shrink-0 gap-1.5 bg-white text-primary hover:bg-white/90" size="lg" asChild>
+            <a href={nextClass.meetingLink} target="_blank" rel="noreferrer">
+              <ExternalLink className="size-4" /> Unirse a la clase
+            </a>
+          </Button>
+        ) : (
+          <Button className="relative shrink-0 bg-white text-primary hover:bg-white/90" asChild>
+            <Link href="/campus/mis-clases">Ver mis clases</Link>
+          </Button>
+        )}
       </div>
 
       <div className="mb-6 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_1.4fr]">
