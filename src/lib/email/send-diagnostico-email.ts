@@ -2,6 +2,7 @@ import "server-only";
 import { getResendClient } from "@/lib/email/resend";
 import { buildDiagnosticoPdf, diagnosticoReportFilename, type DiagnosticoReportData } from "@/lib/diagnostico/report-pdf";
 import { siteName } from "@/lib/data/home-content";
+import { escapeHtml } from "@/lib/html-escape";
 
 function diagnosticoEmailHtml(data: DiagnosticoReportData): string {
   return `
@@ -10,7 +11,7 @@ function diagnosticoEmailHtml(data: DiagnosticoReportData): string {
     <div style="font-size:12px;color:#9ca3af;margin-bottom:20px;">soberanocognitivo.com</div>
 
     <p style="font-size:15px;color:#111827;margin:0 0 6px;font-weight:700;">
-      ${data.estudianteNombre} completó su diagnóstico académico
+      ${escapeHtml(data.estudianteNombre)} completó su diagnóstico académico
     </p>
     <p style="font-size:13px;color:#6b7280;margin:0 0 16px;">
       Adjuntamos el reporte en PDF con el puntaje, el desglose por materia y las recomendaciones.

@@ -1,37 +1,5 @@
 // Ported verbatim from reference/prototipos/Panel Administrativo.dc.html (mock/demo data).
-import { AlertTriangle, MessageSquare, TrendingDown, SendHorizontal } from "lucide-react";
-import type {
-  AdminAlert,
-  AdminEnrollmentRow,
-  AdminPaymentRow,
-  AdminProgramRow,
-  AdminScheduledReport,
-  Stat,
-  WeekBar,
-} from "@/lib/types/panels";
-
-export const adminName = "Sofía Arango";
-export const adminMeta = "Administradora";
-
-export const kpis: Stat[] = [
-  { label: "Usuarios activos", value: "412" },
-  { label: "Nuevos registros (mes)", value: "38" },
-  { label: "Matrículas pendientes", value: "7" },
-  { label: "Ingresos del mes", value: "$18,4M COP" },
-  { label: "Cursos activos", value: "14" },
-];
-
-export const enrollTrend: WeekBar[] = [12, 18, 15, 22, 19, 27].map((v, i) => ({
-  label: ["Mar", "Abr", "May", "Jun", "Jul", "Ago"][i],
-  value: v,
-}));
-
-export const alerts: AdminAlert[] = [
-  { icon: AlertTriangle, text: "7 matrículas con pago pendiente hace más de 5 días", tone: "warning" },
-  { icon: MessageSquare, text: "5 mensajes de foro por moderar", tone: "info" },
-  { icon: TrendingDown, text: "3 estudiantes con avance por debajo del 20%", tone: "error" },
-  { icon: SendHorizontal, text: "2 reportes quincenales con envío fallido", tone: "error" },
-];
+import type { AdminEnrollmentRow, AdminProgramRow, AdminScheduledReport } from "@/lib/types/panels";
 
 export const programsAdmin: AdminProgramRow[] = [
   { name: "Fundamentos matemáticos", level: "Primaria", seats: "32/40", status: "Publicado", tone: "success" },
@@ -48,13 +16,6 @@ export const enrollments: AdminEnrollmentRow[] = [
   { student: "Nuevo estudiante — sin nombre", program: "Álgebra y geometría", plan: "Grupal", status: "Pago pendiente", tone: "warning" },
   { student: "Sara Valentina Cruz", program: "Fundamentos matemáticos", plan: "Personalizado", status: "Confirmada", tone: "success" },
   { student: "Nuevo estudiante — sin nombre", program: "Precálculo", plan: "Grupal", status: "Incompleta", tone: "error" },
-];
-
-export const payments: AdminPaymentRow[] = [
-  { desc: "Matrícula — Mariana Gómez", amount: "$695.000 COP", method: "Wompi", status: "Pagado", tone: "success" },
-  { desc: "Matrícula — Camilo Andrés Pardo", amount: "$555.000 COP", method: "Wompi", status: "Pagado", tone: "success" },
-  { desc: "Matrícula — grupo institucional (12)", amount: "Por confirmar", method: "Transferencia", status: "Pendiente", tone: "warning" },
-  { desc: "Renovación — Sara Valentina Cruz", amount: "$555.000 COP", method: "Wompi", status: "Fallido", tone: "error" },
 ];
 
 export const scheduledReports: AdminScheduledReport[] = [

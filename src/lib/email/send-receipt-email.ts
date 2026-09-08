@@ -2,6 +2,7 @@ import "server-only";
 import { getResendClient } from "@/lib/email/resend";
 import { buildReceiptPdf, documentoCompleto, formatCop, formatReceiptDate, receiptFilename } from "@/lib/receipt-pdf";
 import { siteName } from "@/lib/data/home-content";
+import { escapeHtml } from "@/lib/html-escape";
 import type { PaymentReceipt } from "@/app/checkout/gracias/actions";
 
 function row(label: string, value: string): string {
@@ -31,11 +32,11 @@ function receiptEmailHtml(receipt: PaymentReceipt): string {
 
     <table style="width:100%;border-collapse:collapse;background:#f9fafb;border-radius:12px;padding:0 16px;">
       <tr><td colspan="2" style="padding-top:14px;">${sectionLabel("Facturado a")}</td></tr>
-      ${row("Nombre", receipt.nombre)}
-      ${documento ? row("Documento", documento) : ""}
-      ${row("Correo", receipt.email)}
+      ${row("Nombre", escapeHtml(receipt.nombre))}
+      ${documento ? row("Documento", escapeHtml(documento)) : ""}
+      ${row("Correo", escapeHtml(receipt.email))}
       <tr><td colspan="2">${sectionLabel("Detalles del pago")}</td></tr>
-      ${row("Plan", receipt.planName)}
+      ${row("Plan", escapeHtml(receipt.planName))}
       ${receipt.planPeriod ? row("Período", receipt.planPeriod) : ""}
       ${row("Fecha", formatReceiptDate(receipt.createdAt))}
       ${row("Referencia", receipt.reference)}

@@ -1,21 +1,10 @@
-import type { LucideIcon } from "lucide-react";
 import type { StatusTone } from "@/components/shared/status-badge";
 import type { Role } from "@/lib/types/session";
 import type { DocumentType, PlanType, PlanBillingType } from "@/lib/supabase/database.types";
 
-export interface Stat {
-  label: string;
-  value: string;
-}
-
 export interface ProgressItem {
   name: string;
   pct: number;
-}
-
-export interface WeekBar {
-  label: string;
-  value: number;
 }
 
 export interface ToneLabel {
@@ -111,12 +100,6 @@ export interface GeneratedReport {
 }
 
 // ---- Admin ----
-export interface AdminAlert {
-  icon: LucideIcon;
-  text: string;
-  tone: StatusTone;
-}
-
 export interface Colegio {
   id: string;
   nombre: string;
@@ -295,14 +278,6 @@ export interface AdminEnrollmentRow {
   student: string;
   program: string;
   plan: string;
-  status: string;
-  tone: StatusTone;
-}
-
-export interface AdminPaymentRow {
-  desc: string;
-  amount: string;
-  method: string;
   status: string;
   tone: StatusTone;
 }
