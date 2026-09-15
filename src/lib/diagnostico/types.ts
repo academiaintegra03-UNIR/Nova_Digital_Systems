@@ -11,6 +11,40 @@ export const BANCO_LABEL: Record<BancoId, string> = {
 
 export type Perfil = "Soberano" | "Operario" | "Cínico" | "Seguidor";
 
+/** Escala de nivel por puntaje — especificación de Jimmy Ramírez
+ * (2026-09-04): la Batería General usa una escala de "soberanía
+ * cognitiva", los cursos por grado (9°/10°) una escala curricular
+ * ICFES. Se aplica tanto al puntaje global como al de cada materia. */
+const NIVELES_GENERAL: { min: number; label: string }[] = [
+  { min: 80, label: "Soberano" },
+  { min: 65, label: "Estratégico" },
+  { min: 50, label: "Vulnerable" },
+  { min: 0, label: "Dependiente" },
+];
+
+const NIVELES_CURSO: { min: number; label: string }[] = [
+  { min: 80, label: "Avanzado" },
+  { min: 65, label: "Satisfactorio" },
+  { min: 50, label: "Mínimo" },
+  { min: 0, label: "Inicial" },
+];
+
+export function nivelParaPuntaje(porcentaje: number, bancoId: BancoId): string {
+  const escala = bancoId === "general" ? NIVELES_GENERAL : NIVELES_CURSO;
+  return (escala.find((n) => porcentaje >= n.min) ?? escala[escala.length - 1]).label;
+}
+
+/** Tipo de incidencia de integridad capturada durante el examen —
+ * mismo vocabulario de la "Bitácora Forense" de la especificación. */
+export type TipoIncidencia = "pestaña_abandonada" | "intento_copia" | "intento_corte" | "intento_pegado";
+
+export interface Incidencia {
+  timestamp: string;
+  tipo: TipoIncidencia;
+  preguntaId: string | null;
+  detalle: string;
+}
+
 export type Opcion = "A" | "B" | "C" | "D";
 
 /** Forma interna única a la que se normalizan los 3 bancos (que en los

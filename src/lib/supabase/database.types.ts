@@ -513,6 +513,10 @@ export interface Database {
           puntaje_global: number;
           enfoque_score: number;
           desenfoques_count: number;
+          copy_paste_count: number;
+          tiempo_total_minutos: number | null;
+          nivel_global: string | null;
+          incidencias_log: Json;
           perfil_dominante: string | null;
           desglose_materias: Json;
           analisis_ia: string | null;
@@ -534,6 +538,10 @@ export interface Database {
           puntaje_global: number;
           enfoque_score: number;
           desenfoques_count?: number;
+          copy_paste_count?: number;
+          tiempo_total_minutos?: number | null;
+          nivel_global?: string | null;
+          incidencias_log?: Json;
           perfil_dominante?: string | null;
           desglose_materias?: Json;
           analisis_ia?: string | null;
@@ -555,6 +563,10 @@ export interface Database {
           puntaje_global?: number;
           enfoque_score?: number;
           desenfoques_count?: number;
+          copy_paste_count?: number;
+          tiempo_total_minutos?: number | null;
+          nivel_global?: string | null;
+          incidencias_log?: Json;
           perfil_dominante?: string | null;
           desglose_materias?: Json;
           analisis_ia?: string | null;

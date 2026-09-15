@@ -1,6 +1,6 @@
 import { ClipboardList } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
-import { BANCO_LABEL, type BancoId } from "@/lib/diagnostico/types";
+import { BANCO_LABEL, nivelParaPuntaje, type BancoId } from "@/lib/diagnostico/types";
 import type { DiagnosticoReportData } from "@/lib/diagnostico/report-pdf";
 import { Card, CardContent } from "@/components/ui/card";
 import { StatusBadge } from "@/components/shared/status-badge";
@@ -43,21 +43,30 @@ export default async function CampusMisResultadosPage() {
   return (
     <div className="flex flex-col gap-3">
       {resultados.map((r) => {
+        const bancoId = r.banco_id as BancoId;
+        // Filas guardadas antes de agregar niveles no traen nivel_global
+        // ni porcentaje/nivel por materia — se recalculan al vuelo para
+        // no dejar huecos en el reporte de resultados viejos.
+        const desgloseCrudo = Array.isArray(r.desglose_materias)
+          ? (r.desglose_materias as unknown as { materia: string; total: number; aciertos: number; porcentaje?: number; nivel?: string }[])
+          : [];
         const reportData: DiagnosticoReportData = {
           estudianteNombre: r.estudiante_nombre,
           estudianteEdad: r.estudiante_edad ? String(r.estudiante_edad) : undefined,
           colegio: r.colegio ?? undefined,
           grado: r.grado,
-          bancoLabel: BANCO_LABEL[r.banco_id as BancoId] ?? r.banco_id,
+          bancoLabel: BANCO_LABEL[bancoId] ?? r.banco_id,
           createdAt: r.created_at,
           puntajeGlobal: r.puntaje_global,
+          nivelGlobal: r.nivel_global ?? nivelParaPuntaje(r.puntaje_global, bancoId),
           aciertos: r.aciertos,
           totalPreguntas: r.total_preguntas,
           enfoqueScore: r.enfoque_score,
           perfilDominante: r.perfil_dominante,
-          desgloseMaterias: Array.isArray(r.desglose_materias)
-            ? (r.desglose_materias as unknown as DiagnosticoReportData["desgloseMaterias"])
-            : [],
+          desgloseMaterias: desgloseCrudo.map((m) => {
+            const porcentaje = m.porcentaje ?? (m.total > 0 ? Math.round((m.aciertos / m.total) * 100) : 0);
+            return { materia: m.materia, total: m.total, aciertos: m.aciertos, porcentaje, nivel: m.nivel ?? nivelParaPuntaje(porcentaje, bancoId) };
+          }),
           analisisIA: r.analisis_ia,
         };
 

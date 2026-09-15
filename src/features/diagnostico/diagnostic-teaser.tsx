@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { CheckCircle2, Download, ExternalLink, Loader2 } from "lucide-react";
-import { BANCO_LABEL, type BancoId, type Opcion } from "@/lib/diagnostico/types";
-import { buildDiagnosticoPdf, diagnosticoReportFilename } from "@/lib/diagnostico/report-pdf";
+import { toast } from "sonner";
+import { CheckCircle2, ExternalLink, Loader2, Mail } from "lucide-react";
+import { BANCO_LABEL, type BancoId, type Incidencia, type Opcion, type TipoIncidencia } from "@/lib/diagnostico/types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -36,14 +36,18 @@ interface DesgloseMateria {
   materia: string;
   total: number;
   aciertos: number;
+  porcentaje: number;
+  nivel: string;
 }
 
 interface ResultadoDiagnostico {
   aciertos: number;
   totalPreguntas: number;
   puntajeGlobal: number;
+  nivelGlobal: string;
   enfoqueScore: number;
   desenfoquesCount: number;
+  copyPasteCount: number;
   desgloseMaterias: DesgloseMateria[];
   perfilDominante: string | null;
 }
@@ -109,21 +113,70 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
   const [respuestas, setRespuestas] = React.useState<Record<string, Opcion>>({});
   const [justificaciones, setJustificaciones] = React.useState<Record<string, string>>({});
   const [segundosRestantes, setSegundosRestantes] = React.useState(0);
+  // Especificación de Jimmy Ramírez (2026-09-04): el foco (cambio de
+  // pestaña) y el copiado/pegado son incidencias de peso distinto en el
+  // índice de enfoque (-5% vs -10%), así que se cuentan por separado —
+  // más la bitácora forense con cada incidencia individual.
   const desenfoquesRef = React.useRef(0);
+  const copyPasteRef = React.useRef(0);
+  const incidenciasLogRef = React.useRef<Incidencia[]>([]);
+  const indiceRef = React.useRef(0);
+  const totalSegundosRef = React.useRef(0);
+  const segundosRestantesRef = React.useRef(0);
   const [resultado, setResultado] = React.useState<SubmitResponse | null>(null);
-  const [isDownloading, setIsDownloading] = React.useState(false);
 
   const enExamen = paso === "examen";
 
-  // Telemetría de foco — solo activa durante el examen.
+  React.useEffect(() => {
+    indiceRef.current = indice;
+  }, [indice]);
+
+  // Telemetría de foco/integridad — solo activa durante el examen.
   React.useEffect(() => {
     if (!enExamen) return;
+
+    function registrar(tipo: TipoIncidencia, detalle: string) {
+      incidenciasLogRef.current.push({
+        timestamp: new Date().toISOString(),
+        tipo,
+        preguntaId: banco?.preguntas[indiceRef.current]?.id ?? null,
+        detalle,
+      });
+    }
+
     function onVisibilityChange() {
-      if (document.hidden) desenfoquesRef.current += 1;
+      if (document.hidden) {
+        desenfoquesRef.current += 1;
+        registrar("pestaña_abandonada", "El estudiante cambió de pestaña o minimizó el navegador");
+        toast.warning("Detectamos que saliste de la pestaña del examen — esto se tiene en cuenta en tu índice de enfoque.");
+      }
+    }
+    function onCopy() {
+      copyPasteRef.current += 1;
+      registrar("intento_copia", "El estudiante copió texto del examen");
+      toast.warning("Evita copiar el texto del examen para procesarlo externamente — esto se tiene en cuenta en tu resultado.");
+    }
+    function onCut() {
+      copyPasteRef.current += 1;
+      registrar("intento_corte", "El estudiante cortó texto del examen");
+      toast.warning("Evita cortar el texto del examen — esto se tiene en cuenta en tu resultado.");
+    }
+    function onPaste() {
+      copyPasteRef.current += 1;
+      registrar("intento_pegado", "El estudiante pegó contenido en el examen");
+      toast.warning("Evita pegar contenido externo en el examen — esto se tiene en cuenta en tu resultado.");
     }
     document.addEventListener("visibilitychange", onVisibilityChange);
-    return () => document.removeEventListener("visibilitychange", onVisibilityChange);
-  }, [enExamen]);
+    document.addEventListener("copy", onCopy);
+    document.addEventListener("cut", onCut);
+    document.addEventListener("paste", onPaste);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      document.removeEventListener("copy", onCopy);
+      document.removeEventListener("cut", onCut);
+      document.removeEventListener("paste", onPaste);
+    };
+  }, [enExamen, banco]);
 
   const finalizarExamen = React.useCallback(async () => {
     if (!banco) return;
@@ -146,6 +199,9 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
           respuestas,
           justificaciones,
           desenfoquesCount: desenfoquesRef.current,
+          copyPasteCount: copyPasteRef.current,
+          tiempoTotalMinutos: Math.round((totalSegundosRef.current - segundosRestantesRef.current) / 60),
+          incidenciasLog: incidenciasLogRef.current,
         }),
       });
       if (!res.ok) {
@@ -170,12 +226,13 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
     if (!enExamen) return;
     const id = setInterval(() => {
       setSegundosRestantes((s) => {
+        const next = s <= 1 ? 0 : s - 1;
+        segundosRestantesRef.current = next;
         if (s <= 1) {
           clearInterval(id);
           finalizarExamen();
-          return 0;
         }
-        return s - 1;
+        return next;
       });
     }, 1000);
     return () => clearInterval(id);
@@ -204,6 +261,11 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
       setRespuestas({});
       setJustificaciones({});
       desenfoquesRef.current = 0;
+      copyPasteRef.current = 0;
+      incidenciasLogRef.current = [];
+      indiceRef.current = 0;
+      totalSegundosRef.current = data.cronometroMinutos * 60;
+      segundosRestantesRef.current = data.cronometroMinutos * 60;
       setSegundosRestantes(data.cronometroMinutos * 60);
       setPaso("examen");
     } catch {
@@ -472,50 +534,13 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
   // resultado
   if (!resultado || !banco) return null;
   const { resultado: r, analisisIA, whatsappLink } = resultado;
-  const bancoLabel = BATERIAS.find((b) => b.id === banco.bancoId)?.label ?? banco.bancoId;
-
-  async function handleDescargarPdf() {
-    setIsDownloading(true);
-    try {
-      const doc = await buildDiagnosticoPdf({
-        estudianteNombre: lead.estudianteNombre,
-        estudianteEdad: lead.estudianteEdad || undefined,
-        colegio: lead.colegio || undefined,
-        grado: GRADO_POR_BANCO[lead.bancoId],
-        bancoLabel,
-        createdAt: new Date().toISOString(),
-        puntajeGlobal: r.puntajeGlobal,
-        aciertos: r.aciertos,
-        totalPreguntas: r.totalPreguntas,
-        enfoqueScore: r.enfoqueScore,
-        perfilDominante: r.perfilDominante,
-        desgloseMaterias: r.desgloseMaterias,
-        analisisIA,
-      });
-      doc.save(
-        diagnosticoReportFilename({
-          estudianteNombre: lead.estudianteNombre,
-          bancoLabel,
-          createdAt: new Date().toISOString(),
-          puntajeGlobal: r.puntajeGlobal,
-          aciertos: r.aciertos,
-          totalPreguntas: r.totalPreguntas,
-          enfoqueScore: r.enfoqueScore,
-          perfilDominante: r.perfilDominante,
-          desgloseMaterias: r.desgloseMaterias,
-          analisisIA,
-        })
-      );
-    } finally {
-      setIsDownloading(false);
-    }
-  }
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-14 sm:px-8">
       <div className="mb-6 text-center">
         <CheckCircle2 className="mx-auto mb-3 size-10 text-[#2FA6A1]" aria-hidden="true" />
         <h1 className="mb-1 text-3xl font-extrabold text-primary">{r.puntajeGlobal}%</h1>
+        <p className="text-sm font-semibold text-[#2FA6A1]">{r.nivelGlobal}</p>
         <p className="text-sm text-muted-foreground">
           {r.aciertos} de {r.totalPreguntas} respuestas correctas
         </p>
@@ -525,7 +550,7 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
         <CardContent className="py-5">
           <h2 className="mb-3 text-sm font-bold text-primary">Desglose por materia</h2>
           {r.desgloseMaterias.map((m) => (
-            <ProgressRow key={m.materia} label={m.materia} pct={m.total > 0 ? Math.round((m.aciertos / m.total) * 100) : 0} />
+            <ProgressRow key={m.materia} label={`${m.materia} — ${m.nivel}`} pct={m.porcentaje} />
           ))}
           <div className="mt-4 flex items-center justify-between border-t border-border pt-3 text-sm">
             <span className="text-muted-foreground">Índice de enfoque</span>
@@ -549,11 +574,12 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
         </Card>
       ) : null}
 
+      <div className="mb-5 flex items-start gap-2.5 rounded-lg bg-muted px-4 py-3 text-sm text-foreground/80">
+        <Mail className="mt-0.5 size-4 shrink-0 text-[#2FA6A1]" aria-hidden="true" />
+        <span>Te enviamos el reporte completo en PDF por correo — al estudiante y a su acudiente, si quedó registrado.</span>
+      </div>
+
       <div className="flex flex-col items-center gap-3">
-        <Button variant="outline" className="w-full gap-2 sm:w-auto" onClick={handleDescargarPdf} disabled={isDownloading}>
-          {isDownloading ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : <Download className="size-4" aria-hidden="true" />}
-          Descargar reporte (PDF)
-        </Button>
         {whatsappLink ? (
           <Button size="lg" asChild>
             <a href={whatsappLink} target="_blank" rel="noreferrer" className="gap-1.5">

@@ -6,7 +6,7 @@ import { getBanco, esBancoId } from "@/lib/diagnostico/bancos";
 import { calcularResultado } from "@/lib/diagnostico/scoring";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { sendDiagnosticoEmail } from "@/lib/email/send-diagnostico-email";
-import { BANCO_LABEL, type Opcion } from "@/lib/diagnostico/types";
+import { BANCO_LABEL, type Incidencia, type Opcion } from "@/lib/diagnostico/types";
 import type { Json } from "@/lib/supabase/database.types";
 
 export const runtime = "nodejs";
@@ -31,6 +31,9 @@ interface SubmitBody {
   respuestas: Record<string, Opcion>;
   justificaciones?: Record<string, string>;
   desenfoquesCount: number;
+  copyPasteCount: number;
+  tiempoTotalMinutos: number;
+  incidenciasLog: Incidencia[];
 }
 
 function getClientKey(request: NextRequest): string {
@@ -113,7 +116,7 @@ function construirMensajeWhatsApp(
   return `🎯 *Diagnóstico académico — Nova Digital Systems*
 👤 Estudiante: ${lead.estudianteNombre}
 🏫 Colegio: ${lead.colegio || "No indicado"}
-📊 Puntaje global: ${resultado.puntajeGlobal}% (${resultado.aciertos}/${resultado.totalPreguntas})
+📊 Puntaje global: ${resultado.puntajeGlobal}% (${resultado.aciertos}/${resultado.totalPreguntas}) — Nivel: ${resultado.nivelGlobal}
 🎯 Índice de enfoque: ${resultado.enfoqueScore}%${perfilTexto}
 
 Hola, acabo de completar el diagnóstico académico (banco: ${bancoId}). Quiero conocer la recomendación personalizada.`;
@@ -137,7 +140,15 @@ export async function POST(request: NextRequest) {
   const profile = await getAuthenticatedProfile();
   const esEstudianteLogueado = profile?.role === "estudiante";
 
-  const { bancoId: bancoIdRaw, lead, respuestas, desenfoquesCount } = (body ?? {}) as Partial<SubmitBody>;
+  const {
+    bancoId: bancoIdRaw,
+    lead,
+    respuestas,
+    desenfoquesCount,
+    copyPasteCount,
+    tiempoTotalMinutos,
+    incidenciasLog,
+  } = (body ?? {}) as Partial<SubmitBody>;
 
   if (!isValidLead(lead, { requireContacto: !esEstudianteLogueado }) || typeof respuestas !== "object" || respuestas === null) {
     return NextResponse.json({ error: "Completa tu nombre y un dato de contacto de tu acudiente." }, { status: 400 });
@@ -173,7 +184,15 @@ export async function POST(request: NextRequest) {
     acudienteEmails = [lead.acudienteEmail];
   }
 
-  const resultado = calcularResultado(banco, respuestas, Number(desenfoquesCount) || 0);
+  const resultado = calcularResultado(
+    banco,
+    bancoId,
+    respuestas,
+    Number(desenfoquesCount) || 0,
+    Number(copyPasteCount) || 0,
+    Number(tiempoTotalMinutos) || 0
+  );
+  const incidencias = Array.isArray(incidenciasLog) ? incidenciasLog : [];
   const analisisIA = await generarAnalisisIA(estudianteNombre, resultado);
   const whatsappLink = getWhatsAppLink(
     construirMensajeWhatsApp({ ...lead, estudianteNombre, colegio: colegio ?? undefined }, bancoId, resultado)
@@ -193,8 +212,12 @@ export async function POST(request: NextRequest) {
       aciertos: resultado.aciertos,
       total_preguntas: resultado.totalPreguntas,
       puntaje_global: resultado.puntajeGlobal,
+      nivel_global: resultado.nivelGlobal,
       enfoque_score: resultado.enfoqueScore,
       desenfoques_count: resultado.desenfoquesCount,
+      copy_paste_count: resultado.copyPasteCount,
+      tiempo_total_minutos: resultado.tiempoTotalMinutos || null,
+      incidencias_log: incidencias as unknown as Json,
       perfil_dominante: resultado.perfilDominante,
       desglose_materias: resultado.desgloseMaterias as unknown as Json,
       analisis_ia: analisisIA,
@@ -223,6 +246,7 @@ export async function POST(request: NextRequest) {
       bancoLabel: BANCO_LABEL[bancoId] ?? bancoId,
       createdAt: new Date().toISOString(),
       puntajeGlobal: resultado.puntajeGlobal,
+      nivelGlobal: resultado.nivelGlobal,
       aciertos: resultado.aciertos,
       totalPreguntas: resultado.totalPreguntas,
       enfoqueScore: resultado.enfoqueScore,

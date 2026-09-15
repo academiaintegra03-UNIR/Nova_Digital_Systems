@@ -1,18 +1,23 @@
 import "server-only";
-import type { Opcion, Perfil, PreguntaDiagnostico } from "@/lib/diagnostico/types";
+import { nivelParaPuntaje, type BancoId, type Opcion, type Perfil, type PreguntaDiagnostico } from "@/lib/diagnostico/types";
 
 export interface DesgloseMateria {
   materia: string;
   total: number;
   aciertos: number;
+  porcentaje: number;
+  nivel: string;
 }
 
 export interface ResultadoDiagnostico {
   aciertos: number;
   totalPreguntas: number;
   puntajeGlobal: number;
+  nivelGlobal: string;
   enfoqueScore: number;
   desenfoquesCount: number;
+  copyPasteCount: number;
+  tiempoTotalMinutos: number;
   desgloseMaterias: DesgloseMateria[];
   /** null si el banco no trae datos de perfil (9°/10°) — nunca se
    * inventa un perfil sin esa información. */
@@ -29,11 +34,14 @@ function materiaBase(materia: string): string {
 
 export function calcularResultado(
   banco: PreguntaDiagnostico[],
+  bancoId: BancoId,
   respuestas: Record<string, Opcion>,
-  desenfoquesCount: number
+  desenfoquesCount: number,
+  copyPasteCount: number,
+  tiempoTotalMinutos: number
 ): ResultadoDiagnostico {
   let aciertos = 0;
-  const porMateria = new Map<string, DesgloseMateria>();
+  const porMateria = new Map<string, { materia: string; total: number; aciertos: number }>();
   const perfilConteo: Partial<Record<Perfil, number>> = {};
 
   for (const pregunta of banco) {
@@ -57,19 +65,30 @@ export function calcularResultado(
 
   const totalPreguntas = banco.length;
   const puntajeGlobal = totalPreguntas > 0 ? Math.round((aciertos / totalPreguntas) * 100) : 0;
-  const enfoqueScore = Math.max(0, 100 - desenfoquesCount * 10);
+  // Especificación de Jimmy Ramírez (2026-09-04): 100% base, -5% por cada
+  // pérdida de foco (cambio de pestaña) y -10% por cada intento de
+  // copiar/cortar/pegar — no es el mismo peso para ambos tipos.
+  const enfoqueScore = Math.max(0, 100 - desenfoquesCount * 5 - copyPasteCount * 10);
 
   const perfilEntries = Object.entries(perfilConteo) as [Perfil, number][];
   const perfilDominante =
     perfilEntries.length > 0 ? perfilEntries.reduce((a, b) => (b[1] > a[1] ? b : a))[0] : null;
 
+  const desgloseMaterias: DesgloseMateria[] = Array.from(porMateria.values()).map((m) => {
+    const porcentaje = m.total > 0 ? Math.round((m.aciertos / m.total) * 100) : 0;
+    return { ...m, porcentaje, nivel: nivelParaPuntaje(porcentaje, bancoId) };
+  });
+
   return {
     aciertos,
     totalPreguntas,
     puntajeGlobal,
+    nivelGlobal: nivelParaPuntaje(puntajeGlobal, bancoId),
     enfoqueScore,
     desenfoquesCount,
-    desgloseMaterias: Array.from(porMateria.values()),
+    copyPasteCount,
+    tiempoTotalMinutos,
+    desgloseMaterias,
     perfilDominante,
   };
 }

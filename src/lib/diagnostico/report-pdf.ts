@@ -20,11 +20,12 @@ export interface DiagnosticoReportData {
   bancoLabel: string;
   createdAt: string;
   puntajeGlobal: number;
+  nivelGlobal: string;
   aciertos: number;
   totalPreguntas: number;
   enfoqueScore: number;
   perfilDominante: string | null;
-  desgloseMaterias: { materia: string; total: number; aciertos: number }[];
+  desgloseMaterias: { materia: string; total: number; aciertos: number; porcentaje: number; nivel: string }[];
   analisisIA: string | null;
 }
 
@@ -120,7 +121,7 @@ export async function buildDiagnosticoPdf(data: DiagnosticoReportData) {
   doc.text(`${data.puntajeGlobal}%`, PAGE_LEFT + 14, y + 34);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10);
-  doc.text(`${data.aciertos} de ${data.totalPreguntas} respuestas correctas`, PAGE_LEFT + 100, y + 22);
+  doc.text(`${data.aciertos} de ${data.totalPreguntas} respuestas correctas · Nivel: ${data.nivelGlobal}`, PAGE_LEFT + 100, y + 22);
   doc.text(`Índice de enfoque: ${data.enfoqueScore}%`, PAGE_LEFT + 100, y + 38);
   if (data.perfilDominante) {
     doc.setFont("helvetica", "bold");
@@ -136,18 +137,17 @@ export async function buildDiagnosticoPdf(data: DiagnosticoReportData) {
   y += 16;
 
   for (const m of data.desgloseMaterias) {
-    const pct = m.total > 0 ? Math.round((m.aciertos / m.total) * 100) : 0;
     doc.setFont("helvetica", "normal");
     doc.setFontSize(9.5);
     doc.setTextColor(COLOR_TEXT);
-    doc.text(m.materia, PAGE_LEFT, y, { maxWidth: PAGE_WIDTH * 0.6 });
+    doc.text(m.materia, PAGE_LEFT, y, { maxWidth: PAGE_WIDTH * 0.5 });
     doc.setTextColor(COLOR_MUTED);
-    doc.text(`${pct}%`, PAGE_RIGHT, y, { align: "right" });
+    doc.text(`${m.porcentaje}% · ${m.nivel}`, PAGE_RIGHT, y, { align: "right" });
     y += 6;
     doc.setFillColor(COLOR_TRACK);
     doc.rect(PAGE_LEFT, y, PAGE_WIDTH, 6, "F");
     doc.setFillColor(COLOR_TEAL);
-    doc.rect(PAGE_LEFT, y, (PAGE_WIDTH * pct) / 100, 6, "F");
+    doc.rect(PAGE_LEFT, y, (PAGE_WIDTH * m.porcentaje) / 100, 6, "F");
     y += 18;
   }
 

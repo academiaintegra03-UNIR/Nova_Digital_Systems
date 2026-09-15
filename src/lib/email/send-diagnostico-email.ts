@@ -23,7 +23,7 @@ function diagnosticoEmailHtml(data: DiagnosticoReportData): string {
           Puntaje global
         </td>
         <td style="padding:14px 16px;color:#ffffff;font-size:18px;font-weight:800;text-align:right;">
-          ${data.puntajeGlobal}%
+          ${data.puntajeGlobal}% · ${escapeHtml(data.nivelGlobal)}
         </td>
       </tr>
     </table>
