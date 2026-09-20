@@ -454,6 +454,15 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
 
     const esUltima = indice === banco.preguntas.length - 1;
 
+    // La justificación es obligatoria: no se puede avanzar ni finalizar sin ella.
+    const justificacionPendiente =
+      !!pregunta.requiereJustificacion && !(justificaciones[pregunta.id] ?? "").trim();
+    function exigirJustificacion(): boolean {
+      if (!justificacionPendiente) return true;
+      setError("Justifica brevemente tu respuesta para continuar.");
+      return false;
+    }
+
     return (
       <div className="mx-auto max-w-2xl px-4 py-10 sm:px-8">
         <div className="mb-5 flex items-center justify-between text-sm">
@@ -489,12 +498,16 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
 
             {pregunta.requiereJustificacion ? (
               <div className="flex flex-col gap-1.5">
-                <Label htmlFor="dx-justificacion">Justifica brevemente tu respuesta (opcional)</Label>
+                <Label htmlFor="dx-justificacion">Justifica brevemente tu respuesta</Label>
                 <Textarea
                   id="dx-justificacion"
                   value={justificaciones[pregunta.id] ?? ""}
-                  onChange={(e) => setJustificaciones((j) => ({ ...j, [pregunta.id]: e.target.value }))}
+                  onChange={(e) => {
+                    setJustificaciones((j) => ({ ...j, [pregunta.id]: e.target.value }));
+                    setError(undefined);
+                  }}
                   rows={2}
+                  required
                 />
               </div>
             ) : null}
@@ -512,7 +525,7 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
             Anterior
           </Button>
           {esUltima ? (
-            <Button onClick={finalizarExamen} disabled={paso === "enviando"}>
+            <Button onClick={() => exigirJustificacion() && finalizarExamen()} disabled={paso === "enviando"}>
               {paso === "enviando" ? (
                 <>
                   <Loader2 className="animate-spin" /> Enviando...
@@ -522,7 +535,14 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
               )}
             </Button>
           ) : (
-            <Button onClick={() => setIndice((i) => Math.min(banco.preguntas.length - 1, i + 1))} disabled={paso === "enviando"}>
+            <Button
+              onClick={() => {
+                if (!exigirJustificacion()) return;
+                setError(undefined);
+                setIndice((i) => Math.min(banco.preguntas.length - 1, i + 1));
+              }}
+              disabled={paso === "enviando"}
+            >
               Siguiente
             </Button>
           )}
