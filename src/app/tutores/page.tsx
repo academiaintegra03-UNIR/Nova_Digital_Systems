@@ -88,7 +88,7 @@ export default async function TutoresAgendaPage() {
       </div>
 
       <div className="mb-6">
-        <h2 className="mb-3 text-base font-bold text-primary">Próximas clases</h2>
+        <h2 className="mb-3 text-base font-bold text-heading">Próximas clases</h2>
         {proximas.length === 0 ? (
           <Card>
             <CardContent className="flex flex-col items-center py-8 text-center text-sm text-muted-foreground">
@@ -142,7 +142,7 @@ export default async function TutoresAgendaPage() {
 
       {pasadas.length > 0 ? (
         <div>
-          <h2 className="mb-3 text-base font-bold text-primary">Clases anteriores</h2>
+          <h2 className="mb-3 text-base font-bold text-heading">Clases anteriores</h2>
           <div className="flex flex-col gap-2.5">
             {pasadas.map((clase) => (
               <Card key={clase.id}>
@@ -185,7 +185,7 @@ export default async function TutoresAgendaPage() {
         </div>
       ) : null}
 
-      <h3 className="mb-3 text-base font-bold text-primary">Accesos rápidos</h3>
+      <h3 className="mb-3 text-base font-bold text-heading">Accesos rápidos</h3>
       <QuickLinksRow
         links={[
           { href: "/tutores/materias", label: "Materias", icon: Layers },

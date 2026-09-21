@@ -29,7 +29,7 @@ export default function LoginPage() {
           <Image src="/Nova-PNG.png" alt="" width={36} height={36} className="rounded-full" priority />
           <span>
             <span className="block text-lg leading-tight font-extrabold">{siteName}</span>
-            <span className="block text-xs leading-tight text-[#AFC3D9]">{siteTagline}</span>
+            <span className="block text-xs leading-tight text-on-primary-muted">{siteTagline}</span>
           </span>
         </Link>
 
@@ -40,16 +40,16 @@ export default function LoginPage() {
           <ul className="space-y-4">
             {trustItems.map((item) => (
               <li key={item.label} className="flex items-start gap-3">
-                <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-on-primary/10">
                   <item.icon className="size-4" aria-hidden="true" />
                 </span>
-                <span className="pt-1.5 text-sm leading-relaxed text-[#D7E4F0]">{item.label}</span>
+                <span className="pt-1.5 text-sm leading-relaxed text-on-primary-muted">{item.label}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <p className="relative text-xs text-[#8FA9C4]">© 2026 {siteName}</p>
+        <p className="relative text-xs text-on-primary-subtle">© 2026 {siteName}</p>
       </div>
 
       {/* Form panel */}
@@ -57,11 +57,11 @@ export default function LoginPage() {
         <div className="mx-auto w-full max-w-sm">
           <Link href="/" className="mb-10 flex items-center gap-2.5 lg:hidden">
             <Image src="/Nova-PNG.png" alt="" width={32} height={32} className="rounded-full" priority />
-            <span className="text-base font-extrabold text-primary">{siteName}</span>
+            <span className="text-base font-extrabold text-heading">{siteName}</span>
           </Link>
 
           <div className="mb-8">
-            <h1 className="mb-2 text-2xl font-extrabold text-primary sm:text-3xl">Bienvenido de nuevo</h1>
+            <h1 className="mb-2 text-2xl font-extrabold text-heading sm:text-3xl">Bienvenido de nuevo</h1>
             <p className="text-sm text-muted-foreground">
               Ingresa con el correo y la contraseña de tu cuenta.
             </p>

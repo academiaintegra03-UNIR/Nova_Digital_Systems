@@ -199,13 +199,13 @@ export function DiagnosticosDashboard({ diagnosticos }: { diagnosticos: Diagnost
         <div className="mb-6 grid grid-cols-1 gap-5 lg:grid-cols-3">
           <Card>
             <CardContent>
-              <h3 className="mb-4 text-sm font-bold text-primary">Distribución de puntaje</h3>
+              <h3 className="mb-4 text-sm font-bold text-heading">Distribución de puntaje</h3>
               <BarChart data={distribucion} />
             </CardContent>
           </Card>
           <Card>
             <CardContent>
-              <h3 className="mb-4 text-sm font-bold text-primary">Promedio por colegio</h3>
+              <h3 className="mb-4 text-sm font-bold text-heading">Promedio por colegio</h3>
               {promedioPorColegio.length > 0 ? (
                 <BarChart data={promedioPorColegio} suffix="%" />
               ) : (
@@ -215,7 +215,7 @@ export function DiagnosticosDashboard({ diagnosticos }: { diagnosticos: Diagnost
           </Card>
           <Card>
             <CardContent>
-              <h3 className="mb-4 text-sm font-bold text-primary">Diagnósticos por día ({DAYS_IN_TREND} días)</h3>
+              <h3 className="mb-4 text-sm font-bold text-heading">Diagnósticos por día ({DAYS_IN_TREND} días)</h3>
               <BarChart data={tendencia} />
             </CardContent>
           </Card>

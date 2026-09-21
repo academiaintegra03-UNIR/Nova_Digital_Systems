@@ -10,16 +10,16 @@ export default function SimulacrosPage() {
         {availableSims.map((sm) => (
           <Card key={sm.name}>
             <CardContent>
-              <div className="mb-1.5 text-base font-bold text-primary">{sm.name}</div>
+              <div className="mb-1.5 text-base font-bold text-heading">{sm.name}</div>
               <div className="mb-3.5 text-xs text-muted-foreground">
                 {sm.questions} preguntas · {sm.duration}
               </div>
-              <Button className="w-full bg-[#2FA6A1] hover:bg-[#238984]">Iniciar simulacro</Button>
+              <Button variant="cta" className="w-full">Iniciar simulacro</Button>
             </CardContent>
           </Card>
         ))}
       </div>
-      <h3 className="mb-3 text-lg font-bold text-primary">Intentos anteriores</h3>
+      <h3 className="mb-3 text-lg font-bold text-heading">Intentos anteriores</h3>
       <Card>
         <CardContent className="p-0">
           {pastSims.map((ps) => (

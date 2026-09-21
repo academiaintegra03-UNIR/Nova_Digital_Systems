@@ -19,7 +19,7 @@ export default function ResourcesPage() {
           />
         </div>
         <div className="lg:order-1">
-          <h1 className="mb-2 text-3xl font-extrabold text-primary">Recursos educativos</h1>
+          <h1 className="mb-2 text-3xl font-extrabold text-heading">Recursos educativos</h1>
           <p className="text-base text-muted-foreground">
             Guías, videos y ejercicios gratuitos. Los materiales exclusivos se habilitan al matricularte.
           </p>

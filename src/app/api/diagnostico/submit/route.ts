@@ -71,7 +71,7 @@ async function generarAnalisisIA(
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return null;
 
-  const prompt = `Eres el Director Pedagógico de Nova Digital Systems. Un estudiante llamado ${estudianteNombre} acaba de terminar una batería diagnóstica. Resultados: ${JSON.stringify(
+  const prompt = `Eres el Director Pedagógico de Nova Digital Studio Systems. Un estudiante llamado ${estudianteNombre} acaba de terminar una batería diagnóstica. Resultados: ${JSON.stringify(
     {
       puntajeGlobal: resultado.puntajeGlobal,
       enfoqueScore: resultado.enfoqueScore,
@@ -113,7 +113,7 @@ function construirMensajeWhatsApp(
   resultado: ReturnType<typeof calcularResultado>
 ): string {
   const perfilTexto = resultado.perfilDominante ? `\n*Perfil dominante:* ${resultado.perfilDominante}` : "";
-  return `🎯 *Diagnóstico académico — Nova Digital Systems*
+  return `🎯 *Diagnóstico académico — Nova Digital Studio Systems*
 👤 Estudiante: ${lead.estudianteNombre}
 🏫 Colegio: ${lead.colegio || "No indicado"}
 📊 Puntaje global: ${resultado.puntajeGlobal}% (${resultado.aciertos}/${resultado.totalPreguntas}) — Nivel: ${resultado.nivelGlobal}

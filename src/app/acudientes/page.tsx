@@ -122,7 +122,7 @@ export default async function AcudientesResumenPage() {
       <Card className="mb-5">
         <CardContent className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <h1 className="text-base font-bold text-primary">
+            <h1 className="text-base font-bold text-heading">
               {hasGrupalPlan ? `Plan ${planName}` : "Sin plan grupal activo"}
             </h1>
             <p className="text-sm text-muted-foreground">
@@ -155,7 +155,7 @@ export default async function AcudientesResumenPage() {
               <CardContent>
                 <div className="mb-3 flex items-center gap-3">
                   <Avatar className="size-10">
-                    <AvatarFallback className="bg-[#2FA6A1] font-bold text-white">{initials(hijo.nombre)}</AvatarFallback>
+                    <AvatarFallback className="bg-primary font-bold text-white">{initials(hijo.nombre)}</AvatarFallback>
                   </Avatar>
                   <div>
                     <div className="text-sm font-bold text-foreground">{hijo.nombre}</div>
@@ -190,7 +190,7 @@ export default async function AcudientesResumenPage() {
         </div>
       )}
 
-      <h3 className="mb-3 text-base font-bold text-primary">Accesos rápidos</h3>
+      <h3 className="mb-3 text-base font-bold text-heading">Accesos rápidos</h3>
       <QuickLinksRow
         links={[
           { href: "/acudientes/mi-grupo", label: "Mi grupo", icon: Users },

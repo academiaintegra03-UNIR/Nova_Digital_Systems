@@ -7,13 +7,13 @@ import { getWhatsAppDisplayNumber, getWhatsAppLink } from "@/lib/whatsapp";
 export const metadata: Metadata = { title: "Contacto" };
 
 export default function ContactPage() {
-  const whatsappLink = getWhatsAppLink("Hola, quiero más información sobre Nova Digital Systems.");
+  const whatsappLink = getWhatsAppLink("Hola, quiero más información sobre Nova Digital Studio Systems.");
   const whatsappDisplay = getWhatsAppDisplayNumber();
 
   return (
     <div className="mx-auto grid max-w-4xl grid-cols-1 gap-9 px-4 py-12 sm:px-8 lg:grid-cols-[1.2fr_1fr]">
       <div>
-        <h1 className="mb-2.5 text-3xl font-extrabold text-primary">Hablemos</h1>
+        <h1 className="mb-2.5 text-3xl font-extrabold text-heading">Hablemos</h1>
         <p className="mb-6 text-sm text-muted-foreground">
           Cuéntanos qué necesitas y te contactamos en menos de 24 horas.
         </p>
@@ -21,7 +21,7 @@ export default function ContactPage() {
       </div>
 
       <div className="h-fit rounded-2xl bg-secondary p-6">
-        <div className="mb-3.5 text-base font-extrabold text-primary">Otras formas de contacto</div>
+        <div className="mb-3.5 text-base font-extrabold text-heading">Otras formas de contacto</div>
         <div className="mb-2.5 flex items-start gap-2 text-sm text-foreground/80">
           <span>💬 WhatsApp directo —</span>
           {whatsappLink ? (

@@ -35,7 +35,7 @@ export default async function CampusHiloPage({
         <ArrowLeft className="size-3.5" aria-hidden="true" /> Foro
       </Link>
 
-      <h2 className="mb-4 text-lg font-extrabold text-primary">{hilo.titulo}</h2>
+      <h2 className="mb-4 text-lg font-extrabold text-heading">{hilo.titulo}</h2>
 
       <div className="mb-4 flex flex-col gap-3">
         {mensajes.length === 0 ? (

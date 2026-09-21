@@ -1,13 +1,14 @@
+import { BRAND } from "@/lib/brand";
 import type { PaymentReceipt } from "@/app/checkout/gracias/actions";
 import { siteName } from "@/lib/data/home-content";
 import { documentTypeLabel } from "@/lib/data/document-types";
 
-const COLOR_PRIMARY = "#1e3a5f";
-const COLOR_MUTED = "#6b7280";
-const COLOR_FAINT = "#9ca3af";
-const COLOR_BORDER = "#e5e7eb";
-const COLOR_TEXT = "#111827";
-const COLOR_TOTAL_BG = "#f3f6fa";
+const COLOR_PRIMARY = BRAND.oxford;
+const COLOR_MUTED = BRAND.glacierStrong;
+const COLOR_FAINT = BRAND.glacier;
+const COLOR_BORDER = BRAND.border;
+const COLOR_TEXT = BRAND.oxford;
+const COLOR_TOTAL_BG = BRAND.paper;
 
 const PAGE_LEFT = 56;
 const PAGE_RIGHT = 539;

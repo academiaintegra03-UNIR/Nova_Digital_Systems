@@ -77,19 +77,19 @@ export function OrientationChatWidget() {
         <div className="mb-3 flex w-[calc(100vw-2rem)] max-w-sm flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
           <div className="flex items-center gap-2.5 border-b border-border bg-primary px-4 py-3">
             <Avatar className="size-9 shrink-0">
-              <AvatarFallback className="bg-[#F2954A] font-bold text-white">
+              <AvatarFallback className="bg-primary font-bold text-white">
                 {orientationAssistantName[0]}
               </AvatarFallback>
             </Avatar>
             <div className="min-w-0 flex-1">
               <div className="truncate text-sm font-bold text-white">{orientationAssistantName}</div>
-              <div className="truncate text-xs text-[#D7E4F0]">{orientationAssistantRole}</div>
+              <div className="truncate text-xs text-on-primary-muted">{orientationAssistantRole}</div>
             </div>
             <button
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Cerrar chat"
-              className="flex size-7 shrink-0 items-center justify-center rounded-full text-white/80 hover:bg-white/10 hover:text-white"
+              className="flex size-7 shrink-0 items-center justify-center rounded-full text-white/80 hover:bg-on-primary/10 hover:text-white"
             >
               <X className="size-4" aria-hidden="true" />
             </button>
@@ -176,8 +176,9 @@ export function OrientationChatWidget() {
               <Button
                 type="submit"
                 size="icon"
+                variant="cta"
                 disabled={isPending || !draft.trim()}
-                className="size-9 shrink-0 bg-[#F2954A] hover:bg-[#e8863a]"
+                className="size-9 shrink-0"
               >
                 <SendHorizontal className="size-4" aria-hidden="true" />
                 <span className="sr-only">Enviar</span>
@@ -192,7 +193,7 @@ export function OrientationChatWidget() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Cerrar chat de orientación" : "Abrir chat de orientación con Álex"}
         aria-expanded={open}
-        className="ml-auto flex size-14 items-center justify-center rounded-full bg-[#F2954A] text-white shadow-lg hover:bg-[#e8863a]"
+        className="ml-auto flex size-14 items-center justify-center rounded-full bg-cta text-cta-foreground shadow-lg hover:bg-cta-hover"
       >
         {open ? <X className="size-6" aria-hidden="true" /> : <MessageCircle className="size-6" aria-hidden="true" />}
       </button>

@@ -40,7 +40,7 @@ export default async function TutorHiloPage({
       </Link>
 
       <div className="mb-4 flex items-center justify-between gap-3">
-        <h2 className="text-lg font-extrabold text-primary">{hilo.titulo}</h2>
+        <h2 className="text-lg font-extrabold text-heading">{hilo.titulo}</h2>
         <ConfirmDeleteDialog
           id={hiloId}
           title="Eliminar hilo"

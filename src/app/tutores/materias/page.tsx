@@ -63,7 +63,7 @@ export default async function TutorMateriasPage() {
               <CardContent className="py-5">
                 <Link href={`/tutores/materias/${gm.id}`} className="block">
                   <div className="mb-1 text-xs text-muted-foreground">{gm.grupoNombre}</div>
-                  <div className="text-base font-bold text-primary">{gm.materiaNombre}</div>
+                  <div className="text-base font-bold text-heading">{gm.materiaNombre}</div>
                 </Link>
                 <div className="absolute right-2 top-2">
                   <RemoveMateriaButton id={gm.id} label={gm.materiaNombre} />

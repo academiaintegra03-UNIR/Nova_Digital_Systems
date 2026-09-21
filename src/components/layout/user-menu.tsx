@@ -49,7 +49,7 @@ export function UserMenu({
         <Button variant="ghost" asChild>
           <Link href="/login">Iniciar sesión</Link>
         </Button>
-        <Button asChild>
+        <Button variant="cta" asChild>
           <Link href="/diagnostico">Comenzar ahora</Link>
         </Button>
       </div>
@@ -63,7 +63,7 @@ export function UserMenu({
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-auto gap-2 px-2 py-1.5">
           <Avatar className="size-7">
-            <AvatarFallback className="bg-secondary text-xs font-bold text-primary">
+            <AvatarFallback className="bg-secondary text-xs font-bold text-heading">
               {initials(profile.nombre)}
             </AvatarFallback>
           </Avatar>

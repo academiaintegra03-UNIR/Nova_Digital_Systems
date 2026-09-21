@@ -73,7 +73,7 @@ export default async function AdminResumenPage() {
                 </div>
                 <div className="text-sm text-white/80">Confírmalos o márcalos para no dejar cuentas a medio activar.</div>
               </div>
-              <Button className="shrink-0 bg-white text-primary hover:bg-white/90" asChild>
+              <Button variant="cta" className="shrink-0" asChild>
                 <Link href="/admin/pagos">Ver pagos</Link>
               </Button>
             </div>
@@ -95,7 +95,7 @@ export default async function AdminResumenPage() {
 
           <Card>
             <CardContent>
-              <h3 className="mb-3.5 text-base font-bold text-primary">Usuarios por rol</h3>
+              <h3 className="mb-3.5 text-base font-bold text-heading">Usuarios por rol</h3>
               <div className="flex flex-col gap-2 text-sm">
                 <div className="flex items-center justify-between border-b border-border py-2 last:border-none">
                   <span className="text-muted-foreground">Estudiantes</span>
@@ -120,8 +120,8 @@ export default async function AdminResumenPage() {
 
         <div className="flex flex-col gap-4">
           <Link href="/admin/diagnosticos">
-            <div className="flex items-center gap-3.5 rounded-2xl bg-teal px-5 py-5 text-white transition-opacity hover:opacity-90">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20">
+            <div className="flex items-center gap-3.5 rounded-2xl bg-primary px-5 py-5 text-white transition-opacity hover:opacity-90">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-on-primary/20">
                 <GraduationCap className="size-5" aria-hidden="true" />
               </div>
               <div className="min-w-0 flex-1">
@@ -133,8 +133,8 @@ export default async function AdminResumenPage() {
           </Link>
 
           <Link href="/admin/planes">
-            <div className="flex items-center gap-3.5 rounded-2xl bg-[#1e3a5f] px-5 py-5 text-white transition-opacity hover:opacity-90">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/15">
+            <div className="flex items-center gap-3.5 rounded-2xl bg-primary px-5 py-5 text-white transition-opacity hover:opacity-90">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-on-primary/15">
                 <CreditCard className="size-5" aria-hidden="true" />
               </div>
               <div className="min-w-0 flex-1">
@@ -165,7 +165,7 @@ export default async function AdminResumenPage() {
           <Card>
             <CardContent className="py-4">
               <div className="mb-1.5 flex items-center gap-2">
-                <ShieldCheck className="size-4 text-teal" aria-hidden="true" />
+                <ShieldCheck className="size-4 text-glacier-strong" aria-hidden="true" />
                 <span className="text-xs font-bold text-foreground">Acceso seguro</span>
               </div>
               <p className="text-xs text-muted-foreground">

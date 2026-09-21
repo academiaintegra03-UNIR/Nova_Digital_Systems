@@ -39,7 +39,7 @@ function PlanCard({ plan }: { plan: Plan }) {
       <CardContent className="flex flex-1 flex-col">
         <IconTile icon={TYPE_ICON[plan.type]} tone={plan.badge ? "primary" : "secondary"} className="mb-3" />
 
-        <div className="mb-1 text-lg font-extrabold text-primary">{plan.name}</div>
+        <div className="mb-1 text-lg font-extrabold text-heading">{plan.name}</div>
         <p className="mb-3.5 min-h-9 text-sm text-muted-foreground">{plan.description}</p>
 
         {plan.seatLimit ? (
@@ -48,7 +48,7 @@ function PlanCard({ plan }: { plan: Plan }) {
           </div>
         ) : null}
 
-        <div className="mb-0.5 text-2xl font-extrabold text-primary">{formatCop(plan.priceCop)}</div>
+        <div className="font-data mb-0.5 text-2xl font-extrabold text-heading">{formatCop(plan.priceCop)}</div>
         <div className="mb-4 text-xs text-muted-foreground">{plan.period}</div>
 
         <div className="flex-1 space-y-2">

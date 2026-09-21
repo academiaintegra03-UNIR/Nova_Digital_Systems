@@ -17,7 +17,7 @@ export default async function CampusMisMateriasPage() {
       <Card>
         <CardContent className="flex flex-col items-center py-10 text-center">
           <Layers className="mb-3 size-8 text-muted-foreground" aria-hidden="true" />
-          <h1 className="mb-1.5 text-lg font-extrabold text-primary">Todavía no tienes materias</h1>
+          <h1 className="mb-1.5 text-lg font-extrabold text-heading">Todavía no tienes materias</h1>
           <p className="text-sm text-muted-foreground">
             Cuando tu tutor agregue materias a tu grupo, las vas a ver aquí con sus clases y actividades.
           </p>
@@ -33,7 +33,7 @@ export default async function CampusMisMateriasPage() {
           <Card className="h-full transition-colors hover:border-primary/40 hover:bg-muted/40">
             <CardContent className="py-5">
               <div className="mb-1 text-xs text-muted-foreground">{gm.grupoNombre}</div>
-              <div className="text-base font-bold text-primary">{gm.materiaNombre}</div>
+              <div className="text-base font-bold text-heading">{gm.materiaNombre}</div>
             </CardContent>
           </Card>
         </Link>

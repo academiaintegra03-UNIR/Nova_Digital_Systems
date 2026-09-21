@@ -1,12 +1,13 @@
+import { BRAND } from "@/lib/brand";
 import { siteName } from "@/lib/data/home-content";
 
-const COLOR_PRIMARY = "#1e3a5f";
-const COLOR_TEAL = "#2FA6A1";
-const COLOR_MUTED = "#6b7280";
-const COLOR_FAINT = "#9ca3af";
-const COLOR_BORDER = "#e5e7eb";
-const COLOR_TEXT = "#111827";
-const COLOR_TRACK = "#f3f6fa";
+const COLOR_PRIMARY = BRAND.oxford;
+const COLOR_ACCENT = BRAND.glacier;
+const COLOR_MUTED = BRAND.glacierStrong;
+const COLOR_FAINT = BRAND.glacier;
+const COLOR_BORDER = BRAND.border;
+const COLOR_TEXT = BRAND.oxford;
+const COLOR_TRACK = BRAND.paper;
 
 const PAGE_LEFT = 56;
 const PAGE_RIGHT = 539;
@@ -146,7 +147,7 @@ export async function buildDiagnosticoPdf(data: DiagnosticoReportData) {
     y += 6;
     doc.setFillColor(COLOR_TRACK);
     doc.rect(PAGE_LEFT, y, PAGE_WIDTH, 6, "F");
-    doc.setFillColor(COLOR_TEAL);
+    doc.setFillColor(COLOR_ACCENT);
     doc.rect(PAGE_LEFT, y, (PAGE_WIDTH * m.porcentaje) / 100, 6, "F");
     y += 18;
   }

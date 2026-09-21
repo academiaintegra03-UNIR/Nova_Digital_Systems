@@ -72,7 +72,7 @@ export default async function ColegiosResumenPage() {
 
       <Card className="mb-6">
         <CardContent>
-          <h3 className="mb-3.5 text-base font-bold text-primary">Próximas clases en tu colegio</h3>
+          <h3 className="mb-3.5 text-base font-bold text-heading">Próximas clases en tu colegio</h3>
           {proximasClases.length === 0 ? (
             <p className="text-sm text-muted-foreground">No hay clases programadas por ahora.</p>
           ) : (
@@ -106,7 +106,7 @@ export default async function ColegiosResumenPage() {
         </CardContent>
       </Card>
 
-      <h3 className="mb-3 text-base font-bold text-primary">Accesos rápidos</h3>
+      <h3 className="mb-3 text-base font-bold text-heading">Accesos rápidos</h3>
       <QuickLinksRow
         links={[
           { href: "/colegios-panel/estudiantes", label: "Estudiantes", icon: GraduationCap },

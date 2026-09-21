@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import type { DiagnosticStep, HeroContent, MethodologyPoint, NeedCard, TrustItem } from "@/lib/types/content";
 
-export const siteName = "Nova Digital Systems";
+export const siteName = "Nova Digital Studio Systems";
 export const siteTagline = "Comprende, practica y avanza";
 
 // Static hero copy — ported from reference/prototipos/Academia Integra.dc.html

@@ -28,7 +28,7 @@ export default function MiRutaPage() {
               {m.status === "Completado" ? <Check className="size-4" /> : i + 1}
             </div>
             <div className="flex-1">
-              <div className="text-sm font-bold text-primary">{m.name}</div>
+              <div className="text-sm font-bold text-heading">{m.name}</div>
               <div className="text-xs text-muted-foreground">{m.lessons} lecciones</div>
             </div>
             <StatusBadge tone={statusTone[m.status]}>{m.status}</StatusBadge>

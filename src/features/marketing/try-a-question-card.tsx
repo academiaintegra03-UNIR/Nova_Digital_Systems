@@ -33,14 +33,14 @@ export function TryAQuestionCard({ className }: { className?: string }) {
         className
       )}
     >
-      <span className="absolute -top-3 -right-3 rounded-full bg-[#F2954A] px-3 py-1 text-[11px] font-bold text-white shadow-sm">
+      <span className="absolute -top-3 -right-3 rounded-lg bg-cta px-3 py-1.5 text-xs font-medium text-cta-foreground shadow-sm">
         Pruébalo tú mismo
       </span>
 
       <div className="mb-1 text-xs font-bold tracking-wide text-secondary-foreground uppercase">
         Banco de preguntas · Álgebra
       </div>
-      <p className="mb-4 text-base font-bold text-primary">{QUESTION}</p>
+      <p className="mb-4 text-base font-bold text-heading">{QUESTION}</p>
 
       <div className="mb-3 grid grid-cols-4 gap-2">
         {OPTIONS.map((opt) => {
@@ -58,7 +58,7 @@ export function TryAQuestionCard({ className }: { className?: string }) {
                   ? "border-success bg-success-foreground text-success"
                   : isSelected
                     ? "border-warning bg-warning-foreground text-warning"
-                    : "border-border bg-background text-primary hover:border-secondary-foreground"
+                    : "border-border bg-background text-heading hover:border-secondary-foreground"
               )}
             >
               x = {opt}
@@ -83,7 +83,7 @@ export function TryAQuestionCard({ className }: { className?: string }) {
 
       <Link
         href="/diagnostico"
-        className="mt-4 flex items-center gap-1.5 text-sm font-bold text-primary hover:text-secondary-foreground"
+        className="mt-4 flex items-center gap-1.5 text-sm font-bold text-heading hover:text-secondary-foreground"
       >
         {correct ? (
           <>

@@ -9,7 +9,7 @@ export default function ProgramsPage() {
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8">
       <div className="mb-9 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
-          <h1 className="mb-2 text-3xl font-extrabold text-primary">Programas académicos</h1>
+          <h1 className="mb-2 text-3xl font-extrabold text-heading">Programas académicos</h1>
           <p className="text-base text-muted-foreground">
             Desde fundamentos de primaria hasta cálculo universitario y preparación para exámenes.
           </p>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { heroContent } from "@/lib/data/home-content";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,7 @@ function Headline({ text }: { text: string }) {
         <svg
           viewBox="0 0 200 14"
           preserveAspectRatio="none"
-          className="absolute -bottom-1.5 left-0 h-2.5 w-full text-[#F2954A]"
+          className="absolute -bottom-1.5 left-0 h-2.5 w-full text-glacier"
           aria-hidden="true"
         >
           <path
@@ -39,27 +40,40 @@ function Headline({ text }: { text: string }) {
 }
 
 /**
- * Static hero on the site's normal light background — no dark full-bleed
- * band, no carousel, no stock-photo placeholder. A graph-paper texture (a
- * notebook, not generic tech dots) and a hand-drawn underline give it a
- * warmer, student-facing feel; the practice question on the right is
- * something a visitor can actually try, not just look at.
+ * Hero con fondo ilustrado (public/images/fondointerfaz*.png) sobre el tema
+ * oscuro global. El texto y la tarjeta usan los tokens del tema, sin estilos
+ * propios. La pregunta de la derecha se puede responder de verdad, no es una
+ * captura.
  */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-background">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-60"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)",
-          backgroundSize: "34px 34px",
-          WebkitMaskImage: "radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 100%)",
-          maskImage: "radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 100%)",
-        }}
-      />
+    <section className="relative isolate overflow-hidden border-b border-border text-foreground">
+      {/* Fondo ilustrado: una imagen por formato (art direction), ambas a sangre. La de
+          escritorio conserva el arte a la derecha, detrás de la tarjeta; la móvil, abajo. */}
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <Image
+          src="/images/fondointerfaz.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden object-cover object-right md:block"
+        />
+        <Image
+          src="/images/fondointerfazmovil.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-bottom md:hidden"
+        />
+        {/* Degradados de marca: aseguran contraste del texto (arriba en móvil, a la izquierda en escritorio) y funden la
+            imagen con el fondo oscuro de la página por abajo. */}
+        <div className="absolute inset-0 bg-linear-to-b from-background/75 via-background/35 to-transparent md:bg-linear-to-r md:from-background/60 md:via-background/20" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background to-transparent" />
+      </div>
 
-      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-8 sm:py-24 md:min-h-[34rem] lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <div>
           <div className="mb-5 flex items-center gap-2.5">
             <span className="h-px w-8 bg-secondary-foreground/60" aria-hidden="true" />
@@ -67,12 +81,12 @@ export function Hero() {
               {heroContent.eyebrow}
             </span>
           </div>
-          <h1 className="mb-5 text-3xl leading-tight font-extrabold text-primary sm:text-4xl lg:text-5xl">
+          <h1 className="mb-5 text-3xl leading-tight font-extrabold tracking-tight text-heading sm:text-4xl lg:text-5xl">
             <Headline text={heroContent.title} />
           </h1>
-          <p className="mb-8 max-w-md text-base leading-relaxed text-foreground/70">{heroContent.subtitle}</p>
+          <p className="mb-8 max-w-md text-base leading-relaxed text-foreground/75">{heroContent.subtitle}</p>
           <div className="flex flex-wrap items-center gap-3">
-            <Button size="lg" className="bg-[#F2954A] text-white hover:bg-[#e8863a]" asChild>
+            <Button size="lg" variant="cta" asChild>
               <Link href="/diagnostico">Realizar diagnóstico gratuito</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
@@ -82,7 +96,7 @@ export function Hero() {
         </div>
 
         <div className="flex justify-center py-4 lg:justify-end lg:py-0">
-          <TryAQuestionCard className="-rotate-2" />
+          <TryAQuestionCard className="shadow-[0_0_70px_-18px_var(--glacier)]" />
         </div>
       </div>
     </section>

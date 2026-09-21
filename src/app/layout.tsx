@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 const description =
@@ -16,8 +22,8 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nova Digital Systems | Matemáticas y preparación para exámenes",
-    template: "%s · Nova Digital Systems",
+    default: "Nova Digital Studio Systems | Matemáticas y preparación para exámenes",
+    template: "%s · Nova Digital Studio Systems",
   },
   description,
   keywords: [
@@ -38,13 +44,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_CO",
-    siteName: "Nova Digital Systems",
-    title: "Nova Digital Systems | Matemáticas y preparación para exámenes",
+    siteName: "Nova Digital Studio Systems",
+    title: "Nova Digital Studio Systems | Matemáticas y preparación para exámenes",
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nova Digital Systems | Matemáticas y preparación para exámenes",
+    title: "Nova Digital Studio Systems | Matemáticas y preparación para exámenes",
     description,
   },
 };
@@ -52,7 +58,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "Nova Digital Systems",
+  name: "Nova Digital Studio Systems",
   description,
   url: siteUrl,
   logo: `${siteUrl}/Nova-PNG.png`,
@@ -61,7 +67,7 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${plusJakartaSans.variable} antialiased`}>
+    <html lang="es" className={`${inter.variable} ${jetbrainsMono.variable} dark antialiased`}>
       <body
         className="min-h-screen flex flex-col bg-background text-foreground"
         suppressHydrationWarning
@@ -71,7 +77,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
-        <Toaster position="top-center" richColors />
+        <Toaster position="top-center" theme="dark" richColors />
       </body>
     </html>
   );

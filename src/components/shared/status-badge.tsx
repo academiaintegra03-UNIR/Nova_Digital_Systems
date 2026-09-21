@@ -6,7 +6,7 @@ const toneClasses: Record<StatusTone, string> = {
   success: "bg-success-foreground text-success",
   warning: "bg-warning-foreground text-warning",
   error: "bg-destructive/10 text-destructive",
-  info: "bg-secondary text-primary",
+  info: "bg-secondary text-heading",
   neutral: "bg-muted text-muted-foreground",
 };
 

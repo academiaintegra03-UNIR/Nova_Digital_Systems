@@ -85,7 +85,7 @@ export default async function AdminIaPage() {
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1.4fr_1fr]">
         <Card>
           <CardContent>
-            <h3 className="mb-4 text-base font-bold text-primary">Mensajes por día (últimos {DAYS_IN_TREND} días)</h3>
+            <h3 className="mb-4 text-base font-bold text-heading">Mensajes por día (últimos {DAYS_IN_TREND} días)</h3>
             {total === 0 ? (
               <p className="text-sm text-muted-foreground">Todavía no hay peticiones registradas.</p>
             ) : (
@@ -106,7 +106,7 @@ export default async function AdminIaPage() {
 
         <Card>
           <CardContent>
-            <h3 className="mb-3.5 text-base font-bold text-primary">Estado</h3>
+            <h3 className="mb-3.5 text-base font-bold text-heading">Estado</h3>
             <div className="flex items-start gap-2.5 border-b border-border py-2 text-sm last:border-none">
               <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden="true" />
               <span>{successCount} respuestas exitosas</span>

@@ -50,7 +50,7 @@ export function CourseSidebar({
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block px-3.5 py-2.5 text-sm font-semibold text-teal hover:bg-muted/50"
+                    className="block px-3.5 py-2.5 text-sm font-semibold text-glacier-strong hover:bg-muted/50"
                   >
                     {link.label}
                   </Link>

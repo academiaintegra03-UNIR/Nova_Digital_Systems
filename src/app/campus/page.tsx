@@ -90,7 +90,7 @@ export default async function CampusHomePage() {
         <div className="relative">
           <div className="mb-1 text-xl font-bold">Hola, {firstName} 👋</div>
           {nextClass ? (
-            <div className="text-sm text-[#EAF6F5]">
+            <div className="text-sm text-on-primary-muted">
               <div className="mb-0.5 text-xs font-bold tracking-wide uppercase text-white/70">Próxima clase</div>
               <div className="text-base font-bold text-white">
                 {nextClass.materiaNombre}: {nextClass.nombre}
@@ -98,17 +98,17 @@ export default async function CampusHomePage() {
               <div>{formatScheduled(nextClass.scheduledAt)}</div>
             </div>
           ) : (
-            <div className="text-sm text-[#EAF6F5]">No tienes clases programadas por ahora.</div>
+            <div className="text-sm text-on-primary-muted">No tienes clases programadas por ahora.</div>
           )}
         </div>
         {nextClass?.meetingLink ? (
-          <Button className="relative shrink-0 gap-1.5 bg-white text-primary hover:bg-white/90" size="lg" asChild>
+          <Button variant="cta" className="relative shrink-0 gap-1.5" size="lg" asChild>
             <a href={nextClass.meetingLink} target="_blank" rel="noreferrer">
               <ExternalLink className="size-4" /> Unirse a la clase
             </a>
           </Button>
         ) : (
-          <Button className="relative shrink-0 bg-white text-primary hover:bg-white/90" asChild>
+          <Button variant="cta" className="relative shrink-0" asChild>
             <Link href="/campus/mis-clases">Ver mis clases</Link>
           </Button>
         )}
@@ -117,7 +117,7 @@ export default async function CampusHomePage() {
       <div className="mb-6 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_1.4fr]">
         <Card>
           <CardContent>
-            <h3 className="mb-3 text-base font-bold text-primary">Mi grupo</h3>
+            <h3 className="mb-3 text-base font-bold text-heading">Mi grupo</h3>
             {grupoNombre ? (
               <div className="flex items-center gap-3">
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-muted">
@@ -144,7 +144,7 @@ export default async function CampusHomePage() {
 
         <Card>
           <CardContent>
-            <h3 className="mb-3 text-base font-bold text-primary">Próximas clases</h3>
+            <h3 className="mb-3 text-base font-bold text-heading">Próximas clases</h3>
             {proximas.length === 0 ? (
               <p className="text-sm text-muted-foreground">No tienes clases próximas por ahora.</p>
             ) : (
@@ -179,7 +179,7 @@ export default async function CampusHomePage() {
         </Card>
       </div>
 
-      <h3 className="mb-3 text-base font-bold text-primary">Accesos rápidos</h3>
+      <h3 className="mb-3 text-base font-bold text-heading">Accesos rápidos</h3>
       <QuickLinksRow
         links={[
           { href: "/campus/mis-materias", label: "Mis materias", icon: Layers },

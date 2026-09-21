@@ -36,7 +36,7 @@ export default async function CampusMisClasesPage() {
       <Card>
         <CardContent className="flex flex-col items-center py-10 text-center">
           <CalendarClock className="mb-3 size-8 text-muted-foreground" aria-hidden="true" />
-          <h1 className="mb-1.5 text-lg font-extrabold text-primary">Todavía no tienes clases</h1>
+          <h1 className="mb-1.5 text-lg font-extrabold text-heading">Todavía no tienes clases</h1>
           <p className="text-sm text-muted-foreground">
             Cuando tu tutor programe una clase para tu grupo, la vas a ver aquí con el link para unirte.
           </p>
@@ -48,7 +48,7 @@ export default async function CampusMisClasesPage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h2 className="mb-3 text-base font-bold text-primary">Próximas clases</h2>
+        <h2 className="mb-3 text-base font-bold text-heading">Próximas clases</h2>
         {proximas.length === 0 ? (
           <p className="text-sm text-muted-foreground">No tienes clases próximas por ahora.</p>
         ) : (
@@ -84,7 +84,7 @@ export default async function CampusMisClasesPage() {
 
       {pasadas.length > 0 ? (
         <div>
-          <h2 className="mb-3 text-base font-bold text-primary">Clases anteriores</h2>
+          <h2 className="mb-3 text-base font-bold text-heading">Clases anteriores</h2>
           <div className="flex flex-col gap-2.5">
             {pasadas.map((clase) => (
               <Card key={clase.id}>

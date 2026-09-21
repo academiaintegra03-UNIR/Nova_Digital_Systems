@@ -31,7 +31,7 @@ export default async function CampusMisResultadosPage() {
       <Card>
         <CardContent className="flex flex-col items-center py-10 text-center">
           <ClipboardList className="mb-3 size-8 text-muted-foreground" aria-hidden="true" />
-          <h1 className="mb-1.5 text-lg font-extrabold text-primary">Todavía no tienes diagnósticos</h1>
+          <h1 className="mb-1.5 text-lg font-extrabold text-heading">Todavía no tienes diagnósticos</h1>
           <p className="text-sm text-muted-foreground">
             Cuando presentes una batería diagnóstica, tus resultados van a aparecer aquí.
           </p>
@@ -82,7 +82,7 @@ export default async function CampusMisResultadosPage() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="text-right">
-                  <div className="text-lg font-extrabold text-primary">{r.puntaje_global}%</div>
+                  <div className="text-lg font-extrabold text-heading">{r.puntaje_global}%</div>
                   <div className="text-xs text-muted-foreground">
                     {r.aciertos}/{r.total_preguntas}
                   </div>

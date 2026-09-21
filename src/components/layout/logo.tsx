@@ -14,7 +14,7 @@ export function Logo({
     <Link href="/" className={cn("flex shrink-0 items-center gap-2.5", className)}>
       <Image src="/Nova-PNG.png" alt="" width={36} height={36} className="rounded-full" priority />
       <span>
-        <span className="block text-lg leading-tight font-extrabold tracking-tight text-primary">
+        <span className="block text-lg leading-tight font-extrabold tracking-tight text-heading">
           {siteName}
         </span>
         {withTagline ? (

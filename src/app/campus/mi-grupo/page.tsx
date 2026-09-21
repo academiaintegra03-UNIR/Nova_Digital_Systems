@@ -73,7 +73,7 @@ export default async function CampusMiGrupoPage() {
       <Card>
         <CardContent className="flex flex-col items-center py-10 text-center">
           <Users className="mb-3 size-8 text-muted-foreground" aria-hidden="true" />
-          <h1 className="mb-1.5 text-lg font-extrabold text-primary">Aún no estás en ningún grupo</h1>
+          <h1 className="mb-1.5 text-lg font-extrabold text-heading">Aún no estás en ningún grupo</h1>
           <p className="text-sm text-muted-foreground">
             Cuando el administrador te asigne a un grupo, lo vas a ver aquí junto con tu tutor y tus
             compañeros.
@@ -89,7 +89,7 @@ export default async function CampusMiGrupoPage() {
         <Card key={grupo.id}>
           <CardContent>
             <div className="mb-3.5 flex flex-wrap items-center justify-between gap-2">
-              <h3 className="text-lg font-bold text-primary">{grupo.name}</h3>
+              <h3 className="text-lg font-bold text-heading">{grupo.name}</h3>
               <span className="text-xs text-muted-foreground">Tutor: {grupo.tutorNombre ?? "Sin asignar"}</span>
             </div>
             {grupo.companeros.length > 0 ? (

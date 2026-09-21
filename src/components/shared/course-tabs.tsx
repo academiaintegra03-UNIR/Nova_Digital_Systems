@@ -26,7 +26,7 @@ export function CourseTabs({ tabs }: { tabs: CourseTab[] }) {
             className={cn(
               "shrink-0 border-b-2 px-3.5 py-2.5 text-sm font-semibold whitespace-nowrap transition-colors",
               isActive
-                ? "border-teal text-teal"
+                ? "border-glacier-strong text-glacier-strong"
                 : "border-transparent text-muted-foreground hover:text-foreground"
             )}
           >

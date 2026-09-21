@@ -1,4 +1,4 @@
-# Roadmap de funcionalidades — Nova Digital Systems
+# Roadmap de funcionalidades — Nova Digital Studio Systems
 
 Este documento reúne las funcionalidades planeadas que todavía no están
 construidas, organizadas por área, con la tecnología recomendada para cada

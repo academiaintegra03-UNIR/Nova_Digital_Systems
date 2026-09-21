@@ -39,7 +39,7 @@ export function QuestionBank() {
       <Card>
         <CardContent>
           <div className="mb-1 text-sm text-muted-foreground">Intentos esta semana</div>
-          <div className="mb-3.5 text-2xl font-extrabold text-primary">{bankStats.attempts}</div>
+          <div className="mb-3.5 text-2xl font-extrabold text-heading">{bankStats.attempts}</div>
           <div className="mb-1 text-sm text-muted-foreground">Precisión</div>
           <div className="mb-3.5 text-2xl font-extrabold text-success">{bankStats.accuracy}</div>
           <div className="text-xs text-muted-foreground">

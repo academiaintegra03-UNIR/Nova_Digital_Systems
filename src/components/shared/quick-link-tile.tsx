@@ -16,7 +16,7 @@ export function QuickLinkTile({ href, label, icon: Icon }: QuickLink) {
     <Link href={href}>
       <Card className="h-full transition-colors hover:border-primary/40 hover:bg-muted/40">
         <CardContent className="flex flex-col items-center gap-2 py-5 text-center">
-          <Icon className="size-5 text-primary" aria-hidden="true" />
+          <Icon className="size-5 text-heading" aria-hidden="true" />
           <span className="text-xs font-semibold text-foreground">{label}</span>
         </CardContent>
       </Card>

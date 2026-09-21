@@ -77,7 +77,7 @@ export function ClasesTable({
                             href={clase.meetingLink}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-muted-foreground hover:text-primary"
+                            className="text-muted-foreground hover:text-heading"
                             title="Abrir link de la clase"
                           >
                             <ExternalLink className="size-4" />
@@ -88,7 +88,7 @@ export function ClasesTable({
                             href={clase.recordingLink}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-muted-foreground hover:text-primary"
+                            className="text-muted-foreground hover:text-heading"
                             title="Ver grabación"
                           >
                             <Video className="size-4" />

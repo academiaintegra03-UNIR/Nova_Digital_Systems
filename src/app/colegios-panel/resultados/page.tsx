@@ -6,7 +6,7 @@ export default function ColegiosResultadosPage() {
   return (
     <Card>
       <CardContent>
-        <h3 className="mb-4 text-base font-bold text-primary">
+        <h3 className="mb-4 text-base font-bold text-heading">
           Resultados agregados por área (último simulacro institucional)
         </h3>
         {areaResults.map((a) => (

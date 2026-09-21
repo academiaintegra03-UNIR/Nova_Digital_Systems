@@ -61,7 +61,7 @@ export function PaymentReceiptView({
       <Card>
         <CardContent className="flex flex-col items-center py-10 text-center">
           <TriangleAlert className="mb-3 size-8 text-warning" aria-hidden="true" />
-          <h1 className="mb-1.5 text-lg font-extrabold text-primary">No encontramos ese pago</h1>
+          <h1 className="mb-1.5 text-lg font-extrabold text-heading">No encontramos ese pago</h1>
           <p className="mb-5 text-sm text-muted-foreground">
             Si acabas de pagar, escríbenos por Contacto con tu correo y te confirmamos manualmente.
           </p>
@@ -78,7 +78,7 @@ export function PaymentReceiptView({
       <Card>
         <CardContent className="flex flex-col items-center py-10 text-center">
           <Loader2 className="mb-3 size-8 animate-spin text-secondary-foreground" aria-hidden="true" />
-          <h1 className="mb-1.5 text-lg font-extrabold text-primary">Confirmando tu pago</h1>
+          <h1 className="mb-1.5 text-lg font-extrabold text-heading">Confirmando tu pago</h1>
           <p className="text-sm text-muted-foreground">
             Wompi nos avisa apenas se procese — normalmente toma solo unos segundos. Esta página se
             actualiza sola, no hace falta que la recargues.
@@ -97,7 +97,7 @@ export function PaymentReceiptView({
             <div className="mb-3 flex size-14 items-center justify-center rounded-full bg-success-foreground text-success">
               <CheckCircle2 className="size-7" aria-hidden="true" />
             </div>
-            <h1 className="mb-1 text-xl font-extrabold text-primary">¡Pago confirmado!</h1>
+            <h1 className="mb-1 text-xl font-extrabold text-heading">¡Pago confirmado!</h1>
             <p className="text-sm text-muted-foreground">Tu cuenta ya está activa.</p>
           </div>
 
@@ -154,7 +154,7 @@ export function PaymentReceiptView({
         <div className="mb-3 flex size-14 items-center justify-center rounded-full bg-destructive/10 text-destructive">
           <TriangleAlert className="size-7" aria-hidden="true" />
         </div>
-        <h1 className="mb-1.5 text-lg font-extrabold text-primary">El pago no se completó</h1>
+        <h1 className="mb-1.5 text-lg font-extrabold text-heading">El pago no se completó</h1>
         <p className="mb-5 text-sm text-muted-foreground">
           Tu cuenta quedó creada, pero el plan no se activó. Puedes intentar de nuevo o escribirnos por
           Contacto si el problema persiste.

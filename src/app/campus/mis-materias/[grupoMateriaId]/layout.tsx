@@ -33,7 +33,7 @@ export default async function CampusMiMateriaCursoLayout({
 
       <div className="mb-4">
         <div className="text-xs text-muted-foreground">{curso.grupoNombre}</div>
-        <h1 className="text-xl font-extrabold text-primary">{curso.materiaNombre}</h1>
+        <h1 className="text-xl font-extrabold text-heading">{curso.materiaNombre}</h1>
       </div>
 
       <CourseTabs

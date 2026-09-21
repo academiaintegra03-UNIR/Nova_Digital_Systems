@@ -35,7 +35,7 @@ export default async function CheckoutPage({ params }: PageProps<"/checkout/[pla
           <ShieldCheck className="size-5" aria-hidden="true" />
         </div>
         <div>
-          <h1 className="text-xl font-extrabold text-primary sm:text-2xl">Confirma tu inscripción</h1>
+          <h1 className="text-xl font-extrabold text-heading sm:text-2xl">Confirma tu inscripción</h1>
           <p className="text-xs text-muted-foreground">Pago procesado de forma segura por Wompi</p>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default async function CheckoutPage({ params }: PageProps<"/checkout/[pla
             <div className="mb-1 text-xs font-bold tracking-wide text-muted-foreground uppercase">
               Resumen de tu plan
             </div>
-            <div className="mb-1 text-lg font-extrabold text-primary">{plan.name}</div>
+            <div className="mb-1 text-lg font-extrabold text-heading">{plan.name}</div>
             <p className="mb-3 text-sm text-muted-foreground">{plan.description}</p>
 
             {plan.seat_limit ? (
@@ -67,7 +67,7 @@ export default async function CheckoutPage({ params }: PageProps<"/checkout/[pla
             <div className="mt-4 flex items-end justify-between border-t border-border pt-4">
               <span className="text-xs font-semibold text-muted-foreground">Total a pagar</span>
               <div className="text-right">
-                <div className="text-2xl font-extrabold text-primary">{formatCop(plan.price_cop)}</div>
+                <div className="text-2xl font-extrabold text-heading">{formatCop(plan.price_cop)}</div>
                 <div className="text-xs text-muted-foreground">{plan.period}</div>
               </div>
             </div>

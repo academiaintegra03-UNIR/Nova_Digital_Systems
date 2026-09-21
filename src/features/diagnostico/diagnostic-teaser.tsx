@@ -96,6 +96,36 @@ const GRADO_POR_BANCO: Record<BancoId, string | null> = {
 
 type Paso = "lead" | "examen" | "enviando" | "resultado";
 
+/** Solo letras (con tildes/ñ) y espacios; la primera letra de cada palabra en mayúscula. */
+function formatearNombre(valor: string): string {
+  return valor
+    .replace(/[^\p{L}\s]/gu, "")
+    .replace(/\s{2,}/g, " ")
+    .replace(/(^|\s)(\p{L})/gu, (_, sep: string, letra: string) => sep + letra.toUpperCase());
+}
+
+function soloDigitos(valor: string, max: number): string {
+  return valor.replace(/\D/g, "").slice(0, max);
+}
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+/** Devuelve el motivo por el que el correo no es válido, o undefined si está vacío o es válido. */
+function errorCorreo(valor: string): string | undefined {
+  const v = valor.trim();
+  if (!v) return undefined;
+  if (!v.includes("@")) return "Falta el signo @ — un correo debe verse así: nombre@dominio.com";
+  if (!EMAIL_REGEX.test(v)) return "Correo no válido — revisa que tenga el formato nombre@dominio.com";
+  return undefined;
+}
+
+/** Cada aviso de integridad es un toast nuevo con id propio: se descarta el anterior
+ * para que el estudiante siempre vea el aviso más reciente, en cualquier pregunta. */
+function avisarIncidencia(mensaje: string) {
+  toast.dismiss();
+  toast.warning(mensaje, { id: `incidencia-${Date.now()}`, duration: 5000 });
+}
+
 function formatTiempo(segundos: number): string {
   const m = Math.floor(segundos / 60);
   const s = segundos % 60;
@@ -107,7 +137,8 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
   const [lead, setLead] = React.useState<LeadForm>(() => getLeadInicial(cuentaConocida));
   const [error, setError] = React.useState<string>();
   const [isLoadingBanco, setIsLoadingBanco] = React.useState(false);
-
+  const [errorEmailAcudiente, setErrorEmailAcudiente] = React.useState<string>();
+  const [errorEmailEstudiante, setErrorEmailEstudiante] = React.useState<string>();
   const [banco, setBanco] = React.useState<BancoResponse | null>(null);
   const [indice, setIndice] = React.useState(0);
   const [respuestas, setRespuestas] = React.useState<Record<string, Opcion>>({});
@@ -148,23 +179,23 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
       if (document.hidden) {
         desenfoquesRef.current += 1;
         registrar("pestaña_abandonada", "El estudiante cambió de pestaña o minimizó el navegador");
-        toast.warning("Detectamos que saliste de la pestaña del examen — esto se tiene en cuenta en tu índice de enfoque.");
+        avisarIncidencia("Detectamos que saliste de la pestaña del examen — esto se tiene en cuenta en tu índice de enfoque.");
       }
     }
     function onCopy() {
       copyPasteRef.current += 1;
       registrar("intento_copia", "El estudiante copió texto del examen");
-      toast.warning("Evita copiar el texto del examen para procesarlo externamente — esto se tiene en cuenta en tu resultado.");
+      avisarIncidencia("Evita copiar el texto del examen para procesarlo externamente — esto se tiene en cuenta en tu resultado.");
     }
     function onCut() {
       copyPasteRef.current += 1;
       registrar("intento_corte", "El estudiante cortó texto del examen");
-      toast.warning("Evita cortar el texto del examen — esto se tiene en cuenta en tu resultado.");
+      avisarIncidencia("Evita cortar el texto del examen — esto se tiene en cuenta en tu resultado.");
     }
     function onPaste() {
       copyPasteRef.current += 1;
       registrar("intento_pegado", "El estudiante pegó contenido en el examen");
-      toast.warning("Evita pegar contenido externo en el examen — esto se tiene en cuenta en tu resultado.");
+      avisarIncidencia("Evita pegar contenido externo en el examen — esto se tiene en cuenta en tu resultado.");
     }
     document.addEventListener("visibilitychange", onVisibilityChange);
     document.addEventListener("copy", onCopy);
@@ -251,6 +282,23 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
       return;
     }
 
+    if (!cuentaConocida && lead.estudianteNombre.trim().length < 3) {
+      setError("Escribe el nombre completo del estudiante (solo letras).");
+      return;
+    }
+    const errAcudiente = errorCorreo(lead.acudienteEmail);
+    const errEstudiante = errorCorreo(lead.estudianteEmail);
+    setErrorEmailAcudiente(errAcudiente);
+    setErrorEmailEstudiante(errEstudiante);
+    if (errAcudiente || errEstudiante) {
+      setError(errAcudiente ? `Correo del acudiente: ${errAcudiente}` : `Correo del estudiante: ${errEstudiante}`);
+      return;
+    }
+    if (lead.acudienteTelefono.trim() && lead.acudienteTelefono.length < 7) {
+      setError("El número de WhatsApp del acudiente no es válido.");
+      return;
+    }
+
     setIsLoadingBanco(true);
     try {
       const res = await fetch(`/api/diagnostico/banco?id=${encodeURIComponent(lead.bancoId)}`);
@@ -287,15 +335,15 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
     return (
       <div className="mx-auto max-w-2xl px-4 py-14 sm:px-8">
         {cuentaConocida ? (
-          <h1 className="mb-3.5 text-center text-3xl font-extrabold text-primary">
+          <h1 className="mb-3.5 text-center text-3xl font-extrabold text-heading">
             Hola, {cuentaConocida.nombre.split(" ")[0]} — hagamos tu diagnóstico
           </h1>
         ) : (
           <>
-            <div className="mb-2.5 text-center text-xs font-bold tracking-wide text-[#2FA6A1] uppercase">
+            <div className="mb-2.5 text-center text-xs font-bold tracking-wide text-glacier-strong uppercase">
               Gratis · Sin compromiso
             </div>
-            <h1 className="mb-3.5 text-center text-3xl font-extrabold text-primary">Diagnóstico académico</h1>
+            <h1 className="mb-3.5 text-center text-3xl font-extrabold text-heading">Diagnóstico académico</h1>
           </>
         )}
         <p className="mb-8 text-center text-base leading-relaxed text-foreground/80">
@@ -306,7 +354,7 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
 
         <Card>
           <CardContent className="py-6">
-            <form onSubmit={handleIniciar} className="flex flex-col gap-4">
+            <form onSubmit={handleIniciar} noValidate className="flex flex-col gap-4">
               {error ? (
                 <Alert variant="destructive">
                   <AlertDescription>{error}</AlertDescription>
@@ -321,7 +369,7 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                       id="dx-estudiante"
                       placeholder="Ej. Jimmy Alejandro"
                       value={lead.estudianteNombre}
-                      onChange={(e) => setLead((l) => ({ ...l, estudianteNombre: e.target.value }))}
+                      onChange={(e) => setLead((l) => ({ ...l, estudianteNombre: formatearNombre(e.target.value) }))}
                       required
                       disabled={isLoadingBanco}
                     />
@@ -330,11 +378,11 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                     <Label htmlFor="dx-edad">Edad</Label>
                     <Input
                       id="dx-edad"
-                      type="number"
-                      min={1}
+                      type="text"
+                      inputMode="numeric"
                       placeholder="Ej. 17"
                       value={lead.estudianteEdad}
-                      onChange={(e) => setLead((l) => ({ ...l, estudianteEdad: e.target.value }))}
+                      onChange={(e) => setLead((l) => ({ ...l, estudianteEdad: soloDigitos(e.target.value, 2) }))}
                       disabled={isLoadingBanco}
                     />
                   </div>
@@ -344,11 +392,11 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                   <Label htmlFor="dx-edad">Edad (opcional)</Label>
                   <Input
                     id="dx-edad"
-                    type="number"
-                    min={1}
+                    type="text"
+                    inputMode="numeric"
                     placeholder="Ej. 17"
                     value={lead.estudianteEdad}
-                    onChange={(e) => setLead((l) => ({ ...l, estudianteEdad: e.target.value }))}
+                    onChange={(e) => setLead((l) => ({ ...l, estudianteEdad: soloDigitos(e.target.value, 2) }))}
                     disabled={isLoadingBanco}
                   />
                 </div>
@@ -384,9 +432,15 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                         type="email"
                         placeholder="Ej. acudiente@correo.com"
                         value={lead.acudienteEmail}
-                        onChange={(e) => setLead((l) => ({ ...l, acudienteEmail: e.target.value }))}
+                        onChange={(e) => {
+                          setLead((l) => ({ ...l, acudienteEmail: e.target.value }));
+                          if (errorEmailAcudiente) setErrorEmailAcudiente(errorCorreo(e.target.value));
+                        }}
+                        onBlur={() => setErrorEmailAcudiente(errorCorreo(lead.acudienteEmail))}
+                        aria-invalid={!!errorEmailAcudiente}
                         disabled={isLoadingBanco}
                       />
+                      {errorEmailAcudiente ? <p className="text-xs text-destructive">{errorEmailAcudiente}</p> : null}
                     </div>
                     <div className="flex flex-col gap-1.5">
                       <Label htmlFor="dx-estudiante-email">Correo del estudiante (opcional — copia)</Label>
@@ -395,9 +449,15 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                         type="email"
                         placeholder="Ej. estudiante@correo.com"
                         value={lead.estudianteEmail}
-                        onChange={(e) => setLead((l) => ({ ...l, estudianteEmail: e.target.value }))}
+                        onChange={(e) => {
+                          setLead((l) => ({ ...l, estudianteEmail: e.target.value }));
+                          if (errorEmailEstudiante) setErrorEmailEstudiante(errorCorreo(e.target.value));
+                        }}
+                        onBlur={() => setErrorEmailEstudiante(errorCorreo(lead.estudianteEmail))}
+                        aria-invalid={!!errorEmailEstudiante}
                         disabled={isLoadingBanco}
                       />
+                      {errorEmailEstudiante ? <p className="text-xs text-destructive">{errorEmailEstudiante}</p> : null}
                     </div>
                   </div>
 
@@ -407,9 +467,10 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                       <Input
                         id="dx-acudiente-tel"
                         type="tel"
-                        placeholder="Ej. +57 300 123 4567"
+                        inputMode="numeric"
+                        placeholder="Ej. 3001234567"
                         value={lead.acudienteTelefono}
-                        onChange={(e) => setLead((l) => ({ ...l, acudienteTelefono: e.target.value }))}
+                        onChange={(e) => setLead((l) => ({ ...l, acudienteTelefono: soloDigitos(e.target.value, 15) }))}
                         disabled={isLoadingBanco}
                       />
                     </div>
@@ -432,7 +493,7 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                 </p>
               )}
 
-              <Button type="submit" size="lg" className="mt-2" disabled={isLoadingBanco}>
+              <Button type="submit" size="lg" variant="cta" className="mt-2" disabled={isLoadingBanco}>
                 {isLoadingBanco ? "Cargando..." : "Comenzar diagnóstico"}
               </Button>
               {!cuentaConocida ? (
@@ -469,13 +530,13 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
           <span className="font-semibold text-muted-foreground">
             Pregunta {indice + 1} de {banco.preguntas.length}
           </span>
-          <span className="font-bold text-primary">{formatTiempo(segundosRestantes)}</span>
+          <span className="font-data font-bold text-heading">{formatTiempo(segundosRestantes)}</span>
         </div>
 
         <Card>
           <CardContent className="py-6">
-            <div className="mb-1 text-xs font-bold uppercase tracking-wide text-[#2FA6A1]">{pregunta.materia}</div>
-            <p className="mb-5 text-base leading-relaxed text-foreground">{pregunta.enunciado}</p>
+            <div className="mb-1 text-xs font-bold uppercase tracking-wide text-glacier-strong">{pregunta.materia}</div>
+            <p className="font-data mb-5 text-sm leading-relaxed text-foreground">{pregunta.enunciado}</p>
 
             <RadioGroup
               value={respuestas[pregunta.id] ?? ""}
@@ -486,7 +547,7 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                 <Label
                   key={letra}
                   htmlFor={`op-${letra}`}
-                  className="flex cursor-pointer items-start gap-3 rounded-lg border border-border px-3.5 py-3 text-sm font-normal has-data-checked:border-primary has-data-checked:bg-primary/5"
+                  className="flex cursor-pointer items-start gap-3 rounded-lg border border-border px-3.5 py-3 font-data text-sm font-normal has-data-checked:border-primary has-data-checked:bg-primary/5"
                 >
                   <RadioGroupItem value={letra} id={`op-${letra}`} className="mt-0.5" />
                   <span>
@@ -558,17 +619,17 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
   return (
     <div className="mx-auto max-w-2xl px-4 py-14 sm:px-8">
       <div className="mb-6 text-center">
-        <CheckCircle2 className="mx-auto mb-3 size-10 text-[#2FA6A1]" aria-hidden="true" />
-        <h1 className="mb-1 text-3xl font-extrabold text-primary">{r.puntajeGlobal}%</h1>
-        <p className="text-sm font-semibold text-[#2FA6A1]">{r.nivelGlobal}</p>
-        <p className="text-sm text-muted-foreground">
+        <CheckCircle2 className="mx-auto mb-3 size-10 text-glacier-strong" aria-hidden="true" />
+        <h1 className="font-data mb-1 text-3xl font-extrabold text-heading">{r.puntajeGlobal}%</h1>
+        <p className="text-sm font-semibold text-glacier-strong">{r.nivelGlobal}</p>
+        <p className="font-data text-sm text-muted-foreground">
           {r.aciertos} de {r.totalPreguntas} respuestas correctas
         </p>
       </div>
 
       <Card className="mb-4">
         <CardContent className="py-5">
-          <h2 className="mb-3 text-sm font-bold text-primary">Desglose por materia</h2>
+          <h2 className="mb-3 text-sm font-bold text-heading">Desglose por materia</h2>
           {r.desgloseMaterias.map((m) => (
             <ProgressRow key={m.materia} label={`${m.materia} — ${m.nivel}`} pct={m.porcentaje} />
           ))}
@@ -588,14 +649,14 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
       {analisisIA ? (
         <Card className="mb-4">
           <CardContent className="py-5">
-            <h2 className="mb-2 text-sm font-bold text-primary">Recomendaciones</h2>
+            <h2 className="mb-2 text-sm font-bold text-heading">Recomendaciones</h2>
             <p className="whitespace-pre-line text-sm leading-relaxed text-foreground/85">{analisisIA}</p>
           </CardContent>
         </Card>
       ) : null}
 
       <div className="mb-5 flex items-start gap-2.5 rounded-lg bg-muted px-4 py-3 text-sm text-foreground/80">
-        <Mail className="mt-0.5 size-4 shrink-0 text-[#2FA6A1]" aria-hidden="true" />
+        <Mail className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
         <span>Te enviamos el reporte completo en PDF por correo — al estudiante y a su acudiente, si quedó registrado.</span>
       </div>
 

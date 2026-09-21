@@ -96,7 +96,7 @@ export function DashboardShell({
                       <SidebarMenuItem key={item.href}>
                         {isActive ? (
                           <span
-                            className="absolute inset-y-1.5 left-0 w-1 rounded-r-full bg-teal"
+                            className="absolute inset-y-1.5 left-0 w-1 rounded-r-full bg-primary"
                             aria-hidden="true"
                           />
                         ) : null}
@@ -108,7 +108,7 @@ export function DashboardShell({
                         >
                           {/* Lucide icons use stroke="currentColor", so setting the
                               link's text color on the active item also tints the icon. */}
-                          <Link href={item.href} className="data-active:font-semibold data-active:text-teal!">
+                          <Link href={item.href} className="data-active:font-semibold data-active:text-glacier-strong!">
                             {item.icon}
                             <span>{item.label}</span>
                           </Link>
@@ -123,7 +123,7 @@ export function DashboardShell({
           <SidebarFooter className="gap-3 border-t border-sidebar-border px-3 py-3">
             <div className="flex items-center gap-2.5 px-1 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:px-0">
               <Avatar className="size-8 shrink-0">
-                <AvatarFallback className="bg-teal text-xs font-bold text-white">
+                <AvatarFallback className="bg-primary text-xs font-bold text-white">
                   {userName
                     .split(" ")
                     .slice(0, 2)
@@ -158,7 +158,7 @@ export function DashboardShell({
                     </BreadcrumbItem>
                   </BreadcrumbList>
                 </Breadcrumb>
-                <h1 className="text-lg font-extrabold text-primary sm:text-xl">{pageTitle}</h1>
+                <h1 className="text-lg font-extrabold text-heading sm:text-xl">{pageTitle}</h1>
                 {pageSubtitle ? (
                   <p className="text-xs text-muted-foreground">{pageSubtitle}</p>
                 ) : null}

@@ -29,7 +29,7 @@ export function SiteHeader({ profile }: { profile: Profile | null }) {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur supports-backdrop-filter:bg-card/80">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/90 text-foreground backdrop-blur-md supports-backdrop-filter:bg-background/75">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5 sm:px-8">
         <Logo />
 
@@ -39,7 +39,7 @@ export function SiteHeader({ profile }: { profile: Profile | null }) {
           <NavigationMenuList className="gap-0.5">
             {marketingNavGroups.map((group) => (
               <NavigationMenuItem key={group.label}>
-                <NavigationMenuTrigger className="bg-transparent text-sm font-semibold text-foreground/80 data-open:text-primary">
+                <NavigationMenuTrigger className="bg-transparent text-sm font-semibold text-foreground/80 data-open:text-heading">
                   {group.label}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -48,7 +48,7 @@ export function SiteHeader({ profile }: { profile: Profile | null }) {
                       <li key={item.href}>
                         <NavigationMenuLink asChild>
                           <Link href={item.href} className="flex-col items-start gap-0.5">
-                            <span className="text-sm font-semibold text-primary">{item.label}</span>
+                            <span className="text-sm font-semibold text-heading">{item.label}</span>
                             {item.description ? (
                               <span className="text-xs text-muted-foreground">{item.description}</span>
                             ) : null}
@@ -66,7 +66,7 @@ export function SiteHeader({ profile }: { profile: Profile | null }) {
                 <NavigationMenuLink
                   asChild
                   active={isActive(pathname, item.href)}
-                  className="h-9 rounded-lg px-2.5 text-sm font-semibold text-foreground/80 data-active:bg-muted data-active:text-primary"
+                  className="h-9 rounded-lg px-2.5 text-sm font-semibold text-foreground/80 data-active:bg-muted data-active:text-heading"
                 >
                   <Link href={item.href}>{item.label}</Link>
                 </NavigationMenuLink>

@@ -58,10 +58,10 @@ export default async function TutorMateriaClasesPage({
       </div>
 
       {proximas[0] ? (
-        <Card className="mb-6 border-teal/40 bg-teal/5">
+        <Card className="mb-6 border-glacier-strong/40 bg-glacier-strong/5">
           <CardContent className="flex flex-wrap items-center justify-between gap-3 py-5">
             <div>
-              <div className="mb-1 text-xs font-bold uppercase tracking-wide text-teal">Próxima clase</div>
+              <div className="mb-1 text-xs font-bold uppercase tracking-wide text-glacier-strong">Próxima clase</div>
               <div className="text-base font-bold text-foreground">{proximas[0].nombre}</div>
               <div className="text-sm text-muted-foreground">
                 {formatScheduled(proximas[0].scheduledAt)}
@@ -88,7 +88,7 @@ export default async function TutorMateriaClasesPage({
 
       {grabaciones.length > 0 ? (
         <div className="mb-6">
-          <h2 className="mb-3 text-base font-bold text-primary">Grabaciones disponibles</h2>
+          <h2 className="mb-3 text-base font-bold text-heading">Grabaciones disponibles</h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {grabaciones.map((clase) => (
               <Card key={clase.id}>
@@ -108,7 +108,7 @@ export default async function TutorMateriaClasesPage({
       ) : null}
 
       <div>
-        <h2 className="mb-3 text-base font-bold text-primary">Listado de sesiones</h2>
+        <h2 className="mb-3 text-base font-bold text-heading">Listado de sesiones</h2>
         {clases.length === 0 ? (
           <p className="text-sm text-muted-foreground">Sin sesiones todavía.</p>
         ) : (

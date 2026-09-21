@@ -13,7 +13,7 @@ export default function SchoolsMethodologyPage() {
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-8">
       <div className="mb-11 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <h1 className="mb-3 text-3xl font-extrabold text-primary">Metodología y servicios para colegios</h1>
+          <h1 className="mb-3 text-3xl font-extrabold text-heading">Metodología y servicios para colegios</h1>
           <p className="max-w-2xl text-base leading-relaxed text-foreground/80">
             Combinamos acompañamiento humano con herramientas de práctica y seguimiento, en grupos pequeños
             que permiten atención real a cada estudiante.
@@ -39,7 +39,7 @@ export default function SchoolsMethodologyPage() {
                 <m.icon className="size-5" aria-hidden="true" />
               </div>
               <div>
-                <div className="mb-1 text-base font-bold text-primary">{m.title}</div>
+                <div className="mb-1 text-base font-bold text-heading">{m.title}</div>
                 <div className="text-sm leading-relaxed text-muted-foreground">{m.desc}</div>
               </div>
             </CardContent>
@@ -47,7 +47,7 @@ export default function SchoolsMethodologyPage() {
         ))}
       </div>
 
-      <h2 className="mb-4 text-xl font-extrabold text-primary">Para colegios e instituciones</h2>
+      <h2 className="mb-4 text-xl font-extrabold text-heading">Para colegios e instituciones</h2>
       <div className="mb-8 grid grid-cols-1 gap-3.5 sm:grid-cols-2">
         {schoolServices.map((s) => (
           <div key={s} className="flex items-start gap-2.5">

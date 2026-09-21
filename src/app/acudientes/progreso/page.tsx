@@ -7,7 +7,7 @@ export default function AcudientesProgresoPage() {
     <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
       <Card>
         <CardContent>
-          <h3 className="mb-4 text-base font-bold text-primary">Avance por área</h3>
+          <h3 className="mb-4 text-base font-bold text-heading">Avance por área</h3>
           {areaPerformance.map((a) => (
             <ProgressRow key={a.name} label={a.name} pct={a.pct} />
           ))}
@@ -15,7 +15,7 @@ export default function AcudientesProgresoPage() {
       </Card>
       <Card>
         <CardContent>
-          <h3 className="mb-3 text-base font-bold text-primary">Temas</h3>
+          <h3 className="mb-3 text-base font-bold text-heading">Temas</h3>
           <div className="mb-1.5 text-xs font-bold text-success">Dominados</div>
           <div className="mb-3.5 flex flex-wrap gap-1.5">
             {masteredTopics.map((t) => (

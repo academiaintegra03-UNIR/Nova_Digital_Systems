@@ -10,7 +10,7 @@ export default function AcudientesPagosPage() {
     <div>
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-secondary p-5">
         <div>
-          <div className="text-base font-bold text-primary">Plan: {planSummary.name}</div>
+          <div className="text-base font-bold text-heading">Plan: {planSummary.name}</div>
           <div className="text-xs text-muted-foreground">
             {planSummary.amount} · {planSummary.nextPayment}
           </div>
@@ -28,7 +28,7 @@ export default function AcudientesPagosPage() {
               subtitle={inv.date}
               trailing={
                 <>
-                  <span className="text-sm font-bold text-primary">{inv.amount}</span>
+                  <span className="text-sm font-bold text-heading">{inv.amount}</span>
                   <StatusBadge tone={inv.tone}>{inv.status}</StatusBadge>
                 </>
               }

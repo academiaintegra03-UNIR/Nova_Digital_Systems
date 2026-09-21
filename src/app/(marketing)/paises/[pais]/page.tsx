@@ -42,7 +42,7 @@ export default async function CountryPage({ params }: PageProps<"/paises/[pais]"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <h1 className="mb-2 text-3xl font-extrabold text-primary">Preparación para exámenes por país</h1>
+      <h1 className="mb-2 text-3xl font-extrabold text-heading">Preparación para exámenes por país</h1>
       <p className="mb-7 text-base text-muted-foreground">
         Selecciona tu país para conocer la ruta de preparación diseñada para tu examen.
       </p>
@@ -57,7 +57,7 @@ export default async function CountryPage({ params }: PageProps<"/paises/[pais]"
               href={`/paises/${id}`}
               className={cn(
                 "shrink-0 border-b-[3px] px-4 py-2.5 text-sm font-bold",
-                active ? "border-primary text-primary" : "border-transparent text-muted-foreground"
+                active ? "border-primary text-heading" : "border-transparent text-muted-foreground"
               )}
             >
               {c.flag} {c.name}
@@ -68,13 +68,13 @@ export default async function CountryPage({ params }: PageProps<"/paises/[pais]"
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[2fr_1fr]">
         <div>
-          <h2 className="mb-1.5 text-xl font-extrabold text-primary">{country.exam}</h2>
+          <h2 className="mb-1.5 text-xl font-extrabold text-heading">{country.exam}</h2>
           <p className="mb-5 text-sm leading-relaxed text-foreground/80">{country.description}</p>
 
-          <h3 className="mb-2 text-base font-extrabold text-primary">¿A quién está dirigida?</h3>
+          <h3 className="mb-2 text-base font-extrabold text-heading">¿A quién está dirigida?</h3>
           <p className="mb-4.5 text-sm text-foreground/80">{country.audience}</p>
 
-          <h3 className="mb-2 text-base font-extrabold text-primary">Áreas evaluadas</h3>
+          <h3 className="mb-2 text-base font-extrabold text-heading">Áreas evaluadas</h3>
           <div className="mb-4.5 flex flex-wrap gap-2">
             {country.areas.map((a) => (
               <span
@@ -89,26 +89,26 @@ export default async function CountryPage({ params }: PageProps<"/paises/[pais]"
           <div className="mb-5 grid grid-cols-2 gap-3.5">
             <div className="rounded-[10px] border border-border bg-card p-3.5">
               <div className="text-xs text-muted-foreground">Modalidad</div>
-              <div className="text-sm font-bold text-primary">{country.modality}</div>
+              <div className="text-sm font-bold text-heading">{country.modality}</div>
             </div>
             <div className="rounded-[10px] border border-border bg-card p-3.5">
               <div className="text-xs text-muted-foreground">Duración</div>
-              <div className="text-sm font-bold text-primary">{country.duration}</div>
+              <div className="text-sm font-bold text-heading">{country.duration}</div>
             </div>
             <div className="rounded-[10px] border border-border bg-card p-3.5">
               <div className="text-xs text-muted-foreground">Simulacros disponibles</div>
-              <div className="text-sm font-bold text-primary">{country.simulations}</div>
+              <div className="text-sm font-bold text-heading">{country.simulations}</div>
             </div>
             <div className="rounded-[10px] border border-border bg-card p-3.5">
               <div className="text-xs text-muted-foreground">Seguimiento</div>
-              <div className="text-sm font-bold text-primary">{country.tracking}</div>
+              <div className="text-sm font-bold text-heading">{country.tracking}</div>
             </div>
           </div>
 
-          <h3 className="mb-2.5 text-base font-extrabold text-primary">Preguntas frecuentes</h3>
+          <h3 className="mb-2.5 text-base font-extrabold text-heading">Preguntas frecuentes</h3>
           {country.faqs.map((f) => (
             <div key={f.q} className="border-b border-border py-2.5">
-              <div className="text-sm font-bold text-primary">{f.q}</div>
+              <div className="text-sm font-bold text-heading">{f.q}</div>
               <div className="mt-1 text-sm text-muted-foreground">{f.a}</div>
             </div>
           ))}
@@ -118,7 +118,7 @@ export default async function CountryPage({ params }: PageProps<"/paises/[pais]"
           <div className="sticky top-24 rounded-2xl border border-border bg-card p-5.5">
             <div className="mb-2.5 text-sm text-muted-foreground">Planes disponibles</div>
             {country.plans.map((pl) => (
-              <div key={pl} className="mb-1 text-sm font-bold text-primary">
+              <div key={pl} className="mb-1 text-sm font-bold text-heading">
                 {pl}
               </div>
             ))}

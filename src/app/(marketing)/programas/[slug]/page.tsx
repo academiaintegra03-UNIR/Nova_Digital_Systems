@@ -31,7 +31,7 @@ export default async function ProgramDetailPage({ params }: PageProps<"/programa
     "@type": "Course",
     name: program.name,
     description: program.description,
-    provider: { "@type": "EducationalOrganization", name: "Nova Digital Systems", sameAs: siteUrl },
+    provider: { "@type": "EducationalOrganization", name: "Nova Digital Studio Systems", sameAs: siteUrl },
   };
 
   const breadcrumbJsonLd = {
@@ -60,12 +60,12 @@ export default async function ProgramDetailPage({ params }: PageProps<"/programa
       <div className="mt-4.5 text-xs font-bold tracking-wide text-secondary-foreground uppercase">
         {program.level}
       </div>
-      <h1 className="mt-1.5 mb-3 text-3xl font-extrabold text-primary">{program.name}</h1>
+      <h1 className="mt-1.5 mb-3 text-3xl font-extrabold text-heading">{program.name}</h1>
       <p className="mb-7 max-w-2xl text-base leading-relaxed text-foreground/80">{program.description}</p>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[2fr_1fr]">
         <div>
-          <h3 className="mb-2.5 text-base font-extrabold text-primary">Temas del programa</h3>
+          <h3 className="mb-2.5 text-base font-extrabold text-heading">Temas del programa</h3>
           <div className="mb-6 flex flex-wrap gap-2">
             {program.topics.map((t) => (
               <span
@@ -77,10 +77,10 @@ export default async function ProgramDetailPage({ params }: PageProps<"/programa
             ))}
           </div>
 
-          <h3 className="mb-2.5 text-base font-extrabold text-primary">Metodología</h3>
+          <h3 className="mb-2.5 text-base font-extrabold text-heading">Metodología</h3>
           <p className="mb-6 text-sm leading-relaxed text-foreground/80">{program.methodology}</p>
 
-          <h3 className="mb-2.5 text-base font-extrabold text-primary">Qué incluye</h3>
+          <h3 className="mb-2.5 text-base font-extrabold text-heading">Qué incluye</h3>
           {program.includes.map((inc) => (
             <div key={inc} className="mb-2 flex items-start gap-2.5">
               <Check className="mt-0.5 size-4 shrink-0 text-success" aria-hidden="true" />
@@ -92,11 +92,11 @@ export default async function ProgramDetailPage({ params }: PageProps<"/programa
         <div>
           <div className="sticky top-24 rounded-2xl border border-border bg-card p-5.5">
             <div className="mb-1 text-sm text-muted-foreground">Modalidad</div>
-            <div className="mb-3.5 text-sm font-bold text-primary">{program.modality}</div>
+            <div className="mb-3.5 text-sm font-bold text-heading">{program.modality}</div>
             <div className="mb-1 text-sm text-muted-foreground">Duración</div>
-            <div className="mb-3.5 text-sm font-bold text-primary">{program.duration}</div>
+            <div className="mb-3.5 text-sm font-bold text-heading">{program.duration}</div>
             <div className="mb-1 text-sm text-muted-foreground">Tutor responsable</div>
-            <div className="mb-5 text-sm font-bold text-primary">{program.tutor}</div>
+            <div className="mb-5 text-sm font-bold text-heading">{program.tutor}</div>
             <Button className="mb-2.5 w-full" asChild>
               <Link href="/planes-precios">Ver planes e inscripción</Link>
             </Button>

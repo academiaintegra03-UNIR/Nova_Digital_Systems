@@ -88,7 +88,7 @@ export default async function ColegiosGruposPage() {
       <Card className="mb-4">
         <CardContent className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <h1 className="text-lg font-extrabold text-primary">Cupo del colegio</h1>
+            <h1 className="text-lg font-extrabold text-heading">Cupo del colegio</h1>
             <p className="text-sm text-muted-foreground">
               {hasPlan
                 ? `Plan ${planInfo.planName} — ${planInfo.studentCount}${planInfo.seatLimit ? ` de ${planInfo.seatLimit}` : ""} cupo${planInfo.seatLimit === 1 ? "" : "s"} usado${planInfo.studentCount === 1 ? "" : "s"}.`

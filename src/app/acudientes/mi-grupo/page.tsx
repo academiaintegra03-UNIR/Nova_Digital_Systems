@@ -51,7 +51,7 @@ export default async function AcudientesMiGrupoPage() {
         <CardContent>
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <div>
-              <h1 className="text-lg font-extrabold text-primary">Mi grupo familiar</h1>
+              <h1 className="text-lg font-extrabold text-heading">Mi grupo familiar</h1>
               <p className="text-sm text-muted-foreground">
                 {hasGrupalPlan
                   ? `Plan ${planName} — ${hijos.length}${seatLimit ? ` de ${seatLimit}` : ""} cupo${seatLimit === 1 ? "" : "s"} usado${hijos.length === 1 ? "" : "s"}.`

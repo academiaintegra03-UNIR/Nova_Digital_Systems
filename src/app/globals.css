@@ -8,7 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
-  --font-mono: var(--font-sans);
+  --font-mono: var(--font-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -43,10 +43,17 @@
   --color-success-foreground: var(--success-foreground);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
-  --color-teal: var(--teal);
-  --color-teal-hover: var(--teal-hover);
-  --color-coral: var(--coral);
-  --color-coral-hover: var(--coral-hover);
+  --color-oxford: var(--oxford);
+  --color-glacier: var(--glacier);
+  --color-glacier-strong: var(--glacier-strong);
+  --color-arctic: var(--arctic);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-heading: var(--heading);
+  --color-alert: var(--alert);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-foreground: var(--cta-foreground);
   --color-on-primary: var(--on-primary);
   --color-on-primary-muted: var(--on-primary-muted);
   --color-on-primary-subtle: var(--on-primary-subtle);
@@ -61,92 +68,122 @@
 }
 
 :root {
-  /* Nova Digital Systems brand palette — light, warm, no dark mode by default. */
-  --background: #fbfaf7;
-  --foreground: #142a42;
-  --card: #ffffff;
-  --card-foreground: #142a42;
-  --popover: #ffffff;
-  --popover-foreground: #142a42;
-  --primary: #123b73; /* navy */
+  /* Manual de Arquitectura de Marca NDSS — paleta "Glacier & Oxford".
+     1) Primitivas: los únicos valores hex de la marca. Cambiar un color de
+        marca se hace aquí y se propaga a todo el sitio.
+     2) Semánticos (más abajo): lo que usan los componentes. Ningún componente
+        debe escribir hex; siempre un token (bg-primary, bg-cta, text-glacier…). */
+  --oxford: #002147; /* fondo / autoridad */
+  --glacier: #718c9a; /* interfaz secundaria */
+  --arctic: #a1e3f7; /* SOLO llamadas a la acción (CTA) */
+  --paper: #f4f5f8; /* fondo general en lugar de blanco puro */
+  --alert: #ef3a25; /* < 2% del diseño: errores y alertas */
+  /* Glacier oscurecido hacia Oxford para texto pequeño (contraste AA sobre paper). */
+  --glacier-strong: color-mix(in oklab, var(--glacier) 55%, var(--oxford));
+
+  /* Jerarquía de superficies (de fondo a primer plano) — todas derivadas de la marca.
+     El fondo de página lleva el tono Glacier para que la marca se SIENTA, y el
+     contenido (tarjetas) queda en un tono casi blanco encima: contraste claro.
+       page      Glacier 18% sobre Paper   → fondo general (--background)
+       band      Glacier 12% sobre blanco  → bandas alternas más claras (--muted)
+       tint      Glacier 32% sobre Paper   → chips, iconos, bloques resaltados (--secondary)
+       surface   Paper casi blanco         → tarjetas, menús, sidebar (--card, --popover)
+       authority Oxford Gray               → cabeceras, footer, bandas de contraste (--primary)
+       action    Arctic Accent             → solo botones CTA (--cta)
+     Para un bloque nuevo usa uno de estos roles; no inventes un color de fondo. */
+  --surface: color-mix(in oklab, var(--paper) 45%, white);
+  --background: color-mix(in oklab, var(--glacier) 18%, var(--paper));
+  --foreground: var(--oxford);
+  --heading: var(--oxford); /* títulos: Oxford en claro, blanco en oscuro */
+  --card: var(--surface);
+  --card-foreground: var(--oxford);
+  --popover: var(--surface);
+  --popover-foreground: var(--oxford);
+  --primary: var(--oxford);
   --primary-foreground: #ffffff;
-  --secondary: #eaf6f5; /* soft turquoise tint */
-  --secondary-foreground: #123b73;
-  --muted: #f0f4f8;
-  --muted-foreground: #5b6b7a;
-  --accent: #fff8ee; /* warm accent tint */
-  --accent-foreground: #123b73;
-  --destructive: #b33a3a;
-  --border: #e4e8ec;
-  --input: #d7e1ea;
-  --ring: #1e5aa8;
+  --secondary: color-mix(in oklab, var(--glacier) 32%, var(--paper));
+  --secondary-foreground: var(--oxford);
+  --muted: color-mix(in oklab, var(--glacier) 12%, white);
+  --muted-foreground: var(--glacier-strong);
+  --accent: color-mix(in oklab, var(--glacier) 24%, white);
+  --accent-foreground: var(--oxford);
+  --destructive: var(--alert);
+  --border: color-mix(in oklab, var(--glacier) 38%, white);
+  --input: color-mix(in oklab, var(--glacier) 50%, white);
+  --ring: var(--glacier);
   --success: #1f7a45;
   --success-foreground: #e4f3ea;
   --warning: #b5701a;
   --warning-foreground: #fdf0e0;
-  --chart-1: #1e5aa8;
-  --chart-2: #2fa6a1;
-  --chart-3: #f2954a;
-  --chart-4: #2e9e5b;
-  --chart-5: #123b73;
-  /* Named brand accents (turquoise + coral) so components reference a token
-     instead of repeating hex literals — keeps hover/pressed states in sync. */
-  --teal: #2fa6a1;
-  --teal-hover: #238984;
-  --coral: #f2954a;
-  --coral-hover: #e8863a;
-  /* Text/border tones for content sitting on a solid --primary (navy) surface,
-     e.g. the footer and sidebar — mirrors the sidebar-* scale below. */
+  --chart-1: var(--oxford);
+  --chart-2: var(--glacier);
+  --chart-3: var(--arctic);
+  --chart-4: var(--glacier-strong);
+  --chart-5: color-mix(in oklab, var(--oxford) 70%, var(--glacier));
+  /* CTA: Arctic Accent con texto Oxford (el Arctic es claro; blanco no contrasta). */
+  --cta: var(--arctic);
+  --cta-hover: color-mix(in oklab, var(--arctic) 86%, var(--oxford));
+  --cta-foreground: var(--oxford);
+  /* Texto/bordes sobre superficies Oxford (footer, login, tarjetas oscuras). */
   --on-primary: #ffffff;
-  --on-primary-muted: #afc3d9;
-  --on-primary-subtle: #8fa9c4;
-  --on-primary-border: #2c5486;
-  --radius: 0.75rem;
-  /* Dashboard sidebar — light surface (was solid navy), matches the rest of
-     the panel chrome instead of standing out as its own dark block. */
-  --sidebar: #ffffff;
-  --sidebar-foreground: #142a42;
-  --sidebar-primary: #123b73;
+  --on-primary-muted: color-mix(in oklab, var(--glacier) 35%, white);
+  --on-primary-subtle: color-mix(in oklab, var(--glacier) 78%, white);
+  --on-primary-border: color-mix(in oklab, var(--oxford) 60%, var(--glacier));
+  --radius: 0.625rem;
+  --sidebar: var(--surface);
+  --sidebar-foreground: var(--oxford);
+  --sidebar-primary: var(--oxford);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #eaf6f5;
-  --sidebar-accent-foreground: #123b73;
-  --sidebar-border: #e4e8ec;
-  --sidebar-ring: #2fa6a1;
+  --sidebar-accent: color-mix(in oklab, var(--glacier) 24%, white);
+  --sidebar-accent-foreground: var(--oxford);
+  --sidebar-border: color-mix(in oklab, var(--glacier) 38%, white);
+  --sidebar-ring: var(--glacier);
 }
 
-/* Dark mode tokens are defined for completeness, but the app never applies
-   the .dark class — the product intentionally ships light-only. */
+/* Tema oscuro "glass" — es el tema del sitio (<html class="dark">).
+   Inspirado en el ecosistema NDSS (inteligencia-educativa-ndss.web.app):
+   fondo profundo, tarjetas de cristal, bordes finos y brillo Glacier, pero
+   construido sobre los colores del manual de marca (Oxford + Glacier).
+     fondo     Oxford oscurecido        --background
+     tarjeta   Oxford + 12% Glacier     --card (con blur y borde translúcido)
+     acción    Arctic (solo CTAs)       --cta
+   Texto pequeño: --glacier-strong pasa a un Glacier claro para leerse sobre oscuro. */
 .dark {
-  --background: #0f2444;
-  --foreground: #eaf1fa;
-  --card: #123b73;
-  --card-foreground: #eaf1fa;
-  --popover: #123b73;
-  --popover-foreground: #eaf1fa;
-  --primary: #eaf1fa;
-  --primary-foreground: #123b73;
-  --secondary: #1e5aa8;
-  --secondary-foreground: #eaf1fa;
-  --muted: #1a3f6e;
-  --muted-foreground: #afc3d9;
-  --accent: #1a3f6e;
-  --accent-foreground: #eaf1fa;
-  --destructive: #e07a7a;
-  --border: rgba(255, 255, 255, 0.12);
-  --input: rgba(255, 255, 255, 0.16);
-  --ring: #2fa6a1;
+  color-scheme: dark;
+  --glacier-strong: color-mix(in oklab, var(--glacier) 72%, white);
+  --surface: color-mix(in oklab, var(--oxford) 88%, var(--glacier));
+  --background: color-mix(in oklab, var(--oxford) 68%, black);
+  --foreground: #e8edf2;
+  --heading: #ffffff;
+  --card: var(--surface);
+  --card-foreground: #e8edf2;
+  --popover: color-mix(in oklab, var(--oxford) 84%, var(--glacier));
+  --popover-foreground: #e8edf2;
+  --primary: color-mix(in oklab, var(--glacier) 45%, var(--oxford));
+  --primary-foreground: #ffffff;
+  --secondary: color-mix(in oklab, var(--oxford) 76%, var(--glacier));
+  --secondary-foreground: #e8edf2;
+  --muted: color-mix(in oklab, var(--oxford) 90%, var(--glacier));
+  --muted-foreground: color-mix(in oklab, var(--glacier) 62%, white);
+  --accent: color-mix(in oklab, var(--oxford) 82%, var(--glacier));
+  --accent-foreground: #e8edf2;
+  --border: rgb(255 255 255 / 0.09);
+  --input: rgb(255 255 255 / 0.14);
+  --ring: color-mix(in oklab, var(--glacier) 70%, white);
   --success: #4fbf82;
-  --success-foreground: #0f2444;
+  --success-foreground: color-mix(in oklab, var(--oxford) 85%, #4fbf82);
   --warning: #e8a94f;
-  --warning-foreground: #0f2444;
-  --sidebar: #0f2444;
-  --sidebar-foreground: #d7e4f0;
-  --sidebar-primary: #2fa6a1;
-  --sidebar-primary-foreground: #0f2444;
-  --sidebar-accent: rgba(255, 255, 255, 0.12);
+  --warning-foreground: color-mix(in oklab, var(--oxford) 85%, #e8a94f);
+  --chart-1: color-mix(in oklab, var(--glacier) 60%, white);
+  --chart-4: var(--glacier);
+  --sidebar: color-mix(in oklab, var(--oxford) 78%, black);
+  --sidebar-foreground: #e8edf2;
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgb(255 255 255 / 0.08);
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(255, 255, 255, 0.12);
-  --sidebar-ring: #2fa6a1;
+  --sidebar-border: rgb(255 255 255 / 0.09);
+  --sidebar-ring: color-mix(in oklab, var(--glacier) 70%, white);
 }
 
 @layer base {
@@ -159,9 +196,27 @@
   body {
     @apply bg-background text-foreground;
     font-size: 16px;
+    /* Ambiente: resplandores Glacier difusos (sin cuadrícula). */
+    background-image:
+      radial-gradient(ellipse 60% 45% at 8% 0%, color-mix(in oklab, var(--glacier) 20%, transparent), transparent 70%),
+      radial-gradient(ellipse 55% 45% at 95% 100%, color-mix(in oklab, var(--oxford) 70%, var(--glacier)), transparent 70%);
+    background-attachment: fixed;
+  }
+  /* Tipografía dual: Inter para texto humano; JetBrains Mono para datos,
+     etiquetas y números (banco de preguntas, resultados, precios). */
+  .font-data {
+    @apply font-mono tabular-nums;
   }
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
+  }
+}
+
+/* ── Lenguaje visual "glass" ─────────────────────────────────────────────
+   Resplandor difuso reutilizable para hero y bandas de contraste. */
+@layer components {
+  .tech-glow {
+    background: radial-gradient(closest-side, color-mix(in oklab, var(--glacier) 38%, transparent), transparent);
   }
 }

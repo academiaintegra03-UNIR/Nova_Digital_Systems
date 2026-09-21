@@ -105,7 +105,7 @@ export default async function TutorMateriaActividadesPage({
                       {actividad.roster.map((r) => (
                         <TableRow key={r.studentId}>
                           <TableCell>{r.studentNombre}</TableCell>
-                          <TableCell className={r.estado === "entregada" ? "font-semibold text-teal" : "text-muted-foreground"}>
+                          <TableCell className={r.estado === "entregada" ? "font-semibold text-glacier-strong" : "text-muted-foreground"}>
                             {r.estado === "entregada" ? "Entregada" : "Pendiente"}
                           </TableCell>
                         </TableRow>

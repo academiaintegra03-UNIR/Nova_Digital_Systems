@@ -21,7 +21,7 @@ export function ResourceFilterList() {
             key={lv}
             size="sm"
             variant={level === lv ? "default" : "outline"}
-            className={cn("rounded-full", level === lv && "bg-[#2FA6A1] hover:bg-[#238984]")}
+            className="rounded-full"
             onClick={() => setLevel(lv)}
           >
             {lv === ALL ? "Todos" : lv}
@@ -33,7 +33,7 @@ export function ResourceFilterList() {
           <Card key={r.id}>
             <CardContent>
               <div className="mb-2.5 flex items-start justify-between">
-                <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-primary">
+                <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-heading">
                   <r.icon className="size-4.5" aria-hidden="true" />
                 </div>
                 <span
@@ -45,7 +45,7 @@ export function ResourceFilterList() {
                   {r.tag}
                 </span>
               </div>
-              <div className="mb-1 text-sm font-bold text-primary">{r.title}</div>
+              <div className="mb-1 text-sm font-bold text-heading">{r.title}</div>
               <div className="text-xs text-muted-foreground">
                 {r.type} · {r.level}
               </div>

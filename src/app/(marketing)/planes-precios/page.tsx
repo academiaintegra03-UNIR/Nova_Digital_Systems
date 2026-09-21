@@ -45,7 +45,7 @@ export default async function PricingPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8">
-      <h1 className="mb-2 text-center text-3xl font-extrabold text-primary">Planes y precios</h1>
+      <h1 className="mb-2 text-center text-3xl font-extrabold text-heading">Planes y precios</h1>
       <p className="mb-10 text-center text-base text-muted-foreground">
         Elige la modalidad que se ajuste a tu ritmo de estudio.
       </p>
@@ -62,7 +62,7 @@ export default async function PricingPage() {
 
       {grupalPlans.length > 0 ? (
         <section className="mb-14">
-          <h2 className="mb-2 text-center text-2xl font-extrabold text-primary">Planes grupales y familiares</h2>
+          <h2 className="mb-2 text-center text-2xl font-extrabold text-heading">Planes grupales y familiares</h2>
           <p className="mb-6 text-center text-sm text-muted-foreground">
             Un plan, varios estudiantes — ideal para hermanos o pequeños grupos.
           </p>
@@ -72,7 +72,7 @@ export default async function PricingPage() {
 
       {institutionalPlans.length > 0 ? (
         <section>
-          <h2 className="mb-2 text-center text-2xl font-extrabold text-primary">Planes para colegios</h2>
+          <h2 className="mb-2 text-center text-2xl font-extrabold text-heading">Planes para colegios</h2>
           <p className="mb-6 text-center text-sm text-muted-foreground">
             Convenios institucionales con cupo de estudiantes.
           </p>
