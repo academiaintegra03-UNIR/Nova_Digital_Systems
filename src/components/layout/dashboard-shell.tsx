@@ -96,7 +96,7 @@ export function DashboardShell({
                       <SidebarMenuItem key={item.href}>
                         {isActive ? (
                           <span
-                            className="absolute inset-y-1.5 left-0 w-1 rounded-r-full bg-primary"
+                            className="absolute inset-y-1.5 left-0 w-1 rounded-r-full bg-glacier shadow-[0_0_10px_var(--glacier)]"
                             aria-hidden="true"
                           />
                         ) : null}
@@ -104,7 +104,7 @@ export function DashboardShell({
                           asChild
                           isActive={isActive}
                           tooltip={item.label}
-                          className="h-9! rounded-lg"
+                          className="h-9! rounded-lg data-active:bg-sidebar-accent data-active:shadow-[0_0_22px_-8px_var(--glacier)]"
                         >
                           {/* Lucide icons use stroke="currentColor", so setting the
                               link's text color on the active item also tints the icon. */}
@@ -140,8 +140,11 @@ export function DashboardShell({
           </SidebarFooter>
           <SidebarRail />
         </Sidebar>
-        <SidebarInset className="bg-muted">
-          <header className="flex items-center justify-between gap-4 border-b border-border bg-card px-4 py-3 sm:px-8">
+        <SidebarInset className="relative isolate bg-transparent">
+          {/* Ambiente del panel: resplandores Glacier difusos, como en la portada. */}
+          <div className="tech-glow pointer-events-none absolute -top-32 -right-24 -z-10 size-[30rem] opacity-40" aria-hidden="true" />
+          <div className="tech-glow pointer-events-none absolute -bottom-40 left-0 -z-10 size-[34rem] opacity-30" aria-hidden="true" />
+          <header className="sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-border bg-background/70 px-4 py-3 backdrop-blur-md sm:px-8">
             <div className="flex items-center gap-3">
               <SidebarTrigger />
               <div>

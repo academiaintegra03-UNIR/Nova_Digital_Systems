@@ -79,14 +79,7 @@ export default async function CampusHomePage() {
 
   return (
     <div>
-      <div className="relative mb-6 flex flex-wrap items-center justify-between gap-4 overflow-hidden rounded-2xl bg-primary px-7 py-6 text-white">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.12]"
-          style={{
-            backgroundImage: "radial-gradient(circle, #fff 1.5px, transparent 1.5px)",
-            backgroundSize: "20px 20px",
-          }}
-        />
+      <div className="relative mb-6 flex flex-wrap items-center justify-between gap-4 overflow-hidden rounded-2xl panel-hero px-7 py-6 text-white">
         <div className="relative">
           <div className="mb-1 text-xl font-bold">Hola, {firstName} 👋</div>
           {nextClass ? (

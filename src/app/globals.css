@@ -219,4 +219,12 @@
   .tech-glow {
     background: radial-gradient(closest-side, color-mix(in oklab, var(--glacier) 38%, transparent), transparent);
   }
+  /* Banner destacado de los paneles: degradado de marca con borde y brillo. */
+  .panel-hero {
+    background-image: linear-gradient(135deg, var(--primary), color-mix(in oklab, var(--oxford) 85%, var(--primary)));
+    border: 1px solid rgb(255 255 255 / 0.1);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.08),
+      0 0 40px -14px color-mix(in oklab, var(--glacier) 45%, transparent);
+  }
 }

@@ -65,7 +65,7 @@ export default async function AdminResumenPage() {
       <div className="mb-6 grid grid-cols-1 gap-5 lg:grid-cols-[1.6fr_1fr]">
         <div className="flex flex-col gap-5">
           {data.pagosPendientesCount > 0 ? (
-            <div className="relative flex flex-wrap items-center justify-between gap-4 overflow-hidden rounded-2xl bg-primary px-7 py-6 text-white">
+            <div className="relative flex flex-wrap items-center justify-between gap-4 overflow-hidden rounded-2xl panel-hero px-7 py-6 text-white">
               <div>
                 <div className="mb-1 text-lg font-bold">
                   Tienes {data.pagosPendientesCount} pago{data.pagosPendientesCount === 1 ? "" : "s"} pendiente
@@ -78,7 +78,7 @@ export default async function AdminResumenPage() {
               </Button>
             </div>
           ) : (
-            <div className="relative flex flex-wrap items-center justify-between gap-4 overflow-hidden rounded-2xl bg-primary px-7 py-6 text-white">
+            <div className="relative flex flex-wrap items-center justify-between gap-4 overflow-hidden rounded-2xl panel-hero px-7 py-6 text-white">
               <div>
                 <div className="mb-1 text-lg font-bold">Todo al día 👍</div>
                 <div className="text-sm text-white/80">No hay pagos pendientes de revisar por ahora.</div>
@@ -120,7 +120,7 @@ export default async function AdminResumenPage() {
 
         <div className="flex flex-col gap-4">
           <Link href="/admin/diagnosticos">
-            <div className="flex items-center gap-3.5 rounded-2xl bg-primary px-5 py-5 text-white transition-opacity hover:opacity-90">
+            <div className="flex items-center gap-3.5 rounded-2xl panel-hero px-5 py-5 text-white transition-opacity hover:opacity-90">
               <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-on-primary/20">
                 <GraduationCap className="size-5" aria-hidden="true" />
               </div>
@@ -133,7 +133,7 @@ export default async function AdminResumenPage() {
           </Link>
 
           <Link href="/admin/planes">
-            <div className="flex items-center gap-3.5 rounded-2xl bg-primary px-5 py-5 text-white transition-opacity hover:opacity-90">
+            <div className="flex items-center gap-3.5 rounded-2xl panel-hero px-5 py-5 text-white transition-opacity hover:opacity-90">
               <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-on-primary/15">
                 <CreditCard className="size-5" aria-hidden="true" />
               </div>

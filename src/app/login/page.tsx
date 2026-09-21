@@ -11,19 +11,11 @@ export const metadata: Metadata = { title: "Iniciar sesión" };
 export default function LoginPage() {
   return (
     <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
-      {/* Branding panel — hidden on mobile, matches the sidebar's navy + the
-          hero's graph-paper texture so /login reads as the same product. */}
+      {/* Branding panel — hidden on mobile, mismo fondo oscuro con resplandores Glacier
+          que la portada y los paneles, para que /login se lea como el mismo producto. */}
       <div className="relative hidden flex-col justify-between overflow-hidden bg-primary px-10 py-10 text-white lg:flex">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.12]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-            backgroundSize: "34px 34px",
-            WebkitMaskImage: "radial-gradient(ellipse 80% 60% at 20% 20%, black 30%, transparent 100%)",
-            maskImage: "radial-gradient(ellipse 80% 60% at 20% 20%, black 30%, transparent 100%)",
-          }}
-        />
+        <div className="tech-glow pointer-events-none absolute -top-40 -left-32 size-[34rem] opacity-60" aria-hidden="true" />
+        <div className="tech-glow pointer-events-none absolute -right-40 -bottom-48 size-[36rem] opacity-40" aria-hidden="true" />
 
         <Link href="/" className="relative flex items-center gap-2.5">
           <Image src="/Nova-PNG.png" alt="" width={36} height={36} className="rounded-full" priority />

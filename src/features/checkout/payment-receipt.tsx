@@ -121,7 +121,7 @@ export function PaymentReceiptView({
             <ReceiptRow label="Método de pago" value="Wompi (Web Checkout)" />
           </div>
 
-          <div className="mb-5 flex items-center justify-between rounded-xl bg-primary px-4 py-3.5 text-white">
+          <div className="mb-5 flex items-center justify-between rounded-xl panel-hero px-4 py-3.5 text-white">
             <span className="text-sm font-bold tracking-wide uppercase">Total pagado</span>
             <span className="text-lg font-extrabold">{formatCop(receipt.amountCop)}</span>
           </div>
