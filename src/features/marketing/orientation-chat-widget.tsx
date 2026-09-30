@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { MessageCircle, SendHorizontal, TriangleAlert, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Maximize2, MessageCircle, SendHorizontal, TriangleAlert, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,6 +30,7 @@ interface ChatMessage {
 }
 
 export function OrientationChatWidget() {
+  const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [draft, setDraft] = React.useState("");
   const [messages, setMessages] = React.useState<ChatMessage[]>([]);
@@ -71,6 +73,10 @@ export function OrientationChatWidget() {
     });
   }
 
+  // La página /alex ya es el chat a pantalla completa — no duplicar el
+  // widget flotante ahí encima.
+  if (pathname === "/alex") return null;
+
   return (
     <div className="fixed right-4 bottom-4 z-50 sm:right-6 sm:bottom-6">
       {open ? (
@@ -85,6 +91,13 @@ export function OrientationChatWidget() {
               <div className="truncate text-sm font-bold text-white">{orientationAssistantName}</div>
               <div className="truncate text-xs text-on-primary-muted">{orientationAssistantRole}</div>
             </div>
+            <Link
+              href="/alex"
+              aria-label="Abrir en pantalla completa"
+              className="flex size-7 shrink-0 items-center justify-center rounded-full text-white/80 hover:bg-on-primary/10 hover:text-white"
+            >
+              <Maximize2 className="size-3.5" aria-hidden="true" />
+            </Link>
             <button
               type="button"
               onClick={() => setOpen(false)}

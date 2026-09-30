@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { CheckCircle2, ExternalLink, Loader2, Lock, Mail } from "lucide-react";
 import { BANCO_LABEL, type BancoId, type Incidencia, type Opcion, type TipoIncidencia } from "@/lib/diagnostico/types";
@@ -144,10 +144,10 @@ export function DiagnosticTeaser({
    * validar esto igual (nunca es solo un filtro de interfaz). */
   bateriasPagasHabilitadas?: boolean;
 } = {}) {
+  const router = useRouter();
   const [paso, setPaso] = React.useState<Paso>("lead");
   const [lead, setLead] = React.useState<LeadForm>(() => getLeadInicial(cuentaConocida));
   const [error, setError] = React.useState<string>();
-  const [requierePago, setRequierePago] = React.useState(false);
   const [isLoadingBanco, setIsLoadingBanco] = React.useState(false);
   const [errorEmailAcudiente, setErrorEmailAcudiente] = React.useState<string>();
   const [errorEmailEstudiante, setErrorEmailEstudiante] = React.useState<string>();
@@ -289,10 +289,12 @@ export function DiagnosticTeaser({
   async function handleIniciar(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(undefined);
-    setRequierePago(false);
 
     if (lead.bancoId !== "general" && !bateriasPagasHabilitadas) {
-      setRequierePago(true);
+      toast.warning("Esa batería es contenido de matrícula paga — te llevamos a los planes disponibles.", {
+        duration: 5000,
+      });
+      router.push("/planes-precios");
       return;
     }
 
@@ -352,7 +354,6 @@ export function DiagnosticTeaser({
     setBanco(null);
     setResultado(null);
     setError(undefined);
-    setRequierePago(false);
   }
 
   if (paso === "lead") {
@@ -382,19 +383,6 @@ export function DiagnosticTeaser({
               {error ? (
                 <Alert variant="destructive">
                   <AlertDescription>{error}</AlertDescription>
-                </Alert>
-              ) : null}
-
-              {requierePago ? (
-                <Alert variant="destructive">
-                  <AlertDescription className="flex flex-col gap-2">
-                    <span>
-                      Esta batería es contenido de matrícula paga. Necesitas un plan activo para presentarla.
-                    </span>
-                    <Button asChild size="sm" variant="cta" className="w-fit">
-                      <Link href="/planes-precios">Ver planes y matricularme</Link>
-                    </Button>
-                  </AlertDescription>
                 </Alert>
               ) : null}
 
@@ -443,10 +431,7 @@ export function DiagnosticTeaser({
                 <Label htmlFor="dx-bateria">Selecciona la batería diagnóstica a presentar</Label>
                 <Select
                   value={lead.bancoId}
-                  onValueChange={(value) => {
-                    setRequierePago(false);
-                    setLead((l) => ({ ...l, bancoId: value as BancoId }));
-                  }}
+                  onValueChange={(value) => setLead((l) => ({ ...l, bancoId: value as BancoId }))}
                   disabled={isLoadingBanco}
                 >
                   <SelectTrigger id="dx-bateria" className="w-full">

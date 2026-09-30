@@ -12,6 +12,7 @@ export interface NavGroup {
 // Direct top-level links — kept short on purpose so the header stays scannable.
 export const marketingNavPrimary: NavItem[] = [
   { href: "/diagnostico", label: "Diagnóstico" },
+  { href: "/alex", label: "Habla con Álex" },
   { href: "/planes-precios", label: "Planes y precios" },
   { href: "/recursos", label: "Recursos" },
 ];
@@ -42,6 +43,7 @@ export const marketingNav: NavItem[] = [
   { href: "/programas", label: "Programas" },
   { href: "/paises", label: "Preparación de exámenes" },
   { href: "/diagnostico", label: "Diagnóstico" },
+  { href: "/alex", label: "Habla con Álex" },
   { href: "/colegios", label: "Metodología" },
   { href: "/planes-precios", label: "Planes y precios" },
   { href: "/recursos", label: "Recursos" },
