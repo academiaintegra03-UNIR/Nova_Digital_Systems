@@ -134,11 +134,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Solicitud inválida." }, { status: 400 });
   }
 
-  // Estudiante logueado: la cuenta es la fuente de verdad para identidad y
-  // contacto, no lo que mande el cliente — y no hace falta pedir datos del
-  // acudiente a mano, se resuelven solos vía guardian_students.
+  // Estudiante (o administrador probando el contenido) logueado: la
+  // cuenta es la fuente de verdad para identidad y contacto, no lo que
+  // mande el cliente — y no hace falta pedir datos del acudiente a mano,
+  // se resuelven solos vía guardian_students (vacío para un admin, que
+  // no tiene acudientes vinculados).
   const profile = await getAuthenticatedProfile();
-  const esEstudianteLogueado = profile?.role === "estudiante";
+  const esCuentaLogueada = profile?.role === "estudiante" || profile?.role === "administrador";
 
   const {
     bancoId: bancoIdRaw,
@@ -150,7 +152,7 @@ export async function POST(request: NextRequest) {
     incidenciasLog,
   } = (body ?? {}) as Partial<SubmitBody>;
 
-  if (!isValidLead(lead, { requireContacto: !esEstudianteLogueado }) || typeof respuestas !== "object" || respuestas === null) {
+  if (!isValidLead(lead, { requireContacto: !esCuentaLogueada }) || typeof respuestas !== "object" || respuestas === null) {
     return NextResponse.json({ error: "Completa tu nombre y un dato de contacto de tu acudiente." }, { status: 400 });
   }
 
@@ -168,7 +170,7 @@ export async function POST(request: NextRequest) {
   let profileId: string | null = null;
   let acudienteEmails: string[] = [];
 
-  if (esEstudianteLogueado && profile) {
+  if (esCuentaLogueada && profile) {
     profileId = profile.id;
     estudianteNombre = profile.nombre;
 

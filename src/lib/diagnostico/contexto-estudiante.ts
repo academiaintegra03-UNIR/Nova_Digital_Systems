@@ -15,8 +15,19 @@ export interface ContextoEstudianteDiagnostico {
  * activa (suscripción individual) que habilite los cursos pagos por
  * grado. Usado tanto por `/diagnostico` (público, pero reconoce a un
  * visitante logueado) como por `/campus/diagnostico` (siempre logueado).
+ *
+ * Un administrador que entra logueado ve todas las baterías habilitadas
+ * sin necesidad de matrícula — no es un estudiante pagando, es quien
+ * administra la plataforma y necesita poder probar cualquier contenido.
  */
 export async function getContextoEstudianteDiagnostico(profile: Profile): Promise<ContextoEstudianteDiagnostico> {
+  if (profile.role === "administrador") {
+    return {
+      cuentaConocida: { nombre: profile.nombre, colegio: null, email: null },
+      bateriasPagasHabilitadas: true,
+    };
+  }
+
   const supabase = await createClient();
 
   const { data: own } = await supabase.from("profiles").select("colegio_id").eq("id", profile.id).maybeSingle();

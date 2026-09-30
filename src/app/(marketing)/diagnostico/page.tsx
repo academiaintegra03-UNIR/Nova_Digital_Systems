@@ -6,12 +6,16 @@ import { DiagnosticTeaser } from "@/features/diagnostico/diagnostic-teaser";
 export const metadata: Metadata = { title: "Diagnóstico académico" };
 
 export default async function DiagnosticPage() {
-  // Ruta pública — pero si quien entra ya está logueado como estudiante,
-  // se le reconoce igual que en /campus/diagnostico (se salta el
-  // formulario de lead y ve los cursos pagos si tiene matrícula activa).
-  // Un visitante sin sesión sigue el flujo anónimo de siempre.
+  // Ruta pública — pero si quien entra ya está logueado como estudiante o
+  // como administrador, se le reconoce igual que en /campus/diagnostico
+  // (se salta el formulario de lead y ve los cursos pagos si tiene
+  // matrícula activa, o siempre en el caso del administrador). Un
+  // visitante sin sesión sigue el flujo anónimo de siempre.
   const profile = await getAuthenticatedProfile();
-  const contexto = profile?.role === "estudiante" ? await getContextoEstudianteDiagnostico(profile) : null;
+  const contexto =
+    profile?.role === "estudiante" || profile?.role === "administrador"
+      ? await getContextoEstudianteDiagnostico(profile)
+      : null;
 
   return (
     <DiagnosticTeaser

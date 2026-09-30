@@ -114,13 +114,19 @@ export function esBancoId(value: string): value is BancoId {
  * siempre es gratuita y pública. Esto se resuelve en el servidor (no se
  * confía en lo que mande el cliente) tanto al servir las preguntas como
  * al calificar el envío, para que no sea solo un filtro de interfaz.
+ *
+ * El administrador puede presentar cualquier batería sin matrícula (para
+ * probar el contenido) — no es un estudiante pagando, es quien administra
+ * la plataforma.
  */
 export async function resolverBancoIdPermitido(bancoIdSolicitado: string): Promise<BancoId> {
   const bancoId = esBancoId(bancoIdSolicitado) ? bancoIdSolicitado : "general";
   if (bancoId === "general") return "general";
 
   const profile = await getAuthenticatedProfile();
-  if (!profile || profile.role !== "estudiante") return "general";
+  if (!profile) return "general";
+  if (profile.role === "administrador") return bancoId;
+  if (profile.role !== "estudiante") return "general";
 
   const sub = await getActiveSubscription(profile.id, "individual");
   return sub ? bancoId : "general";

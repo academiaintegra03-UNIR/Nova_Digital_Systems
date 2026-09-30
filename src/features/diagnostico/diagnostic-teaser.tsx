@@ -1,8 +1,9 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { toast } from "sonner";
-import { CheckCircle2, ExternalLink, Loader2, Mail } from "lucide-react";
+import { CheckCircle2, ExternalLink, Loader2, Lock, Mail } from "lucide-react";
 import { BANCO_LABEL, type BancoId, type Incidencia, type Opcion, type TipoIncidencia } from "@/lib/diagnostico/types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,9 +15,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ProgressRow } from "@/components/shared/progress-row";
 
-const BATERIAS: { id: BancoId; label: string }[] = (Object.entries(BANCO_LABEL) as [BancoId, string][]).map(
-  ([id, label]) => ({ id, label })
-);
+const BATERIAS: { id: BancoId; label: string; pago: boolean }[] = (
+  Object.entries(BANCO_LABEL) as [BancoId, string][]
+).map(([id, label]) => ({ id, label, pago: id !== "general" }));
 
 interface PreguntaPublica {
   id: string;
@@ -143,10 +144,10 @@ export function DiagnosticTeaser({
    * validar esto igual (nunca es solo un filtro de interfaz). */
   bateriasPagasHabilitadas?: boolean;
 } = {}) {
-  const bateriasDisponibles = bateriasPagasHabilitadas ? BATERIAS : BATERIAS.filter((b) => b.id === "general");
   const [paso, setPaso] = React.useState<Paso>("lead");
   const [lead, setLead] = React.useState<LeadForm>(() => getLeadInicial(cuentaConocida));
   const [error, setError] = React.useState<string>();
+  const [requierePago, setRequierePago] = React.useState(false);
   const [isLoadingBanco, setIsLoadingBanco] = React.useState(false);
   const [errorEmailAcudiente, setErrorEmailAcudiente] = React.useState<string>();
   const [errorEmailEstudiante, setErrorEmailEstudiante] = React.useState<string>();
@@ -288,6 +289,12 @@ export function DiagnosticTeaser({
   async function handleIniciar(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(undefined);
+    setRequierePago(false);
+
+    if (lead.bancoId !== "general" && !bateriasPagasHabilitadas) {
+      setRequierePago(true);
+      return;
+    }
 
     if (!lead.estudianteNombre.trim()) {
       setError("Escribe el nombre del estudiante.");
@@ -345,6 +352,7 @@ export function DiagnosticTeaser({
     setBanco(null);
     setResultado(null);
     setError(undefined);
+    setRequierePago(false);
   }
 
   if (paso === "lead") {
@@ -374,6 +382,19 @@ export function DiagnosticTeaser({
               {error ? (
                 <Alert variant="destructive">
                   <AlertDescription>{error}</AlertDescription>
+                </Alert>
+              ) : null}
+
+              {requierePago ? (
+                <Alert variant="destructive">
+                  <AlertDescription className="flex flex-col gap-2">
+                    <span>
+                      Esta batería es contenido de matrícula paga. Necesitas un plan activo para presentarla.
+                    </span>
+                    <Button asChild size="sm" variant="cta" className="w-fit">
+                      <Link href="/planes-precios">Ver planes y matricularme</Link>
+                    </Button>
+                  </AlertDescription>
                 </Alert>
               ) : null}
 
@@ -422,24 +443,34 @@ export function DiagnosticTeaser({
                 <Label htmlFor="dx-bateria">Selecciona la batería diagnóstica a presentar</Label>
                 <Select
                   value={lead.bancoId}
-                  onValueChange={(value) => setLead((l) => ({ ...l, bancoId: value as BancoId }))}
+                  onValueChange={(value) => {
+                    setRequierePago(false);
+                    setLead((l) => ({ ...l, bancoId: value as BancoId }));
+                  }}
                   disabled={isLoadingBanco}
                 >
                   <SelectTrigger id="dx-bateria" className="w-full">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {bateriasDisponibles.map((b) => (
+                    {BATERIAS.map((b) => (
                       <SelectItem key={b.id} value={b.id}>
-                        {b.label}
+                        <span className="flex items-center gap-2">
+                          {b.label}
+                          {b.pago && !bateriasPagasHabilitadas ? (
+                            <Lock className="size-3.5 text-muted-foreground" aria-label="Requiere plan activo" />
+                          ) : null}
+                        </span>
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
                 {!bateriasPagasHabilitadas ? (
                   <p className="text-xs text-muted-foreground">
-                    Los cursos Pre-ICFES de 9° y 10° son contenido de matrícula paga — se habilitan
-                    automáticamente cuando el estudiante tiene una suscripción individual activa.
+                    Los cursos Pre-ICFES de 9° y 10° (
+                    <Lock className="inline size-3 align-text-top" />) son contenido de matrícula paga. Puedes verlos
+                    en la lista, pero para presentarlos necesitas un plan activo — se habilitan automáticamente en
+                    cuanto el estudiante tiene una suscripción individual activa.
                   </p>
                 ) : null}
               </div>
