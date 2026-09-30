@@ -4,12 +4,12 @@ import { getResendClient } from "@/lib/email/resend";
 import { buildDiagnosticoPdf, diagnosticoReportFilename, type DiagnosticoReportData } from "@/lib/diagnostico/report-pdf";
 import { siteName } from "@/lib/data/home-content";
 import { escapeHtml } from "@/lib/html-escape";
+import { emailHeaderHtml } from "@/lib/email/email-header";
 
 function diagnosticoEmailHtml(data: DiagnosticoReportData): string {
   return `
   <div style="font-family:Helvetica,Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;">
-    <div style="font-size:20px;font-weight:800;color:${BRAND.oxford};margin-bottom:2px;">${siteName}</div>
-    <div style="font-size:12px;color:${BRAND.glacier};margin-bottom:20px;">soberanocognitivo.com</div>
+    ${emailHeaderHtml()}
 
     <p style="font-size:15px;color:${BRAND.oxford};margin:0 0 6px;font-weight:700;">
       ${escapeHtml(data.estudianteNombre)} completó su diagnóstico académico

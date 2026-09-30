@@ -22,6 +22,7 @@ interface PreguntaPublica {
   id: string;
   materia: string;
   enunciado: string;
+  imagenUrl?: string;
   opciones: Record<Opcion, string>;
   requiereJustificacion?: boolean;
 }
@@ -132,7 +133,17 @@ function formatTiempo(segundos: number): string {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
-export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaConocida } = {}) {
+export function DiagnosticTeaser({
+  cuentaConocida,
+  bateriasPagasHabilitadas = false,
+}: {
+  cuentaConocida?: CuentaConocida;
+  /** Los cursos Pre-ICFES por grado (9°/10°) son pagos — solo se ofrecen
+   * a un estudiante logueado con matrícula activa. El servidor vuelve a
+   * validar esto igual (nunca es solo un filtro de interfaz). */
+  bateriasPagasHabilitadas?: boolean;
+} = {}) {
+  const bateriasDisponibles = bateriasPagasHabilitadas ? BATERIAS : BATERIAS.filter((b) => b.id === "general");
   const [paso, setPaso] = React.useState<Paso>("lead");
   const [lead, setLead] = React.useState<LeadForm>(() => getLeadInicial(cuentaConocida));
   const [error, setError] = React.useState<string>();
@@ -182,30 +193,35 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
         avisarIncidencia("Detectamos que saliste de la pestaña del examen — esto se tiene en cuenta en tu índice de enfoque.");
       }
     }
-    function onCopy() {
-      copyPasteRef.current += 1;
-      registrar("intento_copia", "El estudiante copió texto del examen");
-      avisarIncidencia("Evita copiar el texto del examen para procesarlo externamente — esto se tiene en cuenta en tu resultado.");
-    }
-    function onCut() {
-      copyPasteRef.current += 1;
-      registrar("intento_corte", "El estudiante cortó texto del examen");
-      avisarIncidencia("Evita cortar el texto del examen — esto se tiene en cuenta en tu resultado.");
-    }
-    function onPaste() {
-      copyPasteRef.current += 1;
-      registrar("intento_pegado", "El estudiante pegó contenido en el examen");
-      avisarIncidencia("Evita pegar contenido externo en el examen — esto se tiene en cuenta en tu resultado.");
+    // Los eventos nativos "copy"/"cut"/"paste" del navegador solo se
+    // disparan si hay una selección de texto válida (o un campo editable
+    // enfocado) en ese instante. Al cambiar de pregunta, React reemplaza
+    // el DOM y cualquier selección anterior queda inválida, así que
+    // Ctrl/Cmd+C/X/V deja de disparar el evento nativo — por eso la
+    // alerta solo salía la primera vez. Detectar la combinación de teclas
+    // directamente evita depender de si hay algo seleccionado.
+    function onKeyDown(e: KeyboardEvent) {
+      if (!(e.ctrlKey || e.metaKey)) return;
+      const key = e.key.toLowerCase();
+      if (key === "c") {
+        copyPasteRef.current += 1;
+        registrar("intento_copia", "El estudiante presionó Ctrl/Cmd+C durante el examen");
+        avisarIncidencia("Evita copiar el texto del examen para procesarlo externamente — esto se tiene en cuenta en tu resultado.");
+      } else if (key === "x") {
+        copyPasteRef.current += 1;
+        registrar("intento_corte", "El estudiante presionó Ctrl/Cmd+X durante el examen");
+        avisarIncidencia("Evita cortar el texto del examen — esto se tiene en cuenta en tu resultado.");
+      } else if (key === "v") {
+        copyPasteRef.current += 1;
+        registrar("intento_pegado", "El estudiante presionó Ctrl/Cmd+V durante el examen");
+        avisarIncidencia("Evita pegar contenido externo en el examen — esto se tiene en cuenta en tu resultado.");
+      }
     }
     document.addEventListener("visibilitychange", onVisibilityChange);
-    document.addEventListener("copy", onCopy);
-    document.addEventListener("cut", onCut);
-    document.addEventListener("paste", onPaste);
+    document.addEventListener("keydown", onKeyDown);
     return () => {
       document.removeEventListener("visibilitychange", onVisibilityChange);
-      document.removeEventListener("copy", onCopy);
-      document.removeEventListener("cut", onCut);
-      document.removeEventListener("paste", onPaste);
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, [enExamen, banco]);
 
@@ -248,7 +264,7 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
       setError("No se pudo enviar el diagnóstico. Revisa tu conexión e intenta de nuevo.");
       setPaso("examen");
     }
-  }, [banco, lead, respuestas, justificaciones]);
+  }, [banco, lead, respuestas, justificaciones, setError]);
 
   // Cronómetro regresivo — auto-finaliza al llegar a 0. Un solo interval
   // por examen (no depende de segundosRestantes, que se actualiza con la
@@ -413,13 +429,19 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {BATERIAS.map((b) => (
+                    {bateriasDisponibles.map((b) => (
                       <SelectItem key={b.id} value={b.id}>
                         {b.label}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+                {!bateriasPagasHabilitadas ? (
+                  <p className="text-xs text-muted-foreground">
+                    Los cursos Pre-ICFES de 9° y 10° son contenido de matrícula paga — se habilitan
+                    automáticamente cuando el estudiante tiene una suscripción individual activa.
+                  </p>
+                ) : null}
               </div>
 
               {!cuentaConocida ? (
@@ -536,6 +558,15 @@ export function DiagnosticTeaser({ cuentaConocida }: { cuentaConocida?: CuentaCo
         <Card>
           <CardContent className="py-6">
             <div className="mb-1 text-xs font-bold uppercase tracking-wide text-glacier-strong">{pregunta.materia}</div>
+            {pregunta.imagenUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element -- imagen externa (Cloudinary) del banco de preguntas, no un asset local optimizable
+              <img
+                src={pregunta.imagenUrl}
+                alt="Imagen de apoyo para la pregunta"
+                className="mb-4 max-h-80 w-full rounded-lg border border-border object-contain"
+                loading="lazy"
+              />
+            ) : null}
             <p className="font-data mb-5 text-sm leading-relaxed text-foreground">{pregunta.enunciado}</p>
 
             <RadioGroup

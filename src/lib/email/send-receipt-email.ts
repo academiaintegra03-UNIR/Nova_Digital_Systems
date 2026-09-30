@@ -4,6 +4,7 @@ import { getResendClient } from "@/lib/email/resend";
 import { buildReceiptPdf, documentoCompleto, formatCop, formatReceiptDate, receiptFilename } from "@/lib/receipt-pdf";
 import { siteName } from "@/lib/data/home-content";
 import { escapeHtml } from "@/lib/html-escape";
+import { emailHeaderHtml } from "@/lib/email/email-header";
 import type { PaymentReceipt } from "@/app/checkout/gracias/actions";
 
 function row(label: string, value: string): string {
@@ -23,8 +24,7 @@ function receiptEmailHtml(receipt: PaymentReceipt): string {
 
   return `
   <div style="font-family:Helvetica,Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;">
-    <div style="font-size:20px;font-weight:800;color:${BRAND.oxford};margin-bottom:2px;">${siteName}</div>
-    <div style="font-size:12px;color:${BRAND.glacier};margin-bottom:20px;">soberanocognitivo.com</div>
+    ${emailHeaderHtml()}
 
     <p style="font-size:15px;color:${BRAND.oxford};margin:0 0 6px;font-weight:700;">¡Tu pago fue confirmado!</p>
     <p style="font-size:13px;color:${BRAND.glacierStrong};margin:0 0 8px;">

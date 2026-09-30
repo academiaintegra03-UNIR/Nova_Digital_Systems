@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { isRateLimited } from "@/lib/rate-limit";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getAuthenticatedProfile } from "@/lib/auth/get-profile";
-import { getBanco, esBancoId } from "@/lib/diagnostico/bancos";
+import { getBanco, resolverBancoIdPermitido } from "@/lib/diagnostico/bancos";
 import { calcularResultado } from "@/lib/diagnostico/scoring";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { sendDiagnosticoEmail } from "@/lib/email/send-diagnostico-email";
@@ -154,8 +154,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Completa tu nombre y un dato de contacto de tu acudiente." }, { status: 400 });
   }
 
-  const bancoIdCandidato = String(bancoIdRaw ?? "");
-  const bancoId = esBancoId(bancoIdCandidato) ? bancoIdCandidato : "general";
+  // Mismo chequeo de matrícula que /api/diagnostico/banco — si alguien
+  // arma la petición a mano pidiendo un banco pago sin tener suscripción
+  // individual activa, se recalifica igual contra la Batería General.
+  const bancoId = await resolverBancoIdPermitido(String(bancoIdRaw ?? ""));
   const banco = getBanco(bancoId);
 
   const admin = createAdminClient();

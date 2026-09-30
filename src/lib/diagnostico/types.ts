@@ -54,6 +54,11 @@ export interface PreguntaDiagnostico {
   id: string;
   materia: string;
   enunciado: string;
+  /** Imagen que acompaña la pregunta (gráfico, tabla, diagrama) — algunos
+   * reactivos de 9°/10° la traen. Se extrae del `enunciado` fuente (venía
+   * como una URL de Cloudinary pegada al inicio del texto) al normalizar
+   * el banco, ver `extraerImagenEnunciado` en bancos.ts. */
+  imagenUrl?: string;
   opciones: Record<Opcion, string>;
   claveCorrecta: Opcion;
   /** Solo el banco "general" trae perfil por opción — en 9°/10° queda
@@ -72,6 +77,7 @@ export function toPreguntaPublica(p: PreguntaDiagnostico): PreguntaPublica {
     id: p.id,
     materia: p.materia,
     enunciado: p.enunciado,
+    imagenUrl: p.imagenUrl,
     opciones: p.opciones,
     requiereJustificacion: p.requiereJustificacion,
   };
