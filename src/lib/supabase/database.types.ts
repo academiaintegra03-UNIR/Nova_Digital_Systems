@@ -573,6 +573,33 @@ export interface Database {
         };
         Relationships: [];
       };
+      postulaciones_prueba_gratuita: {
+        Row: {
+          id: string;
+          created_at: string;
+          nombre: string;
+          email: string;
+          telefono: string | null;
+          notificado: boolean;
+        };
+        Insert: {
+          id?: string;
+          created_at?: string;
+          nombre: string;
+          email: string;
+          telefono?: string | null;
+          notificado?: boolean;
+        };
+        Update: {
+          id?: string;
+          created_at?: string;
+          nombre?: string;
+          email?: string;
+          telefono?: string | null;
+          notificado?: boolean;
+        };
+        Relationships: [];
+      };
       materia_recursos: {
         Row: {
           id: string;
