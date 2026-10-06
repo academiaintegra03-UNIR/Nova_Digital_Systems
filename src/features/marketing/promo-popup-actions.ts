@@ -3,6 +3,7 @@
 import { headers } from "next/headers";
 import { isRateLimited } from "@/lib/rate-limit";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { sendPostulacionConfirmacionEmail } from "@/lib/email/send-postulacion-emails";
 
 export interface PostularPruebaGratuitaState {
   error?: string;
@@ -44,6 +45,10 @@ export async function postularPruebaGratuitaAction(
     console.error("Failed to insert postulación prueba gratuita:", error);
     return { error: "No se pudo enviar tu postulación. Intenta de nuevo en un momento." };
   }
+
+  // Best-effort: si el correo falla, la postulación ya quedó guardada, así
+  // que no se le muestra error al visitante por esto.
+  await sendPostulacionConfirmacionEmail(email, nombre);
 
   return { success: true };
 }
