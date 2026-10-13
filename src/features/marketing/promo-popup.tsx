@@ -17,9 +17,16 @@ import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { postularPruebaGratuitaAction } from "@/features/marketing/promo-popup-actions";
 
-/** Se muestra una sola vez por sesión del navegador, para no molestar en cada página. */
-const SESSION_KEY = "nova-promo-popup-shown";
 const OPEN_DELAY_MS = 1200;
+
+/**
+ * Flag en memoria del módulo — no en sessionStorage. El layout de
+ * (marketing) no se desmonta entre páginas, así que esto evita que el
+ * popup reaparezca con cada clic interno... pero al recargar (F5) se
+ * vuelve a cargar el JS desde cero, así que vuelve a mostrarse, que es lo
+ * que se espera de un popup publicitario.
+ */
+let yaMostrado = false;
 
 const initialForm = { nombre: "", email: "", telefono: "" };
 
@@ -31,19 +38,11 @@ export function PromoPopup() {
   const [isPending, startTransition] = React.useTransition();
 
   React.useEffect(() => {
-    try {
-      if (sessionStorage.getItem(SESSION_KEY)) return;
-    } catch {
-      // sessionStorage no disponible (navegación privada, etc.): mostramos de todas formas.
-    }
+    if (yaMostrado) return;
 
     const timer = setTimeout(() => {
+      yaMostrado = true;
       setOpen(true);
-      try {
-        sessionStorage.setItem(SESSION_KEY, "1");
-      } catch {
-        // Ignorar: a lo sumo se vuelve a mostrar en la próxima página.
-      }
     }, OPEN_DELAY_MS);
 
     return () => clearTimeout(timer);
