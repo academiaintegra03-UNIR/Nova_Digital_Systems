@@ -581,6 +581,8 @@ export interface Database {
           email: string;
           telefono: string | null;
           notificado: boolean;
+          notificado_en: string | null;
+          profile_id: string | null;
         };
         Insert: {
           id?: string;
@@ -589,6 +591,8 @@ export interface Database {
           email: string;
           telefono?: string | null;
           notificado?: boolean;
+          notificado_en?: string | null;
+          profile_id?: string | null;
         };
         Update: {
           id?: string;
@@ -597,6 +601,8 @@ export interface Database {
           email?: string;
           telefono?: string | null;
           notificado?: boolean;
+          notificado_en?: string | null;
+          profile_id?: string | null;
         };
         Relationships: [];
       };

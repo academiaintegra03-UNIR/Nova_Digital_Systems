@@ -2,14 +2,24 @@
 
 import * as React from "react";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { Loader2, Mail, MailWarning } from "lucide-react";
 import { StatCard } from "@/components/shared/stat-card";
 import { StatusBadge } from "@/components/shared/status-badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { marcarNotificadoAction } from "@/app/admin/postulantes/actions";
+import { notificarPostulanteAction } from "@/app/admin/postulantes/actions";
 
 export interface PostulanteAdminRow {
   id: string;
@@ -18,37 +28,101 @@ export interface PostulanteAdminRow {
   email: string;
   telefono: string | null;
   notificado: boolean;
+  notificadoEn: string | null;
 }
 
 function formatFecha(iso: string) {
   return new Date(iso).toLocaleString("es-CO", { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
 }
 
-function FilaAccion({ postulante }: { postulante: PostulanteAdminRow }) {
+/** Acción de un solo sentido: crea la cuenta y envía la contraseña por
+ * correo. Pide confirmación explícita (no es un toggle reversible como un
+ * estado cualquiera) y, una vez hecha, la fila ya no vuelve a mostrar el
+ * botón — solo el resultado. */
+function NotificarAccion({ postulante }: { postulante: PostulanteAdminRow }) {
+  const [open, setOpen] = React.useState(false);
   const [notificado, setNotificado] = React.useState(postulante.notificado);
+  const [notificadoEn, setNotificadoEn] = React.useState(postulante.notificadoEn);
+  const [correoFallido, setCorreoFallido] = React.useState(false);
+  const [error, setError] = React.useState<string>();
   const [isPending, startTransition] = React.useTransition();
 
-  function toggle() {
-    const next = !notificado;
+  function confirmar() {
+    setError(undefined);
     startTransition(async () => {
       const formData = new FormData();
       formData.set("id", postulante.id);
-      formData.set("notificado", String(next));
-      const result = await marcarNotificadoAction(formData);
+      const result = await notificarPostulanteAction(formData);
       if (result.error) {
-        toast.error(result.error);
+        setError(result.error);
         return;
       }
-      setNotificado(next);
-      toast.success(next ? "Marcado como notificado" : "Marcado como pendiente");
+      setNotificado(true);
+      setNotificadoEn(new Date().toISOString());
+      setCorreoFallido(!!result.cuentaSinCorreo);
+      setOpen(false);
+      if (result.cuentaSinCorreo) {
+        toast.warning("Cuenta creada, pero el correo no se pudo enviar", {
+          description: "Ve a Usuarios para restablecerle la contraseña y avisarle directo.",
+          duration: 8000,
+        });
+      } else {
+        toast.success("Cuenta creada y correo enviado");
+      }
     });
   }
 
+  if (notificado) {
+    return (
+      <div className="flex flex-col gap-1">
+        <StatusBadge tone={correoFallido ? "warning" : "success"}>
+          {correoFallido ? (
+            <span className="flex items-center gap-1">
+              <MailWarning className="size-3" /> Cuenta creada, correo pendiente
+            </span>
+          ) : (
+            <span className="flex items-center gap-1">
+              <Mail className="size-3" /> Notificado
+            </span>
+          )}
+        </StatusBadge>
+        {notificadoEn ? <span className="text-xs text-muted-foreground">{formatFecha(notificadoEn)}</span> : null}
+      </div>
+    );
+  }
+
   return (
-    <Button variant="outline" size="sm" onClick={toggle} disabled={isPending}>
-      {isPending ? <Loader2 className="size-3.5 animate-spin" /> : null}
-      {notificado ? "Marcar pendiente" : "Marcar notificado"}
-    </Button>
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
+        <Button variant="cta" size="sm">
+          Notificar
+        </Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>¿Notificar a {postulante.nombre}?</DialogTitle>
+          <DialogDescription>
+            Se va a crear una cuenta de estudiante para <strong>{postulante.email}</strong> con una contraseña
+            generada, y se le va a enviar por correo junto con el acceso a la prueba gratuita. Esta acción no se
+            puede repetir ni deshacer.
+          </DialogDescription>
+        </DialogHeader>
+        {error ? (
+          <Alert variant="destructive" className="mt-2">
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+        ) : null}
+        <DialogFooter className="mt-4">
+          <Button type="button" variant="outline" onClick={() => setOpen(false)} disabled={isPending}>
+            Cancelar
+          </Button>
+          <Button type="button" variant="cta" onClick={confirmar} disabled={isPending}>
+            {isPending ? <Loader2 className="size-4 animate-spin" /> : null}
+            Sí, notificar
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   );
 }
 
@@ -99,7 +173,6 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
                   <TableHead>Correo</TableHead>
                   <TableHead>WhatsApp</TableHead>
                   <TableHead>Estado</TableHead>
-                  <TableHead />
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -110,12 +183,7 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
                     <TableCell className="text-muted-foreground">{p.email}</TableCell>
                     <TableCell className="text-muted-foreground">{p.telefono ?? "—"}</TableCell>
                     <TableCell>
-                      <StatusBadge tone={p.notificado ? "success" : "neutral"}>
-                        {p.notificado ? "Notificado" : "Pendiente"}
-                      </StatusBadge>
-                    </TableCell>
-                    <TableCell>
-                      <FilaAccion postulante={p} />
+                      <NotificarAccion postulante={p} />
                     </TableCell>
                   </TableRow>
                 ))}
