@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { toast } from "sonner";
 import { createUserAction } from "@/app/admin/usuarios/actions";
 import { roleOptions } from "@/lib/data/roles";
@@ -9,6 +10,7 @@ import type { Colegio } from "@/lib/types/panels";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Dialog,
@@ -37,12 +39,17 @@ export function CreateUserDialog({ colegios }: { colegios: Colegio[] }) {
   const [colegioId, setColegioId] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [tipoDocumento, setTipoDocumento] = React.useState("");
+  const [aceptaDatos, setAceptaDatos] = React.useState(false);
   const [error, setError] = React.useState<string>();
   const [isPending, startTransition] = React.useTransition();
   const formRef = React.useRef<HTMLFormElement>(null);
 
   function handleSubmit(formData: FormData) {
     setError(undefined);
+    if (!aceptaDatos) {
+      setError("Debes confirmar el tratamiento de datos personales para continuar.");
+      return;
+    }
     startTransition(async () => {
       const result = await createUserAction(formData);
       if (result.error) {
@@ -55,6 +62,7 @@ export function CreateUserDialog({ colegios }: { colegios: Colegio[] }) {
       setColegioId("");
       setPassword("");
       setTipoDocumento("");
+      setAceptaDatos(false);
       formRef.current?.reset();
     });
   }
@@ -212,6 +220,27 @@ export function CreateUserDialog({ colegios }: { colegios: Colegio[] }) {
                 </Select>
               </div>
             ) : null}
+
+            <div className="flex items-start gap-2">
+              <Checkbox
+                id="new-user-acepta-datos"
+                checked={aceptaDatos}
+                onCheckedChange={(checked) => setAceptaDatos(checked === true)}
+                disabled={isPending}
+                className="mt-0.5"
+              />
+              <Label htmlFor="new-user-acepta-datos" className="text-xs font-normal text-muted-foreground">
+                Confirmo que cuento con la autorización para tratar estos datos personales conforme a la{" "}
+                <Link
+                  href="/politica-de-tratamiento-de-datos"
+                  target="_blank"
+                  className="underline hover:text-foreground"
+                >
+                  Política de Tratamiento de Datos
+                </Link>
+                .
+              </Label>
+            </div>
           </div>
           <DialogFooter>
             <Button type="submit" disabled={isPending}>

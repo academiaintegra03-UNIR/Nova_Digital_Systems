@@ -1,7 +1,7 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
 import { siteName } from "@/lib/data/home-content";
-import { footerCompanyLinks, footerPlatformLinks } from "@/lib/data/nav";
+import { footerCompanyLinks, footerLegalLinks, footerPlatformLinks } from "@/lib/data/nav";
 
 export function SiteFooter() {
   return (
@@ -35,10 +35,12 @@ export function SiteFooter() {
         </div>
         <div>
           <div className="mb-2.5 text-xs font-bold tracking-wide text-white uppercase">Legal</div>
-          <div className="flex flex-col gap-2 text-sm text-on-primary-muted">
-            <span>Política de privacidad</span>
-            <span>Términos y condiciones</span>
-            <span>Consentimiento para menores</span>
+          <div className="flex flex-col gap-2 text-sm">
+            {footerLegalLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="text-on-primary-muted hover:text-white">
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

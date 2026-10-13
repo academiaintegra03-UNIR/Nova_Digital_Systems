@@ -45,8 +45,8 @@ export function UserMenu({
 }) {
   if (!profile) {
     return (
-      <div className={cn("flex items-center gap-2", compact && "hidden lg:flex")}>
-        <Button variant="ghost" asChild>
+      <div className="flex items-center gap-2">
+        <Button variant="ghost" asChild className={cn(compact && "hidden lg:inline-flex")}>
           <Link href="/login">Iniciar sesión</Link>
         </Button>
         <Button variant="cta" asChild>

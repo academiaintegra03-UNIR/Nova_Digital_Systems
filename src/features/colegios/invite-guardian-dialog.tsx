@@ -1,11 +1,13 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { toast } from "sonner";
 import { inviteGuardianAction } from "@/app/colegios-panel/estudiantes/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Dialog,
@@ -27,12 +29,17 @@ function generatePassword() {
 export function InviteGuardianDialog({ studentId, studentName }: { studentId: string; studentName: string }) {
   const [open, setOpen] = React.useState(false);
   const [password, setPassword] = React.useState("");
+  const [aceptaDatos, setAceptaDatos] = React.useState(false);
   const [error, setError] = React.useState<string>();
   const [isPending, startTransition] = React.useTransition();
   const formRef = React.useRef<HTMLFormElement>(null);
 
   function handleSubmit(formData: FormData) {
     setError(undefined);
+    if (!aceptaDatos) {
+      setError("Debes confirmar el tratamiento de datos personales para continuar.");
+      return;
+    }
     startTransition(async () => {
       const result = await inviteGuardianAction(formData);
       if (result.error) {
@@ -42,6 +49,7 @@ export function InviteGuardianDialog({ studentId, studentName }: { studentId: st
       toast.success("Cuenta de acudiente creada.");
       setOpen(false);
       setPassword("");
+      setAceptaDatos(false);
       formRef.current?.reset();
     });
   }
@@ -112,6 +120,27 @@ export function InviteGuardianDialog({ studentId, studentName }: { studentId: st
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground">Compártela con el acudiente por un canal seguro.</p>
+            </div>
+
+            <div className="flex items-start gap-2">
+              <Checkbox
+                id="guardian-acepta-datos"
+                checked={aceptaDatos}
+                onCheckedChange={(checked) => setAceptaDatos(checked === true)}
+                disabled={isPending}
+                className="mt-0.5"
+              />
+              <Label htmlFor="guardian-acepta-datos" className="text-xs font-normal text-muted-foreground">
+                Confirmo que cuento con la autorización para tratar estos datos personales conforme a la{" "}
+                <Link
+                  href="/politica-de-tratamiento-de-datos"
+                  target="_blank"
+                  className="underline hover:text-foreground"
+                >
+                  Política de Tratamiento de Datos
+                </Link>
+                .
+              </Label>
             </div>
           </div>
           <DialogFooter>

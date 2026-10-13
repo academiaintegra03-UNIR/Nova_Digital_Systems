@@ -64,3 +64,7 @@ export const footerCompanyLinks: NavItem[] = [
   { href: "/faq", label: "Preguntas frecuentes" },
   { href: "/contacto", label: "Contacto" },
 ];
+
+export const footerLegalLinks: NavItem[] = [
+  { href: "/politica-de-tratamiento-de-datos", label: "Política de tratamiento de datos" },
+];

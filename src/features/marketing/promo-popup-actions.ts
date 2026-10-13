@@ -22,11 +22,14 @@ export async function postularPruebaGratuitaAction(
   const email = String(formData.get("email") ?? "").trim();
   const telefono = String(formData.get("telefono") ?? "").trim();
 
-  if (!nombre || !email) {
-    return { error: "Completa tu nombre y correo." };
+  if (!nombre || !email || !telefono) {
+    return { error: "Completa tu nombre, correo y WhatsApp." };
   }
   if (!EMAIL_REGEX.test(email)) {
     return { error: "El correo no es válido." };
+  }
+  if (telefono.length < 7) {
+    return { error: "El número de WhatsApp no es válido." };
   }
 
   const clientKey = (await headers()).get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
@@ -38,7 +41,7 @@ export async function postularPruebaGratuitaAction(
   const { error } = await admin.from("postulaciones_prueba_gratuita").insert({
     nombre,
     email,
-    telefono: telefono || null,
+    telefono,
   });
 
   if (error) {

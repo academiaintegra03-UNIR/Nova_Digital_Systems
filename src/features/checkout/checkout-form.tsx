@@ -1,12 +1,14 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { CreditCard, Lock, Mail, Phone, ShieldCheck, User } from "lucide-react";
 import { startCheckoutAction } from "@/app/checkout/[planId]/actions";
 import { documentTypes } from "@/lib/data/document-types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
@@ -29,10 +31,15 @@ function IconField({
 export function CheckoutForm({ planId }: { planId: string }) {
   const [error, setError] = React.useState<string>();
   const [tipoDocumento, setTipoDocumento] = React.useState("");
+  const [aceptaDatos, setAceptaDatos] = React.useState(false);
   const [isPending, startTransition] = React.useTransition();
 
   function handleSubmit(formData: FormData) {
     setError(undefined);
+    if (!aceptaDatos) {
+      setError("Debes aceptar el tratamiento de tus datos personales para continuar.");
+      return;
+    }
     startTransition(async () => {
       const result = await startCheckoutAction(formData);
       if (result.error) {
@@ -143,6 +150,27 @@ export function CheckoutForm({ planId }: { planId: string }) {
             disabled={isPending}
           />
           <p className="text-xs text-muted-foreground">La usarás para iniciar sesión después de pagar.</p>
+        </div>
+
+        <div className="flex items-start gap-2">
+          <Checkbox
+            id="checkout-acepta-datos"
+            checked={aceptaDatos}
+            onCheckedChange={(checked) => setAceptaDatos(checked === true)}
+            disabled={isPending}
+            className="mt-0.5"
+          />
+          <Label htmlFor="checkout-acepta-datos" className="text-xs font-normal text-muted-foreground">
+            Acepto el tratamiento de mis datos personales conforme a la{" "}
+            <Link
+              href="/politica-de-tratamiento-de-datos"
+              target="_blank"
+              className="underline hover:text-foreground"
+            >
+              Política de Tratamiento de Datos
+            </Link>
+            .
+          </Label>
         </div>
 
         <Button type="submit" size="lg" className="w-full gap-2" disabled={isPending}>

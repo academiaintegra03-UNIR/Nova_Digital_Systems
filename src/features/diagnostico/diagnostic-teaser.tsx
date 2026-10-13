@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { CheckCircle2, ExternalLink, Loader2, Lock, Mail } from "lucide-react";
@@ -9,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -148,6 +150,7 @@ export function DiagnosticTeaser({
   const [paso, setPaso] = React.useState<Paso>("lead");
   const [lead, setLead] = React.useState<LeadForm>(() => getLeadInicial(cuentaConocida));
   const [error, setError] = React.useState<string>();
+  const [aceptaDatos, setAceptaDatos] = React.useState(false);
   const [isLoadingBanco, setIsLoadingBanco] = React.useState(false);
   const [errorEmailAcudiente, setErrorEmailAcudiente] = React.useState<string>();
   const [errorEmailEstudiante, setErrorEmailEstudiante] = React.useState<string>();
@@ -304,6 +307,10 @@ export function DiagnosticTeaser({
     }
     if (!cuentaConocida && !lead.acudienteEmail.trim() && !lead.acudienteTelefono.trim()) {
       setError("Deja al menos un correo o teléfono del acudiente para enviarle el resultado.");
+      return;
+    }
+    if (!cuentaConocida && !aceptaDatos) {
+      setError("Debes aceptar el tratamiento de datos personales para continuar.");
       return;
     }
 
@@ -531,15 +538,32 @@ export function DiagnosticTeaser({
                 </p>
               )}
 
+              {!cuentaConocida ? (
+                <div className="flex items-start gap-2">
+                  <Checkbox
+                    id="dx-acepta-datos"
+                    checked={aceptaDatos}
+                    onCheckedChange={(checked) => setAceptaDatos(checked === true)}
+                    disabled={isLoadingBanco}
+                    className="mt-0.5"
+                  />
+                  <Label htmlFor="dx-acepta-datos" className="text-xs font-normal text-muted-foreground">
+                    Acepto el tratamiento de los datos personales del estudiante y del acudiente conforme a la{" "}
+                    <Link
+                      href="/politica-de-tratamiento-de-datos"
+                      target="_blank"
+                      className="underline hover:text-foreground"
+                    >
+                      Política de Tratamiento de Datos
+                    </Link>
+                    . Si el estudiante es menor de edad, declaro ser su acudiente o contar con su autorización.
+                  </Label>
+                </div>
+              ) : null}
+
               <Button type="submit" size="lg" variant="cta" className="mt-2" disabled={isLoadingBanco}>
                 {isLoadingBanco ? "Cargando..." : "Comenzar diagnóstico"}
               </Button>
-              {!cuentaConocida ? (
-                <p className="text-center text-xs text-muted-foreground">
-                  Si el estudiante es menor de edad, se asume el consentimiento del acudiente al dejar sus datos
-                  de contacto arriba.
-                </p>
-              ) : null}
             </form>
           </CardContent>
         </Card>

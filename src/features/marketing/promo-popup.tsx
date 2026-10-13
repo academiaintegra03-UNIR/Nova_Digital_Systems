@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Sparkles, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import {
@@ -14,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { postularPruebaGratuitaAction } from "@/features/marketing/promo-popup-actions";
 
@@ -35,6 +37,7 @@ export function PromoPopup() {
   const [form, setForm] = React.useState(initialForm);
   const [sent, setSent] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const [aceptaDatos, setAceptaDatos] = React.useState(false);
   const [isPending, startTransition] = React.useTransition();
 
   React.useEffect(() => {
@@ -55,6 +58,10 @@ export function PromoPopup() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
+    if (!aceptaDatos) {
+      setError("Debes aceptar el tratamiento de tus datos personales para continuar.");
+      return;
+    }
     const formData = new FormData(e.currentTarget);
     startTransition(async () => {
       const result = await postularPruebaGratuitaAction(formData);
@@ -119,14 +126,37 @@ export function PromoPopup() {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <Label htmlFor="promo-telefono">WhatsApp (opcional)</Label>
+                <Label htmlFor="promo-telefono">WhatsApp</Label>
                 <Input
                   id="promo-telefono"
                   name="telefono"
+                  type="tel"
+                  inputMode="numeric"
+                  required
                   value={form.telefono}
                   onChange={(e) => update("telefono", e.target.value)}
                   disabled={isPending}
                 />
+              </div>
+              <div className="flex items-start gap-2">
+                <Checkbox
+                  id="promo-acepta-datos"
+                  checked={aceptaDatos}
+                  onCheckedChange={(checked) => setAceptaDatos(checked === true)}
+                  disabled={isPending}
+                  className="mt-0.5"
+                />
+                <Label htmlFor="promo-acepta-datos" className="text-xs font-normal text-muted-foreground">
+                  Acepto el tratamiento de mis datos personales conforme a la{" "}
+                  <Link
+                    href="/politica-de-tratamiento-de-datos"
+                    target="_blank"
+                    className="underline hover:text-foreground"
+                  >
+                    Política de Tratamiento de Datos
+                  </Link>
+                  .
+                </Label>
               </div>
             </div>
             <DialogFooter>
