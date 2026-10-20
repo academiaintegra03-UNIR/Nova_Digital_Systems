@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 import { heroContent } from "@/lib/data/home-content";
 import { Button } from "@/components/ui/button";
@@ -39,8 +39,33 @@ function Headline({ text }: { text: string }) {
   );
 }
 
+// Art direction con <picture>: el navegador elige y descarga una sola imagen según
+// el ancho. Con dos <Image fill> ocultos por CSS se bajaban ambas y Next avisaba
+// que la oculta (ancho 0) no se renderizaba a "100vw".
+function HeroBackground() {
+  const common = { alt: "", fill: true, priority: true, sizes: "100vw" } as const;
+  const {
+    props: { srcSet: desktop },
+  } = getImageProps({ ...common, src: "/images/imagenprincipal.png" });
+  const {
+    props: { srcSet: mobile, ...rest },
+  } = getImageProps({ ...common, src: "/images/imagenprincipalmovil.png" });
+
+  return (
+    <picture>
+      <source media="(min-width: 768px)" srcSet={desktop} />
+      <source srcSet={mobile} />
+      {/* Móvil: abajo, donde están los estudiantes (el cielo de arriba queda para el texto).
+          Escritorio: la franja de las caras y la mesa. */}
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
+      <img {...rest} className="object-cover object-bottom md:object-[center_45%]" />
+    </picture>
+  );
+}
+
 /**
- * Hero con fondo ilustrado (public/images/fondointerfaz*.png) sobre el tema
+ * Hero con foto de fondo (public/images/imagenprincipal.png en escritorio,
+ * imagenprincipalmovil.png en móvil) sobre el tema
  * oscuro global. El texto y la tarjeta usan los tokens del tema, sin estilos
  * propios. La pregunta de la derecha se puede responder de verdad, no es una
  * captura.
@@ -51,25 +76,12 @@ export function Hero() {
       {/* Fondo ilustrado: una imagen por formato (art direction), ambas a sangre. La de
           escritorio conserva el arte a la derecha, detrás de la tarjeta; la móvil, abajo. */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <Image
-          src="/images/fondointerfaz.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="hidden object-cover object-right md:block"
-        />
-        <Image
-          src="/images/fondointerfazmovil.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-bottom md:hidden"
-        />
+        <HeroBackground />
+        {/* La foto es real (no ilustración): un velo Oxford la entona con la marca. */}
+        <div className="absolute inset-0 bg-primary/35 mix-blend-multiply" />
         {/* Degradados de marca: aseguran contraste del texto (arriba en móvil, a la izquierda en escritorio) y funden la
             imagen con el fondo oscuro de la página por abajo. */}
-        <div className="absolute inset-0 bg-linear-to-b from-background/75 via-background/35 to-transparent md:bg-linear-to-r md:from-background/60 md:via-background/20" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/75 via-background/35 to-transparent md:bg-linear-to-r md:from-background/95 md:via-background/65 md:to-background/15" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background to-transparent" />
       </div>
 

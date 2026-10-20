@@ -5,8 +5,11 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 
-/** Máximo de opciones pintadas a la vez — el catálogo completo tiene miles. */
-const MAX_VISIBLE = 80;
+/**
+ * Opciones que se pintan por tanda — el catálogo completo tiene miles. Al
+ * acercarse al final de la lista se pinta la siguiente tanda.
+ */
+const PAGE_SIZE = 80;
 
 /** Minúsculas y sin tildes, para que "simon bolivar" encuentre "Simón Bolívar". */
 function normalizar(texto: string) {
@@ -54,6 +57,7 @@ export function InstitucionCombobox({
   const [catalogo, setCatalogo] = React.useState<Catalogo | null>(null);
   const [open, setOpen] = React.useState(false);
   const [activeIndex, setActiveIndex] = React.useState(-1);
+  const [limite, setLimite] = React.useState(PAGE_SIZE);
   const containerRef = React.useRef<HTMLDivElement>(null);
   const listRef = React.useRef<HTMLUListElement>(null);
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -67,13 +71,20 @@ export function InstitucionCombobox({
   const { opciones, total } = React.useMemo(() => {
     if (!catalogo) return { opciones: [], total: 0 };
     const consulta = normalizar(value);
-    if (!consulta) return { opciones: catalogo.slice(0, MAX_VISIBLE), total: catalogo.length };
+    if (!consulta) return { opciones: catalogo.slice(0, limite), total: catalogo.length };
     // Todas las palabras deben aparecer, en cualquier orden; primero los que empiezan por la consulta.
     const palabras = consulta.split(/\s+/);
     const coincidencias = catalogo.filter((o) => palabras.every((p) => o.clave.includes(p)));
     coincidencias.sort((a, b) => Number(b.clave.startsWith(consulta)) - Number(a.clave.startsWith(consulta)));
-    return { opciones: coincidencias.slice(0, MAX_VISIBLE), total: coincidencias.length };
-  }, [catalogo, value]);
+    return { opciones: coincidencias.slice(0, limite), total: coincidencias.length };
+  }, [catalogo, value, limite]);
+
+  function cargarMasSiHaceFalta(e: React.UIEvent<HTMLUListElement>) {
+    const el = e.currentTarget;
+    if (opciones.length < total && el.scrollTop + el.clientHeight >= el.scrollHeight - 120) {
+      setLimite((l) => l + PAGE_SIZE);
+    }
+  }
 
   // Cerrar al hacer clic fuera.
   React.useEffect(() => {
@@ -101,6 +112,7 @@ export function InstitucionCombobox({
     if (e.key === "ArrowDown") {
       e.preventDefault();
       if (!open) abrir();
+      if (activeIndex >= opciones.length - 5 && opciones.length < total) setLimite((l) => l + PAGE_SIZE);
       setActiveIndex((i) => Math.min(i + 1, opciones.length - 1));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
@@ -134,6 +146,8 @@ export function InstitucionCombobox({
         onChange={(e) => {
           onChange(e.target.value);
           setActiveIndex(-1);
+          setLimite(PAGE_SIZE);
+          listRef.current?.scrollTo({ top: 0 });
           if (!open) abrir();
         }}
         onKeyDown={handleKeyDown}
@@ -157,7 +171,9 @@ export function InstitucionCombobox({
 
       {open ? (
         <div className="absolute z-50 mt-1 w-full overflow-hidden rounded-lg border bg-popover text-popover-foreground shadow-md">
-          <ul ref={listRef} id={listboxId} role="listbox" className="max-h-60 overflow-y-auto py-1">
+          <ul ref={listRef} id={listboxId} role="listbox" className="max-h-60 overflow-y-auto overscroll-contain py-1"
+            onScroll={cargarMasSiHaceFalta}
+          >
             {opciones.map((o, i) => (
               <li
                 key={`${o.nombre}-${i}`}
@@ -188,7 +204,7 @@ export function InstitucionCombobox({
                   ? "No está en la lista — se guardará tal como lo escribiste."
                   : "Escribe el nombre de tu colegio."
                 : total > opciones.length
-                  ? `Mostrando ${opciones.length} de ${total.toLocaleString("es-CO")} — sigue escribiendo para filtrar.`
+                  ? `${total.toLocaleString("es-CO")} colegios — baja para ver más o escribe para filtrar.`
                   : `${total.toLocaleString("es-CO")} resultado${total === 1 ? "" : "s"}`}
           </p>
         </div>
