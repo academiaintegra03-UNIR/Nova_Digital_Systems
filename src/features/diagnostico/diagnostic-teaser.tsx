@@ -16,6 +16,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ProgressRow } from "@/components/shared/progress-row";
+import { InstitucionCombobox } from "@/components/shared/institucion-combobox";
 
 const BATERIAS: { id: BancoId; label: string; pago: boolean }[] = (
   Object.entries(BANCO_LABEL) as [BancoId, string][]
@@ -521,11 +522,10 @@ export function DiagnosticTeaser({
                     </div>
                     <div className="flex flex-col gap-1.5">
                       <Label htmlFor="dx-colegio">Colegio o institución educativa (opcional)</Label>
-                      <Input
+                      <InstitucionCombobox
                         id="dx-colegio"
-                        placeholder="Ej. Colegio Santa María"
                         value={lead.colegio}
-                        onChange={(e) => setLead((l) => ({ ...l, colegio: e.target.value }))}
+                        onChange={(colegio) => setLead((l) => ({ ...l, colegio }))}
                         disabled={isLoadingBanco}
                       />
                     </div>
