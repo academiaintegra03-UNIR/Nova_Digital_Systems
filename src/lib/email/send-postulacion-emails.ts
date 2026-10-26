@@ -31,9 +31,9 @@ function confirmacionHtml(nombre: string): string {
 /** Incluye la contraseña real de la cuenta nueva — solo se genera y se ve
  * una vez, acá. Supabase la guarda ya hasheada (ver checkout/[planId]/actions.ts). */
 function accesoHtml(nombre: string, email: string, password: string): string {
-  // El link va a la página de la prueba, no directo a /login — mientras
-  // la prueba no se lance, esa página es la que explica el estado; ver
-  // src/app/(marketing)/prueba-gratuita/page.tsx.
+  // El link va a la página de la prueba, no directo a /login — sin sesión
+  // esa página manda a /login y, tras iniciar sesión, de vuelta a la
+  // prueba; ver src/app/prueba-gratuita/layout.tsx.
   const pruebaUrl = absoluteUrl("/prueba-gratuita");
   return wrapperHtml(`
     <p style="font-size:15px;color:${BRAND.oxford};margin:0 0 8px;font-weight:700;">

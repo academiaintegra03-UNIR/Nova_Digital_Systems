@@ -1,0 +1,625 @@
+[
+  {
+    "id": "NDSS-M-001",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo en representaciones gráficas cartesianas los comportamientos de cambio de funciones afines y lineales en contextos cotidianos.",
+    "competencia": "Interpretación y representación",
+    "componente": "Álgebra y cálculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos.",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas.",
+    "tarea": "Determinar el tiempo adicional de operación de un dispositivo extrayendo la tasa de descarga horaria e identificando el umbral de apagado en una gráfica lineal.",
+    "bloom": {
+      "nivel": "Comprensión",
+      "justificacion": "Extrae la razón de cambio constante a partir del plano cartesiano y proyecta el tiempo restante hasta un umbral dado."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Relaciona dos magnitudes continuas identificando la pendiente de decremento y su cruce con una condición operativa."
+    },
+    "taed": {
+      "nivel": "Nivel 1: Recuperación & Verificación",
+      "justificacion": "Verifica datos estructurados desde una interfaz gráfica de monitoreo digital y proyecta estados operativos inmediatos."
+    },
+    "descriptor": "Interpreta razones de cambio constantes en gráficas cartesianas para proyectar valores sujetos a restricciones operativas.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para un estudiante de 16 años, exige un proceso en dos fases: deducir la tasa de consumo por hora (15 %/h) a partir de dos pares ordenados y calcular cuántas horas faltan desde la hora 4 (40 %) hasta el umbral de apagado (10 %)."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792420395/M-001_mnmrmf.jpg",
+    "contexto": "Una aplicación registra el porcentaje de batería de un portátil durante una edición de video, como muestra la gráfica. Por seguridad, el equipo se apaga automáticamente al bajar al 10 % de batería.",
+    "enunciado": "Si el ritmo de descarga se mantiene constante, ¿cuántas horas adicionales podrá editar el usuario a partir de la hora 4 antes de que el equipo se apague?",
+    "opciones": {
+      "A": "1,5 horas.",
+      "B": "2,0 horas.",
+      "C": "2,6 horas.",
+      "D": "6,0 horas."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Calculaste una tasa de descarga de 20 % por hora y dividiste el 30 % disponible entre 20. | Como caiste: Tomaste el 40 % de la hora 4 como si fuera el gasto acumulado en vez de la batería restante. | Analisis de tu competencia: Tu mente confundió el valor de la coordenada final con la variación neta del recorrido. | Plan de Accion: Resta siempre el valor inicial menos el valor actual (100 - 40 = 60) para conocer el consumo real antes de dividir.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Confusión entre ordenada en el punto (y₂) y variación absoluta (Δy) al determinar la razón de cambio. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Lectura puntual sin cálculo de variación). | Sugerencia de Mejora: Ejercitar la distinción gráfica entre la altura de un punto y el descenso vertical acumulado respecto al intercepto. | Tip Tactico para el Docente: Pida a los estudiantes dibujar un triángulo rectángulo sobre la recta para visualizar los catetos Δy y Δx."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Excelente conexión de pasos! Primero detectaste que en 4 horas la batería bajó de 100 % a 40 % (gastó 60 % en 4 horas, es decir, 15 % por hora). Como en la hora 4 tiene 40 % y se apaga al llegar a 10 %, le queda un margen útil de 30 %, el cual se consume exactamente en (30) / (15) = 2,0 horas adicionales.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la capacidad de extraer la pendiente de una función afín y proyectar un intervalo temporal acotado por una condición. | Niveles: Comprensión / Comprensión / Nivel 1: Recuperación & Verificación."
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Dividiste el 40 % restante en la hora 4 entre la tasa de 15 % por hora: (40) / (15) ≈ 2,6. | Como caiste: Asumiste que la batería podía descargarse hasta el 0 %, ignorando el límite de apagado del 10 %. | Analisis de tu competencia: Aplicaste el modelo matemático de forma automática sin integrar la restricción técnica del enunciado. | Plan de Accion: Marca en el eje vertical el límite de seguridad antes de calcular cuánto margen de variación queda disponible.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Extrapolación lineal hasta el eje de las abscisas (y = 0) omitiendo cotas operativas del contexto. | Techo Taxonomico: Bloom: Comprensión parcial; Marzano: Comprensión; TAED: Nivel 1 (Verificación incompleta de restricciones). | Sugerencia de Mejora: Incorporar problemas de funciones lineales con umbrales mínimos o máximos distintos de cero. | Tip Tactico para el Docente: Solicite sombrear la franja de exclusión debajo de la línea punteada roja para que el estudiante vea dónde termina el dominio útil."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Calculaste el tiempo total desde el inicio de la sesión: (90) / (15) = 6,0 horas, en lugar del tiempo adicional desde la hora 4. | Como caiste: Encontraste la hora exacta en la que el computador se apaga, pero olvidaste restar las 4 horas que ya habían transcurrido. | Analisis de tu competencia: Resolviste la proyección global del fenómeno pero omitiste ajustar la respuesta al punto de referencia pedido. | Plan de Accion: Subraya expresiones como \"adicionales a partir de\" para recordar que debes descontar el tiempo ya transcurrido.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Reporte del tiempo acumulado total en lugar del incremento temporal relativo (Δt). | Techo Taxonomico: Bloom: Comprensión; Marzano: Recuperación; TAED: Nivel 1 (Recuperación sin ajuste de referencia). | Sugerencia de Mejora: Contrastar preguntas sobre el \"tiempo total de duración\" frente al \"tiempo restante a partir de un instante t\". | Tip Tactico para el Docente: Haga que los alumnos tracen una línea vertical en t = 4 y cuenten los cuadros hacia la derecha hasta el cruce con la línea roja."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-002",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Utilizo modelos geométricos para resolver problemas de cálculo de áreas compuestas y optimización espacial.",
+    "competencia": "Formulación y ejecución",
+    "componente": "Geometría",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas.",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática.",
+    "tarea": "Calcular el área no ocupada de una región rectangular tras sustraer dos sectores circulares congruentes.",
+    "bloom": {
+      "nivel": "Aplicación",
+      "justificacion": "Modela algebraicamente la sustracción de áreas a partir de una figura compuesta bidimensional."
+    },
+    "marzano": {
+      "nivel": "Utilización del Conocimiento",
+      "justificacion": "Aplica algoritmos de descomposición de áreas para resolver problemas de diseño espacial."
+    },
+    "taed": {
+      "nivel": "Nivel 3: Aplicación & Colaboración con IA",
+      "justificacion": "Ejecuta un plan procedural estructurado combinando fórmulas de polígonos y fracciones de círculo."
+    },
+    "descriptor": "Ejecuta procedimientos geométricos de descomposición para determinar áreas compuestas.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, demanda hallar el área del rectángulo (32 m²), integrar dos cuartos de círculo como un semicírculo (8π m²) y expresar la diferencia algebraica."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792420395/M-002_xngjwi.jpg",
+    "contexto": "Un estudio de diseño arquitectónico proyecta una zona verde dentro de una plazoleta rectangular de 8 m de base por 4 m de altura. En dos de las esquinas consecutivas de la base se instalan dos fuentes circulares, cada una con un radio de 4 m en forma de cuarto de círculo, como se ilustra a continuación.",
+    "enunciado": "¿Cuál es el área total que ocupará la zona verde?",
+    "opciones": {
+      "A": "32 - 16π m²",
+      "B": "32 - 8π m²",
+      "C": "16 - 4π m²",
+      "D": "32 - 4π m²"
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Consideraste que los dos cuartos de círculo formaban un círculo completo de radio 4 m (16π). | Como caiste: Duplicaste el área circular al asumir que dos cuadrantes equivalían a la circunferencia entera. | Analisis de tu competencia: Tu procedimiento omitió verificar la suma fraccionaria: (1/4) + (1/4) = 1/2, no la unidad completa. | Plan de Accion: Suma siempre las fracciones de las figuras circulares antes de aplicar la fórmula π * r².",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Falla al componer fracciones de figuras circulares en el plano. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 2 (Análisis incompleto de proporciones). | Sugerencia de Mejora: Modelar composiciones de cuartos y medios círculos mediante recortes o software dinámico. | Tip Tactico para el Docente: Pida a los estudiantes unir visualmente los dos sectores por sus radios rectos para notar que forman un semicírculo."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Excelente razonamiento geométrico! El área del rectángulo es 8 * 4 = 32 m². Los dos sectores son cuartos de círculo de radio 4 m; juntos conforman medio círculo cuya área es (π * 4²) / 2 = 8π m². Al restar las dos fuentes del rectángulo, la zona verde mide exactamente 32 - 8π m².",
+        "pedagogico": "Clave: B | Intencion: Evaluar la destreza para ejecutar descomposiciones de áreas compuestas integrando rectángulos y sectores circulares. | Niveles: Aplicación / Utilización del Conocimiento / Nivel 3: Aplicación & Colaboración con IA."
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | Calculaste únicamente la mitad del rectángulo (16) y le restaste un solo cuarto de círculo (4π). | Como caiste: Resolviste una mitad simétrica de la plazoleta pero olvidaste multiplicar por dos para cubrir el terreno total. | Analisis de tu competencia: Ejecutaste bien el cálculo sobre un módulo parcial, pero te detuviste antes de escalarlo al área global. | Plan de Accion: Verifica en la pregunta si te piden el área de una sección simétrica o el área total del proyecto.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Ejecución restringida a la mitad simétrica del dominio geométrico. | Techo Taxonomico: Bloom: Aplicación parcial; Marzano: Utilización parcial; TAED: Nivel 2 (Síntesis fragmentada). | Sugerencia de Mejora: Establecer como paso inicial hallar y escribir el área de la figura contenedora principal. | Tip Tactico para el Docente: En problemas simétricos, exija comprobar que el primer término coincida con b * h de toda la figura."
+      },
+      "D": {
+        "estudiante": "Trampa: Híbrido | Calculaste el área total del rectángulo (32), pero restaste únicamente una de las dos fuentes (4π). | Como caiste: Planteaste la resta general de áreas, pero omitiste descontar el segundo sector circular de la derecha. | Analisis de tu competencia: Tu atención visual se fijó en una sola esquina e ignoró la simetría de la figura completa. | Plan de Accion: Escribe en palabras la relación completa: Área rectángulo - 2 * (Área fuente), antes de reemplazar números.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Omisión de la multiplicidad de elementos sustractivos congruentes. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 2 (Lectura parcial del diagrama). | Sugerencia de Mejora: Numerar en el dibujo cada una de las regiones que se van a restar. | Tip Tactico para el Docente: Solicite a los alumnos escribir sobre cada fuente su valor individual (4π) antes de sumar las áreas que se restan."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-003",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Justifico o refuto inferencias basadas en razonamientos estadísticos y medidas de dispersión.",
+    "competencia": "Argumentación",
+    "componente": "Estadística",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas.",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema.",
+    "tarea": "Refutar una conclusión sobre la uniformidad de dos distribuciones salariales contrastando medias y desviaciones estándar.",
+    "bloom": {
+      "nivel": "Evaluación",
+      "justificacion": "Emite juicios fundamentados sobre la validez de un argumento analizando la discrepancia entre media y dispersión."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Detecta falacias argumentativas al contrastar parámetros de tendencia central con medidas de variabilidad."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico",
+      "justificacion": "Evalúa críticamente conclusiones estadísticas identificando sesgos interpretativos y deduciendo la dispersión real de los datos."
+    },
+    "descriptor": "Justifica por qué una afirmación sobre la homogeneidad de datos es inconsistente con sus medidas de dispersión.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, requiere contrastar dos parámetros simultáneamente (media igual vs. desviación estándar distinta) sin requerir el cálculo manual de la raíz cuadrada de la varianza."
+    },
+    "contexto": "En una empresa de tecnología, los equipos A y B registran un salario promedio idéntico de 3 millones de pesos. El director afirma que los salarios de ambos equipos presentan la misma uniformidad. Sin embargo, el analista revisa las desviaciones estándar: el equipo A tiene una desviación de 0,2 millones y el equipo B tiene una desviación de 1,5 millones.",
+    "enunciado": "¿Es correcta la afirmación del director?",
+    "opciones": {
+      "A": "Sí, porque el promedio salarial es idéntico en ambos grupos de colaboradores.",
+      "B": "Sí, porque la desviación estándar solo cuantifica la cantidad total de empleados.",
+      "C": "No, porque el equipo B presenta mayor dispersión en los salarios de sus empleados.",
+      "D": "No, porque el equipo A tiene un número de cargos inferior al registrado en el B."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Consideraste que la igualdad en los promedios garantizaba que ambas distribuciones salariales fueran igual de uniformes. | Como caiste: Te apoyaste únicamente en la medida de tendencia central e ignoraste el parámetro de dispersión. | Analisis de tu competencia: Tu razonamiento se quedó en una lectura unidimensional del promedio sin integrar la variabilidad. | Plan de Accion: Recuerda siempre: el promedio mide el centro; la desviación estándar mide qué tan parejos o dispersos están los datos.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Reducción de las propiedades de una distribución estadística exclusivamente a su media aritmética. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 1 (Recuperación sin contraste analítico). | Sugerencia de Mejora: Comparar conjuntos pequeños de datos con igual media y distinto rango o desviación. | Tip Tactico para el Docente: Compare en el tablero dos grupos de edades: {16, 16, 16} y {10, 16, 22}; ambos promedian 16, pero su uniformidad es opuesta."
+      },
+      "B": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Asumiste que la afirmación era correcta asignándole a la desviación estándar el significado de contar trabajadores. | Como caiste: Confundiste el concepto de desviación estándar (s) con el tamaño de la muestra (n). | Analisis de tu competencia: Presentaste una confusión conceptual entre un parámetro de dispersión y una frecuencia total. | Plan de Accion: Asocia la palabra \"desviación\" con la distancia que se \"desvían\" o alejan los datos frente al promedio.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Desconocimiento léxico y conceptual de la desviación estándar. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Recuperación conceptual errónea). | Sugerencia de Mejora: Clasificar en tablas las medidas estadísticas según su función: centralización, posición y dispersión. | Tip Tactico para el Docente: Haga notar que la desviación estándar viene dada en \"millones de pesos\", por lo que jamás puede representar número de personas."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Excelente juicio analítico! El promedio solo ubica el centro de los datos, pero no mide su uniformidad. Una desviación estándar de 1,5 millones en el equipo B indica que los sueldos están muy dispersos respecto al promedio, mientras que en el equipo A (0,2 millones) todos ganan valores muy cercanos a los 3 millones.",
+        "pedagogico": "Clave: C | Intencion: Validar la comprensión cualitativa de la desviación estándar como indicador de dispersión y homogeneidad en un conjunto de datos. | Niveles: Evaluación / Análisis / Nivel 2: Análisis Crítico."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Rechazaste con acierto la afirmación del director, pero elegiste una razón basada en la cantidad de cargos, dato que no existe en el texto. | Como caiste: Intuiste que los grupos eran diferentes, pero justificaste con una suposición ajena a los datos entregados. | Analisis de tu competencia: Identificaste el veredicto correcto (\"No\"), pero no lograste sustentarlo con la evidencia estadística del problema. | Plan de Accion: En preguntas de argumentación, verifica que la razón después del \"porque\" use estrictamente las variables del enunciado.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Selección de refutaciones basadas en especulaciones externas al registro proporcionado. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 1 (Extrapolación sin verificación). | Sugerencia de Mejora: Practicar la evaluación de argumentos en dos pasos: validar primero el Sí/No y luego la pertinencia de la premisa causal. | Tip Tactico para el Docente: Pida subrayar en el enunciado dónde se menciona el \"número de cargos\" para demostrar por reducción al absurdo que es un dato inexistente."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-004",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Identifico diferentes métodos para solucionar ecuaciones lineales y sistemas de variación afín en contextos cotidianos.",
+    "competencia": "Formulación y ejecución",
+    "componente": "Álgebra y cálculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas.",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática.",
+    "tarea": "Calcular el costo unitario por gigabyte adicional planteando y resolviendo una ecuación lineal con cargo fijo y descuento promocional.",
+    "bloom": {
+      "nivel": "Aplicación",
+      "justificacion": "Plantea y despeja una ecuación lineal de primer grado que integra costos fijos, costos variables y descuentos."
+    },
+    "marzano": {
+      "nivel": "Utilización del Conocimiento",
+      "justificacion": "Ejecuta procedimientos algebraicos de inversión de operaciones para hallar una tasa desconocida."
+    },
+    "taed": {
+      "nivel": "Nivel 3: Aplicación & Colaboración con IA",
+      "justificacion": "Modela y resuelve problemas financieros estructurados despejando variables en relaciones lineales compuestas."
+    },
+    "descriptor": "Plantea y resuelve ecuaciones lineales para determinar tasas unitarias en situaciones financieras.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, supera la simple elección de fórmula al exigir plantear la relación 22.000 + 12x - 4.000 = 54.000 y ejecutar el despeje aritmético en dos pasos para hallar x."
+    },
+    "contexto": "Un plan de telefonía móvil cobra un cargo fijo mensual de 22.000 pesos más un valor constante x por cada gigabyte (GB) adicional consumido. Este mes, una estudiante de 16 años consumió 12 GB adicionales, recibió un bono de descuento único de 4.000 pesos sobre el total de su factura y pagó finalmente 54.000 pesos.",
+    "enunciado": "¿Cuál es el costo x que cobra el operador por cada gigabyte adicional?",
+    "opciones": {
+      "A": "2.333 pesos.",
+      "B": "2.666 pesos.",
+      "C": "3.000 pesos.",
+      "D": "4.500 pesos."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Restaste el bono de descuento al pago final en lugar de sumarlo al revertir la operación: (54.000 - 22.000 - 4.000) / (12) = 2.333. | Como caiste: Al despejar la ecuación, pasaste el descuento de 4.000 a restar nuevamente al otro lado de la igualdad. | Analisis de tu competencia: Cometiste un error de inversión de signo durante la transposición de términos en la ecuación lineal. | Plan de Accion: Si te descontaron 4.000 para pagar 54.000, el consumo real sin descuento fue de 58.000; verifica siempre el sentido lógico del despeje.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Falla en la aplicación del inverso aditivo al despejar un término negativo en una ecuación lineal. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 2 (Análisis procedimental con error de signo). | Sugerencia de Mejora: Reducir primero los términos semejantes del mismo lado (22.000 - 4.000 = 18.000) antes de trasponer al otro miembro. | Tip Tactico para el Docente: Enseñe a simplificar todos los números conocidos en el lado izquierdo antes de mover cualquier cantidad al lado derecho."
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | Restaste el cargo fijo de 22.000 al total pagado y dividiste entre 12, olvidando incluir el bono de descuento: (54.000 - 22.000) / (12) = 2.666. | Como caiste: Omitiste una de las tres condiciones numéricas del enunciado (el descuento de 4.000) al armar tu ecuación. | Analisis de tu competencia: Resolviste un modelo lineal incompleto al dejar por fuera un término constante del balance financiero. | Plan de Accion: Subraya todos los valores en pesos del texto y asegúrate de que cada uno aparezca en tu ecuación antes de despejar.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Omisión de variables intervinientes (descuento promocional) en la estructuración del modelo algebraico. | Techo Taxonomico: Bloom: Aplicación parcial; Marzano: Comprensión; TAED: Nivel 1 (Recuperación incompleta de parámetros). | Sugerencia de Mejora: Practicar la traducción de problemas verbales verificando la correspondencia término a término. | Tip Tactico para el Docente: Pida a los estudiantes hacer una lista de \"Entradas de cobro\" (+) y \"Descuentos\" (-) antes de plantear la igualdad."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Ejecución algebraica impecable! Planteaste el balance real: Cargo fijo + 12x - Descuento = Pago final, es decir, 22.000 + 12x - 4.000 = 54.000, lo que simplifica a 18.000 + 12x = 54.000. Al restar 18.000 obtienes 12x = 36.000, y al dividir entre 12 descubres que cada GB adicional cuesta exactamente 3.000 pesos: x = (36.000) / (12) = 3.000.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la formulación y resolución numérica de una ecuación de primer grado con múltiples términos constantes. | Niveles: Aplicación / Utilización del Conocimiento / Nivel 3: Aplicación & Colaboración con IA."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Dividiste directamente el pago final entre los gigabytes consumidos: (54.000) / (12) = 4.500. | Como caiste: Asumiste que la factura funcionaba por proporcionalidad simple directa, ignorando tanto el cargo fijo como el descuento. | Analisis de tu competencia: Aplicaste una regla de tres elemental sobre un problema que obedecía a una función lineal afín. | Plan de Accion: Antes de dividir un costo total entre el número de unidades, descuenta siempre los cargos básicos fijos.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Tratamiento de una relación afín (y = mx + b) como si fuera de proporcionalidad directa (y = mx). | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Aplicación mecánica de división simple). | Sugerencia de Mejora: Contrastar facturas de servicios públicos con cargo básico frente a compras por peso o volumen sin cargo fijo. | Tip Tactico para el Docente: Pregunte en clase: \"¿Si consumo 0 GB adicionales pago 0 pesos?\"; esto evidencia inmediatamente la presencia del cargo fijo."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-005",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Reconozco congruencia y semejanza entre figuras bidimensionales y aplico el Teorema de Tales en contextos prácticos.",
+    "competencia": "Interpretación y representación",
+    "componente": "Geometría",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos.",
+    "evidencia": "Transforma la representación de una o más piezas de información.",
+    "tarea": "Deducir la diferencia de altura entre dos soportes verticales aplicando razones de semejanza de triángulos a partir de un plano técnico.",
+    "bloom": {
+      "nivel": "Análisis",
+      "justificacion": "Descompone un esquema visual en triángulos rectángulos semejantes, calcula la altura mayor y halla su diferencia respecto a la menor."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Identifica relaciones métricas proporcionales componiendo longitudes de segmentos adyacentes en la base."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico",
+      "justificacion": "Analiza relaciones sistémicas entre componentes espaciales infiriendo variaciones de altura mediante deducción geométrica."
+    },
+    "descriptor": "Establece razones de semejanza entre triángulos rectángulos para determinar variaciones métricas entre sus componentes.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, exige tres procesos articulados: sumar los segmentos para hallar la base del triángulo mayor (2 + 4 = 6 m), aplicar semejanza para hallar h = 4,5 m y restar la altura del soporte menor (4,5 - 1,5 = 3,0 m)."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792420395/M-005_igu5ls.jpg",
+    "contexto": "Para optimizar la captación de energía en un colegio, un técnico instala dos soportes verticales paralelos bajo un panel solar inclinado. El esquema muestra la altura del soporte menor (1,5 m) y las distancias horizontales en la base.",
+    "enunciado": "¿Cuántos metros más alto es el soporte mayor (h) en comparación con el soporte menor?",
+    "opciones": {
+      "A": "2,5 m",
+      "B": "3,0 m",
+      "C": "4,0 m",
+      "D": "4,5 m"
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Híbrido | Asumiste que el soporte mayor medía 4,0 m (igualando la medida de la base DC) y le restaste 1,5 m: 4,0 - 1,5 = 2,5 m. | Como caiste: Ejecutaste correctamente la resta final de comparación, pero partiste de una altura h deducida por apariencia visual y no por semejanza. | Analisis de tu competencia: Comprendiste la pregunta de diferencia de alturas, pero fallaste al estructurar la proporción del Teorema de Tales. | Plan de Accion: Calcula siempre la altura desconocida mediante razones de semejanza antes de efectuar la resta comparativa.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Sustitución del cálculo proporcional de h por una asignación visual (h = 4), seguida de una sustracción correcta. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 1 (Verificación visual sin modelado proporcional). | Sugerencia de Mejora: Exigir el planteamiento explícito de la proporción: (Altura mayor) / (Base total) = (Altura menor) / (Base menor). | Tip Tactico para el Docente: Haga separar el dibujo en dos triángulos independientes rotulando la base del grande como 6 m."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Excelente análisis en dos etapas! Primero sumaste la base total del triángulo grande: 2 + 4 = 6 m, y aplicaste semejanza: (h) / (6) = (1,5) / (2), de donde obtuviste que el soporte mayor mide h = 4,5 m. Luego, al comparar ambos soportes (4,5 m - 1,5 m), concluiste con precisión que el mayor supera al menor en 3,0 m.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la capacidad de articular la proporcionalidad geométrica de triángulos semejantes con la comparación métrica de segmentos. | Niveles: Análisis / Análisis / Nivel 2: Análisis Crítico."
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Tomaste directamente la distancia horizontal entre los dos soportes (DC = 4,0 m) como si fuera la diferencia de sus alturas verticales. | Como caiste: Trasladaste la diferencia horizontal de la base directamente al eje vertical, asumiendo una inclinación de 45°. | Analisis de tu competencia: Tu mente igualó las variaciones horizontales y verticales ignorando que la pendiente del panel es (1,5) / (2) = 0,75. | Plan de Accion: Observa que por cada 2 m horizontales el panel solo sube 1,5 m; por lo tanto, en 4 m horizontales adicionales subirá el doble de 1,5 m, es decir, 3,0 m.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Confusión entre el incremento horizontal (Δx = 4 m) y el incremento vertical (Δy = 3 m). | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Traslación directa de datos visibles). | Sugerencia de Mejora: Relacionar el Teorema de Tales con el concepto de pendiente constante: Δy = m * Δx. | Tip Tactico para el Docente: Muestre que es posible hallar la diferencia directamente multiplicando la pendiente (0,75) por el tramo DC (4 m): 0,75 * 4 = 3,0 m."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Calculaste de forma impecable la altura total del soporte mayor (h = 4,5 m), pero olvidaste restarle la altura del soporte menor. | Como caiste: Te detuviste al hallar el valor de h sin responder a la comparación (\"¿cuántos metros más alto es...?\") pedida en la pregunta. | Analisis de tu competencia: Superaste el reto geométrico de semejanza, pero omitiste el paso aritmético de cierre. | Plan de Accion: Subraya las palabras \"más alto en comparación con\" para recordar que debes restar ambas alturas al final.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Reporte del resultado intermedio (la altura h = 4,5 m) como respuesta definitiva del problema. | Techo Taxonomico: Bloom: Aplicación; Marzano: Utilización del Conocimiento; TAED: Nivel 2 (Resolución parcial sin validación de la pregunta). | Sugerencia de Mejora: Entrenar la relectura de la pregunta base tras obtener el valor de la incógnita gráfica. | Tip Tactico para el Docente: Pida a los estudiantes definir la incógnita buscada como Δh = h - 1,5 desde el inicio del problema."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-006",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Calculo probabilidad de eventos simples y condicionales usando métodos diversos y representaciones tabulares.",
+    "competencia": "Formulación y ejecución",
+    "componente": "Estadística",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas.",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática.",
+    "tarea": "Calcular una probabilidad condicional en porcentaje completando previamente datos faltantes en una tabla de contingencia.",
+    "bloom": {
+      "nivel": "Aplicación",
+      "justificacion": "Reconstruye frecuencias absolutas faltantes en una tabla de doble entrada y calcula la probabilidad condicional resultante."
+    },
+    "marzano": {
+      "nivel": "Utilización del Conocimiento",
+      "justificacion": "Opera restricciones aditivas y razones de probabilidad sobre un subconjunto poblacional."
+    },
+    "taed": {
+      "nivel": "Nivel 3: Aplicación & Colaboración con IA",
+      "justificacion": "Completa arreglos matriciales de datos mediante balance de marginales y ejecuta consultas de probabilidad condicional."
+    },
+    "descriptor": "Determina probabilidades condicionales tras deducir frecuencias faltantes en tablas de contingencia.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, evita la lectura inmediata al requerir primero deducir cuántos usuarios de móvil compraron (50 - 30 = 20) y luego expresar la razón condicional sobre el total de esa fila: (20) / (50) = 40 %."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792420398/M-006_lfttf8.jpg",
+    "contexto": "Una tienda virtual registró el dispositivo utilizado por 100 jóvenes y si realizaron o no una compra durante una jornada de descuentos. En la tabla se borraron accidentalmente dos casillas, pero se conservan los totales.",
+    "enunciado": "Si se escoge al azar a uno de los jóvenes que ingresó desde un dispositivo móvil, ¿cuál es la probabilidad de que haya realizado una compra?",
+    "opciones": {
+      "A": "20 %",
+      "B": "36 %",
+      "C": "40 %",
+      "D": "55 %"
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Deduciste correctamente que 20 usuarios de móvil compraron, pero dividiste entre los 100 jóvenes de toda la tienda: (20) / (100) = 20 %. | Como caiste: Ignoraste la restricción condicional (\"que ingresó desde un dispositivo móvil\") y tomaste el universo total como denominador. | Analisis de tu competencia: Completaste con éxito la tabla, pero aplicaste probabilidad simple en lugar de probabilidad condicional. | Plan de Accion: El grupo que aparece como condición sabida (\"que ingresó desde un móvil\" = 50) define siempre el nuevo denominador.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Uso del espacio muestral global (N = 100) en lugar del espacio muestral reducido (n = 50), o confusión entre frecuencia absoluta (20) y porcentaje (20 %). | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 1 (Recuperación sin ajuste de universo muestral). | Sugerencia de Mejora: Ejercitar la conversión de fracciones con denominador distinto de 100: (20) / (50) = (40) / (100) en contextos condicionales. | Tip Tactico para el Docente: Enfatice que \"20 personas de 50\" no es el 20 %, sino la quinta parte multiplicada por dos llevada a escala de 100 (40 %)."
+      },
+      "B": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Dividiste los 20 compradores de móvil entre el total de compradores de la tienda: (20) / (55) ≈ 36 %. | Como caiste: Invertiste la condición: calculaste la probabilidad de usar móvil dado que compró, en vez de comprar dado que usó móvil. | Analisis de tu competencia: Confundiste el total marginal de la columna (55) con el total marginal de la fila condicionante (50). | Plan de Accion: Lee con cuidado quién condiciona a quién: \"escoger a uno de los que ingresó desde móvil\" fija el denominador en la fila de Móvil (50).",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Selección del total de columna en lugar del total de fila como denominador de la probabilidad condicional. | Techo Taxonomico: Bloom: Aplicación parcial; Marzano: Comprensión; TAED: Nivel 2 (Análisis direccional invertido). | Sugerencia de Mejora: Contrastar en la misma tabla las probabilidades condicionales cruzadas. | Tip Tactico para el Docente: Pida a los estudiantes encerrar con un rectángulo únicamente la fila del grupo mencionado como condición en la pregunta."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Excelente resolución en dos fases! Primero completaste la casilla faltante de la fila \"Móvil\": si el total es 50 y 30 no compraron, entonces 50 - 30 = 20 sí compraron. Como la condición restringe la elección a los 50 jóvenes que usaron móvil, la probabilidad es (20) / (50) = 2/5, lo que equivale exactamente al 40 %.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la capacidad de reconstruir datos en tablas de contingencia y calcular probabilidades condicionales expresadas en porcentaje. | Niveles: Aplicación / Utilización del Conocimiento / Nivel 3: Aplicación & Colaboración con IA."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Seleccionaste el porcentaje total de compradores de toda la tienda: (55) / (100) = 55 %. | Como caiste: Tomaste el total marginal de la columna \"Compró\" sin completar la casilla faltante ni aplicar la condición del dispositivo móvil. | Analisis de tu competencia: Te quedaste en la lectura literal de un dato marginal visible sin cruzar las variables de la tabla. | Plan de Accion: Completa siempre las celdas vacías de la tabla antes de elegir cualquier valor marginal.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Extracción directa del total marginal de la columna de interés sin cruce de variables. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Extracción literal superficial). | Sugerencia de Mejora: Prohibir la selección de respuestas sin haber llenado con lápiz los signos de interrogación de la tabla. | Tip Tactico para el Docente: Haga que el primer paso obligatorio en tablas incompletas sea verificar las sumas horizontales y verticales."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-007",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo las relaciones y propiedades entre las expresiones algebraicas y las gráficas de funciones polinómicas y cuadráticas.",
+    "competencia": "Argumentación",
+    "componente": "Álgebra y cálculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas.",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos.",
+    "tarea": "Refutar una afirmación sobre el crecimiento continuo de una función cuadrática de ingresos identificando su vértice máximo.",
+    "bloom": {
+      "nivel": "Evaluación",
+      "justificacion": "Evalúa la validez de una conjetura comercial analizando el comportamiento parabólico y el punto máximo de una función cuadrática."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Detecta el cambio de monotonía (de creciente a decreciente) de un modelo polinómico de segundo grado."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico",
+      "justificacion": "Evalúa críticamente proyecciones sobre modelos cuadráticos identificando puntos donde se invierte la tendencia."
+    },
+    "descriptor": "Valida o refuta afirmaciones sobre el crecimiento o decrecimiento de funciones cuadráticas en contexto.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, analiza una parábola cóncava hacia abajo I(x) = 40x - 2x², exigiendo evaluar valores o hallar el vértice en x = 10 para refutar la creencia de crecimiento ilimitado."
+    },
+    "contexto": "El ingreso diario (en miles de pesos) de un emprendimiento estudiantil que vende postres se modela con la función I(x) = 40x - 2x², donde x es el precio de venta (en miles de pesos) de cada postre. Un estudiante afirma que si fijan el precio en x = 15, obtendrán un ingreso mayor que si lo fijan en x = 10, pues a mayor precio siempre habrá mayor ingreso.",
+    "enunciado": "¿Es válida la afirmación del estudiante?",
+    "opciones": {
+      "A": "Es válida, porque al aumentar el precio unitario de venta se multiplica directamente la ganancia total.",
+      "B": "Es válida, porque al reemplazar x = 15 en el primer término se obtiene un valor de 600 mil pesos.",
+      "C": "No es válida, porque el ingreso alcanza su máximo en x = 10 y disminuye para precios mayores.",
+      "D": "No es válida, porque para cualquier precio superior a x = 10 el ingreso total se vuelve negativo."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Asumiste que en cualquier negocio subir el precio garantiza aumentar el ingreso total. | Como caiste: Aplicaste una intuición lineal ignorando que el término negativo (-2x²) modela la pérdida de clientes cuando el producto se vuelve demasiado caro. | Analisis de tu competencia: Generalizaste el comportamiento de una función lineal a un modelo cuadrático con punto máximo. | Plan de Accion: Cuando veas una variable elevada al cuadrado con signo negativo (-2x²), recuerda que la función sube hasta un tope y luego empieza a bajar.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Sesgo de proporcionalidad directa aplicado a modelos polinómicos de segundo grado. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 1 (Asociación intuitiva sin verificación algebraica). | Sugerencia de Mejora: Tabular y graficar funciones de ingreso cuadráticas para visualizar la caída de ventas por sobreprecio. | Tip Tactico para el Docente: Pida a los estudiantes calcular I(10) = 200 e I(15) = 150 para demostrar con contraejemplo numérico que un precio mayor no genera mayor ingreso."
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | Evaluaste únicamente la primera parte de la fórmula (40 * 15 = 600) y olvidaste restar el término cuadrático (-2 * 15² = -450). | Como caiste: Calculaste de forma incompleta la función, quedándote solo con el sumando positivo. | Analisis de tu competencia: Omitiste operar el segundo término del polinomio antes de emitir tu juicio de validación. | Plan de Accion: Sustituye el valor de x en absolutamente todos los términos de la expresión antes de comparar resultados.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Evaluación truncada de una expresión algebraica binomial. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Cálculo fragmentado). | Sugerencia de Mejora: Reforzar el uso de paréntesis al evaluar polinomios completos: I(15) = 40(15) - 2(15)². | Tip Tactico para el Docente: Recuerde en el aula que ningún término de una función puede ignorarse al calcular la imagen de un número."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Excelente análisis funcional! La expresión I(x) = 40x - 2x² es una función cuadrática con coeficiente negativo (-2), por lo que su gráfica es una parábola que abre hacia abajo y tiene un máximo en el vértice x = (-40) / (2 * (-2)) = 10 (donde el ingreso es 200 mil pesos). Al subir el precio a x = 15, el ingreso cae a 40(15) - 2(225) = 150 mil pesos.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la capacidad de refutar conjeturas lineales analizando el vértice o evaluando puntos en una función cuadrática cóncava hacia abajo. | Niveles: Evaluación / Análisis / Nivel 2: Análisis Crítico."
+      },
+      "D": {
+        "estudiante": "Trampa: Híbrido | Reconociste con acierto que la afirmación no era válida, pero aseguraste falsamente que después de x = 10 el ingreso daba negativo. | Como caiste: Confundiste el hecho de que la función empiece a disminuir (pendiente negativa) con el hecho de que sus resultados sean números negativos. | Analisis de tu competencia: Identificaste el vértice en x = 10, pero erraste al interpretar el signo de la función (solo se vuelve negativa después de x = 20). | Plan de Accion: Diferencia entre \"bajar de valor\" (pasar de 200 a 150) y \"ser negativo\" (ser menor que cero).",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Confusión conceptual entre el decrecimiento de una función y el signo negativo de su imagen: f(x) < 0. | Techo Taxonomico: Bloom: Análisis parcial; Marzano: Análisis; TAED: Nivel 2 (Interpretación defectuosa de monotonía vs. signo). | Sugerencia de Mejora: Distinguir en la gráfica de una parábola el eje de simetría (donde empieza a bajar) de las raíces o cortes con el eje horizontal (donde se hace cero). | Tip Tactico para el Docente: Dibuje la parábola en el tablero y coloree con azul la rama que baja pero sigue por encima del eje horizontal (entre x = 10 y x = 20)."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-008",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Generalizo procedimientos de cálculo válidos para encontrar el volumen de sólidos regulares y relaciones de escala.",
+    "competencia": "Interpretación y representación",
+    "componente": "Geometría",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos.",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas.",
+    "tarea": "Determinar la relación volumétrica entre dos envases cilíndricos cuando en uno se duplica el radio pero se reduce su altura a la mitad.",
+    "bloom": {
+      "nivel": "Comprensión",
+      "justificacion": "Compone el efecto simultáneo de duplicar una dimensión cuadrática (radio) y reducir a la mitad una dimensión lineal (altura)."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Integra factores de escala opuestos dentro de la representación volumétrica de un cilindro."
+    },
+    "taed": {
+      "nivel": "Nivel 1: Recuperación & Verificación",
+      "justificacion": "Verifica parámetros dimensionales en esquemas tridimensionales y deduce la proporción resultante entre capacidades."
+    },
+    "descriptor": "Establece razones de proporcionalidad volumétrica cuando varían simultáneamente el radio y la altura de un cilindro.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, evita la respuesta intuitiva de un solo factor al combinar una variación cuadrática ((2r)² = 4r²) con una reducción lineal (h / 2), exigiendo deducir que 4 * (1/2) = 2."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792420397/M-008_gjzrmb.jpg",
+    "contexto": "Una fábrica de conservas diseña dos envases cilíndricos. El envase alto tiene radio r y altura h. El envase ancho tiene el doble de radio (2r), pero la mitad de la altura (h / 2), como muestra el esquema. (Recuerde: V = π * r² * h).",
+    "enunciado": "Al comparar la capacidad de ambos recipientes, ¿qué relación existe entre el volumen del envase ancho y el volumen del envase alto?",
+    "opciones": {
+      "A": "El envase ancho tiene igual volumen que el alto.",
+      "B": "El envase ancho tiene el doble de volumen que el alto.",
+      "C": "El envase ancho tiene el triple de volumen que el alto.",
+      "D": "El envase ancho tiene el cuádruple de volumen que el alto."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Pensaste que duplicar el radio y reducir la altura a la mitad se compensaban exactamente (2 * 1/2 = 1), dejando el mismo volumen. | Como caiste: Trataste tanto al radio como a la altura como variables lineales simples, olvidando que el radio está elevado al cuadrado. | Analisis de tu competencia: Tu cerebro aplicó una compensación lineal intuitiva sin verificar el exponente de la fórmula geométrica. | Plan de Accion: Sustituye siempre con paréntesis en la fórmula dada: π * (2r)² * (h / 2) para ver cómo el cuadrado afecta al número 2.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Ilusión de compensación lineal recíproca (* 2 y ÷ 2) en magnitudes tridimensionales. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Percepción lineal no verificada). | Sugerencia de Mejora: Asignar valores numéricos sencillos (r = 1, h = 2) y calcular ambos volúmenes para romper la ilusión de igualdad. | Tip Tactico para el Docente: Haga el experimento numérico en clase: si r = 1 y h = 2, V₁ = 2π; en el segundo, r = 2 y h = 1, dando V₂ = 4π (el doble)."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Brillante equilibrio de factores! En la fórmula V = π * r² * h, al duplicar el radio el área de la base se multiplica por cuatro: (2r)² = 4r². Como al mismo tiempo la altura se divide entre dos (h / 2), combinas ambos efectos: 4 * (1/2) = 2. Así descubres que el envase ancho tiene exactamente el doble de volumen que el envase alto.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la comprensión de la variación conjunta (cuadrática en el radio y lineal en la altura) sobre el volumen de un cilindro. | Niveles: Comprensión / Comprensión / Nivel 1: Recuperación & Verificación."
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Restaste o sumaste de forma aditiva los números del cambio dimensional (4 - 1 = 3 o 2 + 1 = 3). | Como caiste: Operaste los factores de escala mediante sumas o restas cuando la fórmula del volumen es puramente multiplicativa. | Analisis de tu competencia: Confundiste la composición multiplicativa de factores de escala con operaciones aritméticas aditivas. | Plan de Accion: Recuerda que en toda fórmula de volumen los factores se multiplican o dividen entre sí, nunca se suman ni se restan.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Uso de operaciones aditivas entre el factor cuadrático (4) y el divisor lineal (2). | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Asociación aritmética arbitraria). | Sugerencia de Mejora: Reforzar la simplificación de expresiones algebraicas monómicas: (4π * r² * h) / (2) = 2π * r² * h. | Tip Tactico para el Docente: Escriba el coeficiente fraccionario (2²) / (2) para que el estudiante simplifique un 2 del numerador con el 2 del denominador."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Elevaste correctamente el radio al cuadrado: (2r)² = 4r², pero olvidaste dividir entre dos por la reducción de la altura. | Como caiste: Aplicaste el efecto cuadrático del radio pero ignoraste el cambio que sufrió la altura en el segundo cilindro. | Analisis de tu competencia: Resolviste la variación de la base circular pero omitiste integrar la tercera dimensión del sólido. | Plan de Accion: Revisa cada variable de la fórmula (r y h) y verifica en el dibujo si ambas cambiaron antes de concluir.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Atención exclusiva a la duplicación del radio omitiendo la reducción a la mitad de la altura. | Techo Taxonomico: Bloom: Comprensión parcial; Marzano: Comprensión; TAED: Nivel 1 (Lectura parcial del esquema). | Sugerencia de Mejora: Entrenar la verificación de todas las cotas rotuladas en esquemas comparativos. | Tip Tactico para el Docente: Pida encerrar en el dibujo tanto \"2r\" como \"h / 2\" antes de empezar a operar la fórmula."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-009",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Describo la manera como parecen distribuirse los distintos datos de un conjunto y uso diagramas de caja y bigotes.",
+    "competencia": "Interpretación y representación",
+    "componente": "Estadística",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos.",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas.",
+    "tarea": "Determinar la cantidad absoluta de elementos que se ubican dentro de un intervalo intercuartílico a partir de un diagrama de caja y el tamaño de la muestra.",
+    "bloom": {
+      "nivel": "Comprensión",
+      "justificacion": "Extrae el porcentaje acumulado entre el primer cuartil y el máximo o entre cuartiles, y lo transforma en frecuencia absoluta."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Relaciona las divisiones por cuartiles de un diagrama de caja (25 % por tramo) con una población total dada."
+    },
+    "taed": {
+      "nivel": "Nivel 1: Recuperación & Verificación",
+      "justificacion": "Recupera parámetros posicionales en gráficos estadísticos estandarizados y los traduce a cantidades concretas."
+    },
+    "descriptor": "Interpreta cuartiles en un diagrama de caja y bigotes para calcular frecuencias absolutas en intervalos específicos.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, supera la simple lectura teórica de la mediana al exigir dos pasos: identificar que el intervalo entre 20 y 45 minutos corresponde a tres tramos del 25 % (75 % de los datos) y calcular esa proporción sobre 120 operarios."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792420396/M-009_ijnfzz.jpg",
+    "contexto": "En una planta de ensamble se midió el tiempo (en minutos) que tardaron 120 operarios en armar una pieza electrónica. Los resultados se resumieron en el siguiente diagrama de caja y bigotes, donde cada una de las cuatro secciones del gráfico concentra el 25 % de los trabajadores.",
+    "enunciado": "¿Cuántos operarios de la planta tardaron entre 20 y 45 minutos en armar la pieza electrónica?",
+    "opciones": {
+      "A": "30 operarios.",
+      "B": "60 operarios.",
+      "C": "75 operarios.",
+      "D": "90 operarios."
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Restaste los límites del tiempo mencionados en la pregunta (45 - 15 = 30) o calculaste solo un cuarto de la muestra: (120) / (4) = 30. | Como caiste: Tomaste únicamente una de las cuatro secciones del diagrama (25 %) en lugar de las tres secciones que van desde 20 hasta 45. | Analisis de tu competencia: Identificaste cuánto vale cada cuarto de la población (30 operarios), pero no sumaste los tres tramos que cubren el intervalo pedido. | Plan de Accion: Cuenta cuántos tramos del diagrama (de los 4 que existen) quedan incluidos entre los dos límites que te pide la pregunta.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Cálculo de un único cuartil (25 % de 120 = 30) sin acumular los tres tramos comprendidos en el intervalo [20, 45]. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Fraccionamiento elemental sin acumulación). | Sugerencia de Mejora: Sombrear sobre el eje horizontal todo el recorrido pedido y contar cuántos bloques de 25 % abarca. | Tip Tactico para el Docente: Haga escribir el número \"30\" (que es 120 ÷ 4) encima de cada una de las 4 partes del gráfico antes de sumar."
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | Calculaste únicamente los operarios ubicados dentro de la caja rectangular (entre 20 y 40 minutos), que corresponden al 50 % de 120 (60 operarios). | Como caiste: Omitiste incluir el último tramo del bigote derecho (de 40 a 45 minutos) que también hacía parte de la pregunta. | Analisis de tu competencia: Centraste tu vista en la caja central e ignoraste los datos representados por el segmento extremo derecho. | Plan de Accion: Verifica siempre hasta qué número llega el intervalo de la pregunta: 45 es el extremo del bigote, no el borde de la caja (40).",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Restricción de la lectura al rango intercuartílico [Q₁, Q₃] = [20, 40], ignorando el bigote superior [40, 45]. | Techo Taxonomico: Bloom: Comprensión parcial; Marzano: Comprensión; TAED: Nivel 1 (Lectura truncada del diagrama). | Sugerencia de Mejora: Enfatizar que los bigotes también contienen un 25 % de los datos cada uno, igual que cada mitad de la caja. | Tip Tactico para el Docente: Pregunte en clase: \"¿Por qué un bigote corto y una caja larga tienen exactamente la misma cantidad de personas (30)?\"."
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Identificaste con total acierto que entre 20 y 45 minutos está el 75 % de la muestra, pero marcaste 75 como si el total fueran 100 operarios. | Como caiste: Confundiste el porcentaje (75 %) con la cantidad real de personas, olvidando aplicarlo sobre el total de 120 operarios. | Analisis de tu competencia: Hiciste una lectura estadística perfecta del gráfico, pero omitiste convertir la frecuencia relativa a frecuencia absoluta. | Plan de Accion: Cuando te pregunten \"¿Cuántos...?\" en lugar de \"¿Qué porcentaje...?\", multiplica tu fracción por el total de personas del estudio.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Asimilación directa del porcentaje (75 %) como frecuencia absoluta, asumiendo implícitamente N = 100. | Techo Taxonomico: Bloom: Comprensión; Marzano: Comprensión; TAED: Nivel 1 (Verificación sin escalamiento muestral). | Sugerencia de Mejora: Contrastar preguntas de porcentaje frente a preguntas de conteo de individuos en muestras distintas de 100. | Tip Tactico para el Docente: Pida encerrar en el texto el número total de operarios (120) para evitar que el cerebro asuma por defecto que el total es 100."
+      },
+      "D": {
+        "estudiante": "Clave: D. ¡Excelente traducción de porcentaje a cantidad! Observaste que el intervalo de 20 a 45 minutos abarca tres secciones del diagrama: de 20 a 30 (25 %), de 30 a 40 (25 %) y el bigote derecho de 40 a 45 (25 %), sumando el 75 % de los datos. Al calcular el 75 % de los 120 operarios: 120 * (3/4), obtuviste exactamente 90 operarios.",
+        "pedagogico": "Clave: D | Intencion: Evaluar la capacidad de articular la lectura de cuartiles en un diagrama de caja con el cálculo proporcional sobre el tamaño muestral (N = 120). | Niveles: Comprensión / Comprensión / Nivel 1: Recuperación & Verificación."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-010",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Resuelvo y formulo problemas usando modelos geométricos y el Teorema de Pitágoras en contextos aplicados.",
+    "competencia": "Formulación y ejecución",
+    "componente": "Geometría",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas.",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática.",
+    "tarea": "Calcular el ahorro de distancia de un dron al regresar en línea recta (hipotenusa) en comparación con la ruta ortogonal de ida (catetos).",
+    "bloom": {
+      "nivel": "Aplicación",
+      "justificacion": "Calcula la longitud de la hipotenusa mediante el Teorema de Pitágoras y la contrasta aditivamente con la longitud de los catetos."
+    },
+    "marzano": {
+      "nivel": "Utilización del Conocimiento",
+      "justificacion": "Ejecuta procedimientos métricos combinando el cálculo pitagórico con la comparación de trayectorias."
+    },
+    "taed": {
+      "nivel": "Nivel 3: Aplicación & Colaboración con IA",
+      "justificacion": "Aplica modelos geométricos para optimizar rutas de navegación vectorial cuantificando el ahorro de recorrido."
+    },
+    "descriptor": "Resuelve problemas de optimización de rutas en el plano articulando el Teorema de Pitágoras y operaciones aditivas.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, eleva el cálculo pitagórico directo al exigir hallar la trayectoria de ida (6 + 8 = 14 km), calcular la diagonal de regreso (√(6² + 8²) = 10 km) y determinar la diferencia entre ambos recorridos (14 - 10 = 4 km)."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792420395/M-010_a3ho3t.jpg",
+    "contexto": "En su viaje de ida, un dron de entregas vuela 6 km hacia el Norte y luego gira 90° al Este para volar otros 8 km hasta el punto de entrega. Para el viaje de regreso al centro de logística, el dron vuela directamente en línea recta por la diagonal punteada.",
+    "enunciado": "¿Cuántos kilómetros menos recorre el dron en el viaje de regreso en comparación con el viaje de ida?",
+    "opciones": {
+      "A": "2 km",
+      "B": "4 km",
+      "C": "10 km",
+      "D": "14 km"
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Restaste directamente los dos tramos del viaje de ida: 8 km - 6 km = 2 km. | Como caiste: Comparaste los dos catetos entre sí en lugar de comparar la ruta total de ida contra la diagonal de regreso. | Analisis de tu competencia: Tu mente buscó una resta rápida con los números del dibujo omitiendo calcular la hipotenusa. | Plan de Accion: Identifica primero cuánto mide cada viaje por separado (Ida = 14 km, Regreso = 10 km) antes de hacer la resta final.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Sustracción directa de las longitudes de los catetos (8 - 6 = 2) ante la palabra \"menos\" en el enunciado. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Operación superficial por palabras clave). | Sugerencia de Mejora: Desglosar el problema en tres casillas de trabajo: 1) Distancia Ida, 2) Distancia Regreso, 3) Ahorro (Ida - Regreso). | Tip Tactico para el Docente: Prohibir restar datos del enunciado sin haber etiquetado antes qué significa físicamente el resultado de esa resta."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Excelente resolución completa! En la ida el dron recorrió 6 + 8 = 14 km. Para el regreso en diagonal, aplicaste el Teorema de Pitágoras: d = √(6² + 8²) = √(36 + 64) = √100 = 10 km. Al restar ambas rutas (14 km - 10 km), hallaste que en el regreso ahorra exactamente 4 km.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la resolución de problemas métricos que integran el Teorema de Pitágoras con la comparación de longitudes de trayectorias. | Niveles: Aplicación / Utilización del Conocimiento / Nivel 3: Aplicación & Colaboración con IA."
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | Calculaste con total exactitud la distancia diagonal del viaje de regreso (10 km), pero olvidaste restarla de los 14 km de la ida. | Como caiste: Te detuviste tras completar el Teorema de Pitágoras asumiendo que la pregunta solo pedía la longitud de la hipotenusa. | Analisis de tu competencia: Ejecutaste el modelo geométrico principal pero omitiste el paso de comparación pedido en el enunciado. | Plan de Accion: Subraya siempre \"¿Cuántos kilómetros menos...?\" para recordar que el resultado final es una diferencia entre dos rutas.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Reporte del valor intermedio (la hipotenusa d = 10 km) como respuesta definitiva del problema. | Techo Taxonomico: Bloom: Aplicación parcial; Marzano: Utilización parcial; TAED: Nivel 2 (Resolución algorítmica sin cierre contextual). | Sugerencia de Mejora: Acostumbrar a los estudiantes a releer la pregunta exacta una vez obtenido el resultado de una fórmula. | Tip Tactico para el Docente: En el aula, reconozca que quien marca 10 km sabe Pitágoras, pero muéstrele cómo pierde el punto por no responder la comparación pedida."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Sumaste los dos tramos ortogonales: 6 + 8 = 14 km, reportando únicamente la distancia del viaje de ida. | Como caiste: Te quedaste en el cálculo del primer recorrido o asumiste que la diagonal medía lo mismo que la suma de los lados. | Analisis de tu competencia: Operaste en un nivel aditivo elemental sin aplicar la relación pitagórica del triángulo rectángulo. | Plan de Accion: Recuerda que ir en diagonal siempre acorta camino: calcula la hipotenusa y réstala de los 14 km iniciales.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Reporte de la distancia total de ida (14 km) omitiendo la fase de regreso y su comparación. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Suma literal de datos visibles). | Sugerencia de Mejora: Contrastar visualmente el camino por los bordes de una cuadra frente a cruzar un parque en diagonal. | Tip Tactico para el Docente: Use la desigualdad triangular (c < a + b) y muestre que el ahorro de cortar camino es exactamente (a + b) - c."
+      }
+    }
+  },
+  {
+    "id": "NDSS-M-011",
+    "materia": "Matemáticas",
+    "unidad": "Batería de Reactivos de Matemáticas - Saber 11",
+    "momento": 2,
+    "ebc": "Uso procesos inductivos y lenguaje algebraico para poner a prueba conjeturas sobre funciones exponenciales y modelos de variación.",
+    "competencia": "Argumentación",
+    "componente": "Álgebra y cálculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas.",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado.",
+    "tarea": "Evaluar la validez de una afirmación sobre el tiempo requerido para superar un umbral en un modelo de crecimiento exponencial bacteriano.",
+    "bloom": {
+      "nivel": "Evaluación",
+      "justificacion": "Valida o refuta una conjetura temporal comprobando potencias sucesivas en un modelo exponencial de base 2."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Contrasta el crecimiento multiplicativo exponencial frente a estimaciones de crecimiento lineal o aditivo."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico",
+      "justificacion": "Evalúa críticamente conjeturas sobre modelos de crecimiento exponencial verificando estados discretos contra umbrales definidos."
+    },
+    "descriptor": "Establece la validez de afirmaciones sobre modelos exponenciales mediante la evaluación de potencias en contexto.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Para 16 años, analiza una función exponencial accesible P(t) = 500 * 2^(t), exigiendo evaluar en t = 3: 500 * 8 = 4.000, y contrastar el resultado contra el umbral de 3.500 bacterias."
+    },
+    "contexto": "En un laboratorio escolar, la cantidad de bacterias de un cultivo se duplica cada hora siguiendo la función P(t) = 500 * 2^(t), donde t es el tiempo transcurrido en horas desde el inicio del experimento. El protocolo exige aplicar un reactivo cuando la población supere las 3.500 bacterias. Un estudiante afirma que al cumplirse exactamente t = 3 horas ya se debe aplicar el reactivo.",
+    "enunciado": "¿Es acertada la afirmación del estudiante?",
+    "opciones": {
+      "A": "Es acertada, porque a las 3 horas la población alcanza exactamente 4.000 bacterias.",
+      "B": "Es acertada, porque al multiplicar 500 por 2 y luego por 3 se obtienen 3.000 bacterias.",
+      "C": "No es acertada, porque en 3 horas la población apenas llega a 3.000 bacterias en total.",
+      "D": "No es acertada, porque cada hora solo se suman 500 bacterias nuevas al cultivo inicial."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Excelente verificación exponencial! Al sustituir t = 3 en la función P(t) = 500 * 2^(t), primero calculaste la potencia 2³ = 2 * 2 * 2 = 8, y luego multiplicaste 500 * 8 = 4.000 bacterias. Como 4.000 supera el umbral de las 3.500 bacterias del protocolo, la afirmación del estudiante es totalmente acertada.",
+        "pedagogico": "Clave: A | Intencion: Evaluar la validación de una conjetura mediante la sustitución y cálculo correcto de potencias en un modelo de crecimiento exponencial. | Niveles: Evaluación / Análisis / Nivel 2: Análisis Crítico."
+      },
+      "B": {
+        "estudiante": "Trampa: Híbrido | Acertaste al decir que la afirmación era correcta, pero operaste la potencia como multiplicación (2 * 3 = 6) obteniendo 3.000, valor que ni siquiera supera las 3.500. | Como caiste: Elegiste una justificación que contiene dos errores: calcular 2³ = 6 y asegurar que 3.000 supera a 3.500. | Analisis de tu competencia: Identificaste el veredicto positivo, pero no auditaste la coherencia aritmética ni lógica de la explicación. | Plan de Accion: Recuerda que 2³ significa multiplicar tres veces el dos (2 * 2 * 2 = 8), nunca multiplicar la base por el exponente.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Selección del veredicto correcto (\"Es acertada\") acompañado de un cálculo falso (2³ = 6) e inconsistente con el umbral. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1 (Aceptación acrítica de cálculos contradictorios). | Sugerencia de Mejora: Entrenar la verificación de la desigualdad final: si una opción dice \"es acertada porque llega a 3.000\", notar que 3.000 no supera 3.500. | Tip Tactico para el Docente: Muestre cómo la opción B se contradice sola: nadie puede cumplir una meta de 3.500 teniendo apenas 3.000."
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Rechazaste la afirmación porque calculaste erróneamente 2³ = 6, lo que te llevó a obtener 500 * 6 = 3.000 bacterias (menor que 3.500). | Como caiste: Tu conclusión fue coherente con tu cálculo (3.000 < 3.500), pero tu cálculo de potenciación tuvo el clásico error de multiplicar base por exponente (2 * 3). | Analisis de tu competencia: Razonaste bien la condición del umbral, pero fallaste en la propiedad operativa de los exponentes. | Plan de Accion: Si dudas con la potencia, duplica paso a paso cada hora: inicio = 500; hora 1 = 1.000; hora 2 = 2.000; hora 3 = 4.000.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Linealización de la potenciación (a^(b) operado como a * b, haciendo 2³ = 6 y 500 * 6 = 3.000). | Techo Taxonomico: Bloom: Aplicación defectuosa; Marzano: Comprensión; TAED: Nivel 1 (Falla algorítmica en potenciación). | Sugerencia de Mejora: Construir tablas hora por hora (t = 0, 1, 2, 3) duplicando la población previa para evitar el error 2 * 3 = 6. | Tip Tactico para el Docente: Pida a los estudiantes comprobar toda función exponencial haciendo la lista manual de duplicación al margen de la hoja."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Asumiste que el cultivo crecía sumando una cantidad fija de 500 bacterias por hora en vez de duplicarse. | Como caiste: Confundiste un crecimiento exponencial multiplicativo con un crecimiento lineal aditivo. | Analisis de tu competencia: Tu mente reemplazó el modelo exponencial dado en el texto por una sucesión aritmética simple. | Plan de Accion: Cuando el enunciado dice \"se duplica cada hora\", el nuevo valor multiplica por 2 al anterior, no suma una cantidad fija.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Reducción de un fenómeno exponencial a una progresión aritmética de razón constante (+500). | Techo Taxonomico: Bloom: Comprensión; Marzano: Recuperación; TAED: Nivel 1 (Generalización de modelos aditivos). | Sugerencia de Mejora: Comparar en una misma gráfica qué pasa al sumar 500 cada hora frente a duplicar la cantidad cada hora. | Tip Tactico para el Docente: Resalte que en t = 1 da 1.000 y en t = 2 da 2.000: en la primera hora subió 500, pero en la segunda subió 1.000."
+      }
+    }
+  }
+]

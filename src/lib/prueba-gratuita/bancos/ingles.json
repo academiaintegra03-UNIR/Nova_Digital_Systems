@@ -1,0 +1,398 @@
+[
+  {
+    "id": "NDSS-IN-048",
+    "materia": "Inglés",
+    "unidad": "Banco de Reactivos de Inglés - Saber 11",
+    "momento": 2,
+    "ebc": "Utilizo el vocabulario adecuado para expresar de forma clara y precisa conceptos y descripciones cotidianas de mi entorno digital y académico.",
+    "competencia": "Lingüística (Subcompetencia léxica y semántica).",
+    "componente": "Conocimiento Lexical",
+    "afirmacion": "Asocia definiciones o descripciones conceptuales en inglés con el término léxico correspondiente en contextos cotidianos y tecnológicos.",
+    "evidencia": "Selecciona la palabra precisa que corresponde a una descripción funcional de una herramienta de protección de datos en entornos digitales.",
+    "tarea": "Identificar el término léxico adecuado a partir de una descripción conceptual y el análisis de un elemento gráfico de interfaz de usuario.",
+    "bloom": {
+      "nivel": "Comprensión",
+      "justificacion": "Identifica el referente semántico a partir de la paráfrasis funcional del objeto."
+    },
+    "marzano": {
+      "nivel": "Comprensión (Integración)",
+      "justificacion": "Articula la función descrita con la etiqueta conceptual exacta en su repertorio léxico."
+    },
+    "taed": {
+      "nivel": "Nivel 1: Recuperación y Verificación",
+      "justificacion": "Reconoce y valida la correspondencia léxica funcional de una herramienta digital."
+    },
+    "descriptor": "Reconoce el término léxico en inglés que define una función tecnológica común sin recurrir a traducción literal.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Exige discriminar entre términos del mismo campo semántico tecnológico sin caer en falsos cognados o funciones secundarias."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792671310/IN-048_obfh1m.jpg",
+    "contexto": "You create this secret combination of letters, numbers, and symbols to stop unauthorized people from entering your personal accounts online.",
+    "enunciado": "Which word matches this description?",
+    "opciones": {
+      "A": "Browser",
+      "B": "Firewall",
+      "C": "Password",
+      "D": "Database"
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Aunque es un término informático muy común, tu cerebro lo asoció automáticamente al entorno web sin detenerse a validar la función. | Como caiste: Viste palabras como online y accounts y elegiste la primera herramienta digital que usas a diario para navegar, pero un navegador no es un código secreto. | Analisis de tu competencia: Tu competencia léxica se activó por contigüidad temática, no por correspondencia semántica precisa. | Plan de Accion: Antes de marcar, comprueba si la palabra de la opción cumple el verbo principal de la definición (create a combination).",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Capturar evaluados con memoria asociativa difusa en tecnología básica. | Techo Taxonomico: Bloom: Recordar | Marzano: Recuperación | TAED: Nivel 1. | Sugerencia de Mejora: Fortalecer glosarios funcionales contextualizados. | Tip Tactico para el Docente: Realice actividades de emparejamiento donde los estudiantes deban clasificar términos por su categoría funcional (herramienta de acceso vs. medio de navegación)."
+      },
+      "B": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Esta opción suena muy técnica y protectora, pero se refiere a un sistema de red y no a una credencial que tú creas. | Como caiste: Asociaste la idea de \"detener personas no autorizadas\" con seguridad informática avanzada, asumiendo que cualquier barrera defensiva cumplía la definición. | Analisis de tu competencia: Te ubicaste en un nivel de comprensión general de seguridad, omitiendo el detalle clave del enunciado: es una combinación de caracteres creada por el usuario. | Plan de Accion: Presta atención a los sustantivos núcleo del enunciado (combination of letters, numbers, and symbols).",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Medir la tendencia a seleccionar términos técnicos de seguridad sin discriminación de rol individual. | Techo Taxonomico: Bloom: Comprensión básica | Marzano: Recuperación | TAED: Nivel 1. | Sugerencia de Mejora: Enfatizar la diferencia entre seguridad a nivel de red y autenticación de usuario. | Tip Tactico para el Docente: Haga ejercicios de análisis de roles: \"¿Quién crea esto: el usuario o el sistema?\"."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Excelente deducción! La palabra password (contraseña) define exactamente la combinación secreta de caracteres que tú creas para proteger el acceso a tus perfiles y cuentas personales.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la correlación directa entre una definición funcional simple y el término léxico correspondiente en nivel A2/B1. | Niveles: Bloom: Comprensión | Marzano: Comprensión | TAED: Nivel 1 (Recuperación y Verificación)."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Una base de datos almacena información, pero no es la llave de acceso personal. | Como caiste: El texto menciona cuentas e información personal; tu memoria recuperó un lugar donde se guardan cuentas, confundiendo el contenedor con el mecanismo de autenticación. | Analisis de tu competencia: Procesaste datos aislados del texto en lugar de integrar el propósito de la oración. | Plan de Accion: Formula mentalmente la pregunta: \"¿Qué es esto?\" con tus propias palabras antes de mirar las opciones.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Atraer a evaluados que se apoyan en palabras aisladas (accounts, online). | Techo Taxonomico: Bloom: Recordar | Marzano: Recuperación | TAED: Nivel 1. | Sugerencia de Mejora: Trabajar la decodificación sintáctica de oraciones complejas breves. | Tip Tactico para el Docente: Pida a los estudiantes aislar la cláusula principal del sujeto antes de analizar los complementos."
+      }
+    }
+  },
+  {
+    "id": "NDSS-IN-049",
+    "materia": "Inglés",
+    "unidad": "Banco de Reactivos de Inglés - Saber 11",
+    "momento": 2,
+    "ebc": "Reconozco el propósito de textos informativos breves y de avisos publicitarios o de advertencia en lugares comunitarios o escolares.",
+    "competencia": "Pragmática (Funcional y discursiva).",
+    "componente": "Conocimiento Pragmático",
+    "afirmacion": "Determina el contexto espacial o situacional más adecuado para la ubicación de un aviso con base en su función comunicativa.",
+    "evidencia": "Infiere la locación física idónea a partir del análisis pragmático de un aviso de convivencia y uso de recursos.",
+    "tarea": "Identificar el lugar donde se ubica un aviso a partir de la interpretación de su texto y sus elementos visuales.",
+    "bloom": {
+      "nivel": "Aplicación",
+      "justificacion": "Aplica el conocimiento pragmático del uso situacional del idioma a un escenario contextual verosímil."
+    },
+    "marzano": {
+      "nivel": "Análisis (Asociación)",
+      "justificacion": "Conecta las restricciones de un mensaje prescriptivo con las normas de un entorno específico."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico e Integración",
+      "justificacion": "Interpreta el propósito explícito del aviso e integra los datos para descartar contextos incongruentes."
+    },
+    "descriptor": "Reconoce el propósito comunicativo de un aviso e infiere el lugar donde se encuentra ubicado.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere interpretar la función pragmática de una norma de silencio y ahorro de energía en un espacio público de estudio."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792671310/IN-049_m0eof4.jpg",
+    "contexto": "",
+    "enunciado": "Where can you see this notice?",
+    "opciones": {
+      "A": "In a library",
+      "B": "In a cinema",
+      "C": "In a gym",
+      "D": "In a supermarket"
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Muy bien pensado! Una biblioteca (library) es el espacio diseñado para el estudio en silencio (silent study), donde los usuarios usan computadores portátiles y deben mantener el orden de las mesas.",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | En una sala de cine debes apagar el sonido, pero no vas a estudiar ni a conectar computadores en escritorios. | Como caiste: Te concentraste exclusivamente en turn off laptop sound y pensaste en lugares oscuros donde se exige silencio, ignorando study zone y leave desks clear. | Analisis de tu competencia: Tu atención selectiva se enfocó en una sola instrucción y no integró el mensaje global del aviso. | Plan de Accion: Lee el aviso completo y busca el propósito principal combinando todas las palabras clave.",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Es absurdo encontrar normas de silencio para estudio y desconexión de portátiles en una sala de ejercicios. | Como caiste: Pudiste confundir la palabra zone o relacionar la idea de no dejar cosas tiradas con un espacio deportivo, desconectándote del significado de study. | Analisis de tu competencia: Falló la discriminación pragmática de la actividad que realizan los individuos en dicho espacio. | Plan de Accion: Pregúntate siempre qué acciones humanas son compatibles con todas las órdenes del letrero.",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "Trampa: Atractor Moral/Emocional | Mantener el orden y respetar al prójimo es bueno en cualquier lugar público, pero un supermercado no tiene escritorios de estudio. | Como caiste: Tu mente buscó una regla general de cortesía cívica aplicable a un lugar de alto tráfico de personas. | Analisis de tu competencia: Evaluaste el tono de educación cívica del mensaje sin anclarlo a los objetos concretos (desks, laptops). | Plan de Accion: Identifica sustantivos concretos (desks, study) que descarten de inmediato comercios de víveres.",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "NDSS-IN-050",
+    "materia": "Inglés",
+    "unidad": "Banco de Reactivos de Inglés - Saber 11",
+    "momento": 2,
+    "ebc": "Participo en conversaciones espontáneas sobre temas de interés personal y escolar, respondiendo de manera coherente y oportuna a las intervenciones de mis interlocutores.",
+    "competencia": "Sociolingüística (Normas de interacción y registro).",
+    "componente": "Conocimiento Comunicativo",
+    "afirmacion": "Elige la réplica conversacional más adecuada social y pragmáticamente ante un enunciado emitido en una interacción cotidiana.",
+    "evidencia": "Responde de manera pertinente y empática a una situación escolar común presentada en una aplicación de mensajería instantánea.",
+    "tarea": "Seleccionar la intervención coherente del segundo interlocutor considerando la intención comunicativa y el tono social.",
+    "bloom": {
+      "nivel": "Aplicación",
+      "justificacion": "Utiliza normas sociolingüísticas para seleccionar la respuesta funcional adecuada."
+    },
+    "marzano": {
+      "nivel": "Utilización del Conocimiento",
+      "justificacion": "Aplica principios de cortesía y fluidez en intercambios dialógicos reales."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico e Integración",
+      "justificacion": "Evalúa el impacto socioemocional de la respuesta para evitar respuestas fuera de tono o incoherentes."
+    },
+    "descriptor": "Selecciona la intervención adecuada de un segundo interlocutor en una conversación cotidiana breve.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Demanda distinguir entre respuestas gramaticalmente correctas pero disfuncionales frente a un mensaje de frustración académica."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792671309/IN-050_xc5rvk.jpg",
+    "contexto": "Carlos: \"I lost my flash drive with our final science presentation!\"",
+    "enunciado": "You: ___________________________",
+    "opciones": {
+      "A": "It is very expensive.",
+      "B": "Nice to meet you.",
+      "C": "That sounds delicious.",
+      "D": "Don't panic, I have a backup."
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Hablar del precio del objeto en medio de una emergencia académica ignora la prioridad real de la situación. | Como caiste: Te quedaste pensando en el valor material de la memoria USB en lugar de pensar en el contenido del trabajo y el estrés de la entrega. | Analisis de tu competencia: Tu análisis se desconectó de la empatía situacional que rige las conversaciones cotidianas entre pares. | Plan de Accion: Pregúntate siempre: \"¿Qué necesita escuchar mi compañero en este preciso instante?\".",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Esta es una fórmula de saludo social estándar que se usa al ser presentado a alguien, totalmente fuera de lugar aquí. | Como caiste: Tu memoria activó una frase aprendida de cortesía rutinaria sin analizar el contexto de crisis del mensaje. | Analisis de tu competencia: Operaste en un nivel de recuerdo memorístico automático sin evaluar la función pragmática de la interacción. | Plan de Accion: Recuerda que Nice to meet you solo se emplea en primeras presentaciones entre personas.",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "Trampa: Atractor Moral/Emocional | La respuesta es amable y positiva, pero no tiene ningún sentido aplicarla a la pérdida de una tarea. | Como caiste: Viste una expresión amigable y tu cerebro la tomó como una respuesta positiva genérica, sin traducir el adjetivo delicious. | Analisis de tu competencia: Te dejaste llevar por el tono entusiasta ignorando el significado léxico concreto de la opción. | Plan de Accion: Revisa el significado literal de cada término antes de validar si encaja como respuesta emocional.",
+        "pedagogico": "Tipologia: Atractor Moral/Emocional | Intencion del error: Identificar estudiantes que asumen que cualquier frase de cortesía satisface el turno conversacional. | Techo Taxonomico: Bloom: Recordar | Marzano: Recuperación | TAED: Nivel 1. | Sugerencia de Mejora: Fortalecer el repertorio adjetival específico de situaciones comunicativas. | Tip Tactico para el Docente: Prohíba el uso de respuestas aisladas en simulaciones y obligue a justificar el enlace semántico entre interlocutores."
+      },
+      "D": {
+        "estudiante": "Clave: D. ¡Excelente reacción! Ante un problema urgente de un compañero de equipo, la respuesta colaborativa y tranquilizadora es \"Don't panic, I have a backup\" (No te asustes, tengo una copia de seguridad).",
+        "pedagogico": "Clave: D | Intencion: Evaluar la adecuación sociolingüística y la coherencia dialógica ante un problema comunicativo real entre pares escolares. | Niveles: Bloom: Aplicación | Marzano: Utilización | TAED: Nivel 2 (Análisis Crítico e Integración)."
+      }
+    }
+  },
+  {
+    "id": "NDSS-IN-051",
+    "materia": "Inglés",
+    "unidad": "Banco de Reactivos de Inglés - Saber 11",
+    "momento": 2,
+    "ebc": "Aplico estructuras gramaticales comunes en textos breves para otorgar precisión temporal y aspectual a las descripciones de hechos pasados y presentes.",
+    "competencia": "Lingüística (Sintáctica y morfológica).",
+    "componente": "Conocimiento Gramatical",
+    "afirmacion": "Aplica reglas morfocintácticas para completar enunciados en un texto narrativo breve garantizando su corrección estructural.",
+    "evidencia": "Selecciona la forma del verbo que respeta la concordancia temporal del pasado simple con un marcador de tiempo definido.",
+    "tarea": "Seleccionar la opción morfológica adecuada para completar un espacio en blanco dentro de un párrafo corto.",
+    "bloom": {
+      "nivel": "Aplicación",
+      "justificacion": "Aplica las reglas del pasado simple frente a marcadores temporales explícitos."
+    },
+    "marzano": {
+      "nivel": "Utilización del Conocimiento",
+      "justificacion": "Selecciona la variante verbal que sostiene la cohesión gramatical de la proposición."
+    },
+    "taed": {
+      "nivel": "Nivel 1: Recuperación y Verificación",
+      "justificacion": "Valida la concordancia gramatical y descarta formas verbales incongruentes."
+    },
+    "descriptor": "Elige la forma verbal adecuada para completar oraciones con marcadores temporales de pasado.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Exige al estudiante discriminar formas de infinitivo, gerundio y participio frente al pretérito simple regular e irregular."
+    },
+    "contexto": "Last month, our school environmental group ____________ a campaign to collect plastic bottles and old electronics in the neighborhood.",
+    "enunciado": "Which word correctly completes the sentence?",
+    "opciones": {
+      "A": "starts",
+      "B": "started",
+      "C": "starting",
+      "D": "has started"
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | El verbo en presente con -s indica una rutina actual, lo que contradice frontalmente la referencia temporal del mes pasado. | Como caiste: Tu mirada reconoció el sujeto en tercera persona (our school environmental group) y elegiste la regla de la -s del presente simple sin fijarte en el inicio de la oración. | Analisis de tu competencia: Aplicaste mecánicamente una regla de concordancia de presente olvidando verificar la línea de tiempo del enunciado. | Plan de Accion: Antes de elegir el verbo, subraya la expresión de tiempo que indica cuándo sucedió la acción.",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Perfecto! La expresión temporal \"Last month\" (el mes pasado) señala una acción que inició y culminó en un momento específico del pasado, por lo cual se requiere obligatoriamente el pasado simple (started).",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | La terminación -ing requiere un verbo auxiliar (was/were) para funcionar como verbo principal en pasado continuo. | Como caiste: Pensaste que sonaba activo y dinámico, pero una oración en inglés no puede tener un gerundio solitario como verbo principal de la cláusula. | Analisis de tu competencia: Tu intuición fonética pasó por alto la estructura sintáctica formal indispensable en una oración completa. | Plan de Accion: Recuerda la regla de oro: el gerundio (-ing) necesita un acompañante (am/is/are/was/were) para actuar como acción principal.",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "Trampa: Híbrido | El presente perfecto (has started) expresa acciones pasadas conectadas con el presente o con tiempos no finalizados, no con un punto de corte temporal cerrado como last month. | Como caiste: Reconociste la idea de pasado e inferiste que una estructura compuesta aportaba mayor precisión formal, pero los marcadores temporales cerrados (yesterday, ago, last...) no admiten presente perfecto en inglés estándar. | Analisis de tu competencia: Confundiste el aspecto perfectivo con el aspecto indefinido de pasado. | Plan de Accion: Grábate esta regla técnica: si ves last week/month/year, el tiempo verbal debe ser pasado simple, nunca presente perfecto.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Capturar la interferencia clásica hispanohablante entre pretérito perfecto compuesto y pasado simple ante marcadores temporales terminados. | Techo Taxonomico: Bloom: Comprensión | Marzano: Comprensión | TAED: Nivel 1. | Sugerencia de Mejora: Contrastar sistemáticamente el uso de Past Simple vs. Present Perfect. | Tip Tactico para el Docente: Use líneas de tiempo visuales señalando momentos concluidos en el calendario frente a periodos abiertos."
+      }
+    }
+  },
+  {
+    "id": "NDSS-IN-052",
+    "materia": "Inglés",
+    "unidad": "Banco de Reactivos de Inglés - Saber 11",
+    "momento": 2,
+    "ebc": "Identifico información explícita y equivalente en textos informativos cortos sobre asuntos de interés general.",
+    "competencia": "Pragmática (Discursiva y de comprensión lectora).",
+    "componente": "Comprensión de Lectura Literal",
+    "afirmacion": "Identifica información explícita y paráfrasis directas contenidas en un texto informativo breve.",
+    "evidencia": "Reconoce la formulación equivalente que expresa con palabras distintas un dato explícito brindado en una infografía digital.",
+    "tarea": "Seleccionar la paráfrasis correcta que responde a una pregunta puntual sobre la información directa del texto visual.",
+    "bloom": {
+      "nivel": "Comprensión",
+      "justificacion": "Reconoce una idea idéntica expresada mediante sinonimia y reestructuración oracional."
+    },
+    "marzano": {
+      "nivel": "Comprensión (Simbolización)",
+      "justificacion": "Traduce el contenido informativo literal a una proposición paralela equivalente."
+    },
+    "taed": {
+      "nivel": "Nivel 1: Recuperación y Verificación",
+      "justificacion": "Localiza y valida un hecho fáctico verificable sin distorsionar su sentido."
+    },
+    "descriptor": "Encuentra información explícita parafraseada en un texto informativo breve.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere que el evaluado reconozca sinónimos y relaciones proporcionales simples sin dejarse seducir por palabras repetidas fuera de contexto."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792671310/IN-052_bd89os.jpg",
+    "contexto": "",
+    "enunciado": "According to the information, what should students do to protect their eyes from screen fatigue?",
+    "opciones": {
+      "A": "Rest for ten minutes after each hour of computer use.",
+      "B": "Buy expensive blue-light glasses to work longer hours.",
+      "C": "Stop using digital screens permanently during the day.",
+      "D": "Clean their computer screens every ten minutes carefully."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Brillante lectura! El texto afirma que tomar un receso de 10 minutos cada hora ayuda a recuperar los ojos del cansancio de las pantallas. La opción A parafrasea exactamente esa idea: descansar diez minutos después de cada hora de uso.",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | La imagen ilustra a alguien con gafas, pero el texto informativo no te ordena comprar gafas caras para trabajar más tiempo. | Como caiste: Miraste la imagen, viste los lentes y asumiste que la solución residía en comprar un accesorio para seguir frente al computador sin parar. | Analisis de tu competencia: Te fiaste de un elemento visual secundario y omitiste verificar la instrucción textual explícita de la infografía. | Plan de Accion: En preguntas literales, la respuesta correcta siempre debe estar fundamentada en el texto escrito de la gráfica.",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | El cartel jamás dice que dejes de usar pantallas por completo, sino que tomes descansos periódicos. | Como caiste: Llevaste la recomendación al extremo radical (permanently), asumiendo que para proteger la salud hay que eliminar la tecnología de raíz. | Analisis de tu competencia: Transformaste una sugerencia de pausa activa en una prohibición total. | Plan de Accion: Desconfía de opciones que usen medidas absolutas cuando el texto original propone hábitos de equilibrio y dosificación.",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Limpiar la pantalla físicamente no quita el cansancio visual biológico de tus ojos. | Como caiste: El texto menciona \"10-minute\" y \"screen\"; tu cerebro tomó esos términos literales y los mezcló con una acción mecánica que no previene la fatiga ocular. | Analisis de tu competencia: Uniste palabras idénticas del texto sin procesar la relación causal real (descanso biológico vs. limpieza física). | Plan de Accion: Revisa si la acción descrita realmente soluciona el problema de salud planteado en la pregunta.",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "NDSS-IN-053",
+    "materia": "Inglés",
+    "unidad": "Banco de Reactivos de Inglés - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo textos argumentativos y de divulgación para inferir intenciones del autor, posturas ideológicas y propósitos implícitos no manifiestos de forma literal.",
+    "competencia": "Pragmática (Funcional, crítica y de lectura inferencial).",
+    "componente": "Proceso de Lectura Inferencial",
+    "afirmacion": "Infiere el propósito central y la postura del autor a partir del análisis global de un texto reflexivo breve.",
+    "evidencia": "Deduce la intención comunicativa principal del escritor distinguiendo la tesis central de ejemplos y detalles secundarios.",
+    "tarea": "Determinar la intención del autor sobre el consumo de noticias en redes sociales a partir de un fragmento de lectura crítica.",
+    "bloom": {
+      "nivel": "Análisis",
+      "justificacion": "Descompone el discurso para inferir motivaciones no explícitas del autor."
+    },
+    "marzano": {
+      "nivel": "Análisis (Generalización/Especificación)",
+      "justificacion": "Extrae la conclusión implícita del texto vinculando los argumentos presentados."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico e Integración",
+      "justificacion": "Evalúa sesgos y sintetiza el propósito de un mensaje sobre desinformación digital."
+    },
+    "descriptor": "Infiere la intención comunicativa global del autor en textos de opinión y divulgación.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere que el estudiante discierna el propósito global argumentativo sin confundirlo con un simple reporte de hechos o una condena absoluta."
+    },
+    "contexto": "Social media platforms allow news to travel faster than ever before. However, studies show that people frequently share dramatic headlines without clicking on the links to confirm the facts. When we share information without checking its origin, we actively help false stories become accepted truths. Reading beyond the title is no longer just a good habit; it is a civic duty in the modern era.",
+    "enunciado": "What is the author trying to do in this text?",
+    "opciones": {
+      "A": "Describe how software engineers create social media applications.",
+      "B": "Advise people to delete all their social networking accounts.",
+      "C": "Encourage readers to verify online stories before sharing them.",
+      "D": "Explain why false rumors are completely impossible to prevent."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | El texto habla de redes sociales y tecnología, pero en ningún momento describe procesos de programación informática o desarrollo de software. | Como caiste: Viste términos como platforms y links y pensaste en aspectos técnicos de ingeniería digital en lugar del impacto humano y social del mensaje. | Analisis de tu competencia: Tu mente se ancló al entorno técnico del tema y no al tono argumentativo y ético del autor. | Plan de Accion: Identifica siempre a quién se dirige el autor: ¿a ingenieros que programan o a ciudadanos que leen y comparten?",
+        "pedagogico": ""
+      },
+      "B": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | El autor no te pide que cierres tus redes sociales, sino que las uses con sentido crítico y responsabilidad cívica. | Como caiste: Interpretaste la crítica a la desinformación como un llamado extremista a abandonar la tecnología por completo. | Analisis de tu competencia: Confundiste la exigencia de un comportamiento responsable con una postura destructiva hacia las plataformas. | Plan de Accion: Recuerda que un autor maduro busca mejorar las conductas de la comunidad, no imponer soluciones desproporcionadas.",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Gran nivel de análisis crítico! El autor reflexiona sobre el peligro de compartir noticias basándose solo en titulares y concluye que leer más allá del título y revisar el origen es un deber cívico. Por tanto, su meta es motivar al lector a verificar la información antes de difundirla.",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Si el autor creyera que es imposible frenar los rumores, no calificaría la lectura atenta como un deber cívico indispensable. | Como caiste: Notaste que las noticias falsas se difunden con rapidez e inferiste un sentimiento de derrota total, ignorando la propuesta de acción constructiva del párrafo final. | Analisis de tu competencia: Te enfocaste en la descripción del problema e ignoraste la solución propositiva del autor. | Plan de Accion: Revisa siempre la última oración del párrafo: suele ser allí donde el autor plasma su verdadera tesis y llamado a la acción.",
+        "pedagogico": ""
+      }
+    }
+  },
+  {
+    "id": "NDSS-IN-054",
+    "materia": "Inglés",
+    "unidad": "Banco de Reactivos de Inglés - Saber 11",
+    "momento": 2,
+    "ebc": "Utilizo conectores y elementos de cohesión para enlazar oraciones y párrafos de manera coherente, expresando relaciones de causa, efecto, contraste y adición.",
+    "competencia": "Lingüística (Sintáctica y discursiva).",
+    "componente": "Conocimiento Gramatical y Lexical",
+    "afirmacion": "Integra elementos de enlace léxico-gramaticales adecuados para garantizar la cohesión global de un texto expositivo.",
+    "evidencia": "Selecciona el conector lógico que introduce una relación de causa-efecto coherente con las proposiciones del párrafo.",
+    "tarea": "Completar un espacio en blanco en un texto articulado eligiendo el conector discursivo idóneo entre cuatro opciones del mismo registro.",
+    "bloom": {
+      "nivel": "Análisis",
+      "justificacion": "Determina la relación semántica y lógica que une dos proposiciones independientes en un texto."
+    },
+    "marzano": {
+      "nivel": "Análisis (Asociación)",
+      "justificacion": "Identifica el nexo lógico preciso que subyace a la relación semántica de las frases."
+    },
+    "taed": {
+      "nivel": "Nivel 2: Análisis Crítico e Integración",
+      "justificacion": "Evalúa la estructura lógica del discurso para sintetizar la coherencia del mensaje global."
+    },
+    "descriptor": "Selecciona conectores discursivos adecuados para asegurar la cohesión y coherencia en un texto.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere que el evaluado interprete la relación lógica de causa y consecuencia entre dos oraciones complejas y la diferencie de la oposición o la adición."
+    },
+    "contexto": "Many urban centers are investing heavily in bicycle lanes and electric buses to cut air pollution. (1) ____________, citizens are experiencing cleaner air and shorter travel times across the metropolitan area.",
+    "enunciado": "Which word correctly fills the blank (1)?",
+    "opciones": {
+      "A": "Although",
+      "B": "However",
+      "C": "Otherwise",
+      "D": "Therefore"
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Híbrido | Aunque es un conector formal muy usado, Although introduce una concesión o contraste (\"a pesar de que\") y exige continuar dentro de una misma cláusula dependiente, no abrir una oración independiente separada por coma. | Como caiste: Reconociste un conector de nivel formal y pensaste que aportaba fluidez académica, pasando por alto su función subordinante y de contraste. | Analisis de tu competencia: Tu competencia sintáctica reconoció el registro elevado de la palabra pero falló en verificar su función lógica de unión. | Plan de Accion: Identifica la relación entre las dos ideas: si la segunda es el resultado positivo de la primera, necesitas un conector de consecuencia, no de contraste.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Medir la distinción entre conjunciones subordinantes de concesión y adverbios conjuntivos de transición. | Techo Taxonomico: Bloom: Comprensión | Marzano: Comprensión | TAED: Nivel 1. | Sugerencia de Mejora: Practicar la puntuación y posición sintáctica de los conectores de enlace. | Tip Tactico para el Docente: Enseñe a los alumnos a clasificar los conectores según la puntuación que los rodea (punto y coma vs. subordinación directa)."
+      },
+      "B": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | However expresa oposición o contraargumento (\"sin embargo\"), lo que invertiría la lógica del párrafo haciendo creer que el aire limpio contradice la inversión ecológica. | Como caiste: Tu cerebro está muy acostumbrado a colocar However cada vez que ve un conector seguido de coma al inicio de una oración, sin comprobar si las ideas se oponen o se complementan. | Analisis de tu competencia: Operaste por automatización sintáctica superficial sin realizar la lectura semántica del nexo. | Plan de Accion: Pregúntate siempre: \"¿La segunda idea es una sorpresa negativa o es el fruto natural de la primera?\".",
+        "pedagogico": ""
+      },
+      "C": {
+        "estudiante": "",
+        "pedagogico": ""
+      },
+      "D": {
+        "estudiante": "Clave: D.",
+        "pedagogico": ""
+      }
+    }
+  }
+]

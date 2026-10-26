@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { toast } from "sonner";
 import { Loader2, Mail, MailWarning } from "lucide-react";
 import { StatCard } from "@/components/shared/stat-card";
@@ -29,6 +30,31 @@ export interface PostulanteAdminRow {
   telefono: string | null;
   notificado: boolean;
   notificadoEn: string | null;
+  /** Resumen de la prueba gratuita de la cuenta creada — null si no hay
+   * cuenta enlazada o todavía no envió ninguna materia. */
+  prueba: {
+    finalizada: boolean;
+    porcentaje: number;
+    salidasPestana: number;
+    copiaPegado: number;
+  } | null;
+}
+
+function PruebaResumen({ id, prueba }: { id: string; prueba: PostulanteAdminRow["prueba"] }) {
+  if (!prueba) return <span className="text-muted-foreground">—</span>;
+  return (
+    <div className="space-y-0.5 text-xs">
+      <Link href={`/admin/postulantes/${id}/informe`} className="font-bold text-heading underline underline-offset-2">
+        Ver informe
+      </Link>
+      <div className="font-semibold text-foreground">
+        {prueba.finalizada ? "Finalizada" : "En curso"} · <span className="font-data">{prueba.porcentaje}%</span>
+      </div>
+      <div className={prueba.salidasPestana + prueba.copiaPegado > 0 ? "text-warning" : "text-muted-foreground"}>
+        {prueba.salidasPestana} salidas de pestaña · {prueba.copiaPegado} copiar/pegar
+      </div>
+    </div>
+  );
 }
 
 function formatFecha(iso: string) {
@@ -173,6 +199,7 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
                   <TableHead>Correo</TableHead>
                   <TableHead>WhatsApp</TableHead>
                   <TableHead>Estado</TableHead>
+                  <TableHead>Prueba</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -184,6 +211,9 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
                     <TableCell className="text-muted-foreground">{p.telefono ?? "—"}</TableCell>
                     <TableCell>
                       <NotificarAccion postulante={p} />
+                    </TableCell>
+                    <TableCell>
+                      <PruebaResumen id={p.id} prueba={p.prueba} />
                     </TableCell>
                   </TableRow>
                 ))}

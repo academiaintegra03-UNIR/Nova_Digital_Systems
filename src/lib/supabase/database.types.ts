@@ -606,6 +606,30 @@ export interface Database {
         };
         Relationships: [];
       };
+      pruebas_gratuitas: {
+        Row: {
+          profile_id: string;
+          iniciada_en: string;
+          respuestas: Json;
+          incidencias: Json;
+          finalizada_en: string | null;
+        };
+        Insert: {
+          profile_id: string;
+          iniciada_en?: string;
+          respuestas?: Json;
+          incidencias?: Json;
+          finalizada_en?: string | null;
+        };
+        Update: {
+          profile_id?: string;
+          iniciada_en?: string;
+          respuestas?: Json;
+          incidencias?: Json;
+          finalizada_en?: string | null;
+        };
+        Relationships: [];
+      };
       materia_recursos: {
         Row: {
           id: string;

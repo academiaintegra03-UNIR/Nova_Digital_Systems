@@ -1,0 +1,794 @@
+[
+  {
+    "id": "NDSS-CTS-023",
+    "materia": "Ciencia tecnología y sociedad",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo el potencial de los recursos naturales en la obtención de energía para diferentes usos.",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Ciencia, Tecnología y Sociedad: Ambiente, Sostenibilidad y Recursos Naturales",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades.",
+    "evidencia": "Explica cómo la explotación de un recurso o el uso de una tecnología tiene efectos positivos o negativos en las personas y en el entorno.",
+    "tarea": "Determinar la consecuencia ambiental del uso de una fuente energética a partir de datos comparativos de emisiones.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Interpreta relaciones causales entre la fuente energética y el impacto en la calidad del aire."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Integra datos gráficos para explicar el efecto ecológico de la sustitución tecnológica."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Deconstruye la relación entre variables tecnológicas e impacto ambiental sin sesgos de intuición común."
+    },
+    "descriptor": "Explica los efectos ambientales derivados de la adopción de tecnologías energéticas basándose en información cuantitativa.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere contrastar dos variables en un diagrama y relacionarlas con la química de la atmósfera local."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528965/CTS-023_ido7ta.jpg",
+    "contexto": "Un municipio colombiano evalúa sustituir su flota de transporte público por dos alternativas tecnológicas. El equipo técnico presenta la siguiente gráfica comparativa sobre emisiones relativas y costos por kilómetro:",
+    "enunciado": "Al analizar la sustitución de toda la flota por buses 100% eléctricos durante su operación local, ¿cuál es el beneficio directo inmediato para el entorno urbano del municipio?",
+    "opciones": {
+      "A": "La disminución de la demanda eléctrica en las horas de mayor actividad comercial.",
+      "B": "La reducción drástica de enfermedades respiratorias ligadas al material particulado local.",
+      "C": "El aumento de la tasa de absorción de carbono en las zonas boscosas periféricas.",
+      "D": "La eliminación de los residuos industriales generados en el proceso de refinación petrolera."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Notaste que se habla de electricidad, pero invertiste la relación física: incorporar buses eléctricos demanda mayor suministro a la red, no reduce la demanda eléctrica de la ciudad. | Como caiste: Tu mente asoció \"eficiencia energética\" con \"menor consumo general\", pasando por alto la carga que estos vehículos imponen al sistema. | Analisis de tu competencia: Te quedaste en una asociación superficial del término \"eléctrico\" sin modelar la dinámica de flujo de energía en la red urbana. | Plan de Accion: Antes de marcar, verifica si el efecto propuesto ocurre en la fuente o en el consumo del sistema.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Revelar confusión en la relación causa-efecto del consumo energético de flotas eléctricas. | Techo Taxonomico: Bloom: Recordar (reconoce términos pero invierte su vínculo causal). Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Analizar balances de entrada y salida de energía en sistemas tecnológicos urbanos. | Tip Tactico para el Docente: Solicite a los estudiantes trazar diagramas de flujo de flechas direccionales (de dónde sale y a dónde va la energía) para evitar inversiones de causa y efecto."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Excelente deducción! Al observar que las emisiones locales de PM2.5 caen a cero durante el rodamiento de los buses eléctricos, vinculas directamente el dato con el bienestar en la salud pública y la calidad del aire que respiran los habitantes.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la capacidad de relacionar datos de emisiones de material particulado urbano con efectos concretos en la salud ambiental comunitaria. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Esta opción suena ambientalmente positiva, pero confunde la reducción de emisiones vehiculares con la capacidad biológica fotosintética de los árboles en la periferia. | Como caiste: Asumiste que todo lo que disminuye el CO₂ estimula mágicamente a los bosques a capturar más carbono por unidad de tiempo. | Analisis de tu competencia: Tu análisis confundió un proceso físico de emisión con un proceso ecológico vegetal independiente. | Plan de Accion: Separa siempre las acciones tecnológicas humanas de los ciclos biológicos autónomos del ecosistema.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Evidenciar traslape indiscriminado entre control de emisiones fisicoquímicas y fijación biológica de biomasa. | Techo Taxonomico: Bloom: Comprender (comprensión desarticulada del ciclo del carbono). Marzano: Comprensión básica. TAED: Nivel 1. | Sugerencia de Mejora: Delimitar con precisión los reservorios y flujos del ciclo biogeoquímico del carbono. | Tip Tactico para el Docente: Emplee esquemas de cajas y flechas cerradas para que el alumnado distinga un sumidero de carbono de una fuente de emisión evitada."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Aunque la demanda de combustible fósil disminuya localmente, la actividad de refinación no se reduce de manera exclusiva ni se anula en su totalidad por la decisión de un solo municipio. | Como caiste: Extrapolaste un impacto municipal acotado a la supresión total de una cadena industrial global. | Analisis de tu competencia: Operaste bajo una generalización excesiva, ignorando los límites geográficos y operacionales del contexto. | Plan de Accion: Cuida el alcance de las afirmaciones; los cambios locales mitigan impactos locales directos, no anulan sistemas industriales completos.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Detectar la tendencia a magnificar el impacto local de una tecnología hasta niveles sistémicos absolutos. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Contextualizar el alcance espacial y operativo de las intervenciones tecnológicas locales. | Tip Tactico para el Docente: Proponga ejercicios de acotamiento de escala donde se contrasten impactos locales frente a impactos regionales e industriales globales."
+      }
+    }
+  },
+  {
+    "id": "NDSS-B-024",
+    "materia": "Biología",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Explico diversos tipos de relaciones entre especies en los ecosistemas.",
+    "competencia": "Uso comprensivo del conocimiento científico",
+    "componente": "Biología: Ecosistémico",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico.",
+    "evidencia": "Establece relaciones entre fenómenos biológicos para comprender su entorno.",
+    "tarea": "Identificar la relación ecológica predominante a partir del análisis de curvas poblacionales acopladas.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Interpreta el patrón temporal de oscilación entre dos poblaciones para asociarlo con una interacción biológica."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Extrae inferencias válidas a partir de la sincronía de fases en una representación gráfica."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Sintetiza datos visuales identificando desfases temporales característicos de dinámicas tróficas."
+    },
+    "descriptor": "Reconoce el modelo biológico de interacción entre poblaciones a partir del análisis de fluctuaciones numéricas en el tiempo.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere interpretar el desfase entre picos y valles de dos curvas continuas."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528966/B-024_e0ryni.jpg",
+    "contexto": "En un parque natural colombiano se monitoreó durante ocho años el tamaño poblacional de un roedor silvestre y de una serpiente cazadora. Los datos se consolidaron en la siguiente gráfica:",
+    "enunciado": "A partir del comportamiento oscilatorio y el desfase de los picos en las dos poblaciones, ¿cuál interacción biológica explica dicha dinámica?",
+    "opciones": {
+      "A": "La depredación, donde la abundancia de presas condiciona el posterior aumento de los cazadores.",
+      "B": "El mutualismo, donde ambas especies aumentan simultáneamente su tamaño sin desfase temporal alguno.",
+      "C": "El comensalismo, donde la serpiente obtiene refugio del roedor sin alterar la tasa reproductiva de este.",
+      "D": "La competencia, donde ambas poblaciones disminuyen drásticamente hasta la extinción local de una de ellas."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Excelente lectura del gráfico! Notaste con precisión que cuando la presa (roedor) abunda, la serpiente tiene alimento suficiente para reproducirse un año después; al escasear la presa, el depredador decae poco después.",
+        "pedagogico": "Clave: A | Intencion: Evaluar la identificación del modelo Lotka-Volterra clásico de depredador-presa a través de representaciones gráficas bivariadas. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "B": {
+        "estudiante": "Trampa: Híbrido | Menciona una interacción biológica real, pero su propia descripción entra en conflicto con lo que muestra la gráfica, donde las poblaciones jamás suben al mismo tiempo exacto. | Como caiste: Viste que ambas poblaciones presentaban fases de aumento e inferiste erróneamente un beneficio mutuo simétrico. | Analisis de tu competencia: Tu mente ignoró el desfase temporal, una variable crítica del pensamiento dinámico en ecología. | Plan de Accion: Cuando analices dos curvas, fíjate siempre si los puntos máximos coinciden en el eje del tiempo o si están desfasados.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Detectar la incapacidad para leer desfases temporales en series de tiempo ecológicas. | Techo Taxonomico: Bloom: Recordar (recuerda la palabra mutualismo, pero ignora la métrica temporal). Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Contrastar modelos gráficos de simbiosis frente a ciclos tróficos. | Tip Tactico para el Docente: Proyecte series temporales y haga que los estudiantes tracen líneas verticales con regla sobre los picos para comprobar si coinciden en el tiempo."
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Afirma que la serpiente usa al roedor como refugio, lo cual contradice la lógica trófica biológica del contexto presentado. | Como caiste: Seleccionaste una categoría ecológica al azar buscando una relación donde una especie pareciera no depender tanto de la otra. | Analisis de tu competencia: No contrastaste el enunciado con el conocimiento biológico funcional del rol ecológico carnívoro. | Plan de Accion: Pregúntate si el mecanismo biológico descrito en la opción tiene sentido en el mundo real antes de validarla.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Evidenciar desconexión entre la definición de comensalismo y la morfofisiología de los organismos evaluados. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Fortalecer la caracterización funcional de gremios tróficos. | Tip Tactico para el Docente: Pida a los alumnos clasificar organismos en nichos tróficos antes de analizar sus interacciones numéricas."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Plantea un desenlace de exclusión competitiva total que no ocurre en el gráfico, ya que ninguna de las dos curvas colapsa a cero. | Como caiste: Recordaste que los recursos son limitados y asumiste que toda interacción poblacional conduce a la muerte y desaparición de un competidor. | Analisis de tu competencia: Tu análisis se basó en un prejuicio conceptual en vez de verificar los límites numéricos de las líneas del gráfico. | Plan de Accion: Revisa los valores finales de las curvas; si oscilan de forma continua, el sistema conserva su estabilidad dinámica.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Revelar la concepción errónea de que toda interacción biológica desemboca en exclusión competitiva irreversible. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Trabajar conceptos de resiliencia y oscilaciones cíclicas en poblaciones. | Tip Tactico para el Docente: Analice con el grupo gráficos de equilibrio dinámico donde la oscilación sostenida demuestre coexistencia estable."
+      }
+    }
+  },
+  {
+    "id": "NDSS-B-025",
+    "materia": "Biología",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Explico la estructura de la célula y las funciones básicas de sus componentes.",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Biología: Celular",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico.",
+    "evidencia": "Analiza la dinámica interna de los organismos y da razón de cómo funcionan sus componentes para mantener la vida.",
+    "tarea": "Explicar el mecanismo de transporte de solutos a través de la membrana celular en condiciones de gradiente químico.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Explica el movimiento de partículas a favor y en contra de gradientes osmóticos y electroquímicos."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Describe las condiciones termodinámicas y biológicas del flujo celular."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Integra conceptos de concentración molecular y gasto bioenergético celular."
+    },
+    "descriptor": "Da razón de los mecanismos de transporte transmembranal considerando gradientes de concentración y requerimientos energéticos.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Demanda contrastar la dirección del gradiente químico con la necesidad de hidrólisis de ATP."
+    },
+    "contexto": "Un cultivo de células epiteliales se expone a una solución salina donde la concentración intracelular de iones sodio (Na⁺) es de 12 mM y la extracelular es de 145 mM. Para expulsar iones sodio hacia el exterior contra este fuerte gradiente, la célula activa complejos proteicos específicos en su membrana.",
+    "enunciado": "¿Cómo se clasifica y opera este proceso de expulsión celular?",
+    "opciones": {
+      "A": "Como difusión simple, atravesando la bicapa lipídica directamente sin ayuda de proteínas ni uso de ATP.",
+      "B": "Como transporte pasivo facilitado, utilizando canales iónicos que operan sin ningún consumo de energía celular.",
+      "C": "Como transporte activo primario, acoplando el bombeo de iones con el consumo metabólico directo de ATP.",
+      "D": "Como ósmosis selectiva, regulando exclusivamente el paso de moléculas de agua hacia el espacio extracelular."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Los iones poseen carga eléctrica neta, por lo que su paso libre por el núcleo hidrofóbico de la bicapa fosfolipídica es físicamente imposible. | Como caiste: Confundiste el transporte de iones cargados con el de gases neutros apolares como el oxígeno. | Analisis de tu competencia: Tu razonamiento no consideró las propiedades de polaridad y carga de la membrana plasmática. | Plan de Accion: Recuerda siempre que las partículas con carga (iones) necesitan transportadores especializados; jamás cruzan la grasa de la membrana libremente.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Revelar vacíos sobre las propiedades hidrofóbicas de la membrana y el comportamiento de especies iónicas. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Repasar la polaridad molecular de los fosfolípidos y la impermeabilidad a los iones. | Tip Tactico para el Docente: Utilice analogías mecánicas (como imanes y aceite) para demostrar por qué un ion no puede disolverse en una bicapa lipídica apolar."
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | La difusión facilitada sí usa proteínas de membrana, pero solo funciona a favor de gradiente (de mayor a menor concentración). | Como caiste: Viste la palabra \"proteínas\" en el texto y asumiste que cualquier transportador proteico resuelve el problema sin gasto energético. | Analisis de tu competencia: Omitiste la restricción termodinámica fundamental: no se puede ir cuesta arriba en concentración sin gastar energía. | Plan de Accion: Fíjate en la dirección del movimiento; si va de menor a mayor concentración, descarta de inmediato cualquier opción pasiva.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Identificar si el estudiante asume erróneamente que la presencia de proteínas transportadoras exime a la célula del gasto energético en contra de gradiente. | Techo Taxonomico: Bloom: Comprender (comprensión incompleta). Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Profundizar en la diferencia entre transporte pasivo facilitado y bombas dependientes de nucleótidos trifosfato. | Tip Tactico para el Docente: Trabaje ejercicios de vectores de gradiente donde las flechas indiquen la necesidad de aporte exógeno de energía (ATP)."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Exacto! Cuando una célula transporta un ion en contra de su gradiente de concentración (de donde hay menos a donde hay más), la termodinámica exige realizar trabajo químico, el cual se paga con la energía del ATP mediante bombas proteicas.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la comprensión funcional de los tipos de transporte celular a partir del análisis del gradiente químico y el requerimiento energético. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "D": {
+        "estudiante": "Trampa: Híbrido | Define de forma adecuada la ósmosis como flujo hídrico, pero la pregunta indaga explícitamente sobre el bombeo de iones sodio (solutos), no sobre el solvente. | Como caiste: Reconociste un concepto biológico verídico, pero lo aplicaste a la molécula equivocada del fenómeno planteado. | Analisis de tu competencia: Tu lectura fue superficial al confundir el flujo de agua con el transporte de electrolitos. | Plan de Accion: Subraya siempre el soluto o la partícula específica por la que pregunta el enunciado.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Evidenciar confusión frecuente entre transporte de soluto y transporte de solvente (ósmosis). | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Delimitar con rigor los términos de soluto, solvente y presión osmótica. | Tip Tactico para el Docente: Pida a los estudiantes elaborar tablas comparativas de dos columnas: \"Lo que se mueve en ósmosis\" versus \"Lo que se mueve en diálisis y bombas de soluto\"."
+      }
+    }
+  },
+  {
+    "id": "NDSS-B-026",
+    "materia": "Biología",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Caracterizo ecosistemas y analizo el equilibrio dinámico entre sus poblaciones.",
+    "competencia": "Indagación",
+    "componente": "Biología: Ecosistémico",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros.",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden.",
+    "tarea": "Concluir el efecto trófico indirecto de la remoción de un carnívoro tope a partir de una red alimentaria.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Examina la red trófica para predecir cascadas tróficas sobre los productores primarios."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Deduce la relación causal multiespecífica en un sistema interconectado."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Aplica pensamiento sistémico para anticipar desequilibrios ecológicos no lineales."
+    },
+    "descriptor": "Deduce las consecuencias indirectas de la intervención sobre un eslabón trófico a partir del análisis de un diagrama de flujo biológico.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere seguir una cadena de tres niveles de causalidad biológica en cascada."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528965/B-026_ipkigj.jpg",
+    "contexto": "En un ecosistema acuático continental se identificaron las siguientes conexiones alimentarias entre cuatro comunidades biológicas:",
+    "enunciado": "Si una pesca excesiva retira a la totalidad de los individuos del pez depredador tope, ¿qué efecto indirecto inmediato experimentará la comunidad de algas verdes?",
+    "opciones": {
+      "A": "La disminución acentuada de su biomasa total debido al incremento súbito de peces forrajeros.",
+      "B": "La proliferación acelerada de su población debido a la disminución del zooplancton herbívoro.",
+      "C": "El incremento masivo de su tasa de reproducción debido a la duplicación de los nutrientes minerales.",
+      "D": "La extinción irreversible de todas sus especies debido a la toxicidad del agua estancada."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Notaste que los peces forrajeros aumentan, pero invertiste el efecto sobre el eslabón final: los peces no comen algas directamente en este modelo, comen zooplancton. | Como caiste: Tu cerebro saltó eslabones y asumió erróneamente que más peces siempre significa menos plantas acuáticas. | Analisis de tu competencia: Tu mente no recorrió paso a paso el efecto trófico alternado (par/impar) propio de las cascadas tróficas. | Plan de Accion: Traza flechas de \"sube\" (+) y \"baja\" (-) nivel por nivel en el diagrama antes de seleccionar una opción.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Evidenciar omisión de niveles tróficos intermedios al deducir interacciones biológicas. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Resolver problemas secuenciales de control trófico \"top-down\" y \"bottom-up\". | Tip Tactico para el Docente: Diseñe juegos de cartas interactivas donde remover una carta modifique con fichas de colores el tamaño de las demás en cascada."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Extraordinario razonamiento sistémico! Seguiste la cadena: al quitar al bagre depredador, los peces forrajeros aumentan; al haber más peces forrajeros, estos devoran masivamente al zooplancton; al desaparecer el zooplancton herbívoro, ¡las algas crecen sin freno al no tener quién las consuma!",
+        "pedagogico": "Clave: B | Intencion: Evaluar la capacidad de predecir efectos tróficos indirectos en cascada en redes alimentarias. | Niveles: Analizar / Análisis / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | El crecimiento algal guarda relación con nutrientes, pero inventaste una fuente química que no proviene de la interacción del diagrama presentado. | Como caiste: Introdujiste información externa sobre eutrofización para justificar una opción que sonaba creíble. | Analisis de tu competencia: No te ceñiste a la evidencia visual de la red trófica proporcionada. | Plan de Accion: Responde únicamente con las conexiones causales demostradas en el esquema suministrado.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Detectar la adición de variables no controladas ni descritas en el modelo presentado. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Guiar al estudiante a validar hipótesis exclusivamente a partir del sistema cerrado evaluado. | Tip Tactico para el Docente: Pida a los estudiantes tachar opciones que mencionen sustancias químicas o factores que no figuren en la gráfica."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Asume catastróficamente que cualquier perturbación conduce a la toxicidad del agua y la muerte de todas las algas. | Como caiste: Elegiste una opción de tinte dramático y destructivo muy común en problemáticas ambientales cotidianas. | Analisis de tu competencia: Te dejaste llevar por una percepción intuitiva pesimista sin respaldo ecológico deductivo. | Plan de Accion: Desconfía de afirmaciones que pronostiquen extinciones inmediatas y totales sin sustento gradual en los datos.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Identificar el sesgo de colapso catastrófico inmediato en razonamiento ambiental. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Analizar equilibrios dinámicos y cambios cuantitativos de abundancia versus extinciones absolutas. | Tip Tactico para el Docente: Discuta en clase casos reales donde la remoción de depredadores genera explosión biológica (blooms) en lugar de esterilidad inmediata."
+      }
+    }
+  },
+  {
+    "id": "NDSS-B-027",
+    "materia": "Biología",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Explico y comparo algunas adaptaciones de seres vivos en ecosistemas del mundo y de Colombia.",
+    "competencia": "Uso comprensivo del conocimiento científico",
+    "componente": "Biología: Organísmico",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico.",
+    "evidencia": "Establece relaciones entre fenómenos biológicos para comprender la dinámica de lo vivo.",
+    "tarea": "Asociar las adaptaciones morfológicas y fisiológicas vegetales de alta montaña con el estrés ambiental del páramo.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Asocia las características estructurales de plantas paramunas con la conservación hídrica y térmica."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Explica el valor adaptativo de rasgos biológicos frente a factores abióticos limitantes."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Deconstruye la relación entre estructura anatómica y presión selectiva ambiental."
+    },
+    "descriptor": "Reconoce el rol adaptativo de estructuras morfológicas en plantas frente a factores abióticos extremos.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere articular la vellosidad foliar con la termorregulación y la radiación ultravioleta."
+    },
+    "contexto": "Los frailejones (género Espeletia) que habitan los páramos andinos colombianos presentan hojas densamente cubiertas por una vellosidad blanca y agrupadas en rosetas apretadas alrededor de un tallo recubierto por hojas muertas retenidas.",
+    "enunciado": "¿Qué ventaja fisiológica y ecológica brindan estas características frente a las condiciones del páramo?",
+    "opciones": {
+      "A": "La facilitación de una rápida transpiración de vapor durante las horas de densa neblina matutina.",
+      "B": "El incremento de la superficie foliar expuesta para maximizar la absorción directa de calor del suelo.",
+      "C": "La captación exclusiva de minerales pesados suspendidos en el aire mediante los pelos absorbentes foliares.",
+      "D": "La protección contra la radiación ultravioleta y el aislamiento térmico frente a congelaciones nocturnas."
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | En un entorno frío y con vientos desecantes, las plantas necesitan conservar agua, por lo que acelerar la transpiración resultaría letal. | Como caiste: Pensaste que la humedad ambiental obligaba a la planta a botar agua rápidamente para no saturarse. | Analisis de tu competencia: Invertiste la función biológica: las adaptaciones paramunas buscan limitar la pérdida hídrica, no acelerarla. | Plan de Accion: Recuerda que el frío extremo y el viento secan los tejidos; las plantas siempre buscarán retener el agua.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Identificar si el estudiante confunde una adaptación xerofítica/criotolerante con una estrategia de hipertranspiración. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Repasar el concepto de estrés hídrico fisiológico en climas fríos. | Tip Tactico para el Docente: Enfatice cómo el viento gélido deshidrata las células vegetales y cómo las cutículas gruesas o pelos evitan la desecación."
+      },
+      "B": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | La disposición en roseta compacta no busca aumentar la superficie foliar extendida, sino reducir el área expuesta al viento helado. | Como caiste: Asumiste que mayor tamaño foliar siempre es beneficioso para captar calor, olvidando que también aumenta el enfriamiento. | Analisis de tu competencia: Tu análisis confundió un mecanismo de concentración protectora con una estrategia de dispersión foliar. | Plan de Accion: Asocia las rosetas compactas con mecanismos de empaquetamiento para conservar calor en el núcleo de la planta.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Detectar la creencia errónea de que una roseta busca extender área en lugar de empacar volumen para minimizar pérdidas de calor. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Relacionar la relación superficie/volumen con la conservación de calor. | Tip Tactico para el Docente: Utilice modelos tridimensionales para mostrar que las formas esféricas o compactas pierden menos calor por unidad de masa."
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Los pelos foliares brindan protección física y térmica; la absorción fundamental de agua y minerales se realiza a través de las raíces. | Como caiste: Le atribuiste a los pelos de las hojas la función exclusiva del sistema radicular vegetal. | Analisis de tu competencia: Generalizaste el término \"pelos\" asociándolo mecánicamente con los pelos radiculares absorbentes del suelo. | Plan de Accion: Distingue siempre la función de protección de la epidermis aérea de la función de nutrición de la raíz.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Evidenciar extrapolación indebida de funciones radiculares a estructuras del vástago aéreo. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Diferenciar tejidos vegetales de protección (tricomas foliares) frente a tejidos de absorción (pelos radicales). | Tip Tactico para el Docente: Proyecte micrografías de ambos tipos de pelos para contrastar su anatomía y ubicación en la planta."
+      },
+      "D": {
+        "estudiante": "Clave: D. ¡Excelente análisis biológico! La densa vellosidad actúa como un abrigo térmico y un filtro contra la intensa radiación solar de alta montaña, mientras que las hojas muertas adheridas aíslan el tallo impidiendo que los conductos de agua se congelen de noche.",
+        "pedagogico": "Clave: D | Intencion: Evaluar la comprensión del valor adaptativo morfológico de organismos de alta montaña frente a factores climáticos abióticos. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      }
+    }
+  },
+  {
+    "id": "NDSS-Q-028",
+    "materia": "Química",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Propongo y verifico diferentes métodos de separación de mezclas.",
+    "competencia": "Indagación",
+    "componente": "Química: Aspectos Analíticos de Mezclas",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros.",
+    "evidencia": "Determina si los resultados derivados de una investigación son suficientes y pertinentes para sacar conclusiones en una situación dada.",
+    "tarea": "Seleccionar el tren de separación secuencial idóneo para una mezcla compleja de sólidos con propiedades fisicoquímicas contrastantes.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Contrasta propiedades de solubilidad y puntos de ebullición para validar un protocolo experimental."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Evalúa la pertinencia de procedimientos de laboratorio basados en diferencias de propiedades de las fases."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Integra matrices de datos de propiedades de la materia para formular rutas analíticas."
+    },
+    "descriptor": "Establece la secuencia analítica de separación de mezclas con base en propiedades físicas diferenciales.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere articular solubilidad diferencial en solvente acuoso con diferencia de tamaño de partícula y puntos de ebullición."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528966/Q-028_uuxfiv.jpg",
+    "contexto": "En el laboratorio se requiere separar completamente una mezcla heterogénea formada por tres sustancias: limadura de hierro, cloruro de sodio (NaCl) y arena silícea (SiO₂). El técnico presenta la siguiente tabla con las propiedades de cada compuesto:",
+    "enunciado": "Para aislar cada uno de los tres componentes puros en su estado sólido, ¿cuál es el orden correcto del procedimiento experimental?",
+    "opciones": {
+      "A": "Disolver la mezcla completa en alcohol, filtrar por gravedad y realizar una centrifugación final.",
+      "B": "Calentar la mezcla hasta evaporar totalmente el cloruro de sodio y luego tamizar en seco.",
+      "C": "Separar el hierro con un imán, disolver el residuo en agua, filtrar la arena y evaporar el filtrado.",
+      "D": "Filtrar la mezcla sólida en seco, someter el residuo a decantación y enfriar rápidamente con hielo."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | El alcohol no disuelve selectivamente el cloruro de sodio ni el hierro, y la centrifugación no separa sólidos de densidades similares sin un solvente adecuado. | Como caiste: Elegiste términos de laboratorio sofisticados creyendo que cualquier solvente orgánico servía para separar sales inorgánicas. | Analisis de tu competencia: Desconectaste el procedimiento de las propiedades de solubilidad reportadas en la tabla técnica. | Plan de Accion: Usa siempre la información de la tabla: si la solubilidad reportada es en agua, no inventes solventes diferentes.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Revelar la elección de métodos y solventes inconexos con los datos de solubilidad de la tabla. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Cotejar siempre los reactivos propuestos con las propiedades tabuladas. | Tip Tactico para el Docente: Haga que los estudiantes subrayen en la tabla el solvente específico cuya solubilidad está cuantificada antes de elegir la técnica."
+      },
+      "B": {
+        "estudiante": "Trampa: Híbrido | El cloruro de sodio tiene un punto de fusión elevadísimo (801 °C) y no se evapora al calor común del mechero; además, el tamizado no separa granos de tamaño similar. | Como caiste: Confundiste la evaporación de un líquido con la volatilización de una sal sólida iónica. | Analisis de tu competencia: Ignoraste la magnitud de los puntos de cambio de fase indicados en el registro instrumental. | Plan de Accion: Revisa la columna de puntos de fusión; valores superiores a 500 °C implican que calentar no es la vía directa para evaporar.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Identificar si el alumno asume erróneamente que una sal sólida puede evaporarse con calentamiento simple en laboratorio escolar. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Afianzar el concepto de enlaces iónicos y su resistencia térmica (altos puntos de fusión y ebullición). | Tip Tactico para el Docente: Realice demostraciones comparativas de calentamiento de sal versus evaporación de agua para evidenciar la estabilidad térmica del enlace iónico."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Impecable diseño de procedimiento! El imán retira el hierro magnético; luego, al añadir agua, la sal se disuelve y la arena no; la filtración retiene la arena pura; y finalmente, evaporar el agua cristaliza la sal pura.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la habilidad para estructurar un algoritmo secuencial de separación física combinando magnetismo, disolución selectiva, filtración y cristalización. | Niveles: Analizar / Análisis / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | No es posible filtrar una mezcla de tres polvos secos porque el papel de filtro se tapa o deja pasar partículas diminutas sin discriminar químicamente. | Como caiste: Asumiste que la filtración separa cualquier tipo de sólido sin necesidad de agregar una fase líquida portadora. | Analisis de tu competencia: Pasaste por alto la definición operativa de filtración, la cual exige la coexistencia de una fase líquida y una fase sólida insoluble. | Plan de Accion: Recuerda que para filtrar sólidos insolubles debes tener primero una suspensión en un líquido.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Evidenciar desconocimiento de las condiciones de operación de la filtración por gravedad. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Repasar las técnicas fundamentales de separación de mezclas y sus requisitos mecánicos. | Tip Tactico para el Docente: Plantee casos prácticos de laboratorio donde el uso de mezclas secas demuestre la inviabilidad de usar papel de filtro sin fase líquida."
+      }
+    }
+  },
+  {
+    "id": "NDSS-Q-029",
+    "materia": "Química",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Realizo cálculos cuantitativos en cambios químicos.",
+    "competencia": "Uso comprensivo del conocimiento científico",
+    "componente": "Química: Aspectos Fisicoquímicos de Sustancias",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico.",
+    "evidencia": "Diferencia distintos tipos de reacciones químicas y realiza de manera adecuada cálculos estequiométricos básicos.",
+    "tarea": "Determinar la masa de producto formado a partir de relaciones estequiométricas molares y de conservación de la masa.",
+    "bloom": {
+      "nivel": "Aplicar",
+      "justificacion": "Realiza relaciones cuantitativas sencillas basadas en la ley de conservación de la masa."
+    },
+    "marzano": {
+      "nivel": "Utilización del Conocimiento",
+      "justificacion": "Aplica principios de proporción química fija para resolver un balance de materia."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Modela la transformación cuantitativa de reactivos en productos sin violar la estequiometría."
+    },
+    "descriptor": "Aplica la ley de conservación de la materia en cálculos de estequiometría mol-masa.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere calcular masas molares y aplicar proporciones estequiométricas directas."
+    },
+    "contexto": "La combustión completa del gas propano se representa mediante la siguiente ecuación química balanceada: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O Se conocen las masas molares de las especies involucradas: C₃H₈ = 44 g/mol, O₂ = 32 g/mol, CO₂ = 44 g/mol y H₂O = 18 g/mol.",
+    "enunciado": "Si reaccionan completamente 44 g de propano con suficiente oxígeno, ¿cuántos gramos de dióxido de carbono (CO₂) se producen?",
+    "opciones": {
+      "A": "132 g, porque 1 mol de propano produce exactamente 3 moles de dióxido de carbono.",
+      "B": "44 g, porque la masa de cada mol de gas debe conservarse invariable en los productos.",
+      "C": "88 g, porque se liberan 2 moles de gas carbónico por cada molécula de combustible.",
+      "D": "176 g, porque la masa total de los reactivos se concentra únicamente en el carbono."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Cálculo estequiométrico perfecto! 44 g de C₃H₈ equivalen a 1 mol. Según los coeficientes de la ecuación balanceada, 1 mol de propano produce 3 moles de CO₂. Como cada mol de CO₂ pesa 44 g, multiplicas 3 * 44 g = 132 g de CO₂.",
+        "pedagogico": "Clave: A | Intencion: Evaluar la destreza para transformar masas a moles y aplicar proporciones molares directas a partir de ecuaciones balanceadas. | Niveles: Aplicar / Utilización del Conocimiento / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "B": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Asumiste erróneamente que la masa de un reactivo debe ser igual a la masa de un solo producto de forma individual. | Como caiste: Confundiste la conservación de la masa total de la reacción con una supuesta igualdad entre una sustancia de entrada y una de salida. | Analisis de tu competencia: Aplicaste el principio de conservación de forma aislada sin considerar los demás reactivos (oxígeno) y productos (agua). | Plan de Accion: Recuerda que la masa total de reactivos (C₃H₈ + O₂) es la que iguala a los productos (CO₂ + H₂O), no reactivo a reactivo.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Identificar el error común de asumir conservación de masa reactivo-a-producto en lugar de sistema cerrado global. | Techo Taxonomico: Bloom: Comprender (comprensión errada). Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Realizar balances de masa tabulados completos (tabla de entradas y salidas en gramos). | Tip Tactico para el Docente: Haga que los alumnos sumen la masa de todos los reactivos y comprueben que iguala a la suma de todos los productos para desmontar igualdades individuales."
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | Tomaste un coeficiente equivocado para el dióxido de carbono (2 en vez de 3) o restaste números sin seguir la ecuación. | Como caiste: Hiciste un cálculo numérico rápido sin verificar el coeficiente estequiométrico exacto que acompaña al CO₂. | Analisis de tu competencia: Desarticulaste la lectura de la ecuación balanceada al calcular los moles producidos. | Plan de Accion: Encierra en un círculo el número grande (coeficiente) que antecede a la sustancia por la que te preguntan.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Revelar lectura apresurada o distorsión de los coeficientes estequiométricos de los productos. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Afianzar el significado físico de los coeficientes estequiométricos como razones molares. | Tip Tactico para el Docente: Pida a los estudiantes verbalizar la ecuación en voz alta: \"X moles de esto producen Y moles de aquello\" antes de tomar la calculadora."
+      },
+      "D": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Sumaste masas molares sin respetar las proporciones de reacción o multiplicaste por 4 en vez de por 3. | Como caiste: Tomaste el coeficiente del agua (4) y se lo aplicaste al dióxido de carbono. | Analisis de tu competencia: Tu mente cruzó los coeficientes estequiométricos de los productos en la fase final del cálculo. | Plan de Accion: Escribe claramente la relación molar debajo de cada fórmula química antes de hacer las operaciones.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Detectar confusión en la asignación de coeficientes entre diferentes productos de la reacción. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Ejercitar el seguimiento visual ordenado de fórmulas y coeficientes en reacciones redox y combustión. | Tip Tactico para el Docente: Emplee marcadores de colores distintos para cada especie química en la pizarra durante los cálculos estequiométricos."
+      }
+    }
+  },
+  {
+    "id": "NDSS-Q-030",
+    "materia": "Química",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Establezco relaciones cuantitativas entre los componentes de una solución.",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Química: Aspectos Fisicoquímicos de Mezclas",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico.",
+    "evidencia": "Reconoce los atributos que definen ciertos procesos fisicoquímicos simples (disolución, saturación, precipitación).",
+    "tarea": "Determinar el estado de saturación y la cantidad de soluto precipitado a partir del enfriamiento de una solución acuosa.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Interpreta una curva de solubilidad soluto-solvente en función de la temperatura."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Extrae valores umbral de solubilidad a partir de un plano cartesiano bivariado."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Evalúa el comportamiento de soluciones saturadas e insaturadas a partir de evidencia visual gráfica."
+    },
+    "descriptor": "Explica los estados de saturación de una solución acuosa a partir de gráficos de solubilidad versus temperatura.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere relacionar el descenso térmico con el límite de solubilidad para calcular precipitación en 100 g de agua."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528968/Q-030_tlf8ny.jpg",
+    "contexto": "En un estudio de laboratorio se determinó la curva de solubilidad del nitrato de potasio (KNO₃) en agua pura:",
+    "enunciado": "Si una solución que contiene 110 g de KNO₃ disueltos en 100 g de agua a 60 °C se enfría lentamente hasta los 20 °C, ¿qué ocurre en el recipiente?",
+    "opciones": {
+      "A": "La solución permanece completamente homogénea sin formación de sólidos en el fondo del matraz.",
+      "B": "La masa total de agua se evapora de forma espontánea debido a la cristalización exotérmica del soluto.",
+      "C": "El soluto se descompone químicamente liberando vapores tóxicos de nitrógeno gaseoso al ambiente.",
+      "D": "Se precipitan 80 g de cristales de soluto porque a 20 °C solo pueden disolverse 30 g de sal."
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Asumiste que si una sustancia ya se disolvió en caliente, nunca puede volver a separarse al enfriar. | Como caiste: Desconociste el efecto del descenso de temperatura sobre la capacidad del solvente para retener soluto. | Analisis de tu competencia: Ignoraste la curva de solubilidad, la cual muestra que a menor temperatura la solubilidad cae drásticamente. | Plan de Accion: Recuerda que al enfriar una solución saturada, el exceso de soluto que el agua ya no puede albergar se va al fondo.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Detectar la creencia ingenua de que la solubilidad alcanzada a alta temperatura permanece inalterable en frío. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Analizar la dependencia directa entre temperatura y solubilidad en sales sólidas. | Tip Tactico para el Docente: Muestre en video o laboratorio la cristalización en vivo de soluciones saturadas calientes al contacto con hielo."
+      },
+      "B": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | La precipitación o cristalización es un fenómeno físico de separación de fases; no hace desaparecer el agua líquida. | Como caiste: Exageraste un cambio de fase atribuyéndole la vaporización total instantánea del solvente. | Analisis de tu competencia: Confundiste una transición de saturación en fase líquida con un cambio violento de estado líquido-gas. | Plan de Accion: Ten presente que el enfriamiento reduce la energía cinética; no genera calor suficiente para evaporar toda el agua.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Evidenciar confusión entre el calor de cristalización y la entalpía de vaporización del agua. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Afianzar las leyes de conservación de masa en cambios de fase físicos. | Tip Tactico para el Docente: Pida a los estudiantes pesar un vaso antes y después de la precipitación para confirmar que la masa de agua sigue intacta."
+      },
+      "C": {
+        "estudiante": "Trampa: Híbrido | Modificar la temperatura de disolución no destruye la molécula de KNO₃ ni produce reacciones de descomposición química espontánea. | Como caiste: Introdujiste una explicación catastrofista asociando sales de nitrato con explosiones o gases venenosos. | Analisis de tu competencia: Confundiste un fenómeno físico reversible (solubilidad) con una descomposición química irreversible. | Plan de Accion: Distingue los cambios físicos (disolver y precipitar) de las reacciones químicas con ruptura de enlaces.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Identificar la confusión recurrente entre procesos físicos de cambio de fase y transformaciones químicas. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Delimitar las fronteras entre fenómenos físicos y reacciones químicas. | Tip Tactico para el Docente: Enfatice que si el precipitado se vuelve a calentar se redisuelve idéntico, lo cual demuestra que no hubo reacción química."
+      },
+      "D": {
+        "estudiante": "Clave: D. ¡Lectura gráfica y cálculo perfectos! En la curva observas que a 20 °C el agua solo admite 30 g de sal por cada 100 g. Como había 110 g disueltos, el agua retiene los 30 g permitidos y expulsa el exceso: 110 g - 30 g = 80 g de precipitado en el fondo.",
+        "pedagogico": "Clave: D | Intencion: Evaluar la competencia de interpolar datos en curvas bivariadas de solubilidad y cuantificar la masa de precipitado por balance de masa. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      }
+    }
+  },
+  {
+    "id": "NDSS-Q-031",
+    "materia": "Química",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Uso la tabla periódica para determinar propiedades físicas y químicas de los elementos.",
+    "competencia": "Uso comprensivo del conocimiento científico",
+    "componente": "Química: Aspectos Fisicoquímicos de Sustancias",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico.",
+    "evidencia": "Establece relaciones entre las propiedades y estructura de la materia con la formación de iones y enlaces.",
+    "tarea": "Determinar el tipo de enlace predominante y las propiedades de una sustancia a partir de la diferencia de electronegatividad.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Relaciona la diferencia de electronegatividad con la naturaleza del enlace interatómico."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Deduce propiedades macroscópicas a partir de modelos microscópicos de enlace."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Integra principios de enlace químico para justificar comportamientos térmicos y mecánicos."
+    },
+    "descriptor": "Asocia la diferencia de electronegatividad de los elementos constitutivos con el enlace químico y las propiedades térmicas macroscópicas.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere calcular la diferencia de electronegatividad y relacionarla con la formación de redes cristalinas iónicas."
+    },
+    "contexto": "El cloruro de potasio (KCl) se forma por la unión entre el potasio (K, alcalino con electronegatividad de 0.8) y el cloro (Cl, halógeno con electronegatividad de 3.0). La diferencia de electronegatividad entre ambos átomos es de 2.2 unidades en la escala de Pauling.",
+    "enunciado": "Con base en esta diferencia, ¿qué enlace presentan y qué propiedad caracteriza a este compuesto sólido?",
+    "opciones": {
+      "A": "Enlace covalente no polar, formando moléculas gaseosas que no interactúan entre sí.",
+      "B": "Enlace metálico libre, permitiendo que el compuesto sólido se deforme sin fracturarse.",
+      "C": "Enlace iónico fuerte, formando una red cristalina sólida con alto punto de fusión.",
+      "D": "Enlace por puente de hidrógeno, disolviéndose únicamente en solventes completamente apolares."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Una diferencia de 2.2 es muy grande; el enlace covalente no polar exige diferencias mínimas o nulas (menores a 0.4) entre no metales. | Como caiste: Marcaste la primera categoría de enlace sin contrastar el valor numérico con las escalas estándar de polaridad. | Analisis de tu competencia: Desconectaste el dato cuantitativo de electronegatividad del concepto de polaridad del enlace. | Plan de Accion: Recuerda: diferencias mayores a 1.7 indican transferencia electrónica, es decir, enlace iónico.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Identificar desconocimiento de la escala cuantitativa de Pauling para clasificar tipos de enlace. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Ejercitar la correlación entre intervalos de ΔEN y tipologías de enlace (covalente apolar, covalente polar, iónico). | Tip Tactico para el Docente: Diseñe una recta numérica graduada en el aula para ubicar enlaces según su diferencia de electronegatividad."
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | El enlace metálico se da entre átomos metálicos idénticos o aleaciones; no ocurre entre un metal y un no metal como el cloro. | Como caiste: Viste que el potasio era un metal y generalizaste esa característica a todo el compuesto combinado. | Analisis de tu competencia: Analizaste solo uno de los constituyentes ignorando la naturaleza no metálica fuertemente electronegativa del halógeno. | Plan de Accion: Identifica siempre los dos participantes: metal + no metal con gran diferencia de electronegatividad = enlace iónico.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Detectar razonamientos sesgados que clasifican el enlace basados únicamente en el elemento metálico electropositivo. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Enfatizar que el enlace depende de la interacción mutua entre pares de átomos, no de un solo elemento aislado. | Tip Tactico para el Docente: Guíe a los alumnos a etiquetar siempre ambos polos: \"donante de electrones\" y \"aceptor de electrones\"."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Brillante comprensión de la estructura química! Una diferencia de 2.2 unidades (mayor a 1.7) garantiza la transferencia de electrones y la formación de iones (K⁺ y Cl⁻), organizados en una red cristalina que requiere enorme energía térmica para fundirse.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la capacidad de predecir la naturaleza del enlace interatómico a partir de la electronegatividad y asociarlo con propiedades de red cristalina. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "D": {
+        "estudiante": "Trampa: Híbrido | Los puentes de hidrógeno son fuerzas intermoleculares entre moléculas que contienen hidrógeno unido a F, O o N; el KCl no tiene hidrógeno. | Como caiste: Asociaste una fuerza secundaria conocida con un compuesto inorgánico binario sin verificar su fórmula química. | Analisis de tu competencia: Seleccionaste un tipo de enlace por familiaridad léxica sin revisar los elementos presentes en la sal. | Plan de Accion: Comprueba que los elementos de la opción realmente existan en la fórmula del compuesto evaluado.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Evidenciar confusión entre enlaces intramoleculares primarios y fuerzas intermoleculares secundarias. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Distinguir con claridad los tres enlaces fuertes (iónico, covalente, metálico) frente a las interacciones dipolares débiles. | Tip Tactico para el Docente: Utilice diagramas de energía de enlace para que el alumnado aprecie la diferencia de escala entre enlaces primarios e interacciones secundarias."
+      }
+    }
+  },
+  {
+    "id": "NDSS-F-032",
+    "materia": "Física",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Establezco relaciones entre energía interna, temperatura, volumen, presión y cantidad de materia en gases ideales.",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Física: Termodinámica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico.",
+    "evidencia": "Elabora explicaciones al relacionar variables de estado que describen un sistema termodinámico.",
+    "tarea": "Identificar el trabajo realizado por un gas ideal a partir de un ciclo cerrado en un diagrama Presión-Volumen.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Interpreta el área encerrada en un ciclo termodinámico como trabajo neto transferido."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Extrae relaciones funcionales entre variables de estado a partir de un gráfico P-V."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Integra representaciones gráficas termodinámicas con la primera ley de la conservación de la energía."
+    },
+    "descriptor": "Da razón de los intercambios de trabajo y calor en un sistema gaseoso a partir de trayectorias en diagramas P-V.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere asociar el sentido horario de la trayectoria con la producción neta positiva de trabajo."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528966/F-032_gc6ir5.jpg",
+    "contexto": "Un cilindro cerrado con un émbolo móvil contiene un gas ideal que experimenta un ciclo termodinámico representado en el siguiente diagrama de Presión contra Volumen:",
+    "enunciado": "Al completar una vuelta entera del ciclo en el sentido de las flechas (sentido horario), ¿qué balance experimenta el gas?",
+    "opciones": {
+      "A": "Realiza un trabajo neto nulo porque el émbolo regresa exactamente a su posición inicial.",
+      "B": "Realiza un trabajo neto positivo sobre el entorno equivalente al área encerrada por el ciclo.",
+      "C": "Cede una cantidad infinita de calor hacia el exterior sin modificar su energía interna.",
+      "D": "Absorbe trabajo mecánico neto del exterior porque la presión final es menor que la inicial."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Confundiste el cambio en una función de estado como la energía interna (que sí es cero al volver al inicio) con el trabajo mecánico. | Como caiste: Pensaste que como el sistema regresa al mismo punto P y V, todo lo ocurrido en el camino se anula a cero. | Analisis de tu competencia: Asimilaste el trabajo (función de trayectoria) como si fuera una variable de estado intrínseca. | Plan de Accion: Recuerda que el trabajo depende del camino recorrido; el área encerrada por la curva nunca es cero.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Identificar si el estudiante confunde una función de trayectoria (trabajo) con una función de estado (energía interna). | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Diferenciar sistemáticamente magnitudes de estado (U, P, V, T) frente a intercambios de energía en tránsito (Q, W). | Tip Tactico para el Docente: Haga analogías con rutas de senderismo: volver a la misma altitud inicial no significa que no se gastó energía caminando."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Excelente dominio termodinámico! En un diagrama P-V, el trabajo es la integral bajo la curva. Al recorrerse en sentido horario, la expansión ocurre a presiones más altas que la compresión, por lo que el trabajo neto es positivo y equivale exactamente al área del ciclo.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la comprensión del trabajo geométrico en diagramas termodinámicos y su signo según el sentido de circulación. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Ningún sistema termodinámico cerrado puede intercambiar magnitudes infinitas de calor o energía según las leyes de la física. | Como caiste: Seleccionaste una opción con terminología exagerada creyendo que un ciclo continuo produce energía sin límite. | Analisis de tu competencia: No aplicaste el principio de conservación de la energía (primera ley de la termodinámica). | Plan de Accion: Descarta inmediatamente opciones que hablen de cantidades \"infinitas\" o \"nulas sin justificación\" en balances termodinámicos.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Detectar la aceptación acrítica de postulados físicamente imposibles (energía infinita). | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Reforzar los postulados de la primera y segunda ley de la termodinámica. | Tip Tactico para el Docente: Enfatice que la primera ley prohíbe las máquinas de movimiento perpetuo o intercambios infinitos."
+      },
+      "D": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | La trayectoria en sentido horario produce trabajo hacia afuera (máquina térmica); para absorber trabajo neto debería girar en sentido antihorario. | Como caiste: Invertiste la convención de signos del trabajo termodinámico en ciclos cerrados. | Analisis de tu competencia: Tu razonamiento no distinguió entre el ciclo de una máquina térmica y el de un refrigerador. | Plan de Accion: Asocia siempre el sentido de las manecillas del reloj (horario) con trabajo positivo entregado al exterior.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Evidenciar inversión en la convención física del signo del trabajo en ciclos cerrados. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Contrastar el ciclo de potencia (horario, W > 0) frente al ciclo de refrigeración (antihorario, W < 0). | Tip Tactico para el Docente: Haga que los estudiantes coloreen con dos colores: el área grande de la expansión y el área menor de la compresión, demostrando que la resta neta es positiva."
+      }
+    }
+  },
+  {
+    "id": "NDSS-F-033",
+    "materia": "Física",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Verifico relaciones entre distancia recorrida, velocidad y fuerza involucrada en diversos tipos de movimiento.",
+    "competencia": "Uso comprensivo del conocimiento científico",
+    "componente": "Física: Mecánica Clásica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico.",
+    "evidencia": "Relaciona los distintos factores que determinan la dinámica de un sistema mecánico.",
+    "tarea": "Identificar la aceleración y fuerza neta de un cuerpo cuando se mueve a velocidad constante en un medio con fricción.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Aplica la primera ley de Newton a un objeto con movimiento rectilíneo uniforme."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Integra las condiciones de equilibrio dinámico para deducir la fuerza resultante."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Desvincula la intuición aristotélica (fuerza implica velocidad) del modelo newtoniano formal."
+    },
+    "descriptor": "Reconoce las condiciones de equilibrio de fuerzas en cuerpos que experimentan movimiento rectilíneo uniforme.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Supera el sesgo cognitivo común de creer que velocidad constante requiere fuerza neta no nula."
+    },
+    "contexto": "Un automóvil se desplaza sobre una carretera recta y horizontal manteniendo una velocidad constante de 80 km/h. Se sabe que el motor ejerce una fuerza de tracción constante hacia adelante mientras el aire y el asfalto generan fuerzas de fricción sobre el vehículo.",
+    "enunciado": "De acuerdo con las leyes de la dinámica de Newton, ¿cuál es el estado de las fuerzas netas y de la aceleración del automóvil?",
+    "opciones": {
+      "A": "La fuerza neta total es igual a cero y su aceleración es nula.",
+      "B": "La fuerza neta apunta hacia adelante para garantizar que la rapidez se mantenga constante.",
+      "C": "La fuerza neta apunta hacia atrás debido a que la fricción frena progresivamente el motor.",
+      "D": "La aceleración del vehículo aumenta de manera uniforme para equilibrar el peso del carro."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Extraordinario rigor newtoniano! La primera ley de Newton enseña que si un cuerpo se desplaza a velocidad constante en línea recta, se encuentra en equilibrio dinámico. La fuerza del motor anula exactamente la fricción, haciendo que la fuerza neta sea cero y la aceleración nula.",
+        "pedagogico": "Clave: A | Intencion: Evaluar la asimilación conceptual de la primera ley de Newton (equilibrio dinámico) en situaciones cotidianas con fricción. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "B": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Caíste en la trampa aristotélica: pensar que para que algo se mueva hacia adelante siempre debe existir una fuerza neta positiva empujándolo. | Como caiste: Confundiste la existencia de una velocidad hacia adelante con la necesidad de una fuerza desbalanceada en la misma dirección. | Analisis de tu competencia: Tu intuición cotidiana bloqueó la aplicación formal de la primera ley de Newton. | Plan de Accion: Recuerda siempre: velocidad constante significa aceleración cero, y aceleración cero significa fuerza neta igual a cero.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Identificar el sesgo común de asociar fuerza neta constante con movimiento a velocidad constante. | Techo Taxonomico: Bloom: Recordar (intuición aristotélica previa al aprendizaje formal). Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Contrastar sistemáticamente la visión aristotélica frente a la mecánica newtoniana. | Tip Tactico para el Docente: Utilice simuladores virtuales de física donde al retirar la fricción un objeto siga moviéndose eternamente con fuerza aplicada igual a cero."
+      },
+      "C": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Si la fuerza neta apuntara hacia atrás, el automóvil frenaría y su velocidad disminuiría, lo cual contradice el dato de que va a 80 km/h constantes. | Como caiste: Pensaste que la presencia de fricción obligaba a que la resultante final fuera en contra del movimiento. | Analisis de tu competencia: No equilibraste la fuerza de avance del motor con las fuerzas opositoras en el diagrama de cuerpo libre. | Plan de Accion: Si la velocidad no cambia, las fuerzas opuestas tienen exactamente el mismo valor numérico y se anulan.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Detectar omisión de la fuerza de tracción al evaluar el balance dinámico del vehículo. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Dibujar diagramas de cuerpo libre con pares de vectores opuestos de igual magnitud. | Tip Tactico para el Docente: Haga que los estudiantes dibujen flechas de igual longitud para tracción y fricción, comprobando que su suma vectorial es cero."
+      },
+      "D": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | La aceleración no tiene que aumentar para equilibrar el peso; el peso vertical se compensa con la fuerza normal de la carretera. | Como caiste: Mezclaste el eje vertical (peso) con el eje horizontal de avance y aceleración. | Analisis de tu competencia: Desarticulaste los ejes de coordenadas del análisis dinámico cartesiano. | Plan de Accion: Separa siempre el eje vertical (arriba/abajo) del eje horizontal (avance/freno); no los mezcles en una misma fuerza.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Evidenciar traslape entre componentes ortogonales de fuerza (eje X versus eje Y). | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Fortalecer la descomposición cartesiana de fuerzas en planos independientes. | Tip Tactico para el Docente: Enfatice que las fuerzas verticales solo afectan el movimiento vertical y las horizontales el movimiento horizontal."
+      }
+    }
+  },
+  {
+    "id": "NDSS-F-034",
+    "materia": "Física",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Identifico y establezco las aplicaciones de los circuitos eléctricos en la vida cotidiana.",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Física: Eventos Electromagnéticos",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico.",
+    "evidencia": "Elabora explicaciones al relacionar las variables de estado que describen un circuito eléctrico.",
+    "tarea": "Explicar el comportamiento del brillo de bombillos idénticos en un circuito en paralelo ante la apertura de un ramal.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Explica el reparto de voltaje y corriente en ramas independientes de un circuito en paralelo."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Integra las leyes de Kirchhoff para describir el funcionamiento de cargas eléctricas independientes."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Modela el comportamiento de sistemas circuitales a partir del análisis de esquemas esquemáticos."
+    },
+    "descriptor": "Describe el comportamiento de magnitudes eléctricas en ramas en paralelo sometidas a diferencias de potencial constantes.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere diferenciar la independencia de voltaje en paralelo frente a la dependencia en circuitos en serie."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528965/F-034_kqtezn.jpg",
+    "contexto": "Un estudiante conecta dos bombillos idénticos (B1 y B2) a una batería ideal de 12 V mediante una conexión en paralelo:",
+    "enunciado": "Si el interruptor de la rama B1 se abre interrumpiendo el paso de corriente por este bombillo, ¿qué ocurre con el bombillo B2?",
+    "opciones": {
+      "A": "Se apaga de forma inmediata porque la corriente total del circuito se corta por completo.",
+      "B": "Disminuye visiblemente su brillo porque el voltaje de la batería se reduce a la mitad.",
+      "C": "Incrementa su brillo al doble porque absorbe toda la corriente que antes iba hacia B1.",
+      "D": "Permanece encendido con el mismo brillo porque su voltaje y su corriente se mantienen inalterados."
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Confundiste una conexión en paralelo con una en serie; en serie al abrir un foco se apagan todos, pero en paralelo las ramas son independientes. | Como caiste: Asumiste que un circuito eléctrico es una sola cadena cerrada y que al cortar un punto se interrumpe todo el sistema. | Analisis de tu competencia: No reconociste la topología de nodos independientes propia de los circuitos en paralelo. | Plan de Accion: Recuerda que en tu casa las luces están en paralelo: apagar la bombilla del baño no apaga la de la cocina.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Identificar la confusión entre propiedades topológicas de ramas en paralelo versus bucles en serie. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Contrastar diagramas de circuitos domiciliarios frente a series simples de luces navideñas antiguas. | Tip Tactico para el Docente: Utilice una maqueta física o simulador en línea para que los alumnos desconecten una lámpara y vean que la otra no parpadea."
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | El voltaje de una fuente ideal depende de la batería (12 V), no de cuántos bombillos estén conectados en ramas paralelas. | Como caiste: Creíste que el voltaje se divide entre los dispositivos en paralelo como ocurre con la corriente en los nodos. | Analisis de tu competencia: Confundiste la regla de división de voltaje (circuitos en serie) con la invariancia de voltaje en paralelo. | Plan de Accion: Grábate esta regla de oro: en paralelo, todos los ramales reciben exactamente el mismo voltaje completo de la fuente.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Detectar la transposición errónea del divisor de tensión propio de circuitos en serie a ramas en paralelo. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Ejercitar la ley de voltajes de Kirchhoff en mallas en paralelo. | Tip Tactico para el Docente: Haga que los estudiantes midan con voltímetro virtual los terminales de cada bombillo antes y después de abrir el interruptor."
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | La batería suministra corriente según la demanda; si desconectas un bombillo, la batería simplemente entrega menos corriente total, no sobrecarga al otro. | Como caiste: Asumiste que la fuente empuja una corriente fija obligatoria y que toda la energía se desvía al bombillo sobreviviente. | Analisis de tu competencia: Desconociste la ley de Ohm (I = V/R), donde la corriente por B2 solo depende de sus propios 12 V y su resistencia. | Plan de Accion: Calcula la corriente de cada rama de forma aislada: si su voltaje y su resistencia no cambiaron, su corriente tampoco.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Evidenciar el concepto erróneo de que una fuente de voltaje ideal actúa como fuente de corriente constante forzada. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Distinguir el comportamiento de generadores de tensión constante frente a receptores pasivos. | Tip Tactico para el Docente: Enfatice que la corriente sale de la batería \"a pedido\" de las resistencias conectadas, no por expulsión forzada fija."
+      },
+      "D": {
+        "estudiante": "Clave: D. ¡Perfecto razonamiento sobre circuitos! En una configuración en paralelo, cada rama está conectada de forma directa a los terminales de la fuente. Al abrir B1, el ramal B2 sigue conectado a los mismos 12 V; por la ley de Ohm y la ley de Joule (P = V²/R), su brillo permanece idéntico.",
+        "pedagogico": "Clave: D | Intencion: Evaluar la comprensión funcional de la independencia operativa de receptores en circuitos en paralelo. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      }
+    }
+  },
+  {
+    "id": "NDSS-F-035",
+    "materia": "Física",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Identifico aplicaciones de los diferentes modelos de la luz.",
+    "competencia": "Uso comprensivo del conocimiento científico",
+    "componente": "Física: Eventos Ondulatorios",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico.",
+    "evidencia": "Identifica las características fundamentales de las ondas, así como las variables que intervienen en su propagación.",
+    "tarea": "Determinar el comportamiento de la frecuencia, longitud de onda y velocidad de la luz al refractarse en un medio más denso.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Explica las invariantes y variables de una onda electromagnética al cambiar de medio de propagación."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Deduce la variación de parámetros ondulatorios a partir del índice de refracción."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Discrimina propiedades de la fuente frente a propiedades del medio material en ondas."
+    },
+    "descriptor": "Reconoce la invariancia de la frecuencia y la variación de la velocidad y longitud de onda durante la refracción óptica.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Supera el error recurrente de pensar que la frecuencia cambia cuando la luz se ralentiza."
+    },
+    "contexto": "Un haz de luz láser monocromático se propaga inicialmente por el aire e incide sobre un bloque transparente de vidrio con un índice de refracción mayor que el del aire. Se sabe que al ingresar al vidrio, la velocidad de propagación de la luz disminuye debido a la interacción con la estructura molecular del medio.",
+    "enunciado": "¿Qué ocurre con la frecuencia y la longitud de onda de este haz de luz al penetrar en el vidrio?",
+    "opciones": {
+      "A": "La frecuencia disminuye proporcionalmente a la velocidad mientras que su longitud de onda se mantiene invariable.",
+      "B": "La frecuencia se duplica para compensar el frenado óptico mientras que su longitud de onda permanece constante.",
+      "C": "La frecuencia permanece estrictamente constante mientras que su longitud de onda disminuye en la misma proporción.",
+      "D": "La frecuencia y la longitud de onda aumentan simultáneamente debido a la mayor densidad óptica del material."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | La frecuencia de una onda está determinada únicamente por la fuente emisora (el láser); no cambia jamás al pasar de un medio a otro. | Como caiste: Asumiste erróneamente que si la onda va más despacio, sus oscilaciones por segundo también deben bajar. | Analisis de tu competencia: Confundiste la velocidad de desplazamiento espacial (v) con el ritmo de vibración temporal intrínseco (f). | Plan de Accion: Recuerda la regla fundamental de ondas: la frecuencia es la huella digital de la fuente; ¡el medio solo cambia la velocidad y la longitud de onda!",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Detectar la creencia errónea de que la frecuencia depende del medio material de propagación. | Techo Taxonomico: Bloom: Comprender. Marzano: Comprensión. TAED: Nivel 1. | Sugerencia de Mejora: Enfatizar que la frecuencia es una propiedad temporal fijada por el oscilador inicial. | Tip Tactico para el Docente: Utilice una analogía de personas marchando en fila: si la fila entra al lodo caminan con pasos más cortos (longitud de onda), pero los tambores marcan el mismo ritmo (frecuencia)."
+      },
+      "B": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | La física ondulatoria no \"duplica\" frecuencias para compensar pérdidas de velocidad; eso violaría la conservación de la energía del fotón (E = h*f). | Como caiste: Planteaste una compensación matemática artificial sin sustento en los principios de refracción. | Analisis de tu competencia: Creaste una regla ad hoc ignorando que la energía de la radiación monocromática no cambia en la interfase. | Plan de Accion: La frecuencia no compensa nada; permanece fija porque los frentes de onda que entran deben salir al mismo ritmo continuo.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Identificar mecanismos compensatorios espurios que violan la relación cuántica de Planck-Einstein. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Articular la invariancia de la frecuencia con la conservación energética del fotón. | Tip Tactico para el Docente: Enfatice que el color percibido de la luz depende de su frecuencia y este no muta de color al entrar en un vaso de agua."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Extraordinario dominio de la óptica física! La frecuencia (f) es una constante fijada por el emisor láser. Como v = λ * f, si la velocidad de la luz se reduce al entrar al medio más denso, la longitud de onda (λ) está obligada matemáticamente a acortarse en la misma proporción exacta.",
+        "pedagogico": "Clave: C | Intencion: Evaluar la aplicación de la ecuación de propagación ondulatoria (v = λ*f) discriminando propiedades de la fuente de las del medio. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | La densidad óptica de un medio frena la luz, por lo que tanto la velocidad como la longitud de onda decrecen; ninguna de ellas aumenta. | Como caiste: Asociaste \"mayor índice de refracción\" con un incremento general de todas las variables numéricas de la onda. | Analisis de tu competencia: Tu análisis se guio por una analogía superficial de crecimiento sin aplicar la ecuación fundamental de ondas. | Plan de Accion: A mayor índice de refracción (n), menor velocidad y menor longitud de onda.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Evidenciar el sesgo de proporcionalidad directa indiscriminada entre magnitudes físicas. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Trabajar la relación inversamente proporcional entre el índice de refracción n y los parámetros v y λ. | Tip Tactico para el Docente: Haga que los alumnos despejen explícitamente λ = v/f para notar que al bajar el numerador v, el resultado λ forzosamente desciende."
+      }
+    }
+  },
+  {
+    "id": "NDSS-CTS-036",
+    "materia": "Ciencia tecnología y sociedad",
+    "unidad": "Banco de Reactivos de Ciencias Naturales - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo el potencial de los recursos naturales de mi entorno para la obtención de energía e indico el uso que se puede dar.",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Ciencia, Tecnología y Sociedad: Ciencia, Tecnología y Contexto Sociocultural",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades.",
+    "evidencia": "Explica cómo la explotación de un recurso o el uso de una tecnología tiene efectos positivos o negativos en las personas y en el entorno.",
+    "tarea": "Evaluar el balance de impacto ambiental y viabilidad territorial de una fuente de energía solar fotovoltaica a gran escala.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Explica las limitaciones ecológicas y de disponibilidad espacial en la implementación de granjas solares."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Integra criterios técnicos y ecosistémicos para juzgar proyectos de infraestructura energética."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Contrasta beneficios energéticos frente a impactos en el cambio de uso del suelo y biodiversidad."
+    },
+    "descriptor": "Analiza las implicaciones socioambientales derivadas del emplazamiento de parques de generación renovable a partir de matrices de impacto.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Supera la visión simplista de que toda tecnología renovable está totalmente exenta de impactos territoriales."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792528966/CTS-036_gyzhs2.jpg",
+    "contexto": "Una corporación ambiental colombiana evalúa instalar una megaplanta de paneles solares fotovoltaicos para abastecer una región del país. Los analistas presentan la siguiente infografía de evaluación de impacto socioecológico:",
+    "enunciado": "A partir de la información de la matriz, ¿cuál es el principal desafío socioecológico local derivado de la instalación de este proyecto energético?",
+    "opciones": {
+      "A": "La pérdida de biodiversidad y degradación del suelo provocada por la remoción masiva de la cobertura vegetal nativa.",
+      "B": "La emisión continua de gases de efecto invernadero generada por el funcionamiento diario de las celdas solares.",
+      "C": "El agotamiento total e inmediato de las cuencas fluviales regionales debido a la combustión interna del silicio.",
+      "D": "La destrucción de la capa de ozono atmosférica por la radiación reflejada por la superficie de vidrio templado."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Extraordinario juicio socioambiental! Aunque la energía solar no emite CO₂ durante su operación, la matriz técnica advierte que ocupar 250 hectáreas de bosque seco tropical exige descapote del suelo y fragmentación del hábitat, impactando gravemente a la fauna nativa.",
+        "pedagogico": "Clave: A | Intencion: Evaluar la competencia de pensamiento crítico para reconocer los costos ecológicos territoriales de infraestructuras energéticas limpias. | Niveles: Comprender / Comprensión / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "B": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | La infografía indica expresamente \"Cero emisiones de CO₂ durante la operación\"; las celdas fotovoltaicas no operan por combustión de gases. | Como caiste: Asumiste que toda infraestructura energética de gran tamaño produce humo o chimeneas contaminantes. | Analisis de tu competencia: No contrastaste la opción con el dato cuantitativo de emisiones cero reportado en la pieza gráfica. | Plan de Accion: Revisa siempre los rótulos explícitos del diagrama: si dice \"Cero CO₂\", descarta cualquier opción que afirme lo contrario.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Identificar lectura deficiente de tablas de emisiones operativas en tecnologías de generación limpia. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Fortalecer la lectura denotativa de indicadores en balances ambientales de ciclo de vida. | Tip Tactico para el Docente: Pida al grupo categorizar los impactos en \"fase de construcción\" versus \"fase de operación\" para evitar anacronismos."
+      },
+      "C": {
+        "estudiante": "Trampa: Híbrido | Los paneles solares no realizan \"combustión de silicio\" ni secan ríos enteros; el silicio es un semiconductor inerte en placas sólidas. | Como caiste: Creíste una afirmación con lenguaje pseudocientífico que mezclaba el elemento silicio con procesos térmicos inexistentes. | Analisis de tu competencia: Aceptaste un mecanismo químico imposible en tecnologías de conversión fotovoltaica. | Plan de Accion: Desconfía de opciones que inventen procesos mecánicos o químicos ajenos a la tecnología descrita.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Detectar la vulnerabilidad ante opciones distractoras construidas con tecnicismos ficticios. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Afianzar el principio de funcionamiento físico del efecto fotoeléctrico en semiconductores. | Tip Tactico para el Docente: Enfatice que las celdas solares son dispositivos de estado sólido sin partes móviles ni combustión."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | El vidrio templado refleja parte de la luz visible, pero no interactúa con los clorofluorocarbonos ni destruye el ozono estratosférico. | Como caiste: Conectaste de forma vaga el concepto de \"radiación solar\" con el problema clásico del agujero de la capa de ozono. | Analisis de tu competencia: Mezclaste dos fenómenos ambientales completamente inconexos (albedo local versus química de la estratósfera). | Plan de Accion: No conectes problemas ambientales populares a menos que exista una relación química directa demostrada.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Evidenciar traslape indiscriminado entre radiación óptica reflejada y destrucción catalítica del ozono. | Techo Taxonomico: Bloom: Recordar. Marzano: Recuperación. TAED: Nivel 1. | Sugerencia de Mejora: Delimitar las causas fisicoquímicas del deterioro de la capa de ozono (radicales libres de cloro/bromo). | Tip Tactico para el Docente: Repase los factores causales reales de los problemas atmosféricos globales para evitar falsas asociaciones."
+      }
+    }
+  }
+]

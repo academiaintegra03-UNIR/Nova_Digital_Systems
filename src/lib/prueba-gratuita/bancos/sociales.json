@@ -1,0 +1,624 @@
+[
+  {
+    "id": "NDSS-S-037",
+    "materia": "Sociales",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Reconozco y analizo la interacción permanente entre el espacio geográfico y el ser humano y evalúo críticamente los avances y limitaciones de esta relación.",
+    "competencia": "Pensamiento social",
+    "componente": "El Espacio, el Territorio, el Ambiente y la Población",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales.",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico.",
+    "tarea": "Identificar la relación entre la degradación de un recurso natural del entorno y las actividades productivas de una comunidad.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Requiere descomponer la información gráfica de un mapa temático para establecer la correspondencia entre la actividad ganadera y la pérdida de cobertura vegetal ribereña."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "El estudiante examina similitudes y diferencias espaciales y asocia patrones de causa y efecto entre ocupación del suelo y deterioro ecológico."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Deconstruye un esquema visual de datos espaciales, sintetizando variables territoriales y antrópicas sin sesgos interpretativos."
+    },
+    "descriptor": "Reconoce cómo las acciones humanas transforman los elementos naturales de una cuenca hidrográfica a partir de fuentes cartográficas.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Demanda contrastar dos variables espaciales en un mapa esquemático sencillo y deducir una correlación directa sin requerir conocimientos técnicos previos."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792669461/S-037_vctmsk.jpg",
+    "contexto": "",
+    "enunciado": "Al observar el mapa de la cuenca del Río Verde, ¿cuál es el factor que explica el desmoronamiento de la orilla en el Sector B?",
+    "opciones": {
+      "A": "La variación de la temperatura ambiente entre el norte y el sur del río.",
+      "B": "La eliminación de árboles ribereños para destinar el suelo al pastoreo.",
+      "C": "El paso regular de botes de transporte local sobre el centro del cauce.",
+      "D": "La presencia prolongada de lluvias intensas únicamente sobre esa orilla."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Tu mente buscó una explicación de tipo ambiental amplio, pero la temperatura no desgasta mecánicamente la tierra de un borde fluvial. | Como caiste: Pensaste que cualquier fenómeno climático servía para justificar el desgaste del suelo, confundiendo el clima regional con la erosión directa del terreno. | Analisis de tu competencia: Tu proceso mental se detuvo en una idea ambiental genérica y no analizó la relación mecánica directa que mostraba la imagen. | Plan de Accion: Enfócate en la acción física que muestra el dibujo: observa qué elementos sostienen o sueltan la tierra en cada margen.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Confusión entre fenómenos macroclimáticos y procesos erosivos antrópicos puntuales. | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Fortalecer la lectura de relaciones espaciales directas causa-efecto. | Tip Tactico para el Docente: Trabajar con salidas de campo o fotografías de satélite donde los estudiantes clasifiquen qué factores físicos sostienen las riberas."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Excelente deducción! Identificaste con claridad que talar los árboles de la orilla para meter ganado retira las raíces que amarran la tierra, provocando que el suelo caiga al río cuando los animales caminan y pastan.",
+        "pedagogico": "Clave: B | Intencion: Evaluar si el estudiante establece relaciones directas entre el uso socioeconómico del suelo y la alteración física de las cuencas. | Niveles: Analizar / Análisis / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | Suena a un problema real de los ríos, pero la imagen no registra botes ni oleaje artificial. | Como caiste: Trajiste a la prueba un dato de la vida cotidiana sobre transporte en ríos que no aparece en el gráfico. | Analisis de tu competencia: Te fiaste de recuerdos externos en lugar de leer las pruebas directas que te aportaba el mapa. | Plan de Accion: Limítate estrictamente a las evidencias visibles en el dibujo antes de marcar tu opción.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Incorporación de factores externos plausibles pero no sustentados en el estímulo. | Techo Taxonomico: Bloom: Recordar / Marzano: Recuperación / TAED: Nivel 1. | Sugerencia de Mejora: Enfatizar la delimitación de respuestas a partir de evidencias dadas. | Tip Tactico para el Docente: Realizar talleres de \"lectura de evidencias cerradas\" donde esté prohibido asumir datos que el gráfico no suministre."
+      },
+      "D": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | La lluvia moja todo el entorno, no escoge caprichosamente caer solo sobre una franja de pasto de pocos metros. | Como caiste: Asumiste que el clima actúa de forma aislada en espacios mínimos para explicar una diferencia visible. | Analisis de tu competencia: Tu razonamiento ignoró la escala espacial: las lluvias cubren regiones enteras y no explican por qué solo se cae un lado del río. | Plan de Accion: Revisa si la causa propuesta es lógica para el tamaño del área que estás observando.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Atribución errónea de fenómenos zonales a microespacios no diferenciables climáticamente. | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Trabajar nociones de escala geográfica y cobertura de fenómenos atmosféricos. | Tip Tactico para el Docente: Comparar mapas climáticos departamentales frente a mapas prediales para entender escalas de impacto."
+      }
+    }
+  },
+  {
+    "id": "NDSS-S-038",
+    "materia": "Sociales",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Reconozco que las organizaciones sociales y políticas se transforman para atender demandas de diferentes grupos y sectores comunitarios.",
+    "competencia": "Interpretación y análisis de perspectivas",
+    "componente": "El Poder, la Economía y las Organizaciones Sociales",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales.",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales.",
+    "tarea": "Contrastar los intereses económicos de comerciantes con las demandas de descanso de residentes en una decisión municipal.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Discrimina las motivaciones e intereses opuestos presentes en dos posturas ciudadanas frente al uso comercial del espacio urbano nocturno."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Identifica las contradicciones básicas entre el derecho al trabajo y el derecho a la tranquilidad ciudadana dentro de un conflicto local."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Evalúa dos fuentes testimoniales breves para detectar la prioridad económica de un grupo frente a la prioridad de bienestar del otro."
+    },
+    "descriptor": "Diferencia los intereses que defienden dos grupos sociales al momento de regular los horarios del comercio nocturno en una zona residencial.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere confrontar dos puntos de vista expresados de forma directa y reconocer el origen de su discrepancia comunitaria."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792669461/S-038_g6txsh.jpg",
+    "contexto": "",
+    "enunciado": "Al comparar los testimonios de ambos ciudadanos, ¿en qué punto radica el desacuerdo principal entre ellos?",
+    "opciones": {
+      "A": "En el tipo de música que reproducen los establecimientos nocturnos.",
+      "B": "En el costo de los alimentos que se ofrecen en los restaurantes.",
+      "C": "En el número de policías asignados a la vigilancia de ese sector.",
+      "D": "En el balance entre los ingresos de los negocios y el descanso vecinal."
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Información Parcial | Aunque la vecina menciona la música, su queja no es el género musical sino el ruido y la hora tardía. | Como caiste: Tu vista captó la palabra \"música\" y concluiste apresuradamente que discutían sobre gustos musicales. | Analisis de tu competencia: Tu cerebro operó en un nivel de reconocimiento literal de palabras sueltas, perdiendo de vista el conflicto central de fondo. | Plan de Accion: No te quedes con la primera palabra llamativa; pregúntate qué problema de fondo produce esa situación.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Distracción por elementos secundarios mencionados tangencialmente en el estímulo. | Techo Taxonomico: Bloom: Recordar / Marzano: Recuperación / TAED: Nivel 1. | Sugerencia de Mejora: Trabajar la jerarquización de ideas principales versus detalles anecdóticos. | Tip Tactico para el Docente: Solicitar a los estudiantes que redacten en una sola oración el interés de cada actor antes de revisar alternativas."
+      },
+      "B": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | El precio de la comida no forma parte del debate ni afecta el descanso nocturno de los residentes. | Como caiste: Relacionaste restaurantes con precios de menú, agregando una discusión comercial que nadie mencionó. | Analisis de tu competencia: Hiciste una inferencia desconectada de la intención comunicativa de los dos testimonios. | Plan de Accion: Valida que el motivo que elijas sea el centro de la queja de los personajes.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Asociación libre con el contexto comercial pero sin pertinencia en el problema. | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Delimitar el campo de argumentación de los problemas socioeconómicos. | Tip Tactico para el Docente: Ejercitar la identificación del objeto central de disputa en casos de convivencia barrial."
+      },
+      "C": {
+        "estudiante": "Trampa: Atractor Moral/Emocional | La seguridad policial es un tema común en los barrios, pero ninguno de los dos vecinos reclama presencia de uniformados. | Como caiste: Elegiste una opción que suena a solución típica comunitaria pero que no responde al problema planteado. | Analisis de tu competencia: Te inclinaste por un tema de seguridad ciudadana convencional en vez de ceñirte a las opiniones expuestas. | Plan de Accion: Verifica si la opción responde directamente al choque de opiniones presentado en la fuente.",
+        "pedagogico": "Tipologia: Atractor Moral/Emocional | Intencion del error: Inclinación hacia respuestas que invocan institucionalidad o seguridad por costumbre discursiva. | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Evitar recurrir a soluciones prefabricadas no sustentadas en los testimonios. | Tip Tactico para el Docente: Trabajar dilemas donde las dos partes tengan argumentos válidos sin que intervenga el delito o la fuerza pública."
+      },
+      "D": {
+        "estudiante": "Clave: D. ¡Excelente lectura crítica! Comprendiste con precisión que el comerciante defiende la estabilidad laboral y económica de su local, mientras la vecina prioriza la salud y el sueño reparador de su familia.",
+        "pedagogico": "Clave: D | Intencion: Evaluar la capacidad para identificar el núcleo del conflicto entre dos actores con intereses legítimos contrapuestos. | Niveles: Analizar / Análisis / Nivel 2 (Análisis Crítico e Integración)."
+      }
+    }
+  },
+  {
+    "id": "NDSS-S-039",
+    "materia": "Sociales",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Identifico y analizo las consecuencias sociales, económicas y culturales de los procesos de concentración de la población y modernización en la vida cotidiana.",
+    "competencia": "Pensamiento reflexivo y sistémico",
+    "componente": "El Tiempo y las Culturas",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas.",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención.",
+    "tarea": "Evaluar el impacto cultural y económico de la digitalización de una plaza tradicional de mercado campesino.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Descompone las repercusiones del reemplazo de pagos en efectivo por billeteras digitales sobre comerciantes adultos mayores sin conectividad."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Deduce cómo una innovación técnica en el tiempo genera ventajas operativas pero produce exclusión involuntaria en saberes tradicionales."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Identifica barreras de acceso digital y analiza las tensiones entre modernización tecnológica e inclusión comunitaria."
+    },
+    "descriptor": "Reconoce los efectos no previstos que causa la modernización tecnológica sobre prácticas comerciales y culturales tradicionales.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Plantea un dilema entre modernización financiera y preservación de prácticas culturales sin términos bancarios complejos."
+    },
+    "contexto": "La administración de un municipio dispuso que todas las compras en la plaza de mercado tradicional se realicen exclusivamente mediante aplicaciones de teléfonos inteligentes, con el propósito de ordenar el recaudo y modernizar el comercio de alimentos. Sin embargo, varios agricultores mayores de la zona rural manifestaron que no cuentan con teléfonos con internet ni conocen el manejo de pagos electrónicos, por lo que han tenido que vender sus cosechas a intermediarios por fuera de la plaza a menor precio.",
+    "enunciado": "Frente a la medida aplicada, ¿qué consecuencia social no deseada se presenta en este caso?",
+    "opciones": {
+      "A": "La pérdida de ingresos directos para los campesinos de mayor edad.",
+      "B": "El incremento en el costo de transporte para llevar los alimentos.",
+      "C": "La escasez absoluta de productos agrícolas frescos en el municipio.",
+      "D": "El aumento de ventas virtuales en los grandes supermercados locales."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Muy bien pensado! Notaste que la imposición de tecnología sin acompañamiento terminó afectando el sustento económico de los campesinos tradicionales, quienes no pudieron seguir vendiendo directamente a los consumidores.",
+        "pedagogico": "Clave: A | Intencion: Constatar si el estudiante analiza los efectos socioeconómicos colaterales derivados de imponer cambios tecnológicos en entornos tradicionales. | Niveles: Analizar / Análisis / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "B": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | La medida municipal modificó la forma de pago, no el precio del transporte ni el costo de la gasolina. | Como caiste: Pensaste que la modernización encarece automáticamente los fletes de carga. | Analisis de tu competencia: Tu mente conectó dificultades de venta con costos de viaje sin que existiera ese vínculo en la situación descrita. | Plan de Accion: Revisa con calma cuál es la dificultad puntual que menciona el relato antes de sacar conclusiones sobre otros costos.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Vinculación de factores logísticos no determinados por el medio de pago. | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Establecer cadenas causales directas y descartar factores no asociados a la intervención. | Tip Tactico para el Docente: Emplear diagramas de espina de pescado (causa-efecto) para que los jóvenes mapeen las consecuencias directas de una norma."
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | La comida sigue produciéndose y comercializándose a través de intermediarios; la comida no desapareció de forma total. | Como caiste: Pensaste que la traba comercial dejaba a todo el pueblo sin alimentos. | Analisis de tu competencia: Exageraste la magnitud del problema pasando de una dificultad de venta particular al desabastecimiento general. | Plan de Accion: Evita considerar que los problemas de comercialización implican la destrucción de toda la comida disponible.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Magnificación desproporcionada del impacto sin sustento en los hechos narrados. | Techo Taxonomico: Bloom: Recordar / Marzano: Recuperación / TAED: Nivel 1. | Sugerencia de Mejora: Reconocer los límites y alcances reales de un fenómeno social. | Tip Tactico para el Docente: Ejercitar la identificación de efectos parciales frente a colapsos totales en estudios de casos locales."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Es posible que los supermercados crezcan, pero el texto trata del impacto negativo sobre quienes trabajan en la plaza comunitaria. | Como caiste: Miraste hacia otros comercios que ni siquiera participaron en la discusión municipal. | Analisis de tu competencia: Desviaste tu atención hacia actores secundarios en vez de responder sobre los afectados directos. | Plan de Accion: Mantén el foco en los grupos comunitarios protagonistas de la situación descrita.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Fuga hacia consecuencias colaterales no centrales para la población vulnerable estudiada. | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Enfocar el análisis en la población objeto de la política pública. | Tip Tactico para el Docente: Preguntar siempre: \"¿A quiénes perjudica de manera directa la medida tomada?\"."
+      }
+    }
+  },
+  {
+    "id": "NDSS-S-040",
+    "materia": "Sociales",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo críticamente los factores que ponen en riesgo el equilibrio de los recursos naturales y el derecho de las personas a un ambiente sano.",
+    "competencia": "Pensamiento reflexivo y sistémico",
+    "componente": "El Espacio, el Territorio, el Ambiente y la Población",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas.",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática.",
+    "tarea": "Relacionar la dimensión económica de la pesca intensiva con la dimensión ambiental de conservación del recurso hídrico a partir de un diagrama.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Relaciona datos cuantitativos e iconográficos de una gráfica de barras para identificar la sobreexplotación de un ecosistema acuático."
+    },
+    "marzano": {
+      "nivel": "Análisis",
+      "justificacion": "Conecta la reducción sostenida del volumen de pesca con el incumplimiento de los tiempos de reproducción de las especies."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Sintetiza datos visuales de tendencia temporal y deduce el impacto ecológico de priorizar la ganancia comercial inmediata."
+    },
+    "descriptor": "Identifica cómo la búsqueda de beneficio económico a corto plazo afecta la sostenibilidad ambiental de los recursos naturales comunitarios.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere interpretar un diagrama de barras comparativo de fácil lectura y vincular la caída productiva con la presión sobre el ecosistema."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792669460/S-040_wggt1f.jpg",
+    "contexto": "",
+    "enunciado": "De acuerdo con el gráfico, ¿qué relación existe entre la actividad económica y el estado del recurso natural en la ciénaga?",
+    "opciones": {
+      "A": "La producción pesquera se recuperó gracias a la llegada de nuevas tecnologías.",
+      "B": "La fauna del humedal aumentó al reducirse la presencia de pescadores tradicionales.",
+      "C": "La explotación desmedida a corto plazo condujo al agotamiento acelerado del recurso.",
+      "D": "La comercialización del pescado generó una ampliación de la superficie de la ciénaga."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Las barras muestran un descenso continuo de 95 a 15 toneladas, lo que demuestra un colapso productivo y no una recuperación. | Como caiste: Asumiste erróneamente que la palabra \"tecnología\" siempre genera resultados positivos en el tiempo. | Analisis de tu competencia: Confiaste en una idea preconcebida sobre el progreso técnico e ignoraste el declive continuo que marcaban las barras. | Plan de Accion: Revisa si la línea o la altura de las barras sube o baja antes de afirmar que hubo una mejoría.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Lectura invertida de tendencias numéricas provocada por el sesgo de que \"tecnología equivale a mejoría\". | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Ejercitar la descripción objetiva de trayectorias descendentes en gráficos estadísticos. | Tip Tactico para el Docente: Proponer gráficas sin títulos para que los alumnos describan primero el comportamiento numérico antes de emitir juicios."
+      },
+      "B": {
+        "estudiante": "Trampa: Híbrido | Es cierto que los pescadores artesanales perdieron espacio, pero la fauna no creció; por el contrario, los peces se redujeron drásticamente. | Como caiste: Aceptaste la primera mitad de la idea y no contrastaste la segunda parte con los datos de las barras. | Analisis de tu competencia: Tu atención validó una parte de la afirmación y no detectó el dato contradictorio al final de la opción. | Plan de Accion: Lee las opciones de principio a fin asegurándote de que todas sus partes coincidan con la gráfica.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Aceptación de premisas válidas combinadas con conclusiones no respaldadas. | Techo Taxonomico: Bloom: Comprender / Marzano: Comprensión / TAED: Nivel 1. | Sugerencia de Mejora: Fomentar el desglose analítico de opciones compuestas. | Tip Tactico para el Docente: Enseñar a los estudiantes a marcar con vistos buenos y cruces cada parte de una opción de respuesta."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Extraordinario análisis! Identificaste de inmediato la tendencia descendente del gráfico: cuando se extrae más de lo que la ciénaga puede reponer de forma natural, la especie termina escaseando para toda la comunidad.",
+        "pedagogico": "Clave: C | Intencion: Valorar la comprensión de límites ecológicos frente a dinámicas de extracción económica no sostenibles. | Niveles: Analizar / Análisis / Nivel 2 (Análisis Crítico e Integración)."
+      },
+      "D": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Vender pescado no amplía el tamaño físico ni la profundidad de un cuerpo de agua. | Como caiste: Mezclaste las ventas comerciales con el tamaño geográfico de la laguna. | Analisis de tu competencia: Uniste dos términos geográficos y comerciales sin una relación lógica real. | Plan de Accion: Pregúntate si tiene sentido físico que una actividad comercial agrande el territorio de un lago.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Atribución de cambios en la morfología natural a transacciones del mercado. | Techo Taxonomico: Bloom: Recordar / Marzano: Recuperación / TAED: Nivel 1. | Sugerencia de Mejora: Clarificar distinciones entre dinámicas de mercado y alteraciones físicas del paisaje. | Tip Tactico para el Docente: Realizar matrices donde se diferencien cambios físicos del espacio frente a cambios en la producción."
+      }
+    }
+  },
+  {
+    "id": "NDSS-S-041",
+    "materia": "Sociales",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo críticamente los elementos constituyentes de la democracia y los mecanismos de participación ciudadana en Colombia.",
+    "competencia": "Pensamiento social",
+    "componente": "El Poder, la Economía y las Organizaciones Sociales",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación.",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos.",
+    "tarea": "Identificar el mecanismo democrático formal mediante el cual los habitantes de un municipio rechazan un proyecto de explotación minera en su territorio.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Reconoce las características y propósitos esenciales de los instrumentos de consulta y decisión ciudadana previstos en la ley."
+    },
+    "marzano": {
+      "nivel": "Comprensión",
+      "justificacion": "Distingue el uso apropiado de un mecanismo de deliberación pública para decidir sobre un asunto local de interés general."
+    },
+    "taed": {
+      "nivel": "Nivel 1 (Recuperación y Verificación)",
+      "justificacion": "Identifica y valida la figura institucional correspondiente para canalizar una decisión colectiva frente a opciones no aplicables."
+    },
+    "descriptor": "Reconoce el mecanismo constitucional adecuado para que una comunidad decida colectivamente sobre una actividad que impacta su territorio.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere seleccionar la vía legal pertinente a partir de una situación concreta sin enredos jurídicos ni tecnicismos doctrinales."
+    },
+    "contexto": "En un municipio con vocación agrícola, una compañía solicitó autorización para desarrollar un proyecto de minería en las montañas donde nacen los ríos locales. La mayoría de los habitantes no está de acuerdo con el proyecto y busca que el pueblo entero sea llamado a votar en las urnas para aprobar o rechazar de manera definitiva esa actividad en su territorio.",
+    "enunciado": "Frente a este propósito colectivo, ¿cuál es el mecanismo idóneo para tomar esa decisión?",
+    "opciones": {
+      "A": "El trámite de una tutela colectiva ante los juzgados locales.",
+      "B": "La realización de una consulta popular en el municipio.",
+      "C": "La recolección de firmas para promover un plebiscito nacional.",
+      "D": "El envío de un derecho de petición a la compañía minera."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | La tutela sirve para pedirle a un juez que ampare un derecho fundamental que está siendo violado de inmediato, no para convocar elecciones de votación ciudadana. | Como caiste: Escuchas mucho la palabra \"tutela\" como solución a problemas y asumiste que sirve para cualquier trámite legal. | Analisis de tu competencia: Tu mente reconoció un mecanismo legal válido, pero lo aplicó a una función completamente ajena a su naturaleza jurídica. | Plan de Accion: Recuerda que los jueces dictan sentencias individuales, mientras que las votaciones abiertas se hacen con mecanismos de participación.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Confusión funcional entre instrumentos judiciales de protección de derechos y mecanismos de decisión política electoral. | Techo Taxonomico: Bloom: Recordar / Marzano: Recuperación / TAED: Nivel 1. | Sugerencia de Mejora: Diferenciar las vías judiciales de los mecanismos democráticos de participación ciudadana. | Tip Tactico para el Docente: Diseñar un cuadro comparativo simple de dos columnas: \"Lo que resuelve un juez\" frente a \"Lo que decide el pueblo en las urnas\"."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Acertaste por completo! La consulta popular es justamente la herramienta constitucional que permite convocar al pueblo a las urnas para que vote \"Sí\" o \"No\" sobre un tema de enorme trascendencia para su municipio.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la apropiación del concepto y uso de la consulta popular como mecanismo constitucional de decisión ciudadana territorial. | Niveles: Comprender / Comprensión / Nivel 1 (Recuperación y Verificación)."
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | El plebiscito lo convoca el presidente para avalar políticas del gobierno nacional, no la gente de un municipio para decidir sobre sus montañas locales. | Como caiste: Te sonó a votación popular, pero pasaste por alto que el plebiscito aplica a decisiones presidenciales nacionales. | Analisis de tu competencia: Te fijaste en la acción de votar pero ignoraste el nivel del territorio y la autoridad facultada para convocarlo. | Plan de Accion: Comprueba siempre si el problema es de orden local municipal o si abarca decisiones presidenciales de todo el país.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Extrapolación errónea de figuras electorales del orden nacional a problemáticas netamente territoriales. | Techo Taxonomico: Bloom: Recordar / Marzano: Recuperación / TAED: Nivel 1. | Sugerencia de Mejora: Clarificar el ámbito de aplicación (local versus nacional) y el originador de cada figura constitucional. | Tip Tactico para el Docente: Trabajar casos de estudio donde se distinga el rol del Concejo Municipal frente al Congreso y la Presidencia."
+      },
+      "D": {
+        "estudiante": "Trampa: Información Parcial | Un derecho de petición sirve para pedir información o copias a una empresa, pero no obliga a someter una decisión a votación popular. | Como caiste: Confundiste una solicitud formal por escrito con una jornada de votación en las urnas. | Analisis de tu competencia: Te quedaste en una figura básica para pedir datos y no alcanzaste el instrumento que permite decidir democráticamente. | Plan de Accion: Pregúntate si la opción elegida desemboca en el llamado a las urnas que pide el enunciado.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Elección de un canal informativo básico en lugar de una herramienta deliberativa vinculante. | Techo Taxonomico: Bloom: Recordar / Marzano: Recuperación / TAED: Nivel 1. | Sugerencia de Mejora: Distinguir los fines específicos de los derechos de petición frente al ejercicio del voto directo. | Tip Tactico para el Docente: Proponer situaciones cotidianas para que los alumnos decidan qué documento o acción corresponde tramitar según el objetivo buscado."
+      }
+    }
+  },
+  {
+    "id": "NDSS-CC-042",
+    "materia": "Competencias ciudadanas",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo críticamente los conflictos entre grupos, en mi barrio, vereda, municipio o país.",
+    "competencia": "Interpretación y análisis de perspectivas",
+    "componente": "Convivencia y Paz",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales.",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales en situaciones de tensión o conflicto.",
+    "tarea": "Identificar el punto de encuentro o interés común entre dos grupos comunitarios en disputa.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Descompone los discursos de los actores para hallar coincidencias funcionales no evidentes."
+    },
+    "marzano": {
+      "nivel": "Análisis (Asociación)",
+      "justificacion": "Determina similitudes y diferencias críticas entre las demandas de dos partes opuestas."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Deconstruye narrativas divergentes para sintetizar un interés compartido."
+    },
+    "descriptor": "Compara las posturas de distintos actores en un conflicto comunitario para reconocer puntos de convergencia práctica.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere que el evaluado diferencie la posición reactiva visible del beneficio colectivo de fondo."
+    },
+    "contexto": "Un grupo de jóvenes de un barrio utiliza la cancha comunitaria por las tardes para ensayar coreografías de danza urbana con música amplificada. Por su parte, la asociación de adultos mayores del sector solicita cerrar la cancha a esa misma hora para realizar caminatas de acondicionamiento físico en silencio y prevenir caídas accidentales. Ambas partes afirman que el espacio público debe priorizar su bienestar físico y emocional.",
+    "enunciado": "¿Cuál es el interés común que comparten ambos grupos frente al uso de la cancha?",
+    "opciones": {
+      "A": "Contar con un lugar seguro y adecuado para realizar actividades que favorecen su salud.",
+      "B": "Garantizar horarios exclusivos que impidan el ingreso simultáneo de otros residentes.",
+      "C": "Reducir el nivel de ruido ambiental para proteger la tranquilidad de las viviendas cercanas.",
+      "D": "Fomentar las expresiones culturales juveniles por encima de las actividades de los adultos mayores."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Muy bien pensado! Aunque cada grupo tiene una actividad distinta en mente, ambos coinciden en el fondo: buscan que la cancha comunitaria sea un espacio seguro para el cuidado de su salud física y emocional.",
+        "pedagogico": "Clave: A | Intencion: Constatar la capacidad para identificar intereses comunes y puntos de encuentro en situaciones de conflicto comunitario. | Niveles: Analizar / Análisis (Asociación) / Nivel 2."
+      },
+      "B": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Cuidado: pretender horarios que excluyan a los demás responde al reclamo particular de uno de los grupos, no a un interés compartido. | Como caiste: Tomaste la exigencia de una de las partes como si fuera el acuerdo mutuo de toda la comunidad. | Analisis de tu competencia: Tu mente se quedó en el punto de fricción y no buscó la necesidad de fondo que une a las dos partes. | Plan de Accion: Recuerda que un interés común debe beneficiar a ambos bandos, no darle la victoria a uno solo.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Identificar la confusión entre la pretensión excluyente de un actor y el objetivo compartido de bienestar. | Techo Taxonomico: Bloom: Comprensión superficial; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Trabajar metodologías de resolución de conflictos identificando la diferencia entre posición e interés. | Tip Tactico para el Docente: Utilizar dilemas de mediación escolar donde las partes deban listar qué ganan ambas si cooperan."
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | Esta es la preocupación de los adultos mayores, pero no representa el deseo de los jóvenes que ensayan con música. | Como caiste: Elegiste una opción que resuelve solo la molestia de un grupo, dejando por fuera las intenciones del otro. | Analisis de tu competencia: Te inclinaste por la postura de una parte en lugar de sintetizar la convergencia entre ambas. | Plan de Accion: Verifica que la respuesta incluya a los dos colectivos y no solo a quien pide silencio.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Diagnosticar la selección de demandas particulares de uno de los bandos ignorando la reciprocidad. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Ejercitar la síntesis integradora de perspectivas contrapuestas. | Tip Tactico para el Docente: Enseñar a construir tablas de doble entrada con los puntos no negociables de cada parte."
+      },
+      "D": {
+        "estudiante": "Trampa: Atractor Moral/Emocional | Suena tentador apoyar el arte juvenil, pero priorizar a un solo grupo contradice la búsqueda de un interés común en el barrio. | Como caiste: Te identificaste con los jóvenes bailarines y asumiste que su derecho cultural está por encima de las caminatas de los mayores. | Analisis de tu competencia: Te dejaste llevar por simpatía generacional en vez de aplicar un criterio de equidad en el espacio público. | Plan de Accion: En los conflictos ciudadanos, desconfía de opciones que premien a un sector pasando por encima de los demás.",
+        "pedagogico": "Tipologia: Atractor Moral/Emocional | Intencion del error: Evidenciar sesgos de empatía etaria o gremial que nublan la imparcialidad analítica. | Techo Taxonomico: Bloom: Juicio de valor no sustentado; Marzano: Autocontrol deficitario; TAED: Nivel 1. | Sugerencia de Mejora: Fortalecer la neutralidad valorativa en el examen de disputas comunitarias. | Tip Tactico para el Docente: Asignar roles invertidos en debates para defender los argumentos del grupo etario opuesto."
+      }
+    }
+  },
+  {
+    "id": "NDSS-CC-043",
+    "materia": "Competencias ciudadanas",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo críticamente el sentido de las leyes y comprendo la importancia de cumplirlas, así no comparta alguna de ellas.",
+    "competencia": "Pensamiento social",
+    "componente": "Participación y Responsabilidad Democrática",
+    "afirmacion": "Comprende los principios constitucionales y los fundamentos de la democracia y la participación ciudadana en Colombia.",
+    "evidencia": "Conoce la Constitución Política de Colombia y sus principios fundamentales.",
+    "tarea": "Reconocer el principio democrático que justifica la consulta a la ciudadanía frente a una decisión que afecta su entorno.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Interpreta el alcance del principio democrático y participativo en una situación de gestión territorial."
+    },
+    "marzano": {
+      "nivel": "Comprensión (Integración)",
+      "justificacion": "Relaciona el concepto de democracia participativa con un caso de intervención urbana."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Identifica el fundamento normativo que media la relación entre gobernantes y comunidad."
+    },
+    "descriptor": "Explica la función de la participación ciudadana como principio ordenador del Estado social de derecho en el ámbito municipal.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Demanda distinguir entre legitimidad técnica de la administración y soberanía popular participativa."
+    },
+    "contexto": "La alcaldía de un municipio aprobó la remodelación del parque central para convertirlo en una plaza seca de eventos masivos, eliminando zonas verdes tradicionales. Gran parte de los habitantes expresó su desacuerdo, argumentando que nunca fueron convocados a reuniones informativas ni consultados sobre los cambios en un lugar tradicional de encuentro familiar.",
+    "enunciado": "Frente a este caso, ¿cuál principio constitucional fundamenta el reclamo de los vecinos?",
+    "opciones": {
+      "A": "El deber de preservar intactos los diseños arquitectónicos de épocas coloniales.",
+      "B": "El carácter participativo del Estado que exige consultar decisiones colectivas.",
+      "C": "La primacía absoluta de la voluntad del alcalde en el manejo del presupuesto.",
+      "D": "La obligación de garantizar ganancias monetarias a los comerciantes del parque."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Híbrido | Suena bien cuidar la memoria del barrio, pero la arquitectura colonial no es una ley general ni el corazón del reclamo. | Como caiste: Te dejaste llevar por el valor nostálgico del parque y asumiste que toda construcción antigua es intocable por norma. | Analisis de tu competencia: Te fijaste en un rasgo estético secundario en vez de analizar el principio político de la toma de decisiones. | Plan de Acción: Enfócate en las reglas del juego democrático antes que en el valor histórico particular del inmueble.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Captar al estudiante que recurre a la preservación patrimonial descontextualizada. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Precisar las diferencias entre normas de conservación patrimonial y derechos fundamentales de participación. | Tip Tactico para el Docente: Analizar casos de cabildo abierto y audiencias públicas frente a obras de infraestructura local."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Punto exacto! Nuestra Constitución define a Colombia como una democracia participativa: las obras que transforman la vida comunitaria no pueden imponerse sin escuchar a la ciudadanía afectada.",
+        "pedagogico": "Clave: B | Intencion: Constatar el conocimiento del principio de democracia participativa consagrado en el artículo 1 de la Constitución. | Niveles: Comprender / Comprensión / Nivel 2."
+      },
+      "C": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | ¡Cuidado! Esta afirmación describe una postura autoritaria contraria al espíritu del Estado social de derecho. | Como caiste: Pensaste que el poder de ejecutar obras le da al mandatario carta blanca para gobernar sin rendir cuentas ni consultar. | Analisis de tu competencia: Tu mente confundió la facultad administrativa del mandatario con un mandato supremo sin límites democráticos. | Plan de Acción: Recuerda que en democracia ningún funcionario público está por encima de los derechos colectivos.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Diagnosticar la creencia errónea en una jerarquía institucional vertical sin frenos ni contrapesos. | Techo Taxonomico: Bloom: Comprensión superficial; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Revisar los límites del poder ejecutivo en el marco constitucional colombiano. | Tip Tactico para el Docente: Promover dilemas sobre el principio de pesos y contrapesos y control social a la gestión."
+      },
+      "D": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | El comercio es importante, pero no constituye el principio constitucional vulnerado en el caso. | Como caiste: Asociaste la palabra eventos y remodelación con ingresos económicos y dinero, cambiando de tema sin darte cuenta. | Analisis de tu competencia: Saltaste del campo de los derechos cívicos y la participación comunitaria al terreno del comercio privado. | Plan de Acción: No cambies de conversación; mantén el foco en la relación ciudadana entre vecinos y autoridades.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Evidenciar traslados inadecuados de razonamientos de mercado a bienes públicos de uso común. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Diferenciar entre intereses económicos privados y derechos colectivos ciudadanos. | Tip Tactico para el Docente: Usar el concepto de bien común frente a interés de lucro individual."
+      }
+    }
+  },
+  {
+    "id": "NDSS-CC-044",
+    "materia": "Competencias ciudadanas",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Rechazo las situaciones de discriminación y exclusión social en el país; comprendo sus posibles causas y las consecuencias negativas para la sociedad.",
+    "competencia": "Interpretación y análisis de perspectivas",
+    "componente": "Pluralidad, Identidad y Valoración de las Diferencias",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos.",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos que promueven tratos diferenciales injustificados.",
+    "tarea": "Identificar el estereotipo cultural oculto en una pieza publicitaria laboral.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Examina la interacción texto-imagen para inferir la premisa discriminatoria implícita."
+    },
+    "marzano": {
+      "nivel": "Análisis (Generalización)",
+      "justificacion": "Detecta la inducción injustificada de rasgos de personalidad basada en la procedencia étnica o regional."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Deconstruye sesgos cognitivos y mensajes mediáticos discriminatorios en formatos multimodales."
+    },
+    "descriptor": "Reconoce supuestos prejuiciosos en mensajes de comunicación que condicionan el acceso al trabajo de colectivos específicos.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "El evaluado debe interpretar que la exclusión suele presentarse bajo una falsa fachada de cordialidad o perfil corporativo."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792669460/CC-044_p79u0b.jpg",
+    "contexto": "Considere el contenido y los requisitos anunciados en la pieza publicitaria:",
+    "enunciado": "¿Cuál prejuicio social se encuentra implícito en el anuncio de trabajo?",
+    "opciones": {
+      "A": "La idea de que los jóvenes carecen de habilidades verbales para atender usuarios.",
+      "B": "La suposición de que el origen regional define la disciplina de los empleados.",
+      "C": "La afirmación de que el trabajo turístico requiere exclusivamente presencia física.",
+      "D": "La creencia de que las empresas de servicios pagan salarios por debajo de la ley."
+    },
+    "clave": "B",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | Mira con cuidado: el afiche no cuestiona la juventud, sino el lugar de nacimiento. | Como caiste: Asociaste la silueta joven con debates comunes sobre la falta de experiencia laboral en muchachos de tu edad. | Analisis de tu competencia: Tu mente proyectó una preocupación personal válida sobre el empleo joven, pero ignoró la evidencia textual del afiche. | Plan de Acción: Contrasta cada opción con la frase textual que genera la exclusión real en la imagen.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Revelar distracción mediante tópicos comunes de discriminación etaria no pertinentes al estímulo. | Techo Taxonomico: Bloom: Comprensión; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Centrar la lectura crítica en el condicionante específico señalado en la viñeta de requisitos. | Tip Tactico para el Docente: Trabajar ejercicios de desmonte de publicidad engañosa identificando el sujeto y el adjetivo estigmatizante."
+      },
+      "B": {
+        "estudiante": "Clave: B. ¡Exacto! Diste en el blanco. El aviso da por sentado que nacer en cierta zona del país garantiza puntualidad y orden, lo cual generaliza y discrimina a quienes vienen de otras regiones basándose en un estereotipo sin fundamento.",
+        "pedagogico": "Clave: B | Intencion: Evaluar la detección de prejuicios y estereotipos regionalistas en ofertas cotidianas de empleo. | Niveles: Analizar / Análisis / Nivel 2."
+      },
+      "C": {
+        "estudiante": "Trampa: Información Parcial | Ojo con las frases intermedias del anuncio. | Como caiste: Aunque el afiche menciona la buena presencia, esa exigencia no es la razón por la que prefieren contratar personas de una región específica. | Analisis de tu competencia: Tomaste un requisito secundario del cartel y pasaste por alto la condición de preferencia territorial. | Plan de Acción: Identifica qué frase concreta del texto establece la ventaja o exclusión indebida.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Atrapar a evaluados que leen términos aislados (buena presencia) sin articularlos a la cláusula de exclusión. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Enseñar a conectar premisas con conclusiones dentro de oraciones compuestas. | Tip Tactico para el Docente: Subrayar conectores de causa y condición en textos publicitarios para evidenciar sesgos."
+      },
+      "D": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Esta opción introduce un tema laboral que no figura en ninguna parte del aviso. | Como caiste: Tu cerebro vinculó las ofertas de trabajo abusivas con salarios injustos, trayendo un debate externo que la gráfica no plantea. | Analisis de tu competencia: Te saliste del marco comunicativo del ítem para evaluar condiciones salariales no mencionadas. | Plan de Acción: Limita tu análisis estricto a las pistas observables en el texto y la imagen.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Diagnosticar la incorporación de prejuicios propios del estudiante sobre la precariedad laboral. | Techo Taxonomico: Bloom: Conocimiento previo no articulado; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Limitar la inferencia al corpus de información entregado en el reactivo. | Tip Tactico para el Docente: Exigir que cada respuesta del estudiante esté anclada a una cita textual o elemento del gráfico."
+      }
+    }
+  },
+  {
+    "id": "NDSS-CC-045",
+    "materia": "Competencias ciudadanas",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Analizo críticamente y debato con argumentos y evidencias sobre hechos ocurridos a nivel local, nacional y mundial, y comprendo las consecuencias que éstos pueden tener sobre mi propia vida.",
+    "competencia": "Pensamiento reflexivo y sistémico",
+    "componente": "Convivencia y Paz",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas.",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención.",
+    "tarea": "Reconocer el efecto económico o laboral que se desprende de una medida destinada a solucionar un problema de orden público.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Vincula causalmente una decisión de seguridad con impactos colaterales en la economía formal nocturna."
+    },
+    "marzano": {
+      "nivel": "Análisis (Análisis de Errores / Consecuencias)",
+      "justificacion": "Proyecta repercusiones colaterales entre dimensiones dispares (seguridad ciudadana vs. empleo)."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Aplica pensamiento sistémico para entender cómo una medida restrictiva altera circuitos urbanos interconectados."
+    },
+    "descriptor": "Analiza las consecuencias no deseadas en la esfera económica y laboral derivadas de una política estricta de seguridad ciudadana.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Obliga a superar la mirada aislada de la seguridad para entender las afectaciones económicas simultáneas."
+    },
+    "contexto": "Para frenar las peleas callejeras entre pandillas los fines de semana, la administración de una ciudad decretó el toque de queda general a partir de las 8 de la noche los viernes y sábados. Aunque las riñas disminuyeron de forma notable en los barrios críticos, los propietarios de restaurantes, salas de cine y locales comerciales protestaron porque tuvieron que despedir a decenas de trabajadores por la caída drástica de sus ventas.",
+    "enunciado": "¿Qué dimensión del problema se vio perjudicada directamente por la medida adoptada?",
+    "opciones": {
+      "A": "La seguridad vecinal nocturna.",
+      "B": "La convivencia pacífica barrial.",
+      "C": "La economía comercial urbana.",
+      "D": "La movilidad del transporte escolar."
+    },
+    "clave": "C",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Inversión Causal/Cronológica | ¡Ojo! La seguridad fue la dimensión beneficiada por la norma, no la perjudicada. | Como caiste: Leíste rápido y confundiste el objetivo positivo del decreto con las consecuencias negativas por las que preguntaba el enunciado. | Analisis de tu competencia: Tu mente identificó el tema central del caso, pero invirtió el impacto positivo y negativo solicitado en la pregunta. | Plan de Acción: Revisa con cuidado si la pregunta indaga por el problema resuelto o por el daño colateral que causó la solución.",
+        "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Capturar al evaluado que no discrimina entre objetivo previsto y externalidad negativa. | Techo Taxonomico: Bloom: Comprensión; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Entrenar la lectura de preguntas que indagan por consecuencias no intencionadas de políticas públicas. | Tip Tactico para el Docente: Utilizar esquemas de causa-efecto multidimensional en el tablero para mapear ganadores y perdedores de una norma."
+      },
+      "B": {
+        "estudiante": "Trampa: Híbrido | La convivencia mejoró en términos de riñas, no empeoró en los barrios intervenidos. | Como caiste: Notaste que las pandillas eran el origen de la discusión y pensaste que todo giraba únicamente alrededor de la convivencia. | Analisis de tu competencia: Te quedaste atado a la dimensión social visible y perdiste de vista el impacto sobre los negocios y trabajadores. | Plan de Acción: Abre el panorama: cuando se aplica una ley, busca siempre a qué otros grupos sociales ajenos al conflicto termina tocando.",
+        "pedagogico": "Tipologia: Híbrido | Intencion del error: Medir si el evaluado se mantiene en la variable temática inicial ignorando el giro del enunciado. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Diferenciar entre la dimensión de convivencia y las dinámicas socioeconómicas del trabajo. | Tip Tactico para el Docente: Promover dilemas sobre soluciones simplistas a problemas complejos de seguridad urbana."
+      },
+      "C": {
+        "estudiante": "Clave: C. ¡Excelente visión integral! Entendiste la conexión sistémica: una medida pensada para vigilar el orden público golpeó de frente los ingresos y los empleos del comercio nocturno.",
+        "pedagogico": "Clave: C | Intencion: Evaluar el reconocimiento de interdependencias entre decisiones de orden público y dimensiones productivas/laborales. | Niveles: Analizar / Análisis / Nivel 2."
+      },
+      "D": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Las rutas de colegios no operan en los horarios nocturnos de fin de semana descritos. | Como caiste: Viste la palabra transporte y movilidad en tu mente, pero elegiste un servicio escolar que no guarda relación temporal con la medida. | Analisis de tu competencia: Tu memoria seleccionó una categoría urbana habitual sin contrastarla con el contexto de las 8 de la noche de viernes y sábado. | Plan de Acción: Revisa siempre las coordenadas de tiempo y lugar antes de marcar una alternativa.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Atraer por plausibilidad genérica pero anacrónica con las restricciones temporales del texto. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Cotejar datos específicos de horario y destinatarios de las normas. | Tip Tactico para el Docente: Exigir en clase la contrastación de variables temporales frente a cualquier medida legal analizada."
+      }
+    }
+  },
+  {
+    "id": "NDSS-CC-046",
+    "materia": "Competencias ciudadanas",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Hago seguimiento a las acciones que desarrollan los representantes escolares y protesto pacíficamente cuando no cumplen sus funciones o abusan de su poder.",
+    "competencia": "Pensamiento social",
+    "componente": "Participación y Responsabilidad Democrática",
+    "afirmacion": "Comprende los principios constitucionales y los fundamentos de la democracia y la participación ciudadana en Colombia.",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar en la democracia y para fiscalizar el poder.",
+    "tarea": "Identificar la función de veeduría ciudadana que ejerce una comunidad escolar mediante canales de comunicación digital.",
+    "bloom": {
+      "nivel": "Comprender",
+      "justificacion": "Interpreta el sentido democrático del control social a partir de un flujo de seguimiento a proyectos escolares."
+    },
+    "marzano": {
+      "nivel": "Comprensión (Integración)",
+      "justificacion": "Asocia la publicación de reportes financieros con la transparencia institucional y la rendición de cuentas."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Analiza flujogramas de datos abiertos para deducir el rol de la fiscalización ciudadana."
+    },
+    "descriptor": "Reconoce el mecanismo de control social y rendición de cuentas que permite verificar el cumplimiento de compromisos adquiridos.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Requiere relacionar un diagrama de flujo de recursos con el derecho a supervisar la gestión de representantes."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792669460/CC-046_vjl1vr.jpg",
+    "contexto": "",
+    "enunciado": "A partir del proceso que ilustra el diagrama, la acción realizada en la tercera etapa representa",
+    "opciones": {
+      "A": "un ejercicio de control social para vigilar el manejo de los recursos.",
+      "B": "una sanción disciplinaria definitiva contra el gobierno de la escuela.",
+      "C": "un trámite bancario para duplicar las ganancias del fondo de libros.",
+      "D": "una campaña publicitaria para mejorar la popularidad del rector."
+    },
+    "clave": "A",
+    "comentarios": {
+      "A": {
+        "estudiante": "Clave: A. ¡Muy bien pensado! La lupa y la publicación abierta de facturas muestran exactamente cómo la comunidad vigila que el dinero y los proyectos se cumplan con honestidad y transparencia.",
+        "pedagogico": "Clave: A | Intencion: Evaluar la comprensión de la veeduría ciudadana y la rendición de cuentas en la gestión comunitaria. | Niveles: Comprender / Comprensión / Nivel 2."
+      },
+      "B": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | Vigilar no significa que alguien haya cometido una falta o merezca un castigo. | Como caiste: Asociaste la palabra supervisar con acusaciones y sanciones, creyendo que siempre que se revisan cuentas es porque hubo un delito. | Analisis de tu competencia: Tu mente equiparó la vigilancia ciudadana preventiva con un castigo judicial o disciplinario. | Plan de Acción: Entiende que rendir cuentas es una práctica democrática cotidiana y sana, no una pelea ni una condena.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Asumir que la fiscalización pública implica necesariamente una sanción punitiva. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Enfatizar el carácter preventivo y pedagógico del control social. | Tip Tactico para el Docente: Diseñar proyectos de aula donde los alumnos supervisen el presupuesto de actividades escolares."
+      },
+      "C": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | El colegio busca equipar su biblioteca, no realizar inversiones financieras especulativas. | Como caiste: Viste términos como facturas y fondos y te fuiste por el lado de las operaciones de bancos y préstamos. | Analisis de tu competencia: Cambiaste el enfoque de participación escolar y veeduría hacia la rentabilidad bancaria comercial. | Plan de Acción: Recuerda que el objetivo de una institución educativa es el servicio comunitario, no el enriquecimiento mercantil.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Confundir administración transparente de recursos con intermediación financiera comercial. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Distinguir los fines sociales de una entidad pública de las operaciones bancarias privadas. | Tip Tactico para el Docente: Realizar simulacros de presupuesto participativo donde no haya lucro sino asignación comunitaria."
+      },
+      "D": {
+        "estudiante": "Trampa: Atractor Moral/Emocional | Suena a propaganda, pero el diagrama describe un comité de vigilancia de estudiantes. | Como caiste: Es frecuente ver que directivos o políticos usan fotos para promocionarse, pero aquí la iniciativa es del estudiantado vigilante. | Analisis de tu competencia: Tu cerebro aplicó una sospecha cínica general sobre la propaganda en lugar de leer el rol del comité estudiantil. | Plan de Acción: Mira quién ejecuta la acción en la gráfica antes de deducir el motivo del evento.",
+        "pedagogico": "Tipologia: Atractor Moral/Emocional | Intencion del error: Interpretar la rendición de cuentas como un acto de proselitismo o autopromoción. | Techo Taxonomico: Bloom: Comprensión superficial; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Valorar la transparencia activa como una obligación institucional democrática. | Tip Tactico para el Docente: Analizar páginas web de entidades públicas distinguiendo la sección de rendición de cuentas de las notas de prensa."
+      }
+    }
+  },
+  {
+    "id": "NDSS-CC-047",
+    "materia": "Competencias ciudadanas",
+    "unidad": "Banco de Reactivos de Sociales y Ciudadanas - Saber 11",
+    "momento": 2,
+    "ebc": "Argumento y debato dilemas relacionados con exclusión y reconozco los mejores argumentos, así no coincidan con los míos.",
+    "competencia": "Pensamiento reflexivo y sistémico",
+    "componente": "Pluralidad, Identidad y Valoración de las Diferencias",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas.",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática.",
+    "tarea": "Reconocer cómo se relacionan la identidad cultural y la salud pública en un dilema de vacunación comunitaria.",
+    "bloom": {
+      "nivel": "Analizar",
+      "justificacion": "Examina las tensiones entre la autonomía médica tradicional y las regulaciones sanitarias generales."
+    },
+    "marzano": {
+      "nivel": "Análisis (Relaciones)",
+      "justificacion": "Identifica la interconexión compleja entre la protección colectiva de la salud y el respeto a la diversidad étnica."
+    },
+    "taed": {
+      "nivel": "Nivel 2 (Análisis Crítico e Integración)",
+      "justificacion": "Sintetiza datos provenientes de infografías con perspectivas culturales contrapuestas."
+    },
+    "descriptor": "Identifica los puntos de fricción entre normas universales de salud pública y los derechos étnicos a la autonomía y medicina ancestral.",
+    "complejidad": {
+      "nivel": "Media",
+      "justificacion": "Obliga a sopesar dos valores constitucionalmente protegidos que entran en colisión práctica sin solución trivial."
+    },
+    "imagenUrl": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792669460/CC-047_wbprqv.jpg",
+    "contexto": "",
+    "enunciado": "Al analizar la situación expuesta en la infografía, ¿cuáles dos dimensiones entran en tensión directa?",
+    "opciones": {
+      "A": "La expansión del comercio regional y la propiedad privada sobre la tierra.",
+      "B": "El derecho a la educación infantil y la disciplina en los planteles escolares.",
+      "C": "El presupuesto militar nacional y la soberanía de los límites fronterizos.",
+      "D": "La salud preventiva colectiva y la autonomía de las costumbres culturales."
+    },
+    "clave": "D",
+    "comentarios": {
+      "A": {
+        "estudiante": "Trampa: Error de Campo Semántico/Lógico | Nada en la infografía habla de vender productos o comprar terrenos. | Como caiste: Relacionaste la palabra rural con el campo y la agricultura, y de inmediato pensaste en disputas por la tierra. | Analisis de tu competencia: Tu mente asoció libremente el escenario geográfico desconectándose del problema real de las vacunas y rituales. | Plan de Accion: Enfócate en la acción que realizan los personajes (curar, prevenir, rezar) y no en el tipo de paisaje de fondo.",
+        "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Fuga temática hacia conflictos sobre tenencia de la tierra comunes en la agenda indígena. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Ajustar la delimitación del conflicto exclusivamente a las variables sanitarias de la infografía. | Tip Tactico para el Docente: Enseñar a los estudiantes a encerrar en un círculo a los dos actores centrales antes de clasificar las dimensiones en pugna."
+      },
+      "B": {
+        "estudiante": "Trampa: Información Parcial | Los niños pueden recibir vacunas, pero aquí no se está debatiendo el colegio ni las tareas. | Como caiste: Trajiste temas cotidianos de tu vida estudiantil para intentar rellenar un dilema que pertenece a un resguardo y a brigadas de salud. | Analisis de tu competencia: Proyectaste tu contexto inmediato escolar en un problema de salud territorial y diversidad étnica. | Plan de Accion: Limítate a analizar los actores específicos que el texto y la imagen te están presentando.",
+        "pedagogico": "Tipologia: Información Parcial | Intencion del error: Proyectar problemáticas educativas cotidianas en dilemas de salud pública y diversidad étnica. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Identificar los ámbitos institucionales pertinentes a la situación descrita. | Tip Tactico para el Docente: Analizar noticias de prensa clasificando el sector de política pública involucrado (salud, educación, defensa)."
+      },
+      "C": {
+        "estudiante": "Trampa: Sobre-generalización Encubierta | El bastón de mando y el escudo son símbolos de autoridad comunitaria, no elementos de una guerra internacional. | Como caiste: Interpretaste la palabra escudo y fronteras de resguardo en un sentido bélico de fuerzas armadas y defensa militar. | Analisis de tu competencia: Sobredimensionaste un conflicto de salud pública convirtiéndolo en un problema geopolítico internacional. | Plan de Accion: No exageres la escala del conflicto; ajusta tu respuesta al ámbito sanitario y comunitario descrito.",
+        "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Interpretar simbología cultural indígena bajo esquemas de conflicto bélico o militar. | Techo Taxonomico: Bloom: Recordar; Marzano: Recuperación; TAED: Nivel 1. | Sugerencia de Mejora: Respetar la semiótica de la autoridad tradicional comunitaria sin sobredimensionar la escala del conflicto. | Tip Tactico para el Docente: Realizar talleres sobre la simbología y el rol del bastón de mando y la guardia indígena en Colombia."
+      },
+      "D": {
+        "estudiante": "Clave: D. ¡Razonamiento impecable! Captaste el nudo central del problema: la urgencia de salvar vidas mediante vacunas universales choca con el derecho fundamental de los pueblos a defender su medicina y cosmovisión.",
+        "pedagogico": "Clave: D | Intencion: Evaluar la comprensión de dilemas de ponderación constitucional entre salud colectiva y diversidad étnica. | Niveles: Analizar / Análisis (Relaciones) / Nivel 2."
+      }
+    }
+  }
+]

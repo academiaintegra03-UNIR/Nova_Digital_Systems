@@ -1,6 +1,9 @@
-import { Award, BarChart3, Bot, BookOpen, CalendarClock, ClipboardCheck, ClipboardList, Compass, HelpCircle, Home, Layers, Users } from "lucide-react";
+import { Award, BarChart3, Bot, BookOpen, CalendarClock, ClipboardCheck, ClipboardList, Compass, FileText, HelpCircle, Home, Layers, Sparkles, Users } from "lucide-react";
+import { redirect } from "next/navigation";
 import { requireRole } from "@/lib/auth/require-role";
+import { esCuentaPruebaGratuita, getEstadoPrueba } from "@/lib/prueba-gratuita/estado";
 import { DashboardShell, type DashboardNavItem } from "@/components/layout/dashboard-shell";
+import { MiInformeContenido } from "@/features/prueba-gratuita/mi-informe-contenido";
 
 const navItems: DashboardNavItem[] = [
   { href: "/campus", label: "Inicio", icon: <Home /> },
@@ -17,17 +20,33 @@ const navItems: DashboardNavItem[] = [
   { href: "/campus/tutor-ia", label: "Tutor con IA", icon: <Bot /> },
 ];
 
+/** Panel de una cuenta de prueba gratuita que ya la terminó: solo su
+ * informe — el resto del campus requiere un plan. */
+const navItemsPrueba: DashboardNavItem[] = [
+  { href: "/campus/mi-informe", label: "Mi informe", icon: <FileText /> },
+  { href: "/planes-precios", label: "Ver planes", icon: <Sparkles /> },
+];
+
 export default async function CampusLayout({ children }: { children: React.ReactNode }) {
   const profile = await requireRole("estudiante");
+  // Cuenta de prueba gratuita (sin plan): mientras no termine la prueba
+  // va a presentarla; al terminarla, su panel solo muestra el informe —
+  // se renderiza en lugar de la página pedida, sea cual sea (el layout no
+  // conoce la ruta, y redirigir a la misma URL haría un bucle).
+  const esPrueba = await esCuentaPruebaGratuita(profile);
+  if (esPrueba) {
+    const estado = await getEstadoPrueba(profile.id);
+    if (!estado.finalizada) redirect("/prueba-gratuita");
+  }
 
   return (
     <DashboardShell
       panelLabel="Campus"
-      navItems={navItems}
-      pageSubtitle="Tu campus"
+      navItems={esPrueba ? navItemsPrueba : navItems}
+      pageSubtitle={esPrueba ? "Prueba gratuita" : "Tu campus"}
       profile={profile}
     >
-      {children}
+      {esPrueba ? <MiInformeContenido profile={profile} /> : children}
     </DashboardShell>
   );
 }

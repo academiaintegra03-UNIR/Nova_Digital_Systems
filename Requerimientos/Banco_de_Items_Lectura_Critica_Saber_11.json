@@ -1,0 +1,556 @@
+{
+  "banco": "Lectura Crítica - Saber 11",
+  "cantidad_preguntas": 11,
+  "preguntas": [
+    {
+      "id": "NDSS-L-012",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792426913/L-012_x4jkeh.jpg",
+      "contexto": "El panel de advertencia superior de la infografía destaca el símbolo de una nube con el rótulo \"45 g CO₂e/h\".",
+      "enunciado": "En el contexto de la pieza informativa, la expresión \"CO₂e\" refiere puntualmente a",
+      "opciones": {
+        "A": "la cantidad de vapor liberado por servidores.",
+        "B": "el equivalente consolidado en dióxido de carbono.",
+        "C": "la energía eléctrica demandada por terminales.",
+        "D": "el volumen total de bytes consumidos en la red."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Trampa: Error de Campo Semántico/Lógico | Notaste el dibujo de la nube y tu mente saltó a evaporación física de agua. | Como caiste: Asociaste la iconografía meteorológica con vapor en lugar del estándar de contaminación atmosférica. | Analisis de tu competencia: Tu proceso se desvió hacia una lectura ingenua del icono sin articularlo con la sigla química. | Plan de Accion: Vincula siempre los iconos gráficos con las convenciones técnicas del tema expuesto.",
+          "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Medir si el estudiante confunde una convención gráfica (nube de gas) con fenómenos hidrológicos. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Reconocimiento primario de imagen. | Sugerencia de Mejora: Fortalecer la lectura de iconografía científica estandarizada. | Tip Tactico para el Docente: Solicite al grupo listar siglas comunes de sostenibilidad ambiental y contrastar su icono con su definición formal."
+        },
+        "B": {
+          "estudiante": "Clave: B. ¡Excelente deducción! El sufijo \"e\" en las métricas de gases de efecto invernadero representa \"equivalente\", unificando el impacto contaminante con respecto al dióxido de carbono. Decodificaste con precisión el dato local.",
+          "pedagogico": "Clave: B | Intencion: Evaluar la comprensión semántica local de tecnicismos presentes en textos discontinuos. | Niveles: Comprender / Comprensión / Decodificar."
+        },
+        "C": {
+          "estudiante": "Trampa: Información Parcial | La electricidad origina la emisión, pero la sigla mide la consecuencia ambiental, no la potencia consumida en vatios. | Como caiste: Tomaste el medio operativo como si fuera la unidad de medida explícita. | Analisis de tu competencia: Confundiste la causa energética con el índice de emisión gaseosa. | Plan de Accion: Fíjate con rigor en las unidades de medida: los gramos miden masa residual, no electricidad.",
+          "pedagogico": "Tipologia: Información Parcial | Intencion del error: Detectar la sustitución de la variable de salida (gases) por la de entrada (energía). | Techo Taxonomico: Bloom 2 / Marzano 1 / TAED Identificación simple. | Sugerencia de Mejora: Diferenciar causas operativas de efectos cuantificables. | Tip Tactico para el Docente: Guíe la separación de variables causales frente a unidades de medición en gráficos ambientales."
+        },
+        "D": {
+          "estudiante": "Trampa: Sobre-generalización Encubierta | Creíste que toda métrica de internet se reduce al volumen de megabytes o tráfico. | Como caiste: Generalizaste el soporte digital hacia magnitudes exclusivas de telecomunicaciones. | Analisis de tu competencia: Te anclaste en el entorno informático general e ignoraste el componente ecológico del texto. | Plan de Accion: Revisa el núcleo del término: CO₂ designa un compuesto químico, no transferencia binaria.",
+          "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Evidenciar sesgo de categorización por dominio digital. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Recuperación aislada. | Sugerencia de Mejora: Exigir rigurosidad en la correspondencia entre nomenclatura y objeto evaluado. | Tip Tactico para el Docente: Ejercite la delimitación semántica de términos interdisciplinarios."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Analizo críticamente los lenguajes no verbales y su articulación con los textos verbales en situaciones comunicativas auténticas.",
+        "Competencia": "Identificar y entender los contenidos locales que conforman un texto.",
+        "Componente": "Semántico.",
+        "Afirmacion": "Identifica y entiende los contenidos locales que conforman un texto.",
+        "Evidencia": "Entiende el significado de los elementos locales que constituyen un texto.",
+        "Tarea": "Identificar el significado preciso de un símbolo o término local dentro del contexto de una infografía digital.",
+        "Bloom": "Comprender",
+        "Justificacion Bloom": "Interpreta el significado contextual de un indicador visual sin alterar su sentido local directo.",
+        "Marzano": "Comprensión",
+        "Justificacion Marzano": "Integra la representación visual con la glosa explicativa para determinar el dato explícito.",
+        "TAED": "Nivel 1: Recuperación y Verificación",
+        "Justificacion TAED": "Extrae y valida información puntual y convenciones iconográficas en microformatos gráficos digitales.",
+        "Descriptor": "Reconoce el valor semántico denotativo de unidades icónico-verbales locales en textos discontinuos.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Exige discriminar una convención iconográfica específica en un ecosistema de datos densos sobre huella de carbono digital."
+      }
+    },
+    {
+      "id": "NDSS-L-013",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": null,
+      "contexto": "La adopción obligatoria de plataformas de vigilancia remota en el empleo juvenil suele promocionarse como una garantía para medir la productividad real. No obstante, este monitoreo continuo fragmenta la concentración profunda, genera fatiga atencional crónica y socava los lazos de confianza profesional imprescindibles para la innovación.",
+      "enunciado": "En el texto, el conector \"No obstante\" cumple la función sintáctica de",
+      "opciones": {
+        "A": "corroborar las virtudes técnicas del software empresarial.",
+        "B": "ampliar el inventario de herramientas para medir labores.",
+        "C": "restringir el alcance positivo del argumento presentado.",
+        "D": "concluir que el empleo a distancia resulta ineficaz."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | Interpretaste el conector como un refuerzo de la idea inicial cuando en realidad la confronta. | Como caiste: Leíste la segunda cláusula como una confirmación mecánica de la primera. | Analisis de tu competencia: Tu mente no reconoció el cambio de dirección semántica que impone un nexo de contraste. | Plan de Accion: Cada vez que veas \"no obstante\", \"sin embargo\" o \"pero\", pon un freno y detecta el giro de postura.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Constatar si el estudiante invierte la polaridad lógica del conector. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Decodificación lineal. | Sugerencia de Mejora: Repasar la tabla funcional de marcadores del discurso. | Tip Tactico para el Docente: Trabaje oraciones paralelas cambiando el conector (por ende / no obstante) para visibilizar el cambio de vector discursivo."
+        },
+        "B": {
+          "estudiante": "Trampa: Información Parcial | Asumiste que la enumeración de problemas era una simple adición acumulativa. | Como caiste: Ignoraste el valor de enfrentamiento opositivo del nexo y lo tomaste como un \"además\". | Analisis de tu competencia: Redujiste el análisis sintáctico a una lectura superficial de adición informativa. | Plan de Accion: Distingue con precisión los conectores aditivos de los concesivos o restrictivos.",
+          "pedagogico": "Tipologia: Información Parcial | Intencion del error: Determinar si se homologa erróneamente la oposición con la sumación sintáctica. | Techo Taxonomico: Bloom 1 / Marzano 2 / TAED Reconocimiento elemental. | Sugerencia de Mejora: Clasificar conectores por familias de sentido (adición, oposición, causa). | Tip Tactico para el Docente: Solicite sustituir \"no obstante\" por sinónimos directos para descartar funciones aditivas."
+        },
+        "C": {
+          "estudiante": "Clave: C. ¡Muy bien razonado! \"No obstante\" es un conector adversativo que introduce una limitación directa a la ventaja mencionada previamente, sin destruirla por completo pero acotándola con firmeza.",
+          "pedagogico": "Clave: C | Intencion: Evaluar la competencia de articulación textual sintáctica mediante el valor funcional de un operador discursivo adversativo. | Niveles: Analizar / Análisis / Estructurar jerarquías lógicas."
+        },
+        "D": {
+          "estudiante": "Trampa: Híbrido | Parte de la crítica es cierta, pero el conector no cancela ni invalida totalmente el teletrabajo en general. | Como caiste: Llevaste una objeción puntual a una clausura absoluta sobre el trabajo remoto. | Analisis de tu competencia: Tu lectura sobreinterpretó una restricción y la convirtió en una sentencia definitiva. | Plan de Accion: Delimita el peso del conector: matiza una afirmación previa, no clausura el fenómeno entero.",
+          "pedagogico": "Tipologia: Híbrido | Intencion del error: Verificar si el examinado confunde un matiz restrictivo con una tesis concluyente y absoluta. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Deducción no fundamentada. | Sugerencia de Mejora: Trabajar la diferencia entre premisa subordinada y tesis global. | Tip Tactico para el Docente: Haga notar el alcance delimitado de cada oración antes de generalizar a la postura del autor."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Comprendo el papel que cumplen los medios de comunicación y las plataformas en la configuración de la opinión pública.",
+        "Competencia": "Comprender cómo se articulan las partes de un texto para darle un sentido global.",
+        "Componente": "Sintáctico.",
+        "Afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global.",
+        "Evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto.",
+        "Tarea": "Determinar la relación funcional del conector 'no obstante' entre dos premisas de una columna periodística.",
+        "Bloom": "Analizar",
+        "Justificacion Bloom": "Examina la función de transición restrictiva y de cohesión oracional.",
+        "Marzano": "Análisis",
+        "Justificacion Marzano": "Clasifica la función lógico-sintáctica de conectores opositivos en un fragmento argumentativo.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Deconstruye estructuras lógicas y operadores discursivos opositivos para clarificar la coherencia del razonamiento.",
+        "Descriptor": "Reconoce los enlaces conectivos que articulan la estructura lógica de textos argumentativos continuos.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Demanda discernir matices entre la concesión parcial y la refutación definitiva en el debate sobre teletrabajo."
+      }
+    },
+    {
+      "id": "NDSS-L-014",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792426915/L-014_tr2n7d.jpg",
+      "contexto": "El caricaturista ilustra al directivo concentrado con angustia en el comentario de su pantalla, mientras mantiene las persianas cerradas hacia la protesta exterior.",
+      "enunciado": "El propósito central del autor al emplear esta contradicción es",
+      "opciones": {
+        "A": "ridiculizar la desconexión social de las élites corporativas.",
+        "B": "enseñar el protocolo adecuado para responder en redes.",
+        "C": "documentar la eficiencia del activismo ciudadano en línea.",
+        "D": "elogiar la serenidad del directivo frente a las masas."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Clave: A. ¡Exacto! La caricatura usa el humor ácido para evidenciar el absurdo: a la dirigencia le aterra un mensaje virtual insignificante pero le da la espalda a los reclamos reales masivos en su propia puerta.",
+          "pedagogico": "Clave: A | Intencion: Evaluar la capacidad de identificar la estrategia retórica (ironía/sátira) en un texto discontinuo literario-crítico. | Niveles: Evaluar / Utilización del Conocimiento / Evaluar intencionalidades."
+        },
+        "B": {
+          "estudiante": "Trampa: Atractor Moral/Emocional | Pensaste que el dibujo busca aconsejar buenas prácticas empresariales de relaciones públicas. | Como caiste: Buscaste una moraleja formativa o educativa en un formato que es netamente satírico. | Analisis de tu competencia: Tu análisis se desplazó a un plano prescriptivo moral, perdiendo la perspectiva crítica del género caricaturesco. | Plan de Accion: Recuerda que la sátira editorial no busca enseñar recetas de etiqueta, sino cuestionar el poder.",
+          "pedagogico": "Tipologia: Atractor Moral/Emocional | Intencion del error: Medir la proclividad del estudiante a proyectar intenciones didáctico-morales en géneros puramente reflexivos. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Decodificación simple. | Sugerencia de Mejora: Reconocer la función social transgresora de la caricatura de opinión. | Tip Tactico para el Docente: Organice ejercicios donde los alumnos distingan entre un afiche educativo y una sátira política."
+        },
+        "C": {
+          "estudiante": "Trampa: Sobre-generalización Encubierta | Viste que el directivo sudaba y concluiste que las redes sociales vencieron definitivamente al corporativismo. | Como caiste: Convertiste un detalle cómico puntual en una prueba irrefutable de victoria política general. | Analisis de tu competencia: Sobrevaloraste la efectividad de una publicación sin notar que el personaje simplemente evade el problema de fondo. | Plan de Accion: Evalúa la imagen en su totalidad y no eleves un elemento circunstancial a conclusión global.",
+          "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Verificar si el lector infiere una eficacia política total a partir de una exageración gráfica. | Techo Taxonomico: Bloom 2 / Marzano 3 / TAED Extrapolación indebida. | Sugerencia de Mejora: Limitar la inferencia al marco de relaciones dispuesto en la viñeta. | Tip Tactico para el Docente: Pregunte: \"¿El texto demuestra que la protesta triunfó o solo muestra una conducta individual ridícula?\"."
+        },
+        "D": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | Señalaste \"serenidad\" cuando la imagen explicita sudor, pánico y encierro forzado. | Como caiste: Interpretaste la acción de cerrar la cortina como madurez y templanza emocional. | Analisis de tu competencia: Decodificaste de manera invertida los rasgos corporales del personaje plasmado. | Plan de Accion: Lee con lupa los gestos faciales y corporales: el sudor y los ojos desorbitados indican cobardía y alarma, nunca serenidad.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Contrastar la lectura literal de rasgos expresivos contra lecturas semánticas invertidas. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Reconocimiento primario. | Sugerencia de Mejora: Afinar la decodificación de lenguaje kinésico en caricaturas. | Tip Tactico para el Docente: Analice con lupa rasgos fisonómicos de viñetas para fijar su significado denotativo unívoco."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Analizo los mecanismos ideológicos que subyacen a la estructura de la publicidad y la comunicación digital.",
+        "Competencia": "Reflexionar a partir de un texto y evaluar su contenido.",
+        "Componente": "Pragmático.",
+        "Afirmacion": "Reflexiona a partir de un texto y evalúa su contenido.",
+        "Evidencia": "Reconoce las estrategias discursivas en un texto.",
+        "Tarea": "Evaluar el recurso de ironía visual utilizado en una caricatura política contemporánea.",
+        "Bloom": "Evaluar",
+        "Justificacion Bloom": "Emite un juicio fundado sobre la intención comunicativa de la retórica gráfica.",
+        "Marzano": "Utilización del Conocimiento",
+        "Justificacion Marzano": "Juzga la validez y el propósito de un recurso satírico en el contexto sociopolítico.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Deconstruye intencionalidades retóricas y sesgos ideológicos cifrados en códigos multimodales satíricos.",
+        "Descriptor": "Reconoce el uso de recursos retóricos e ideológicos presentes en medios de comunicación visuales.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Requiere desentrañar una contradicción intencional entre el lenguaje corporal y la leyenda textual."
+      }
+    },
+    {
+      "id": "NDSS-L-015",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": null,
+      "contexto": "Cuando una comunidad cede voluntariamente sus datos genómicos a conglomerados transnacionales, la promesa de medicina personalizada suele deslumbrarla; sin embargo, al mercantilizar estos perfiles, las corporaciones terminan despojándola de su patrimonio biológico esencial.",
+      "enunciado": "En la expresión \"despojándola de su patrimonio\", el pronombre enclítico \"-la\" hace referencia sintáctica a",
+      "opciones": {
+        "A": "la medicina personalizada.",
+        "B": "la corporación transnacional.",
+        "C": "la promesa comercial.",
+        "D": "la comunidad cedente."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Trampa: Información Parcial | La medicina personalizada figura en la oración, pero es el cebo que seduce, no la entidad a la cual le quitan su patrimonio. | Como caiste: Elegiste un sustantivo femenino singular cercano sin validar el rol de paciente de la acción. | Analisis de tu competencia: Tu mente resolvió la concordancia morfológica superficial, pero se saltó la asignación semántica del rol activo/pasivo. | Plan de Accion: Pregunta siempre a la acción: ¿A quién despojan exactamente? La respuesta revelará al antecedente legítimo.",
+          "pedagogico": "Tipologia: Información Parcial | Intencion del error: Evidenciar apego a concordancias puramente formales de género y número sin mediación semántica. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Reconocimiento primario. | Sugerencia de Mejora: Ejercitar el análisis de complementos directos e indirectos en periodos complejos. | Tip Tactico para el Docente: Realice ejercicios de reescritura reemplazando pronombres por cada uno de los antecedentes potenciales para comprobar su coherencia."
+        },
+        "B": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | La corporación es quien ejecuta el despojo, no la víctima despojada. | Como caiste: Confundiste el sujeto agente (las corporaciones) con el objeto directo receptor del daño. | Analisis de tu competencia: Invertiste los roles gramaticales dentro de la estructura predicativa. | Plan de Accion: Deslinda con rigor quién comete la acción y quién la padece en la cláusula subordinada.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Detectar la incapacidad para discernir agente de paciente gramatical. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Decodificación básica. | Sugerencia de Mejora: Fortalecer la distinción funcional entre sujeto gramatical y objeto directo. | Tip Tactico para el Docente: Pregunte de manera explícita: \"¿Quién realiza la acción y quién la recibe?\"."
+        },
+        "C": {
+          "estudiante": "Trampa: Error de Campo Semántico/Lógico | La promesa no posee genoma ni tejido biológico que pueda ser sustraído. | Como caiste: Emparejaste el género gramatical ignorando que una \"promesa\" no puede poseer biológica ni legalmente un patrimonio vivo. | Analisis de tu competencia: Desconectaste la gramática formal del sentido de realidad que impone el predicado. | Plan de Accion: Revisa si la sustitución resultante tiene sentido físico y lógico en la realidad planteada.",
+          "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Constatar fallos en la verificación de compatibilidad semántica entre núcleo y modificadores. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Asociación lineal. | Sugerencia de Mejora: Integrar la cohesión sintáctica con la coherencia semántica en ejercicios de aula. | Tip Tactico para el Docente: Pida contrastar expresiones metafóricas con objetos concretos para evitar emparejamientos absurdos."
+        },
+        "D": {
+          "estudiante": "Clave: D. ¡Acertaste con maestría! El pronombre de tercera persona femenina singular \"-la\" se remite a la \"comunidad\" que transfirió su información, quien sufre la acción de ser despojada de su herencia genética.",
+          "pedagogico": "Clave: D | Intencion: Evaluar la identificación certera de anáforas y relaciones de cohesión oracional en textos expositivo-argumentativos. | Niveles: Comprender / Comprensión / Decodificar microestructuras."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Produzco y comprendo textos argumentativos identificando los diferentes niveles de la lengua y su cohesión formal.",
+        "Competencia": "Identificar y entender los contenidos locales que conforman un texto.",
+        "Componente": "Sintáctico.",
+        "Afirmacion": "Identifica y entiende los contenidos locales que conforman un texto.",
+        "Evidencia": "Entiende el significado de los elementos locales que constituyen un texto.",
+        "Tarea": "Identificar el referente gramatical anafórico de un pronombre enclítico en una breve sentencia argumentativa.",
+        "Bloom": "Comprender",
+        "Justificacion Bloom": "Asocia el elemento de sustitución anafórica con su antecedente textual.",
+        "Marzano": "Comprensión",
+        "Justificacion Marzano": "Integra elementos sintácticos locales dentro del periodo oracional.",
+        "TAED": "Nivel 1: Recuperación y Verificación",
+        "Justificacion TAED": "Rastrea y valida relaciones anafóricas y de cohesión local en microestructuras oracionales complejas.",
+        "Descriptor": "Reconoce las relaciones anafóricas y de correferencia que unen componentes sintácticos inmediatos.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Requiere precisión para desenredar la ambigüedad sintáctica potencial entre sustantivos próximos."
+      }
+    },
+    {
+      "id": "NDSS-L-016",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792426913/L-016_l5gtms.jpg",
+      "contexto": "Transición Tecnológica en el Sector Manufacturero (2020-2026).",
+      "enunciado": "Al confrontar la tendencia visual de las barras de inversión con la nota explicativa inferior, se deduce que la estrategia actual de las empresas",
+      "opciones": {
+        "A": "prioriza la formación laboral sobre el equipamiento.",
+        "B": "contradice la recomendación técnica para el éxito futuro.",
+        "C": "garantiza el bienestar de toda la masa trabajadora.",
+        "D": "incrementa los gastos destinados a salarios industriales."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | La gráfica muestra exactamente lo opuesto: la barra gris de capacitación cayó un 42%, mientras la automatización creció. | Como caiste: Leíste las categorías al revés y atribuiste el aumento al factor humano. | Analisis de tu competencia: Invertiste la asignación de variables visuales en el plano estadístico. | Plan de Accion: Revisa la convención de color antes de interpretar: contrasta la etiqueta de la leyenda con la longitud de la barra.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Evidenciar descuidos en la decodificación de barras comparativas y leyendas de color. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Recuperación simple. | Sugerencia de Mejora: Fortalecer ejercicios de cotejo rápido entre leyenda y magnitud escalar. | Tip Tactico para el Docente: Diseñe pruebas de lectura veloz enfocadas en el contraste de ejes y leyendas en gráficos dobles."
+        },
+        "B": {
+          "estudiante": "Clave: B. ¡Excelente lectura global! La nota afirma que el éxito depende de articular el talento con las máquinas, pero la gráfica demuestra que se recorta drásticamente el presupuesto para capacitar a las personas mientras se compran más robots. ¡Hay una evidente incongruencia!",
+          "pedagogico": "Clave: B | Intencion: Evaluar la capacidad de sintetizar contradicciones lógicas entre el componente cuantitativo y el textual en textos mixtos. | Niveles: Analizar / Análisis / Sintetizar redes informacionales."
+        },
+        "C": {
+          "estudiante": "Trampa: Atractor Moral/Emocional | Quisiste asumir que modernización industrial es automáticamente sinónimo de bienestar para todos. | Como caiste: Te dejaste llevar por una visión optimista ingenua no corroborada por los datos de recorte. | Analisis de tu competencia: Introdujiste un juicio moral deseable en lugar de leer el distanciamiento entre inversión y formación. | Plan de Accion: Fíate de los números y las tendencias que ofrece la gráfica, sin añadir supuestos bienintencionados.",
+          "pedagogico": "Tipologia: Atractor Moral/Emocional | Intencion del error: Detectar la intrusión de presupuestos ideológicos optimistas que neutralizan el dato crítico. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Interpretación sesgada. | Sugerencia de Mejora: Desarrollar sentido de objetividad inferencial basada en datos duros. | Tip Tactico para el Docente: Incentive la búsqueda de discrepancias entre el discurso corporativo y sus balances financieros reales."
+        },
+        "D": {
+          "estudiante": "Trampa: Información Parcial | Asumiste que la inversión general elevada implica un aumento proporcional en los sueldos de los operarios. | Como caiste: Confundiste la inversión en maquinaria robótica con remuneraciones salariales directas. | Analisis de tu competencia: Tu proceso cognitivo extrapoló un rubro de capital físico a un gasto laboral corriente. | Plan de Accion: Ciñe tus inferencias a los conceptos graficados: comprar robots nunca equivale a subir salarios.",
+          "pedagogico": "Tipologia: Información Parcial | Intencion del error: Identificar falacias de composición en economía laboral elemental. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Decodificación desarticulada. | Sugerencia de Mejora: Precisar la terminología de rubros económicos dentro de infografías del sector productivo. | Tip Tactico para el Docente: Trabaje glosarios de economía básica aplicados al análisis de lectura crítica."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Comprendo textos que tienen diferentes formatos y finalidades, estableciendo relaciones entre gráficas y textos continuos.",
+        "Competencia": "Comprender cómo se articulan las partes de un texto para darle un sentido global.",
+        "Componente": "Semántico.",
+        "Afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global.",
+        "Evidencia": "Identifica el tipo de relación existente entre diferentes elementos de un texto (discontinuo).",
+        "Tarea": "Sintetizar la relación de complementariedad y contraste entre una gráfica de barras y una advertencia técnica.",
+        "Bloom": "Analizar",
+        "Justificacion Bloom": "Relaciona e integra la evidencia numérica de dos fuentes internas de la infografía.",
+        "Marzano": "Análisis",
+        "Justificacion Marzano": "Deduce la correlación entre automatización laboral y rezago en formación técnica juvenil.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Integra y sintetiza fuentes heterogéneas (gráficas cuantitativas y textos prescriptivos) detectando discrepancias lógicas.",
+        "Descriptor": "Establece inferencias integradoras a partir del cruce de datos cuantitativos y formulaciones verbales en textos mixtos.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Exige confrontar dos variables estadísticas opuestas presentadas en un gráfico de barras doble."
+      }
+    },
+    {
+      "id": "NDSS-L-017",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": null,
+      "contexto": "La constante comodidad de recibir respuestas inmediatas preconfiguradas por motores generativos no constituye un triunfo de la inteligencia, sino el inicio de su dócil servidumbre. Quien delega sistemáticamente el esfuerzo de la duda y la formulación de interrogantes abdica de su condición de sujeto soberano, reduciéndose a un mero consumidor de conclusiones manufacturadas por corporaciones foráneas.",
+      "enunciado": "El razonamiento del autor descansa sobre el supuesto valorativo de que",
+      "opciones": {
+        "A": "la rapidez informática supera al diálogo humano.",
+        "B": "la adquisición de respuestas resuelve el conflicto ético.",
+        "C": "la incertidumbre intelectual resulta indispensable para la libertad.",
+        "D": "la comodidad operativa constituye el fin supremo individual."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | El texto considera que la inmediatez computacional atrofia el pensamiento, en vez de constituir un valor superior. | Como caiste: Seleccionaste una idea opuesta al tono admonitorio del autor. | Analisis de tu competencia: Confundiste el objeto criticado con el valor ético propuesto por el ensayista. | Plan de Accion: Identifica claramente qué censura el autor para deducir el valor positivo que defiende en contraposición.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Evidenciar desatención al sentido de la crítica frente a la tecnología instrumental. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Comprensión básica. | Sugerencia de Mejora: Ejercitar la reconstrucción de antítesis y tesis nucleares en textos filosóficos. | Tip Tactico para el Docente: Pida a los estudiantes aislar la palabra clave acusatoria (\"servidumbre\") para situar la postura del autor."
+        },
+        "B": {
+          "estudiante": "Trampa: Híbrido | La obtención rápida de respuestas existe, pero el texto demuestra que genera subordinación y no una resolución moral. | Como caiste: Aceptaste la primera parte sobre acceder a datos, pasando por alto la degradación ética que denuncia. | Analisis de tu competencia: Tu lectura no sopesó la carga de valor negativa que el autor imprime a las \"conclusiones manufacturadas\". | Plan de Accion: Monitorea las palabras con peso valorativo (\"servidumbre\", \"abdica\", \"mero consumidor\").",
+          "pedagogico": "Tipologia: Híbrido | Intencion del error: Medir la tendencia a dar por válida una conclusión reconfortante pero ajena al planteamiento del autor. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Decodificación fragmentaria. | Sugerencia de Mejora: Distinguir entre soluciones operativas y dilemas éticos profundos. | Tip Tactico para el Docente: Pregunte al grupo: \"¿Tener la respuesta lista elimina la necesidad de pensar moralmente?\"."
+        },
+        "C": {
+          "estudiante": "Clave: C. ¡Magistral discernimiento! El autor plantea que sin el esfuerzo de dudar e indagar por cuenta propia, perdemos la soberanía personal; por lo tanto, asume como valor fundamental que la inquietud e incertidumbre son vitales para ser auténticamente libres.",
+          "pedagogico": "Clave: C | Intencion: Evaluar la competencia de identificar presupuestos filosóficos y juicios de valor en textos argumentativos continuos. | Niveles: Evaluar / Utilización del Conocimiento / Evaluar cosmovisiones discursivas."
+        },
+        "D": {
+          "estudiante": "Trampa: Sobre-generalización Encubierta | El autor menciona la comodidad, pero como una trampa seductora que aliena al individuo, nunca como el propósito deseable. | Como caiste: Tomaste el motivo de la crítica y lo convertiste en el fin supremo del sujeto. | Analisis de tu competencia: No distinguiste entre el comportamiento pasivo descrito y el estándar ético que el autor exige. | Plan de Accion: Pregúntate siempre: ¿El autor aplaude esta conducta o la señala como un peligro existencial?",
+          "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Comprobar si el evaluado confunde una conducta social contemporánea con el ideal defendido por el emisor. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Reconocimiento ingenuo. | Sugerencia de Mejora: Trabajar la detección del blanco de ataque retórico en columnas de opinión. | Tip Tactico para el Docente: Solicite a los alumnos contrastar el concepto de \"comodidad\" según el mercado versus \"libertad\" según la filosofía crítica."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Analizo crítica y creativamente diferentes manifestaciones literarias y filosóficas, asumiendo una postura fundamentada.",
+        "Competencia": "Reflexionar a partir de un texto y evaluar su contenido.",
+        "Componente": "Pragmático.",
+        "Afirmacion": "Reflexiona a partir de un texto y evalúa su contenido.",
+        "Evidencia": "Reconoce contenidos valorativos presentes en un texto.",
+        "Tarea": "Identificar el supuesto axiológico que sostiene la tesis del autor sobre la autonomía del pensamiento.",
+        "Bloom": "Evaluar",
+        "Justificacion Bloom": "Emite un juicio de valor sobre el presupuesto filosófico implícito en un ensayo reflexivo.",
+        "Marzano": "Utilización del Conocimiento",
+        "Justificacion Marzano": "Juzga la validez de un supuesto ético sobre la delegación cognitiva en algoritmos.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Examina críticamente presupuestos axiológicos y éticos subyacentes en discursos argumentativos sobre tecnología y cognición.",
+        "Descriptor": "Reconoce los juicios de valor y supuestos ideológicos que sustentan la argumentación filosófica.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Exige abstraer el valor central (emancipación cognitiva) que da soporte a un reclamo sobre tecnologías inteligentes."
+      }
+    },
+    {
+      "id": "NDSS-L-018",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792426916/L-018_xojewi.jpg",
+      "contexto": null,
+      "enunciado": "En el panel, la intervención verbal y el gesto del reciclador cumplen el papel directo de",
+      "opciones": {
+        "A": "señalar la falsedad evidente de la creadora digital.",
+        "B": "aplaudir la destreza técnica de los camarógrafos urbanos.",
+        "C": "pedir limosna económica a los miembros de producción.",
+        "D": "felicitar el reciclaje ordenado en la vía pública."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Clave: A. ¡Brillante observación! El reciclador usa la ironía al llamar \"discurso\" a la basura plástica abandonada por el equipo, denunciando local y explícitamente la hipocresía de quien finge ser ecológica ante la cámara.",
+          "pedagogico": "Clave: A | Intencion: Evaluar la identificación local del rol comunicativo y el blanco de la denuncia en una interacción de cómic. | Niveles: Comprender / Comprensión / Decodificar micro-roles."
+        },
+        "B": {
+          "estudiante": "Trampa: Error de Campo Semántico/Lógico | El recolector apunta con indignación al desecho, no está prestando atención a la calidad del lente o la iluminación. | Como caiste: Desviaste el foco hacia la parafernalia técnica e inventaste un diálogo de aprobación técnica. | Analisis de tu competencia: Tu atención se fugó hacia los dispositivos fotográficos sin integrar la acción recriminatoria del personaje. | Plan de Accion: Enfócate en el núcleo del conflicto: el dedo apunta a la basura, no a la cámara.",
+          "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Verificar si el lector desatiende el vector comunicativo del personaje para concentrarse en elementos escénicos neutros. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Reconocimiento descontextualizado. | Sugerencia de Mejora: Guiar la mirada hacia las interacciones interpersonales en viñetas narrativas. | Tip Tactico para el Docente: Pregunte: \"¿Hacia dónde apunta el vector del brazo y qué objeto material conecta?\"."
+        },
+        "C": {
+          "estudiante": "Trampa: Atractor Moral/Emocional | Asumiste un estereotipo socioeconómico sobre el oficio del reciclador en lugar de leer su acción comunicativa. | Como caiste: Tu mente proyectó un prejuicio de vulnerabilidad económica ajeno a lo que ocurre en la escena. | Analisis de tu competencia: Sustituiste la evidencia local del parlamento por un sesgo asistencialista. | Plan de Accion: Lee las palabras textuales del personaje en el globo de diálogo; jamás pidas prestado a prejuicios externos.",
+          "pedagogico": "Tipologia: Atractor Moral/Emocional | Intencion del error: Revelar interferencias por estereotipos socioculturales que opacan la comprensión lectora literal. | Techo Taxonomico: Bloom 1 / Marzano 2 / TAED Proyección subjetiva. | Sugerencia de Mejora: Erradicar supuestos externos al texto durante la fase de lectura de evidencias. | Tip Tactico para el Docente: Señale cómo los sesgos sociales del lector distorsionan el significado objetivo de un texto icónico."
+        },
+        "D": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | La escena exhibe residuos tirados en desorden; plantear felicitación invierte por completo la situación de reclamo. | Como caiste: Interpretaste la frase literalmente sin captar el reproche cáustico ante la suciedad visible. | Analisis de tu competencia: Leíste la expresión en un plano plano-literal positivo, anulando la tensión pragmática del contexto. | Plan de Accion: Relaciona siempre el texto del globo con el objeto señalado: si señala basura regada, es una acusación.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Evidenciar incompetencia en la lectura pragmática del sarcasmo cotidiano. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Decodificación literal ingenua. | Sugerencia de Mejora: Afianzar el análisis de actos de habla indirectos en viñetas gráficas. | Tip Tactico para el Docente: Trabaje oraciones con tono sarcástico y pida a los estudiantes contrastar la literalidad con el contexto real del emisor."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Comprendo la información que circula a través de sistemas no verbales e infiero intenciones comunicativas locales.",
+        "Competencia": "Identificar y entender los contenidos locales que conforman un texto.",
+        "Componente": "Pragmático.",
+        "Afirmacion": "Identifica y entiende los contenidos locales que conforman un texto.",
+        "Evidencia": "Identifica los eventos narrados de manera explícita en un texto (caricatura o cómic) y los personajes involucrados.",
+        "Tarea": "Reconocer el rol pragmático explícito que desempeña un personaje secundario en una tira cómica.",
+        "Bloom": "Comprender",
+        "Justificacion Bloom": "Reconoce la función comunicativa inmediata de un participante en una interacción gráfica.",
+        "Marzano": "Comprensión",
+        "Justificacion Marzano": "Identifica el papel pragmático del personaje dentro del contexto local del panel.",
+        "TAED": "Nivel 1: Recuperación y Verificación",
+        "Justificacion TAED": "Identifica y discrimina acciones y roles pragmáticos explícitos de agentes representados en narrativas visuales.",
+        "Descriptor": "Identifica de forma directa las acciones e intenciones elementales de interlocutores en narrativas visuales.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Exige no confundir al personaje que efectúa la acusación con quien sufre pasivamente la contradicción social."
+      }
+    },
+    {
+      "id": "NDSS-L-019",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": null,
+      "contexto": "Suele celebrarse el diseño de ciudades inteligentes como el pináculo del urbanismo moderno. Sin embargo, bajo la pulcra interfaz de sensores de tráfico y algoritmos de asignación de agua potable, yace una silenciosa segregación algorítmica: las áreas con menor capacidad de pago son catalogadas como zonas de \"riesgo de retorno financiero\", lo que desvía automáticamente las inversiones de mantenimiento hacia barrios privilegiados. Así, el código informático no erradica las desigualdades históricas del territorio; simplemente las automatiza con una máscara de objetividad matemática.",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sintetiza la idea central del texto?",
+      "opciones": {
+        "A": "La tecnología moderna resolvió la administración equitativa del agua.",
+        "B": "Los algoritmos de transporte optimizan los recorridos en barrios marginales.",
+        "C": "El diseño inteligente de urbes elimina completamente las disputas económicas.",
+        "D": "La digitalización urbana perpetúa las brechas sociales bajo criterios tecnocráticos."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | El texto señala que los algoritmos de asignación de agua marginan a las zonas vulnerables, nunca que resolvieron el problema con equidad. | Como caiste: Convertiste la mención de un servicio público en una victoria social cuando el texto plantea una denuncia. | Analisis de tu competencia: Tu lectura invirtió el sentido del enunciado crítico, tornándolo en un logro inexistente. | Plan de Accion: No asumas que la mención de una tecnología implica un resultado beneficioso.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Identificar lecturas superficiales que atribuyen éxito a mecanismos tecnológicos explícitamente criticados. | Techo Taxonomico: Bloom 2 / Marzano 1 / TAED Decodificación descontextualizada. | Sugerencia de Mejora: Contrastar la promesa teórica con la denuncia fáctica contenida en el párrafo. | Tip Tactico para el Docente: Pida al alumno marcar con signos (+ o -) la valoración que el texto otorga a cada servicio mencionado."
+        },
+        "B": {
+          "estudiante": "Trampa: Información Parcial | El tráfico se menciona como parte del sistema, pero el texto aclara que los recursos huyen de las zonas vulnerables. | Como caiste: Te quedaste con un dato periférico de la introducción e ignoraste la conclusión de discriminación. | Analisis de tu competencia: Seleccionaste un componente local desarticulado de la tesis global del autor. | Plan de Accion: Descarta opciones que solo tomen un fragmento del inicio y se olviden del resto del texto.",
+          "pedagogico": "Tipologia: Información Parcial | Intencion del error: Evidenciar la trampa del señuelo temático local (tráfico/movilidad). | Techo Taxonomico: Bloom 1 / Marzano 2 / TAED Recuperación aislada. | Sugerencia de Mejora: Distinguir entre ejemplos secundarios y la afirmación rectora del párrafo. | Tip Tactico para el Docente: Pregunte: \"¿El texto se escribió para hablar de trancones o para alertar sobre la injusticia urbana?\"."
+        },
+        "C": {
+          "estudiante": "Trampa: Sobre-generalización Encubierta | El autor demuestra rigurosamente que las disputas y disparidades económicas continúan vigentes. | Como caiste: Usaste un absoluto (\"elimina completamente\") para validar una promesa publicitaria que el texto se encarga de desmentir. | Analisis de tu competencia: Tu mente aceptó un absolutismo injustificado en flagrante discordancia con la postura del autor. | Plan de Accion: Desconfía sistemáticamente de fórmulas absolutizadoras cuando el autor denuncia problemas estructurales.",
+          "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Comprobar la debilidad cognitiva frente a declaraciones totalizantes no respaldadas. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Generalización espuria. | Sugerencia de Mejora: Entrenar el escaneo de cuantificadores universales no justificados. | Tip Tactico para el Docente: Resalte cómo palabras como \"completamente\" o \"totalmente\" suelen descalificar la validez de una opción de examen."
+        },
+        "D": {
+          "estudiante": "Clave: D. ¡Extraordinaria síntesis! El autor demuestra a lo largo de todo el párrafo que el uso de algoritmos no solucionó la desigualdad urbana, sino que la oculta y automatiza tras una supuesta neutralidad técnica.",
+          "pedagogico": "Clave: D | Intencion: Evaluar la destreza de abstracción y síntesis de la macroestructura semántica en textos de opinión informada. | Niveles: Analizar / Análisis / Sintetizar macroestructuras."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Comprendo e interpreto textos argumentativos con actitud crítica, determinando su sentido global.",
+        "Competencia": "Comprender cómo se articulan las partes de un texto para darle un sentido global.",
+        "Componente": "Semántico.",
+        "Afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global.",
+        "Evidencia": "Identifica y caracteriza las ideas o afirmaciones presentes en un texto informativo.",
+        "Tarea": "Sintetizar la tesis global que articula las razones secundarias en una columna de divulgación científica.",
+        "Bloom": "Analizar",
+        "Justificacion Bloom": "Integra argumentos parciales en una proposición global omnicomprensiva.",
+        "Marzano": "Análisis",
+        "Justificacion Marzano": "Generaliza a partir de las evidencias particulares la idea medular del autor.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Deconstruye y sintetiza macroestructuras informativas complejas, destilando la tesis medular a partir de premisas subordinadas.",
+        "Descriptor": "Infiere la tesis central y el sentido global de textos expositivo-argumentativos continuos.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Exige separar un ejemplo biológico llamativo de la tesis sociológica y tecnológica de fondo."
+      }
+    },
+    {
+      "id": "NDSS-L-020",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792426912/L-020_zsxfuo.jpg",
+      "contexto": null,
+      "enunciado": "Al examinar la articulación sintáctica y el orden de los pasos del flujograma, se concluye que el diseño del proceso",
+      "opciones": {
+        "A": "protege de manera estricta los derechos de autor siempre.",
+        "B": "convalida la impunidad informativa según la popularidad del usuario.",
+        "C": "somete a todas las cuentas al mismo estándar de revisión.",
+        "D": "elimina las publicaciones que carecen de verificación legal oportuna."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Trampa: Sobre-generalización Encubierta | Notaste que existe una caja de \"bloqueo por derechos de autor\", pero olvidaste que las cuentas masivas se saltan ese filtro por la flecha del \"SÍ\". | Como caiste: Afirmaste que se protege \"siempre\", ignorando la excepción estructural previa. | Analisis de tu competencia: Tu razonamiento generalizó una cláusula condicional subordinada a la totalidad del sistema. | Plan de Accion: Revisa si existen desvíos en el flujo antes de declarar que una regla opera universalmente.",
+          "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Revelar la incapacidad de ponderar el efecto anulador de un desvío condicional sobre una regla presunta. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Decodificación de ruta única. | Sugerencia de Mejora: Ejercitar la lectura rigurosa de algoritmos con ramas excluyentes. | Tip Tactico para el Docente: Invite a rastrear rutas con el dedo: \"Si tomo el camino SÍ, ¿llego alguna vez a la caja de derechos de autor?\"."
+        },
+        "B": {
+          "estudiante": "Clave: B. ¡Excelente agudeza crítica! El diagrama muestra que si tienes más de 100 mil seguidores, tu video se aprueba de forma automática sin verificar si es falso o viola normas; la popularidad te exime de control, evidenciando una flagrante impunidad.",
+          "pedagogico": "Clave: B | Intencion: Evaluar la competencia de evaluar la validez estructural y sintáctica de dependencias en un texto discontinuo procedimental. | Niveles: Evaluar / Utilización del Conocimiento / Auditar coherencias procedurales."
+        },
+        "C": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | El rombo de decisión divide el camino precisamente para no tratar a todos por igual: crea un privilegio para cuentas grandes. | Como caiste: Asumiste igualdad de condiciones éticas en un flujograma diseñado intencionalmente con sesgo. | Analisis de tu competencia: Invertiste la evidencia visual de bifurcación asimétrica por un ideal de equidad procesal. | Plan de Accion: Sigue las flechas: si una condición abre dos destinos dispares, no hay igualdad de trato.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Evidenciar la imposición de sesgos éticos deseables sobre la lógica descriptiva del esquema. | Techo Taxonomico: Bloom 2 / Marzano 1 / TAED Suposición acrítica. | Sugerencia de Mejora: Fortalecer la lectura técnica objetiva de diagramas de toma de decisiones. | Tip Tactico para el Docente: Utilice flujogramas reales de empresas digitales para visibilizar privilegios programados."
+        },
+        "D": {
+          "estudiante": "Trampa: Híbrido | El bloqueo ocurre, pero únicamente para los creadores pequeños (flecha del \"NO\") y no para todo el contenido sin verificar. | Como caiste: Aceptaste la sanción descrita en la última caja omitiendo el grupo que queda exento desde el inicio. | Analisis de tu competencia: Válida la consecuencia final, pero distorsionaste su alcance de aplicación poblacional. | Plan de Accion: Monitorea quiénes entran realmente a la fase de penalización siguiendo la secuencia lógica.",
+          "pedagogico": "Tipologia: Híbrido | Intencion del error: Detectar la aceptación acrítica de desenlaces parciales atribuyéndoles cobertura total. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Generalización precipitada. | Sugerencia de Mejora: Delimitar las condiciones de entrada requeridas para alcanzar cada estado terminal. | Tip Tactico para el Docente: Pregunte: \"¿Qué etiqueta debió responder el usuario en el primer rombo para llegar al bloqueo final?\"."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Relaciono de manera crítica obras y diagramas que emplean lenguajes verbales y no verbales para evaluar su coherencia interna.",
+        "Competencia": "Reflexionar a partir de un texto y evaluar su contenido.",
+        "Componente": "Sintáctico.",
+        "Afirmacion": "Reflexiona a partir de un texto y evalúa su contenido.",
+        "Evidencia": "Establece la validez e implicaciones de un enunciado de un texto (discontinuo/diagrama).",
+        "Tarea": "Evaluar la consistencia sintáctica y de flujo lógico entre dos etapas de un diagrama de flujo regulatorio.",
+        "Bloom": "Evaluar",
+        "Justificacion Bloom": "Determina si el conector de bifurcación condicional genera un cortocircuito lógico en el proceso.",
+        "Marzano": "Utilización del Conocimiento",
+        "Justificacion Marzano": "Aplica criterios de consistencia lógica para diagnosticar una falla de progresión en un algoritmo visual.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Evalúa la consistencia algorítmica y la coherencia formal en diagramas de flujo y modelos procedimentales de decisión.",
+        "Descriptor": "Juzga la coherencia formal, la estructura de interconexión y la validez funcional en textos discontinuos lógicos.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Exige seguir la ruta sintáctica de condiciones \"Si / No\" para detectar un salto argumentativo arbitrario."
+      }
+    },
+    {
+      "id": "NDSS-L-021",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": null,
+      "contexto": "Nadie niega que el financiamiento estatal a creadores de contenido científico democratiza el acceso al saber. Algunos puristas argumentarán que el mecenazgo público terminará por burocratizar el ingenio y someter la curiosidad a los caprichos del burócrata de turno. Sin embargo, abandonar la producción científica a la lógica exclusiva del mercado genera una tiranía infinitamente más nociva: la del clic sensacionalista que sepulta la verdad rigurosa bajo el ruido del entretenimiento barato.",
+      "enunciado": "La voz de los \"puristas\" es introducida en el fragmento con el propósito de",
+      "opciones": {
+        "A": "exponer una objeción que el autor busca invalidar.",
+        "B": "ilustrar la visión final que el autor comparte plenamente.",
+        "C": "demostrar la inutilidad definitiva de la educación pública.",
+        "D": "sugerir un pacto financiero entre creadores y gobernantes."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Clave: A. ¡Impecable razonamiento dialéctico! El autor cita intencionalmente a los puristas para poner sobre la mesa la crítica de la burocracia y luego destruirla (\"Sin embargo...\"), demostrando que la ley del mercado privado es mucho peor.",
+          "pedagogico": "Clave: A | Intencion: Evaluar la destreza de identificar polifonía y funciones dialógicas (contraargumentación) en el marco de la afirmación 2 del ICFES. | Niveles: Analizar / Análisis / Deconstruir polifonías argumentativas."
+        },
+        "B": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | El texto introduce la voz de los puristas como un obstáculo a derribar, no como la tesis con la que el autor concuerda. | Como caiste: Atribuiste la opinión del personaje citado directamente a la mente del emisor del texto. | Analisis de tu competencia: Confundiste la polifonía textual con una postura homogénea del enunciador. | Plan de Accion: Fíjate en cómo reacciona el autor después de presentar una voz: si usa un \"sin embargo\", es porque la va a rebatir.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Constatar si el estudiante cae en la trampa de imputar al autor las ideas de sus adversarios dialécticos. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Decodificación lineal. | Sugerencia de Mejora: Enseñar técnicas de marcación de citas polifónicas y voces adversas en ensayos. | Tip Tactico para el Docente: Haga subrayar con colores distintos la voz del autor y la voz de los contrincantes citados."
+        },
+        "C": {
+          "estudiante": "Trampa: Sobre-generalización Encubierta | Los puristas temen la burocracia de proyectos puntuales, pero jamás proponen desmantelar la educación de un país. | Como caiste: Exageraste un temor administrativo transformándolo en una condena de la instrucción general. | Analisis de tu competencia: Tu pensamiento amplificó un desacuerdo procedimental hacia un colapso institucional absoluto. | Plan de Accion: Mantén la escala del debate: hablar de mecenazgo a contenidos no equivale a suprimir colegios o universidades.",
+          "pedagogico": "Tipologia: Sobre-generalización Encubierta | Intencion del error: Evidenciar sesgos maximalistas que inflan el argumento hasta volverlo una falacia de hombre de paja. | Techo Taxonomico: Bloom 2 / Marzano 3 / TAED Extrapolación indebida. | Sugerencia de Mejora: Acotar las tesis a su perímetro semántico real. | Tip Tactico para el Docente: Pregunte: \"¿El texto ataca toda la educación pública o debate sobre subsidios a divulgadores digitales?\"."
+        },
+        "D": {
+          "estudiante": "Trampa: Error de Campo Semántico/Lógico | El texto presenta una disputa ideológica irreconciliable, no una mesa de conciliación o pacto contractual. | Como caiste: Buscaste una salida armónica diplomática que el texto deliberadamente no contempla. | Analisis de tu competencia: Sustituiste la estructura dialéctica de choque por un acuerdo pacífico voluntarista. | Plan de Accion: Reconoce los géneros de controversia: el autor confronta modelos antagónicos, no redacta convenios laborales.",
+          "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Detectar soluciones irenistas o componendas ausentes en textos polémicos. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Invención contextual. | Sugerencia de Mejora: Trabajar la naturaleza polarizada del debate de opinión contemporáneo. | Tip Tactico para el Docente: Explique cómo el ensayo argumentativo recurre al contraargumento como resorte de validación de la tesis propia."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Comprendo en los textos que leo las dimensiones éticas y políticas presentes en la confrontación de posturas contemporáneas.",
+        "Competencia": "Comprender cómo se articulan las partes de un texto para darle un sentido global.",
+        "Componente": "Pragmático.",
+        "Afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global.",
+        "Evidencia": "Identifica y caracteriza las diferentes voces o situaciones presentes en un texto.",
+        "Tarea": "Reconocer la función comunicativa de una objeción introducida por el autor mediante la voz de un opositor imaginario.",
+        "Bloom": "Analizar",
+        "Justificacion Bloom": "Discrimina las perspectivas dialógicas presentes en el texto y su función persuasiva de refutación.",
+        "Marzano": "Análisis",
+        "Justificacion Marzano": "Analiza la interacción entre contraargumento anticipado y ratificación de la tesis propia.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Deconstruye estructuras argumentativas polifónicas analizando la función dialógica de contraargumentos y voces divergentes.",
+        "Descriptor": "Reconoce la articulación de múltiples voces, puntos de vista y contraposiciones en textos continuos.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Requiere deslindar la voz propia del enunciador de la objeción estratégica de un adversario retórico."
+      }
+    },
+    {
+      "id": "NDSS-L-022",
+      "materia": "Lectura Crítica",
+      "unidad": "Banco de Reactivos de Lectura Crítica - Saber 11",
+      "url": "https://res.cloudinary.com/dewh4igy9/image/upload/v1792426914/L-022_ozgxyk.jpg",
+      "contexto": null,
+      "enunciado": "Al contrastar el lema central con la advertencia en letra pequeña del anuncio, se descubre que la pieza publicitaria",
+      "opciones": {
+        "A": "certifica de modo riguroso la sostenibilidad biológica del bien.",
+        "B": "detalla el ciclo científico de reciclaje para las baterías.",
+        "C": "recurre a una contradicción ética para camuflar el daño ecológico.",
+        "D": "promueve la reforestación inmediata de las selvas y bosques protegidos."
+      },
+      "retroalimentacion": {
+        "A": {
+          "estudiante": "Clave: C. ¡Excelente agudeza crítica! Llamar \"100% amigable con el planeta\" a un objeto plástico descartable con una batería de litio altamente contaminante es un caso flagrante de lavado de imagen verde (greenwashing): oculta el desastre ambiental con eslóganes engañosos.",
+          "pedagogico": "Clave: C | Intencion: Evaluar la capacidad de contextualizar y criticar ideológicamente la retórica del greenwashing en publicidad comercial. | Niveles: Evaluar / Utilización del Conocimiento / Auditar desinformación."
+        },
+        "B": {
+          "estudiante": "Trampa: Inversión Causal/Cronológica | Aceptaste el reclamo publicitario textual como si fuera una verdad ecológica avalada por la ciencia. | Como caiste: Te dejaste deslumbrar por el fondo selvático y el eslogan, ignorando que la letra pequeña desmiente la sostenibilidad. | Analisis de tu competencia: Decodificaste el mensaje superficialmente sin sopesar la inconsistencia fáctica del producto. | Plan de Accion: Contrasta siempre las afirmaciones rimbombantes de la publicidad con las características materiales de lo que te venden.",
+          "pedagogico": "Tipologia: Inversión Causal/Cronológica | Intencion del error: Evidenciar credulidad acrítica ante enunciados hiperbólicos comerciales. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Aceptación pasiva. | Sugerencia de Mejora: Desarrollar análisis de contradicciones en retórica de consumo masivo. | Tip Tactico para el Docente: Muestre empaques de productos \"eco\" y pida analizar la letra chica de sus materiales reales."
+        },
+        "C": {
+          "estudiante": "Trampa: Información Parcial | Se menciona la batería de litio, pero en ningún momento se expone un protocolo de reciclaje; al revés, se advierte que viene sellada y se bota. | Como caiste: Viste la palabra \"litio\" y asumiste mentalmente que el cartel explicaba una solución circular verde. | Analisis de tu competencia: Completaste la información faltante con supuestos positivos que el anuncio jamás detalla. | Plan de Accion: Limítate a lo que el texto dice: decir \"batería sellada\" no es enseñar a reciclarla.",
+          "pedagogico": "Tipologia: Información Parcial | Intencion del error: Detectar inferencias erróneas nacidas de asociar componentes técnicos con virtudes ecológicas automáticas. | Techo Taxonomico: Bloom 2 / Marzano 2 / TAED Deducción incompleta. | Sugerencia de Mejora: Contrastar declaraciones con descripciones de composición técnica. | Tip Tactico para el Docente: Pregunte: \"¿El texto provee instrucciones de reciclaje o describe una pieza descartable no reusable?\"."
+        },
+        "D": {
+          "estudiante": "Trampa: Error de Campo Semántico/Lógico | El fondo tropical es solo un adorno gráfico seductor para la venta, no una campaña forestal real. | Como caiste: Confundiste la escenografía estética del afiche con el objeto real de la comercialización. | Analisis de tu competencia: Tu proceso desvió la atención del producto (el vapeador) hacia el paisaje secundario de utilería. | Plan de Accion: Separa la ambientación decorativa de la verdadera mercancía que se está transando.",
+          "pedagogico": "Tipologia: Error de Campo Semántico/Lógico | Intencion del error: Verificar si el lector sucumbe a la transferencia semántica visual del fondo natural. | Techo Taxonomico: Bloom 1 / Marzano 1 / TAED Distracción icónica. | Sugerencia de Mejora: Aislar el objetivo mercantil de los recursos cosméticos de persuasión visual. | Tip Tactico para el Docente: Solicite tapar la imagen y leer únicamente el texto pequeño para percibir el impacto real del producto."
+        }
+      },
+      "metadatos": {
+        "Momento": 2.0,
+        "EBC": "Asumo una actitud crítica frente a los mensajes publicitarios y los sistemas no verbales de persuasión en consumo digital.",
+        "Competencia": "Reflexionar a partir de un texto y evaluar su contenido.",
+        "Componente": "Semántico.",
+        "Afirmacion": "Reflexiona a partir de un texto y evalúa su contenido.",
+        "Evidencia": "Contextualiza adecuadamente un texto o la información contenida en este.",
+        "Tarea": "Evaluar el choque ideológico y de significado entre un eslogan publicitario ecológico y la tipología de producto promocionado.",
+        "Bloom": "Evaluar",
+        "Justificacion Bloom": "Emite un juicio crítico sobre la validez del mensaje comercial frente al contexto real del producto.",
+        "Marzano": "Utilización del Conocimiento",
+        "Justificacion Marzano": "Juzga la veracidad y los sesgos semánticos de una estrategia de 'greenwashing'.",
+        "TAED": "Nivel 2: Análisis Crítico e Integración",
+        "Justificacion TAED": "Detecta sesgos retóricos, contradicciones ideológicas y falacias de greenwashing en mensajes comerciales multimodales.",
+        "Descriptor": "Reconoce las contradicciones contextuales e ideológicas entre enunciados verbales y realidades productivas.",
+        "Complejidad Estimada": "Media",
+        "Justificacion complejidad estimada": "Requiere confrontar un mensaje de preservación natural con la naturaleza desechable del bien promocionado."
+      }
+    }
+  ]
+}
