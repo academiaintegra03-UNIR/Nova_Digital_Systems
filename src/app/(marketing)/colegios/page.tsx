@@ -5,6 +5,7 @@ import { Check } from "lucide-react";
 import { methodologyPoints, schoolServices } from "@/lib/data/home-content";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Preicfes2027Precios } from "@/features/planes-precios/preicfes-2027-precios";
 
 export const metadata: Metadata = { title: "Metodología y servicios para colegios" };
 
@@ -59,6 +60,9 @@ export default function SchoolsMethodologyPage() {
       <Button asChild>
         <Link href="/contacto">Hablar sobre un plan institucional</Link>
       </Button>
+
+      <Preicfes2027Precios className="mt-14" />
+
     </div>
   );
 }

@@ -580,6 +580,7 @@ export interface Database {
           nombre: string;
           email: string;
           telefono: string | null;
+          colegio: string | null;
           notificado: boolean;
           notificado_en: string | null;
           profile_id: string | null;
@@ -590,6 +591,7 @@ export interface Database {
           nombre: string;
           email: string;
           telefono?: string | null;
+          colegio?: string | null;
           notificado?: boolean;
           notificado_en?: string | null;
           profile_id?: string | null;
@@ -600,6 +602,7 @@ export interface Database {
           nombre?: string;
           email?: string;
           telefono?: string | null;
+          colegio?: string | null;
           notificado?: boolean;
           notificado_en?: string | null;
           profile_id?: string | null;

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Sparkles, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import {
@@ -17,7 +18,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { InstitucionCombobox } from "@/components/shared/institucion-combobox";
 import { postularPruebaGratuitaAction } from "@/features/marketing/promo-popup-actions";
+import { PRUEBA_GRATUITA_POPUP_HASH } from "@/lib/data/nav";
 
 const OPEN_DELAY_MS = 1200;
 
@@ -30,7 +33,7 @@ const OPEN_DELAY_MS = 1200;
  */
 let yaMostrado = false;
 
-const initialForm = { nombre: "", email: "", telefono: "" };
+const initialForm = { nombre: "", email: "", telefono: "", colegio: "" };
 
 export function PromoPopup() {
   const [open, setOpen] = React.useState(false);
@@ -39,17 +42,35 @@ export function PromoPopup() {
   const [error, setError] = React.useState<string | null>(null);
   const [aceptaDatos, setAceptaDatos] = React.useState(false);
   const [isPending, startTransition] = React.useTransition();
+  const pathname = usePathname();
 
   React.useEffect(() => {
     if (yaMostrado) return;
 
     const timer = setTimeout(() => {
+      // Ya lo pudo haber abierto el ancla #prueba-gratuita.
+      if (yaMostrado) return;
       yaMostrado = true;
       setOpen(true);
     }, OPEN_DELAY_MS);
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Con el ancla #prueba-gratuita se abre siempre, aunque ya se haya
+  // mostrado: es una invitación explícita (tarjeta de Recursos, enlaces en
+  // redes). Se revisa al cambiar de ruta (navegación con <Link>) y en
+  // hashchange (clic en el ancla estando ya en la misma página).
+  React.useEffect(() => {
+    function abrirSiHayAncla() {
+      if (window.location.hash !== `#${PRUEBA_GRATUITA_POPUP_HASH}`) return;
+      yaMostrado = true;
+      setOpen(true);
+    }
+    abrirSiHayAncla();
+    window.addEventListener("hashchange", abrirSiHayAncla);
+    return () => window.removeEventListener("hashchange", abrirSiHayAncla);
+  }, [pathname]);
 
   function update<K extends keyof typeof initialForm>(field: K, value: string) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -70,7 +91,7 @@ export function PromoPopup() {
         return;
       }
       setSent(true);
-      toast.success("¡Postulación recibida!", { description: "Te avisaremos apenas lancemos la prueba gratuita." });
+      toast.success("¡Postulación recibida!", { description: "Te enviaremos tu acceso por correo." });
     });
   }
 
@@ -80,18 +101,18 @@ export function PromoPopup() {
         <DialogHeader>
           <div className="flex items-center gap-2 text-cta">
             <Sparkles className="size-5" />
-            <span className="text-xs font-semibold tracking-wide uppercase">Próximamente</span>
+            <span className="text-xs font-semibold tracking-wide uppercase">Prueba gratuita</span>
           </div>
-          <DialogTitle className="text-xl">Vamos a lanzar una prueba gratuita</DialogTitle>
+          <DialogTitle className="text-xl">Presenta gratis una prueba tipo Saber 11</DialogTitle>
           <DialogDescription>
-            Postúlate ahora y serás de los primeros en recibir acceso gratuito en cuanto la habilitemos.
+            Postúlate y te enviaremos por correo tu acceso para presentarla y recibir tu informe de resultados.
           </DialogDescription>
         </DialogHeader>
 
         {sent ? (
           <Alert className="border-none bg-success-foreground">
             <AlertDescription className="font-semibold text-success">
-              ¡Listo! Quedaste en la lista — te escribiremos en cuanto esté disponible.
+              ¡Listo! Recibimos tu postulación — te escribiremos al correo con tu acceso.
             </AlertDescription>
           </Alert>
         ) : (
@@ -135,6 +156,16 @@ export function PromoPopup() {
                   required
                   value={form.telefono}
                   onChange={(e) => update("telefono", e.target.value)}
+                  disabled={isPending}
+                />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <Label htmlFor="promo-colegio">Colegio o institución educativa</Label>
+                <InstitucionCombobox
+                  id="promo-colegio"
+                  name="colegio"
+                  value={form.colegio}
+                  onChange={(colegio) => update("colegio", colegio)}
                   disabled={isPending}
                 />
               </div>

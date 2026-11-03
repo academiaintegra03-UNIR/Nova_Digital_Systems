@@ -28,6 +28,7 @@ export interface PostulanteAdminRow {
   nombre: string;
   email: string;
   telefono: string | null;
+  colegio: string | null;
   notificado: boolean;
   notificadoEn: string | null;
   /** Resumen de la prueba gratuita de la cuenta creada — null si no hay
@@ -159,7 +160,11 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
     const q = busqueda.trim().toLowerCase();
     if (!q) return postulantes;
     return postulantes.filter(
-      (p) => p.nombre.toLowerCase().includes(q) || p.email.toLowerCase().includes(q) || (p.telefono ?? "").includes(q)
+      (p) =>
+        p.nombre.toLowerCase().includes(q) ||
+        p.email.toLowerCase().includes(q) ||
+        (p.telefono ?? "").includes(q) ||
+        (p.colegio ?? "").toLowerCase().includes(q)
     );
   }, [postulantes, busqueda]);
 
@@ -177,7 +182,7 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
       <Card className="mb-6">
         <CardContent className="py-4">
           <Input
-            placeholder="Buscar por nombre, correo o WhatsApp..."
+            placeholder="Buscar por nombre, correo, WhatsApp o colegio..."
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
           />
@@ -198,6 +203,7 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
                   <TableHead>Nombre</TableHead>
                   <TableHead>Correo</TableHead>
                   <TableHead>WhatsApp</TableHead>
+                  <TableHead>Colegio</TableHead>
                   <TableHead>Estado</TableHead>
                   <TableHead>Prueba</TableHead>
                 </TableRow>
@@ -209,6 +215,7 @@ export function PostulantesDashboard({ postulantes }: { postulantes: PostulanteA
                     <TableCell className="font-semibold">{p.nombre}</TableCell>
                     <TableCell className="text-muted-foreground">{p.email}</TableCell>
                     <TableCell className="text-muted-foreground">{p.telefono ?? "—"}</TableCell>
+                    <TableCell className="max-w-56 whitespace-normal text-muted-foreground">{p.colegio ?? "—"}</TableCell>
                     <TableCell>
                       <NotificarAccion postulante={p} />
                     </TableCell>

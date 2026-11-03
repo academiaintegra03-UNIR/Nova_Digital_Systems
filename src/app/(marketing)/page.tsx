@@ -3,6 +3,7 @@ import { ArrowRight, Check, ShieldCheck } from "lucide-react";
 import { TechBand } from "@/components/shared/tech-band";
 import { Hero } from "@/features/marketing/hero";
 import { ProgramCard } from "@/features/programas/program-card";
+import { ResourceLink } from "@/features/recursos/resource-link";
 import { AccentBar, SectionHeading } from "@/components/shared/section-heading";
 import { PendingBadge } from "@/components/shared/pending-badge";
 import { Button } from "@/components/ui/button";
@@ -207,17 +208,19 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {homeResources.map((r) => (
-            <Card key={r.id}>
-              <CardContent className="flex items-start gap-3">
-                <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-heading">
-                  <r.icon className="size-4.5" aria-hidden="true" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-heading">{r.title}</div>
-                  <div className="text-xs text-muted-foreground">{r.type}</div>
-                </div>
-              </CardContent>
-            </Card>
+            <ResourceLink key={r.id} resource={r}>
+              <Card>
+                <CardContent className="flex items-start gap-3">
+                  <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-heading">
+                    <r.icon className="size-4.5" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-heading">{r.title}</div>
+                    <div className="text-xs text-muted-foreground">{r.type}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </ResourceLink>
           ))}
         </div>
       </section>

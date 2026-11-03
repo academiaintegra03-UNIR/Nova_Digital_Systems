@@ -91,4 +91,8 @@ export interface Resource {
   level: ResourceLevel;
   icon: LucideIcon;
   tag: "Gratis" | "Exclusivo";
+  /** A dónde lleva la tarjeta. Las URLs absolutas (Drive, YouTube, Sites)
+   * se abren en otra pestaña; las rutas internas, en la misma. Sin href la
+   * tarjeta no es clicable. */
+  href?: string;
 }

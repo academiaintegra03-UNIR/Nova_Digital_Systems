@@ -46,6 +46,7 @@ async function getPostulantes(): Promise<PostulanteAdminRow[]> {
     nombre: p.nombre,
     email: p.email,
     telefono: p.telefono,
+    colegio: p.colegio,
     notificado: p.notificado,
     notificadoEn: p.notificado_en,
     prueba: resumenPrueba(p.profile_id),
@@ -58,8 +59,7 @@ export default async function AdminPostulantesPage() {
   return (
     <div>
       <p className="mb-1.5 text-sm text-muted-foreground">
-        Interesados que se postularon desde el popup del sitio público para recibir acceso a la prueba gratuita en
-        cuanto se lance.
+        Interesados que se postularon desde el popup del sitio público para recibir acceso a la prueba gratuita.
       </p>
       <p className="mb-4 text-sm text-muted-foreground">
         Al notificar se crea la cuenta del estudiante con una contraseña generada y se le envía por correo junto con
