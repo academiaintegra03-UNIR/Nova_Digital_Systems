@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { ArrowLeft, ArrowRight, Check, ClipboardX, Eye, Loader2, Maximize2, Send } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ClipboardX, Eye, Loader2, Maximize2, Send, Timer, WifiOff } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -22,6 +22,9 @@ import { cn } from "@/lib/utils";
 import { enviarMateriaPruebaAction } from "@/app/prueba-gratuita/actions";
 import type { ItemPruebaPublico, MateriaPrueba, Opcion } from "@/lib/prueba-gratuita/types";
 import type { Incidencia, TipoIncidencia } from "@/lib/diagnostico/types";
+import { formatCronometro } from "@/lib/prueba-gratuita/tiempo";
+import { useCronometroPreguntas } from "@/features/prueba-gratuita/use-cronometro-preguntas";
+import { useMonitorConexion } from "@/features/prueba-gratuita/use-monitor-conexion";
 
 interface PruebaMateriaProps {
   materia: MateriaPrueba;
@@ -39,9 +42,11 @@ interface Borrador {
   iniciada: boolean;
   respuestas: Record<string, Opcion>;
   incidencias: Incidencia[];
+  /** Milisegundos activos por ítem (cronómetro). */
+  tiemposMs: Record<string, number>;
 }
 
-const BORRADOR_VACIO: Borrador = { iniciada: false, respuestas: {}, incidencias: [] };
+const BORRADOR_VACIO: Borrador = { iniciada: false, respuestas: {}, incidencias: [], tiemposMs: {} };
 
 function leerBorrador(key: string): Borrador {
   try {
@@ -74,7 +79,14 @@ function avisarIncidencia(mensaje: string) {
   toast.warning(mensaje, { id: `incidencia-${Date.now()}`, duration: 5000 });
 }
 
-const AVISOS: Record<TipoIncidencia, { detalle: string; aviso: string }> = {
+/** Una caída de conexión sigue abierta mientras no tenga duración. */
+function hayCaidaAbierta(incidencias: Incidencia[]) {
+  return incidencias.some((i) => i.tipo === "conexion_perdida" && i.duracionSegundos == null);
+}
+
+const TOAST_CONEXION = "conexion";
+
+const AVISOS: Record<Exclude<TipoIncidencia, "conexion_perdida">, { detalle: string; aviso: string }> = {
   pestaña_abandonada: {
     detalle: "El estudiante cambió de pestaña o minimizó el navegador",
     aviso: "Saliste de la pestaña de la prueba. Quedó registrado en tu informe.",
@@ -123,9 +135,55 @@ export function PruebaMateria({
   const pendientes = items.map((i, n) => (respuestas[i.id] ? null : n)).filter((n): n is number => n !== null);
   const enExamen = iniciada;
 
+  const tiemposMs = useCronometroPreguntas({
+    activo: enExamen,
+    preguntaId: item.id,
+    inicial: borradorInicial.tiemposMs,
+  });
+  const segundosPregunta = (tiemposMs[item.id] ?? 0) / 1000;
+  const segundosMateria = Object.values(tiemposMs).reduce((acc, ms) => acc + ms, 0) / 1000;
+
+  // Caídas de internet: se registran como incidencia (sin contar como
+  // falta) con su duración, que se completa cuando vuelve la conexión.
+  const onCaida = React.useCallback(() => {
+    setIncidencias((prev) => [
+      ...prev,
+      {
+        timestamp: new Date().toISOString(),
+        tipo: "conexion_perdida",
+        preguntaId: items[indiceRef.current]?.id ?? null,
+        detalle: "Se perdió la conexión a internet",
+        duracionSegundos: null,
+      },
+    ]);
+    toast.warning("Se perdió la conexión a internet. Lo que llevas sigue guardado en este navegador.", {
+      id: TOAST_CONEXION,
+      duration: Infinity,
+    });
+  }, [items]);
+
+  const onRecuperada = React.useCallback(() => {
+    const ahora = Date.now();
+    setIncidencias((prev) =>
+      prev.map((i) =>
+        i.tipo === "conexion_perdida" && i.duracionSegundos == null
+          ? { ...i, duracionSegundos: Math.max(0, Math.round((ahora - Date.parse(i.timestamp)) / 1000)) }
+          : i
+      )
+    );
+    toast.success("Volvió la conexión. Puedes continuar.", { id: TOAST_CONEXION, duration: 4000 });
+  }, []);
+
+  const enLinea = useMonitorConexion({
+    activo: enExamen,
+    enLineaInicial: !hayCaidaAbierta(borradorInicial.incidencias),
+    onCaida,
+    onRecuperada,
+  });
+
   React.useEffect(() => {
-    if (!enviadaRef.current) guardarBorrador(storageKey, { iniciada, respuestas, incidencias });
-  }, [storageKey, iniciada, respuestas, incidencias]);
+    if (!enviadaRef.current) guardarBorrador(storageKey, { iniciada, respuestas, incidencias, tiemposMs });
+  }, [storageKey, iniciada, respuestas, incidencias, tiemposMs]);
 
   React.useEffect(() => {
     indiceRef.current = indice;
@@ -135,7 +193,7 @@ export function PruebaMateria({
   React.useEffect(() => {
     if (!enExamen) return;
 
-    function registrar(tipo: TipoIncidencia) {
+    function registrar(tipo: keyof typeof AVISOS) {
       setIncidencias((prev) => [
         ...prev,
         {
@@ -155,8 +213,8 @@ export function PruebaMateria({
     // se dispara si hay texto seleccionado (ver diagnostic-teaser.tsx); los
     // eventos copy/cut/paste cubren además el menú contextual. Las dos vías
     // se bloquean, y un mismo intento no se registra dos veces.
-    const TIPO_POR_TECLA: Record<string, TipoIncidencia> = { c: "intento_copia", x: "intento_corte", v: "intento_pegado" };
-    const TIPO_POR_EVENTO: Record<string, TipoIncidencia> = { copy: "intento_copia", cut: "intento_corte", paste: "intento_pegado" };
+    const TIPO_POR_TECLA: Record<string, keyof typeof AVISOS> = { c: "intento_copia", x: "intento_corte", v: "intento_pegado" };
+    const TIPO_POR_EVENTO: Record<string, keyof typeof AVISOS> = { copy: "intento_copia", cut: "intento_corte", paste: "intento_pegado" };
     let ultimoAtajo = 0;
 
     function onKeyDown(e: KeyboardEvent) {
@@ -206,7 +264,8 @@ export function PruebaMateria({
   function enviar() {
     setError(null);
     startTransition(async () => {
-      const result = await enviarMateriaPruebaAction(materia, respuestas, incidencias);
+      const tiemposSegundos = Object.fromEntries(Object.entries(tiemposMs).map(([id, ms]) => [id, Math.round(ms / 1000)]));
+      const result = await enviarMateriaPruebaAction(materia, respuestas, incidencias, tiemposSegundos);
       if (result.error) {
         setError(result.error);
         setConfirmando(false);
@@ -236,7 +295,11 @@ export function PruebaMateria({
             <ul className="mb-6 space-y-3 text-sm leading-relaxed text-foreground/85">
               <li className="flex gap-3">
                 <Check className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
-                {items.length} preguntas de selección múltiple con una sola respuesta correcta. No hay límite de tiempo.
+                {items.length} preguntas de selección múltiple con una sola respuesta correcta.
+              </li>
+              <li className="flex gap-3">
+                <Timer className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
+                No hay límite de tiempo. Un cronómetro mide cuánto tardas en cada pregunta, solo para tu informe.
               </li>
               <li className="flex gap-3">
                 <Check className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
@@ -250,6 +313,10 @@ export function PruebaMateria({
               <li className="flex gap-3">
                 <ClipboardX className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
                 Copiar, cortar y pegar están desactivados, y cada intento queda registrado.
+              </li>
+              <li className="flex gap-3">
+                <WifiOff className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
+                Si se cae tu internet no pierdes lo que llevas. La caída se anota en el informe, sin contar en tu contra.
               </li>
               <li className="flex gap-3">
                 <Send className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
@@ -279,8 +346,26 @@ export function PruebaMateria({
             </span>
           ) : null}
         </span>
-        <span className="font-semibold text-muted-foreground" aria-live="polite">
-          {respondidas} de {items.length} respondidas
+        <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+          {!enLinea ? (
+            <span className="flex items-center gap-1 rounded-full bg-warning/20 px-2 py-0.5 text-xs font-bold text-heading">
+              <WifiOff className="size-3.5" aria-hidden="true" /> Sin conexión
+            </span>
+          ) : null}
+          <span
+            className="font-data flex items-center gap-1 font-semibold text-muted-foreground"
+            title="Tiempo en esta pregunta / en la materia"
+          >
+            <Timer className="size-4" aria-hidden="true" />
+            <span className="sr-only">Tiempo en esta pregunta:</span>
+            <span className="text-heading">{formatCronometro(segundosPregunta)}</span>
+            <span aria-hidden="true">/</span>
+            <span className="sr-only">en la materia:</span>
+            {formatCronometro(segundosMateria)}
+          </span>
+          <span className="font-semibold text-muted-foreground" aria-live="polite">
+            {respondidas} de {items.length} respondidas
+          </span>
         </span>
       </div>
       <Progress

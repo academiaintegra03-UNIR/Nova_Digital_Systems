@@ -12,6 +12,10 @@ import type { Incidencia } from "@/lib/diagnostico/types";
  * `pruebas_gratuitas.respuestas` (ver 0025_pruebas_gratuitas.sql). */
 export type RespuestasPrueba = Partial<Record<MateriaPrueba, Record<string, Opcion>>>;
 
+/** Segundos activos en cada ítem, agrupados por materia — forma de la
+ * columna `pruebas_gratuitas.tiempos` (ver 0028_pruebas_gratuitas_tiempos.sql). */
+export type TiemposPrueba = Partial<Record<MateriaPrueba, Record<string, number>>>;
+
 /** Misma bitácora forense del diagnóstico, más la materia en curso. */
 export interface IncidenciaPrueba extends Incidencia {
   materia: MateriaPrueba;
@@ -20,6 +24,7 @@ export interface IncidenciaPrueba extends Incidencia {
 export interface EstadoPrueba {
   respuestas: RespuestasPrueba;
   incidencias: IncidenciaPrueba[];
+  tiempos: TiemposPrueba;
   finalizada: boolean;
   finalizadaEn: string | null;
 }
@@ -55,13 +60,14 @@ export async function getEstadoPrueba(profileId: string): Promise<EstadoPrueba> 
   const admin = createAdminClient();
   const { data } = await admin
     .from("pruebas_gratuitas")
-    .select("respuestas, incidencias, finalizada_en")
+    .select("respuestas, incidencias, tiempos, finalizada_en")
     .eq("profile_id", profileId)
     .maybeSingle();
 
   return {
     respuestas: (data?.respuestas ?? {}) as RespuestasPrueba,
     incidencias: (data?.incidencias ?? []) as unknown as IncidenciaPrueba[],
+    tiempos: (data?.tiempos ?? {}) as TiemposPrueba,
     finalizada: Boolean(data?.finalizada_en),
     finalizadaEn: data?.finalizada_en ?? null,
   };
@@ -70,16 +76,26 @@ export async function getEstadoPrueba(profileId: string): Promise<EstadoPrueba> 
 export interface ResumenIncidencias {
   pestana: number;
   copiaPegado: number;
+  /** Las caídas de internet no cuentan como falta de integridad: se
+   * informan aparte, para dar contexto a tiempos largos o reintentos. */
+  caidasConexion: number;
+  segundosSinConexion: number;
 }
 
-/** Salidas de pestaña por un lado y copiar/cortar/pegar por otro — el
- * diagnóstico también las cuenta por separado (pesan distinto). */
+const TIPOS_COPIA_PEGADO = new Set<Incidencia["tipo"]>(["intento_copia", "intento_corte", "intento_pegado"]);
+
+/** Salidas de pestaña, copiar/cortar/pegar y caídas de conexión, cada una
+ * por separado — el diagnóstico también las cuenta aparte (pesan distinto). */
 export function resumirIncidencias(incidencias: Incidencia[]): ResumenIncidencias {
-  const pestana = incidencias.filter((i) => i.tipo === "pestaña_abandonada").length;
-  return { pestana, copiaPegado: incidencias.length - pestana };
+  const caidas = incidencias.filter((i) => i.tipo === "conexion_perdida");
+  return {
+    pestana: incidencias.filter((i) => i.tipo === "pestaña_abandonada").length,
+    copiaPegado: incidencias.filter((i) => TIPOS_COPIA_PEGADO.has(i.tipo)).length,
+    caidasConexion: caidas.length,
+    segundosSinConexion: caidas.reduce((acc, i) => acc + (i.duracionSegundos ?? 0), 0),
+  };
 }
 
-/** Materias disponibles que el estudiante todavía no ha enviado, en orden. */
 /**
  * Orden aleatorio de las materias, distinto para cada estudiante pero
  * fijo para el mismo estudiante: se baraja (Fisher–Yates) con una semilla
@@ -105,6 +121,8 @@ export interface ResultadoItem {
   item: ItemPrueba;
   elegida: Opcion | null;
   correcta: boolean;
+  /** null en pruebas presentadas antes de que existiera el cronómetro. */
+  segundos: number | null;
 }
 
 export interface ResultadoMateria {
@@ -112,17 +130,21 @@ export interface ResultadoMateria {
   correctas: number;
   total: number;
   porcentaje: number;
+  /** Suma del tiempo por pregunta; null si no hay tiempos guardados. */
+  segundos: number | null;
   porCompetencia: { competencia: string; correctas: number; total: number }[];
   items: ResultadoItem[];
 }
 
 /** Califica contra el banco actual — el puntaje no se guarda en la base. */
-export function calcularInforme(respuestas: RespuestasPrueba): ResultadoMateria[] {
+export function calcularInforme(respuestas: RespuestasPrueba, tiempos: TiemposPrueba = {}): ResultadoMateria[] {
   return (Object.keys(respuestas) as MateriaPrueba[]).map((materia) => {
     const elegidas = respuestas[materia] ?? {};
+    const tiemposMateria = tiempos[materia];
     const items = getBancoPrueba(materia).map((item) => {
       const elegida = elegidas[item.id] ?? null;
-      return { item, elegida, correcta: elegida === item.clave };
+      const segundos = tiemposMateria?.[item.id];
+      return { item, elegida, correcta: elegida === item.clave, segundos: typeof segundos === "number" ? segundos : null };
     });
 
     const competencias = new Map<string, { correctas: number; total: number }>();
@@ -139,6 +161,7 @@ export function calcularInforme(respuestas: RespuestasPrueba): ResultadoMateria[
       correctas,
       total: items.length,
       porcentaje: items.length ? Math.round((correctas / items.length) * 100) : 0,
+      segundos: tiemposMateria ? items.reduce((acc, r) => acc + (r.segundos ?? 0), 0) : null,
       porCompetencia: [...competencias].map(([competencia, acc]) => ({ competencia, ...acc })),
       items,
     };

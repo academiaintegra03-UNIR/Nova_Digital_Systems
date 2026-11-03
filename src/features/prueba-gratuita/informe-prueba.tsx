@@ -1,7 +1,8 @@
-import { AlertTriangle, CheckCircle2, ChevronDown, Eye, Sparkles, Target, XCircle } from "lucide-react";
+import { AlertTriangle, CheckCircle2, ChevronDown, Eye, Sparkles, Target, Timer, Wifi, WifiOff, XCircle } from "lucide-react";
 import type { ResultadoItem, ResultadoMateria } from "@/lib/prueba-gratuita/estado";
-import type { InformePruebaData } from "@/lib/prueba-gratuita/informe-pdf";
+import { textoConexion, textoIntegridad, type InformePruebaData } from "@/lib/prueba-gratuita/informe-pdf";
 import { MATERIA_LABEL } from "@/lib/prueba-gratuita/types";
+import { formatDuracion } from "@/lib/prueba-gratuita/tiempo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
@@ -59,7 +60,7 @@ function Retroalimentacion({ texto }: { texto: string }) {
 }
 
 function DetalleItem({ resultado, numero, vistaDocente }: { resultado: ResultadoItem; numero: number; vistaDocente: boolean }) {
-  const { item, elegida, correcta } = resultado;
+  const { item, elegida, correcta, segundos } = resultado;
   const Icono = correcta ? CheckCircle2 : XCircle;
   const comentario = elegida ? item.comentarios[elegida] : null;
 
@@ -76,6 +77,12 @@ function DetalleItem({ resultado, numero, vistaDocente }: { resultado: Resultado
           </span>
           <span className="block text-foreground/75">{item.tarea}</span>
         </span>
+        {segundos !== null ? (
+          <span className="font-data mt-0.5 flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
+            <Timer className="size-3.5" aria-hidden="true" />
+            <span className="sr-only">Tiempo en esta pregunta:</span> {formatDuracion(segundos)}
+          </span>
+        ) : null}
         <ChevronDown
           className="mt-0.5 size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180"
           aria-hidden="true"
@@ -147,6 +154,7 @@ export function InformePrueba({
   vistaDocente?: boolean;
 }) {
   const sinIncidencias = data.incidencias.pestana + data.incidencias.copiaPegado === 0;
+  const conexionEstable = data.incidencias.caidasConexion === 0;
   const fecha = data.fecha
     ? new Date(data.fecha).toLocaleDateString("es-CO", { day: "numeric", month: "long", year: "numeric" })
     : null;
@@ -168,6 +176,11 @@ export function InformePrueba({
             <span>
               {data.correctas} de {data.total} respuestas correctas
             </span>
+            {data.segundos !== null ? (
+              <span className="flex items-center gap-1">
+                · <Timer className="size-4" aria-hidden="true" /> {formatDuracion(data.segundos)}
+              </span>
+            ) : null}
           </div>
           {acciones ? <div className="mt-6 flex flex-wrap justify-center gap-3">{acciones}</div> : null}
         </CardContent>
@@ -193,6 +206,7 @@ export function InformePrueba({
                 <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
                   <span>
                     {m.correctas} de {m.total} correctas
+                    {m.segundos !== null ? ` · ${formatDuracion(m.segundos)}` : ""}
                   </span>
                   <NivelBadge nivel={m.nivel} />
                 </div>
@@ -240,24 +254,26 @@ export function InformePrueba({
 
       {/* Seguimiento */}
       <Card className="mb-8">
-        <CardContent className="flex items-start gap-3 py-5">
-          {sinIncidencias ? (
-            <Eye className="mt-0.5 size-5 shrink-0 text-glacier-strong" aria-hidden="true" />
-          ) : (
-            <AlertTriangle className="mt-0.5 size-5 shrink-0 text-warning" aria-hidden="true" />
-          )}
-          <div className="text-sm">
-            <h2 className="mb-1 font-bold text-heading">Seguimiento durante la prueba</h2>
-            {sinIncidencias ? (
-              <p className="text-foreground/80">No se registraron salidas de la pestaña ni intentos de copiar o pegar.</p>
-            ) : (
-              <p className="text-foreground/80">
-                {data.incidencias.pestana} {data.incidencias.pestana === 1 ? "salida" : "salidas"} de la pestaña ·{" "}
-                {data.incidencias.copiaPegado} {data.incidencias.copiaPegado === 1 ? "intento" : "intentos"} de copiar,
-                cortar o pegar
-              </p>
-            )}
-          </div>
+        <CardContent className="py-5 text-sm">
+          <h2 className="mb-2 font-bold text-heading">Seguimiento durante la prueba</h2>
+          <ul className="space-y-2 text-foreground/80">
+            <li className="flex items-start gap-2.5">
+              {sinIncidencias ? (
+                <Eye className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
+              ) : (
+                <AlertTriangle className="mt-0.5 size-4 shrink-0 text-warning" aria-hidden="true" />
+              )}
+              {textoIntegridad(data.incidencias)}
+            </li>
+            <li className="flex items-start gap-2.5">
+              {conexionEstable ? (
+                <Wifi className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
+              ) : (
+                <WifiOff className="mt-0.5 size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+              )}
+              {textoConexion(data.incidencias)}
+            </li>
+          </ul>
         </CardContent>
       </Card>
 
@@ -272,6 +288,7 @@ export function InformePrueba({
             <h3 className="font-bold text-heading">{MATERIA_LABEL[resultado.materia]}</h3>
             <span className="text-sm text-muted-foreground">
               {resultado.correctas}/{resultado.total} · {data.materias[i].nivel}
+              {resultado.segundos !== null ? ` · ${formatDuracion(resultado.segundos)}` : ""}
             </span>
           </div>
           <ul className="mb-3 flex flex-wrap gap-2 text-xs">

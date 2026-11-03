@@ -7,6 +7,7 @@ import { calcularResultado } from "@/lib/diagnostico/scoring";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { sendDiagnosticoEmail } from "@/lib/email/send-diagnostico-email";
 import { BANCO_LABEL, type Incidencia, type Opcion } from "@/lib/diagnostico/types";
+import { normalizarColegio } from "@/lib/validation/colegio";
 import type { Json } from "@/lib/supabase/database.types";
 
 export const runtime = "nodejs";
@@ -166,7 +167,7 @@ export async function POST(request: NextRequest) {
 
   let estudianteNombre = lead.estudianteNombre;
   let estudianteEmail = lead.estudianteEmail ?? null;
-  let colegio = lead.colegio ?? null;
+  let colegio = normalizarColegio(lead.colegio);
   let profileId: string | null = null;
   let acudienteEmails: string[] = [];
 

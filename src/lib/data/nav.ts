@@ -68,3 +68,9 @@ export const footerCompanyLinks: NavItem[] = [
 export const footerLegalLinks: NavItem[] = [
   { href: "/politica-de-tratamiento-de-datos", label: "Política de tratamiento de datos" },
 ];
+
+/** Ancla que abre el popup de la prueba gratuita (PromoPopup) al llegar a
+ * cualquier página del sitio público — sirve para enlaces internos y para
+ * los que se comparten en redes, p. ej. soberanocognitivo.com/#prueba-gratuita. */
+export const PRUEBA_GRATUITA_POPUP_HASH = "prueba-gratuita";
+export const PRUEBA_GRATUITA_POPUP_HREF = `/#${PRUEBA_GRATUITA_POPUP_HASH}`;

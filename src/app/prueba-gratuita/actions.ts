@@ -16,10 +16,24 @@ import type { Incidencia, TipoIncidencia } from "@/lib/diagnostico/types";
 import type { Json } from "@/lib/supabase/database.types";
 import { construirInforme } from "@/lib/prueba-gratuita/informe";
 import { sendInformePruebaEmail } from "@/lib/email/send-informe-prueba-email";
+import { MAX_SEGUNDOS_POR_PREGUNTA } from "@/lib/prueba-gratuita/tiempo";
 
 const OPCIONES: Opcion[] = ["A", "B", "C", "D"];
-const TIPOS_INCIDENCIA: TipoIncidencia[] = ["pestaña_abandonada", "intento_copia", "intento_corte", "intento_pegado"];
+const TIPOS_INCIDENCIA: TipoIncidencia[] = [
+  "pestaña_abandonada",
+  "intento_copia",
+  "intento_corte",
+  "intento_pegado",
+  "conexion_perdida",
+];
 const MAX_INCIDENCIAS_POR_MATERIA = 300;
+/** Una caída de conexión de más de un día no es real (reloj del equipo). */
+const MAX_SEGUNDOS_SIN_CONEXION = 24 * 60 * 60;
+
+/** Entero de segundos entre 0 y `max`, o null si no es un número válido. */
+function segundosValidos(valor: unknown, max: number): number | null {
+  return typeof valor === "number" && Number.isFinite(valor) ? Math.min(max, Math.max(0, Math.round(valor))) : null;
+}
 
 export interface EnviarMateriaState {
   error?: string;
@@ -36,7 +50,8 @@ export interface EnviarMateriaState {
 export async function enviarMateriaPruebaAction(
   materia: string,
   respuestasCliente: Record<string, string>,
-  incidenciasCliente: Incidencia[] = []
+  incidenciasCliente: Incidencia[] = [],
+  tiemposCliente: Record<string, number> = {}
 ): Promise<EnviarMateriaState> {
   const profile = await requireRole("estudiante");
   if (!(await esCuentaPruebaGratuita(profile))) {
@@ -74,13 +89,27 @@ export async function enviarMateriaPruebaAction(
       preguntaId: typeof i.preguntaId === "string" && idsBanco.has(i.preguntaId) ? i.preguntaId : null,
       detalle: String(i.detalle ?? "").slice(0, 200),
       materia: materia as MateriaPrueba,
+      ...(i.tipo === "conexion_perdida"
+        ? { duracionSegundos: segundosValidos(i.duracionSegundos, MAX_SEGUNDOS_SIN_CONEXION) }
+        : {}),
     }));
+
+  // El cronómetro también viene del navegador: solo ítems del banco y
+  // segundos dentro de un rango razonable.
+  const tiemposMateria: Record<string, number> = {};
+  if (tiemposCliente && typeof tiemposCliente === "object") {
+    for (const item of banco) {
+      const segundos = segundosValidos(tiemposCliente[item.id], MAX_SEGUNDOS_POR_PREGUNTA);
+      if (segundos !== null) tiemposMateria[item.id] = segundos;
+    }
+  }
 
   const admin = createAdminClient();
   const { error } = await admin.from("pruebas_gratuitas").upsert({
     profile_id: profile.id,
     respuestas: nuevasRespuestas,
     incidencias: [...estado.incidencias, ...incidencias] as unknown as Json,
+    tiempos: { ...estado.tiempos, [materia]: tiemposMateria },
     finalizada_en: finalizada ? new Date().toISOString() : null,
   });
   if (error) {

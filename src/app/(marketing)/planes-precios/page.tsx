@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 import type { Plan } from "@/lib/types/billing";
 import { PlanSection } from "@/features/planes-precios/plan-section";
+import { Preicfes2027Precios } from "@/features/planes-precios/preicfes-2027-precios";
 
 export const metadata: Metadata = { title: "Planes y precios" };
 
@@ -49,6 +50,8 @@ export default async function PricingPage() {
       <p className="mb-10 text-center text-base text-muted-foreground">
         Elige la modalidad que se ajuste a tu ritmo de estudio.
       </p>
+
+      <Preicfes2027Precios className="mb-14" />
 
       {plans.length === 0 ? (
         <p className="text-center text-sm text-muted-foreground">Todavía no hay planes publicados.</p>

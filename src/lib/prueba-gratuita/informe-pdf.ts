@@ -1,5 +1,7 @@
 import { BRAND } from "@/lib/brand";
 import { siteName } from "@/lib/data/home-content";
+import { formatDuracion } from "@/lib/prueba-gratuita/tiempo";
+import type { ResumenIncidencias } from "@/lib/prueba-gratuita/estado";
 
 /** Datos ya calculados del informe — serializables, para armar el PDF
  * tanto en el navegador (botón "Descargar PDF") como en el servidor
@@ -11,17 +13,20 @@ export interface InformePruebaData {
   nivelGlobal: string;
   correctas: number;
   total: number;
+  /** Tiempo activo total; null si la prueba es anterior al cronómetro. */
+  segundos: number | null;
   materias: {
     materia: string;
     correctas: number;
     total: number;
     porcentaje: number;
     nivel: string;
+    segundos: number | null;
     competencias: { competencia: string; correctas: number; total: number }[];
   }[];
   fortalezas: string[];
   aReforzar: string[];
-  incidencias: { pestana: number; copiaPegado: number };
+  incidencias: ResumenIncidencias;
   preguntas: {
     materia: string;
     numero: number;
@@ -29,6 +34,7 @@ export interface InformePruebaData {
     correcta: boolean;
     elegida: string | null;
     clave: string;
+    segundos: number | null;
     planDeAccion: string | null;
   }[];
 }
@@ -58,6 +64,20 @@ function pdfTexto(texto: string): string {
     .replace(/≈/g, "~")
     .replace(/[₀-₉]/g, (c) => String(c.charCodeAt(0) - 0x2080))
     .replace(/[^\x00-\xFF€–—‘’“”•…]/g, "");
+}
+
+/** Mismas frases en la página del informe y en el PDF. */
+export function textoIntegridad(i: ResumenIncidencias): string {
+  return i.pestana + i.copiaPegado === 0
+    ? "No se registraron salidas de la pestaña ni intentos de copiar o pegar."
+    : `Salidas de la pestaña: ${i.pestana} · Intentos de copiar, cortar o pegar: ${i.copiaPegado}`;
+}
+
+export function textoConexion(i: ResumenIncidencias): string {
+  if (i.caidasConexion === 0) return "La conexión a internet se mantuvo estable durante la prueba.";
+  const veces = i.caidasConexion === 1 ? "1 vez" : `${i.caidasConexion} veces`;
+  const duracion = i.segundosSinConexion > 0 ? `, ${formatDuracion(i.segundosSinConexion)} en total` : "";
+  return `Se perdió la conexión a internet ${veces}${duracion}.`;
 }
 
 function formatFecha(iso: string) {
@@ -148,6 +168,9 @@ export async function buildInformePdf(data: InformePruebaData) {
   doc.setFontSize(10);
   doc.text(`${data.correctas} de ${data.total} respuestas correctas`, PAGE_LEFT + 100, y + 22);
   doc.text(`Nivel general: ${data.nivelGlobal}`, PAGE_LEFT + 100, y + 38);
+  if (data.segundos !== null) {
+    doc.text(`Tiempo total: ${formatDuracion(data.segundos)}`, PAGE_RIGHT - 14, y + 30, { align: "right" });
+  }
   y += 76;
 
   // ---- Por materia ----
@@ -159,7 +182,8 @@ export async function buildInformePdf(data: InformePruebaData) {
     doc.setTextColor(BRAND.oxford);
     doc.text(m.materia, PAGE_LEFT, y);
     doc.setTextColor(BRAND.glacierStrong);
-    doc.text(`${m.correctas}/${m.total} · ${m.porcentaje}% · ${m.nivel}`, PAGE_RIGHT, y, { align: "right" });
+    const tiempo = m.segundos !== null ? ` · ${formatDuracion(m.segundos)}` : "";
+    doc.text(`${m.correctas}/${m.total} · ${m.porcentaje}% · ${m.nivel}${tiempo}`, PAGE_RIGHT, y, { align: "right" });
     y += 6;
     barra(m.porcentaje);
   }
@@ -179,11 +203,8 @@ export async function buildInformePdf(data: InformePruebaData) {
   // ---- Seguimiento ----
   y += 6;
   titulo("Seguimiento durante la prueba");
-  parrafo(
-    data.incidencias.pestana + data.incidencias.copiaPegado === 0
-      ? "No se registraron salidas de la pestaña ni intentos de copiar o pegar."
-      : `Salidas de la pestaña: ${data.incidencias.pestana} · Intentos de copiar, cortar o pegar: ${data.incidencias.copiaPegado}`
-  );
+  parrafo(textoIntegridad(data.incidencias));
+  parrafo(textoConexion(data.incidencias));
 
   // ---- Detalle por materia ----
   for (const m of data.materias) {
@@ -193,7 +214,8 @@ export async function buildInformePdf(data: InformePruebaData) {
     y += 4;
     for (const p of data.preguntas.filter((q) => q.materia === m.materia)) {
       const estado = p.correcta ? "Correcta" : `Incorrecta (marcaste ${p.elegida ?? "—"}, la correcta era ${p.clave})`;
-      parrafo(`Pregunta ${p.numero} — ${estado}`, { size: 9, color: p.correcta ? BRAND.oxford : BRAND.alert, bold: true });
+      const tiempo = p.segundos !== null ? ` · ${formatDuracion(p.segundos)}` : "";
+      parrafo(`Pregunta ${p.numero} — ${estado}${tiempo}`, { size: 9, color: p.correcta ? BRAND.oxford : BRAND.alert, bold: true });
       parrafo(p.tarea, { size: 8.5, indent: 10 });
       if (p.planDeAccion) parrafo(`Plan de acción: ${p.planDeAccion}`, { size: 8.5, indent: 10, color: BRAND.oxford });
       y += 4;

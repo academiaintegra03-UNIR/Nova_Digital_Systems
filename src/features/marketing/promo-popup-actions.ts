@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import { isRateLimited } from "@/lib/rate-limit";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { sendPostulacionConfirmacionEmail } from "@/lib/email/send-postulacion-emails";
+import { normalizarColegio } from "@/lib/validation/colegio";
 
 export interface PostularPruebaGratuitaState {
   error?: string;
@@ -21,9 +22,10 @@ export async function postularPruebaGratuitaAction(
   const nombre = String(formData.get("nombre") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const telefono = String(formData.get("telefono") ?? "").trim();
+  const colegio = normalizarColegio(formData.get("colegio"));
 
-  if (!nombre || !email || !telefono) {
-    return { error: "Completa tu nombre, correo y WhatsApp." };
+  if (!nombre || !email || !telefono || !colegio) {
+    return { error: "Completa tu nombre, correo, WhatsApp y colegio." };
   }
   if (!EMAIL_REGEX.test(email)) {
     return { error: "El correo no es válido." };
@@ -42,6 +44,7 @@ export async function postularPruebaGratuitaAction(
     nombre,
     email,
     telefono,
+    colegio,
   });
 
   if (error) {

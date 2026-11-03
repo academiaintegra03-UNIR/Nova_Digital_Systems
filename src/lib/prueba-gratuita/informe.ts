@@ -24,10 +24,11 @@ export interface InformePrueba {
 /** Todo lo que muestran la página del informe, el PDF y el correo, a
  * partir de lo guardado en `pruebas_gratuitas` (respuestas + bitácora). */
 export function construirInforme(estudianteNombre: string, estado: EstadoPrueba): InformePrueba {
-  const resultados = calcularInforme(estado.respuestas);
+  const resultados = calcularInforme(estado.respuestas, estado.tiempos);
   const correctas = resultados.reduce((acc, m) => acc + m.correctas, 0);
   const total = resultados.reduce((acc, m) => acc + m.total, 0);
   const porcentajeGlobal = total ? Math.round((correctas / total) * 100) : 0;
+  const conTiempo = resultados.filter((m) => m.segundos !== null);
 
   const competencias = resultados.flatMap((m) =>
     m.porCompetencia.map((c) => ({
@@ -45,12 +46,14 @@ export function construirInforme(estudianteNombre: string, estado: EstadoPrueba)
       nivelGlobal: nivelPrueba(porcentajeGlobal),
       correctas,
       total,
+      segundos: conTiempo.length ? conTiempo.reduce((acc, m) => acc + (m.segundos ?? 0), 0) : null,
       materias: resultados.map((m) => ({
         materia: MATERIA_LABEL[m.materia],
         correctas: m.correctas,
         total: m.total,
         porcentaje: m.porcentaje,
         nivel: nivelPrueba(m.porcentaje),
+        segundos: m.segundos,
         competencias: m.porCompetencia,
       })),
       fortalezas: competencias
@@ -65,13 +68,14 @@ export function construirInforme(estudianteNombre: string, estado: EstadoPrueba)
         .map((c) => c.etiqueta),
       incidencias: resumirIncidencias(estado.incidencias),
       preguntas: resultados.flatMap((m) =>
-        m.items.map(({ item, elegida, correcta }, i) => ({
+        m.items.map(({ item, elegida, correcta, segundos }, i) => ({
           materia: MATERIA_LABEL[m.materia],
           numero: i + 1,
           tarea: item.tarea,
           correcta,
           elegida,
           clave: item.clave,
+          segundos,
           planDeAccion: !correcta && elegida ? planDeAccion(item.comentarios[elegida].estudiante) : null,
         }))
       ),

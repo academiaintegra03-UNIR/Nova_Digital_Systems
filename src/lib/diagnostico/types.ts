@@ -36,13 +36,22 @@ export function nivelParaPuntaje(porcentaje: number, bancoId: BancoId): string {
 
 /** Tipo de incidencia de integridad capturada durante el examen —
  * mismo vocabulario de la "Bitácora Forense" de la especificación. */
-export type TipoIncidencia = "pestaña_abandonada" | "intento_copia" | "intento_corte" | "intento_pegado";
+export type TipoIncidencia =
+  | "pestaña_abandonada"
+  | "intento_copia"
+  | "intento_corte"
+  | "intento_pegado"
+  /** No es de integridad: el equipo perdió internet durante la prueba. */
+  | "conexion_perdida";
 
 export interface Incidencia {
   timestamp: string;
   tipo: TipoIncidencia;
   preguntaId: string | null;
   detalle: string;
+  /** Solo en "conexion_perdida": cuánto duró sin internet; null mientras
+   * sigue caída (o si se cerró la página antes de que volviera). */
+  duracionSegundos?: number | null;
 }
 
 export type Opcion = "A" | "B" | "C" | "D";
