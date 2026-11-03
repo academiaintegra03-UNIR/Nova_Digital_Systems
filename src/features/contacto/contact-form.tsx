@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { Loader2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,6 +17,7 @@ const initialForm = { name: "", email: "", phone: "", message: "" };
 export function ContactForm() {
   const [form, setForm] = React.useState(initialForm);
   const [sent, setSent] = React.useState(false);
+  const [whatsappLink, setWhatsappLink] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [aceptaDatos, setAceptaDatos] = React.useState(false);
   const [isPending, startTransition] = React.useTransition();
@@ -39,6 +40,7 @@ export function ContactForm() {
         setError(result.error);
         return;
       }
+      setWhatsappLink(result.whatsappLink ?? null);
       setSent(true);
       toast.success("Mensaje enviado", { description: "Te contactaremos pronto." });
     });
@@ -46,11 +48,23 @@ export function ContactForm() {
 
   if (sent) {
     return (
-      <Alert className="border-none bg-success-foreground">
-        <AlertDescription className="font-semibold text-success">
-          ¡Gracias! Recibimos tu mensaje y te contactaremos en menos de 24 horas.
-        </AlertDescription>
-      </Alert>
+      <div className="flex flex-col gap-4">
+        <Alert className="border-none bg-success-foreground">
+          <AlertDescription className="font-semibold text-success">
+            ¡Gracias! Recibimos tu mensaje y te contactaremos en menos de 24 horas.
+          </AlertDescription>
+        </Alert>
+        {/* WhatsApp no deja enviar mensajes desde el servidor sin la API de Meta:
+            se abre el chat con los datos ya escritos y el visitante lo envía. */}
+        {whatsappLink ? (
+          <Button variant="outline" asChild>
+            <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="size-4" />
+              Enviar también por WhatsApp
+            </Link>
+          </Button>
+        ) : null}
+      </div>
     );
   }
 

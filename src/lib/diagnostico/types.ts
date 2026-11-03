@@ -36,7 +36,12 @@ export function nivelParaPuntaje(porcentaje: number, bancoId: BancoId): string {
 
 /** Tipo de incidencia de integridad capturada durante el examen —
  * mismo vocabulario de la "Bitácora Forense" de la especificación. */
-export type TipoIncidencia = "pestaña_abandonada" | "intento_copia" | "intento_corte" | "intento_pegado";
+export type TipoIncidencia =
+  | "pestaña_abandonada"
+  | "intento_copia"
+  | "intento_corte"
+  | "intento_pegado"
+  | "conexion_perdida";
 
 export interface Incidencia {
   timestamp: string;

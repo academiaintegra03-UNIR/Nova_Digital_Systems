@@ -12,6 +12,24 @@ export const MATERIA_LABEL: Record<MateriaPrueba, string> = {
 
 export type Opcion = "A" | "B" | "C" | "D";
 
+/** 3725 -> "1 h 2 min 5 s"; 312 -> "5 min 12 s". Para el informe y el PDF. */
+export function formatDuracion(segundos: number): string {
+  const h = Math.floor(segundos / 3600);
+  const min = Math.floor((segundos % 3600) / 60);
+  const s = Math.floor(segundos % 60);
+  if (h) return `${h} h ${min} min`;
+  if (min) return `${min} min ${s} s`;
+  return `${s} s`;
+}
+
+/** 3725 -> "1:02:05"; 312 -> "05:12". Para el cronómetro en pantalla. */
+export function formatCronometro(segundos: number): string {
+  const h = Math.floor(segundos / 3600);
+  const mm = String(Math.floor((segundos % 3600) / 60)).padStart(2, "0");
+  const ss = String(Math.floor(segundos % 60)).padStart(2, "0");
+  return h ? `${h}:${mm}:${ss}` : `${mm}:${ss}`;
+}
+
 interface NivelJustificado {
   nivel: string;
   justificacion: string;

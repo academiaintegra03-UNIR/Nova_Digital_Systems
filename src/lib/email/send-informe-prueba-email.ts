@@ -6,6 +6,7 @@ import { escapeHtml } from "@/lib/html-escape";
 import { siteName } from "@/lib/data/home-content";
 import { absoluteUrl } from "@/lib/seo";
 import { buildInformePdf, informeFilename, type InformePruebaData } from "@/lib/prueba-gratuita/informe-pdf";
+import { formatDuracion } from "@/lib/prueba-gratuita/types";
 
 function informeEmailHtml(data: InformePruebaData): string {
   const panelUrl = absoluteUrl("/campus/mi-informe");
@@ -41,6 +42,14 @@ function informeEmailHtml(data: InformePruebaData): string {
           ${data.porcentajeGlobal}% · ${escapeHtml(data.nivelGlobal)}
         </td>
       </tr>
+      ${
+        data.tiempoTotalSegundos !== null
+          ? `<tr>
+        <td style="padding:0 16px 14px;color:#ffffff;font-size:12px;">Tiempo total</td>
+        <td style="padding:0 16px 14px;color:#ffffff;font-size:13px;font-weight:700;text-align:right;">${formatDuracion(data.tiempoTotalSegundos)}</td>
+      </tr>`
+          : ""
+      }
     </table>
 
     <table style="width:100%;border-collapse:collapse;margin-top:12px;">${filas}</table>

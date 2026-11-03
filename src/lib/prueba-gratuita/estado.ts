@@ -17,9 +17,13 @@ export interface IncidenciaPrueba extends Incidencia {
   materia: MateriaPrueba;
 }
 
+/** Segundos que tardó en cada materia enviada (ver 0027_pruebas_gratuitas_tiempos.sql). */
+export type TiemposPrueba = Partial<Record<MateriaPrueba, number>>;
+
 export interface EstadoPrueba {
   respuestas: RespuestasPrueba;
   incidencias: IncidenciaPrueba[];
+  tiempos: TiemposPrueba;
   finalizada: boolean;
   finalizadaEn: string | null;
 }
@@ -55,13 +59,14 @@ export async function getEstadoPrueba(profileId: string): Promise<EstadoPrueba> 
   const admin = createAdminClient();
   const { data } = await admin
     .from("pruebas_gratuitas")
-    .select("respuestas, incidencias, finalizada_en")
+    .select("respuestas, incidencias, tiempos, finalizada_en")
     .eq("profile_id", profileId)
     .maybeSingle();
 
   return {
     respuestas: (data?.respuestas ?? {}) as RespuestasPrueba,
     incidencias: (data?.incidencias ?? []) as unknown as IncidenciaPrueba[],
+    tiempos: (data?.tiempos ?? {}) as TiemposPrueba,
     finalizada: Boolean(data?.finalizada_en),
     finalizadaEn: data?.finalizada_en ?? null,
   };
@@ -70,16 +75,28 @@ export async function getEstadoPrueba(profileId: string): Promise<EstadoPrueba> 
 export interface ResumenIncidencias {
   pestana: number;
   copiaPegado: number;
+  conexion: number;
 }
 
-/** Salidas de pestaña por un lado y copiar/cortar/pegar por otro — el
- * diagnóstico también las cuenta por separado (pesan distinto). */
+const COPIA_PEGADO = new Set(["intento_copia", "intento_corte", "intento_pegado"]);
+
+/** Salidas de pestaña, copiar/cortar/pegar y cortes de internet por
+ * separado — pesan distinto (un corte de conexión no es trampa). */
 export function resumirIncidencias(incidencias: Incidencia[]): ResumenIncidencias {
-  const pestana = incidencias.filter((i) => i.tipo === "pestaña_abandonada").length;
-  return { pestana, copiaPegado: incidencias.length - pestana };
+  return {
+    pestana: incidencias.filter((i) => i.tipo === "pestaña_abandonada").length,
+    copiaPegado: incidencias.filter((i) => COPIA_PEGADO.has(i.tipo)).length,
+    conexion: incidencias.filter((i) => i.tipo === "conexion_perdida").length,
+  };
 }
 
-/** Materias disponibles que el estudiante todavía no ha enviado, en orden. */
+/** Suma de los tiempos guardados; null si la prueba no tiene ninguno
+ * (las presentadas antes de que existiera el cronómetro). */
+export function tiempoTotal(tiempos: TiemposPrueba): number | null {
+  const valores = Object.values(tiempos).filter((s): s is number => typeof s === "number");
+  return valores.length ? valores.reduce((acc, s) => acc + s, 0) : null;
+}
+
 /**
  * Orden aleatorio de las materias, distinto para cada estudiante pero
  * fijo para el mismo estudiante: se baraja (Fisher–Yates) con una semilla

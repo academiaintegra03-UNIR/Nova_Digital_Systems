@@ -18,8 +18,17 @@ import { construirInforme } from "@/lib/prueba-gratuita/informe";
 import { sendInformePruebaEmail } from "@/lib/email/send-informe-prueba-email";
 
 const OPCIONES: Opcion[] = ["A", "B", "C", "D"];
-const TIPOS_INCIDENCIA: TipoIncidencia[] = ["pestaña_abandonada", "intento_copia", "intento_corte", "intento_pegado"];
+const TIPOS_INCIDENCIA: TipoIncidencia[] = [
+  "pestaña_abandonada",
+  "intento_copia",
+  "intento_corte",
+  "intento_pegado",
+  "conexion_perdida",
+];
 const MAX_INCIDENCIAS_POR_MATERIA = 300;
+// Tope del cronómetro por materia: el valor viene del navegador, así que
+// se acota para que un número absurdo no infle el informe.
+const MAX_SEGUNDOS_POR_MATERIA = 6 * 60 * 60;
 
 export interface EnviarMateriaState {
   error?: string;
@@ -36,7 +45,8 @@ export interface EnviarMateriaState {
 export async function enviarMateriaPruebaAction(
   materia: string,
   respuestasCliente: Record<string, string>,
-  incidenciasCliente: Incidencia[] = []
+  incidenciasCliente: Incidencia[] = [],
+  segundosCliente: number | null = null
 ): Promise<EnviarMateriaState> {
   const profile = await requireRole("estudiante");
   if (!(await esCuentaPruebaGratuita(profile))) {
@@ -76,11 +86,18 @@ export async function enviarMateriaPruebaAction(
       materia: materia as MateriaPrueba,
     }));
 
+  const segundos = Number(segundosCliente);
+  const tiempos =
+    Number.isFinite(segundos) && segundos > 0
+      ? { ...estado.tiempos, [materia]: Math.min(Math.round(segundos), MAX_SEGUNDOS_POR_MATERIA) }
+      : estado.tiempos;
+
   const admin = createAdminClient();
   const { error } = await admin.from("pruebas_gratuitas").upsert({
     profile_id: profile.id,
     respuestas: nuevasRespuestas,
     incidencias: [...estado.incidencias, ...incidencias] as unknown as Json,
+    tiempos,
     finalizada_en: finalizada ? new Date().toISOString() : null,
   });
   if (error) {

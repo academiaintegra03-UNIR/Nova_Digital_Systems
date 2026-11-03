@@ -6,13 +6,17 @@ import { getResendClient } from "@/lib/email/resend";
 import { escapeHtml } from "@/lib/html-escape";
 import { emailHeaderHtml } from "@/lib/email/email-header";
 import { siteName } from "@/lib/data/home-content";
+import { getWhatsAppLink } from "@/lib/whatsapp";
+import { CONTACT_EMAIL } from "@/lib/contact";
 
 export interface ContactFormState {
   error?: string;
   success?: boolean;
+  /** wa.me con los datos del formulario ya escritos — el visitante solo
+   * tiene que tocar "Enviar". null si no hay número configurado. */
+  whatsappLink?: string | null;
 }
 
-const CONTACT_EMAIL_TO = process.env.CONTACT_EMAIL_TO?.trim() || "ingenieroeducativo@gmail.com";
 const RATE_LIMIT = 5;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 
@@ -74,7 +78,7 @@ export async function sendContactMessageAction(formData: FormData): Promise<Cont
   try {
     const { error } = await resend.emails.send({
       from: `${siteName} <${from}>`,
-      to: CONTACT_EMAIL_TO,
+      to: CONTACT_EMAIL,
       replyTo: email,
       subject: `Nuevo mensaje de contacto — ${nombre}`,
       html: notificacionHtml({ nombre, email, telefono, mensaje }),
@@ -102,5 +106,18 @@ export async function sendContactMessageAction(formData: FormData): Promise<Cont
     console.error("Failed to send contact auto-reply:", err);
   }
 
-  return { success: true };
+  const whatsappLink = getWhatsAppLink(
+    [
+      `Hola, soy ${nombre}. Les acabo de escribir desde el formulario de contacto:`,
+      "",
+      mensaje,
+      "",
+      `Correo: ${email}`,
+      telefono ? `WhatsApp: ${telefono}` : null,
+    ]
+      .filter((linea) => linea !== null)
+      .join("\n")
+  );
+
+  return { success: true, whatsappLink };
 }

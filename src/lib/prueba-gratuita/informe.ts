@@ -1,6 +1,12 @@
 import "server-only";
 import { nivelParaPuntaje } from "@/lib/diagnostico/types";
-import { calcularInforme, resumirIncidencias, type EstadoPrueba, type ResultadoMateria } from "@/lib/prueba-gratuita/estado";
+import {
+  calcularInforme,
+  resumirIncidencias,
+  tiempoTotal,
+  type EstadoPrueba,
+  type ResultadoMateria,
+} from "@/lib/prueba-gratuita/estado";
 import { MATERIA_LABEL } from "@/lib/prueba-gratuita/types";
 import type { InformePruebaData } from "@/lib/prueba-gratuita/informe-pdf";
 
@@ -41,6 +47,7 @@ export function construirInforme(estudianteNombre: string, estado: EstadoPrueba)
     data: {
       estudianteNombre,
       fecha: estado.finalizadaEn,
+      tiempoTotalSegundos: tiempoTotal(estado.tiempos),
       porcentajeGlobal,
       nivelGlobal: nivelPrueba(porcentajeGlobal),
       correctas,
@@ -51,6 +58,7 @@ export function construirInforme(estudianteNombre: string, estado: EstadoPrueba)
         total: m.total,
         porcentaje: m.porcentaje,
         nivel: nivelPrueba(m.porcentaje),
+        segundos: estado.tiempos[m.materia] ?? null,
         competencias: m.porCompetencia,
       })),
       fortalezas: competencias

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { requireRole } from "@/lib/auth/require-role";
 import { getBancoPruebaPublico, getMateriasDisponibles } from "@/lib/prueba-gratuita/banco";
-import { getEstadoPrueba, materiasPendientes } from "@/lib/prueba-gratuita/estado";
+import { getEstadoPrueba, materiasPendientes, tiempoTotal } from "@/lib/prueba-gratuita/estado";
 import { MATERIA_LABEL } from "@/lib/prueba-gratuita/types";
 import { PruebaMateriaCliente } from "@/features/prueba-gratuita/prueba-materia-cliente";
 
@@ -30,6 +30,7 @@ export default async function PruebaGratuitaPage() {
       totalMaterias={totalMaterias}
       items={getBancoPruebaPublico(materia)}
       storageKey={`prueba-gratuita:${profile.id}:${materia}`}
+      segundosPrevios={tiempoTotal(estado.tiempos) ?? 0}
     />
   );
 }

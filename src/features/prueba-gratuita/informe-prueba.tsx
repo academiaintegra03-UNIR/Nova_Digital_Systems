@@ -1,7 +1,7 @@
-import { AlertTriangle, CheckCircle2, ChevronDown, Eye, Sparkles, Target, XCircle } from "lucide-react";
+import { AlertTriangle, CheckCircle2, ChevronDown, Eye, Sparkles, Target, Timer, XCircle } from "lucide-react";
 import type { ResultadoItem, ResultadoMateria } from "@/lib/prueba-gratuita/estado";
 import type { InformePruebaData } from "@/lib/prueba-gratuita/informe-pdf";
-import { MATERIA_LABEL } from "@/lib/prueba-gratuita/types";
+import { MATERIA_LABEL, formatDuracion } from "@/lib/prueba-gratuita/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
@@ -169,6 +169,12 @@ export function InformePrueba({
               {data.correctas} de {data.total} respuestas correctas
             </span>
           </div>
+          {data.tiempoTotalSegundos !== null ? (
+            <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-foreground/80">
+              <Timer className="size-4 text-glacier-strong" aria-hidden="true" />
+              Tiempo total de la prueba: <strong className="font-data text-heading">{formatDuracion(data.tiempoTotalSegundos)}</strong>
+            </p>
+          ) : null}
           {acciones ? <div className="mt-6 flex flex-wrap justify-center gap-3">{acciones}</div> : null}
         </CardContent>
       </Card>
@@ -193,6 +199,7 @@ export function InformePrueba({
                 <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
                   <span>
                     {m.correctas} de {m.total} correctas
+                    {m.segundos !== null ? ` · ${formatDuracion(m.segundos)}` : ""}
                   </span>
                   <NivelBadge nivel={m.nivel} />
                 </div>
@@ -257,6 +264,12 @@ export function InformePrueba({
                 cortar o pegar
               </p>
             )}
+            {data.incidencias.conexion ? (
+              <p className="mt-1 text-foreground/80">
+                Se perdió la conexión a internet {data.incidencias.conexion}{" "}
+                {data.incidencias.conexion === 1 ? "vez" : "veces"} durante la prueba.
+              </p>
+            ) : null}
           </div>
         </CardContent>
       </Card>

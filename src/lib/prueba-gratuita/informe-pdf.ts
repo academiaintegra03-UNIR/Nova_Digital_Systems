@@ -1,5 +1,6 @@
 import { BRAND } from "@/lib/brand";
 import { siteName } from "@/lib/data/home-content";
+import { formatDuracion } from "@/lib/prueba-gratuita/types";
 
 /** Datos ya calculados del informe — serializables, para armar el PDF
  * tanto en el navegador (botón "Descargar PDF") como en el servidor
@@ -7,6 +8,8 @@ import { siteName } from "@/lib/data/home-content";
 export interface InformePruebaData {
   estudianteNombre: string;
   fecha: string | null;
+  /** null en pruebas presentadas antes del cronómetro. */
+  tiempoTotalSegundos: number | null;
   porcentajeGlobal: number;
   nivelGlobal: string;
   correctas: number;
@@ -17,11 +20,12 @@ export interface InformePruebaData {
     total: number;
     porcentaje: number;
     nivel: string;
+    segundos: number | null;
     competencias: { competencia: string; correctas: number; total: number }[];
   }[];
   fortalezas: string[];
   aReforzar: string[];
-  incidencias: { pestana: number; copiaPegado: number };
+  incidencias: { pestana: number; copiaPegado: number; conexion: number };
   preguntas: {
     materia: string;
     numero: number;
@@ -148,6 +152,12 @@ export async function buildInformePdf(data: InformePruebaData) {
   doc.setFontSize(10);
   doc.text(`${data.correctas} de ${data.total} respuestas correctas`, PAGE_LEFT + 100, y + 22);
   doc.text(`Nivel general: ${data.nivelGlobal}`, PAGE_LEFT + 100, y + 38);
+  if (data.tiempoTotalSegundos !== null) {
+    doc.text("Tiempo total", PAGE_RIGHT - 14, y + 22, { align: "right" });
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(12);
+    doc.text(formatDuracion(data.tiempoTotalSegundos), PAGE_RIGHT - 14, y + 38, { align: "right" });
+  }
   y += 76;
 
   // ---- Por materia ----
@@ -159,7 +169,8 @@ export async function buildInformePdf(data: InformePruebaData) {
     doc.setTextColor(BRAND.oxford);
     doc.text(m.materia, PAGE_LEFT, y);
     doc.setTextColor(BRAND.glacierStrong);
-    doc.text(`${m.correctas}/${m.total} · ${m.porcentaje}% · ${m.nivel}`, PAGE_RIGHT, y, { align: "right" });
+    const tiempo = m.segundos !== null ? ` · ${formatDuracion(m.segundos)}` : "";
+    doc.text(`${m.correctas}/${m.total} · ${m.porcentaje}% · ${m.nivel}${tiempo}`, PAGE_RIGHT, y, { align: "right" });
     y += 6;
     barra(m.porcentaje);
   }
@@ -184,6 +195,9 @@ export async function buildInformePdf(data: InformePruebaData) {
       ? "No se registraron salidas de la pestaña ni intentos de copiar o pegar."
       : `Salidas de la pestaña: ${data.incidencias.pestana} · Intentos de copiar, cortar o pegar: ${data.incidencias.copiaPegado}`
   );
+  if (data.incidencias.conexion) {
+    parrafo(`Pérdidas de conexión a internet durante la prueba: ${data.incidencias.conexion}`);
+  }
 
   // ---- Detalle por materia ----
   for (const m of data.materias) {

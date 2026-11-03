@@ -6,6 +6,7 @@ import { getBanco, resolverBancoIdPermitido } from "@/lib/diagnostico/bancos";
 import { calcularResultado } from "@/lib/diagnostico/scoring";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { sendDiagnosticoEmail } from "@/lib/email/send-diagnostico-email";
+import { sendAvisoSoporte } from "@/lib/email/send-aviso-soporte";
 import { BANCO_LABEL, type Incidencia, type Opcion } from "@/lib/diagnostico/types";
 import type { Json } from "@/lib/supabase/database.types";
 
@@ -259,6 +260,26 @@ export async function POST(request: NextRequest) {
       analisisIA,
     });
   }
+
+  await sendAvisoSoporte({
+    asunto: `Nuevo diagnóstico — ${estudianteNombre}`,
+    titulo: "Nuevo diagnóstico presentado",
+    filas: [
+      ["Estudiante", estudianteNombre],
+      ["Edad", lead.estudianteEdad],
+      ["Correo del estudiante", estudianteEmail],
+      ["Colegio", colegio],
+      ["Grado", lead.grado],
+      ["Correo del acudiente", acudienteEmails[0]],
+      ["Teléfono del acudiente", lead.acudienteTelefono],
+      ["Prueba", BANCO_LABEL[bancoId] ?? bancoId],
+      ["Puntaje global", `${resultado.puntajeGlobal} (${resultado.nivelGlobal})`],
+      ["Aciertos", `${resultado.aciertos} de ${resultado.totalPreguntas}`],
+      ["Cuenta registrada", esCuentaLogueada ? "Sí" : "No"],
+    ],
+    replyTo: acudienteEmails[0] ?? estudianteEmail,
+    adminPath: "/admin/diagnosticos",
+  });
 
   return NextResponse.json({ resultado, analisisIA, whatsappLink });
 }

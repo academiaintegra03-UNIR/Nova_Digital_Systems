@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import { isRateLimited } from "@/lib/rate-limit";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { sendPostulacionConfirmacionEmail } from "@/lib/email/send-postulacion-emails";
+import { sendAvisoSoporte } from "@/lib/email/send-aviso-soporte";
 
 export interface PostularPruebaGratuitaState {
   error?: string;
@@ -52,6 +53,17 @@ export async function postularPruebaGratuitaAction(
   // Best-effort: si el correo falla, la postulación ya quedó guardada, así
   // que no se le muestra error al visitante por esto.
   await sendPostulacionConfirmacionEmail(email, nombre);
+  await sendAvisoSoporte({
+    asunto: `Nueva postulación a la prueba gratuita — ${nombre}`,
+    titulo: "Nueva postulación a la prueba gratuita",
+    filas: [
+      ["Nombre", nombre],
+      ["Correo", email],
+      ["WhatsApp", telefono],
+    ],
+    replyTo: email,
+    adminPath: "/admin/postulantes",
+  });
 
   return { success: true };
 }

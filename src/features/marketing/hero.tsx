@@ -2,7 +2,6 @@ import { getImageProps } from "next/image";
 import Link from "next/link";
 import { heroContent } from "@/lib/data/home-content";
 import { Button } from "@/components/ui/button";
-import { TryAQuestionCard } from "@/features/marketing/try-a-question-card";
 
 // The headline highlights one word with a hand-drawn-style underline instead
 // of a generic gradient/badge — "matemáticas" is the word being marked up.
@@ -43,7 +42,8 @@ function Headline({ text }: { text: string }) {
 // el ancho. Con dos <Image fill> ocultos por CSS se bajaban ambas y Next avisaba
 // que la oculta (ancho 0) no se renderizaba a "100vw".
 function HeroBackground() {
-  const common = { alt: "", fill: true, priority: true, sizes: "100vw" } as const;
+  // quality 90 (habilitada en next.config): con el 75 por defecto la foto se veía borrosa.
+  const common = { alt: "", fill: true, priority: true, sizes: "100vw", quality: 90 } as const;
   const {
     props: { srcSet: desktop },
   } = getImageProps({ ...common, src: "/images/imagenprincipal.png" });
@@ -66,9 +66,8 @@ function HeroBackground() {
 /**
  * Hero con foto de fondo (public/images/imagenprincipal.png en escritorio,
  * imagenprincipalmovil.png en móvil) sobre el tema
- * oscuro global. El texto y la tarjeta usan los tokens del tema, sin estilos
- * propios. La pregunta de la derecha se puede responder de verdad, no es una
- * captura.
+ * oscuro global. El texto usa los tokens del tema, sin estilos propios; la
+ * mitad derecha queda libre para que se vea la foto.
  */
 export function Hero() {
   return (
@@ -77,11 +76,9 @@ export function Hero() {
           escritorio conserva el arte a la derecha, detrás de la tarjeta; la móvil, abajo. */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <HeroBackground />
-        {/* La foto es real (no ilustración): un velo Oxford la entona con la marca. */}
-        <div className="absolute inset-0 bg-primary/35 mix-blend-multiply" />
         {/* Degradados de marca: aseguran contraste del texto (arriba en móvil, a la izquierda en escritorio) y funden la
             imagen con el fondo oscuro de la página por abajo. */}
-        <div className="absolute inset-0 bg-linear-to-b from-background/75 via-background/35 to-transparent md:bg-linear-to-r md:from-background/95 md:via-background/65 md:to-background/15" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/75 via-background/35 to-transparent md:bg-linear-to-r md:from-background/90 md:via-background/40 md:to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background to-transparent" />
       </div>
 
@@ -105,10 +102,6 @@ export function Hero() {
               <Link href="/programas">Explorar programas</Link>
             </Button>
           </div>
-        </div>
-
-        <div className="flex justify-center py-4 lg:justify-end lg:py-0">
-          <TryAQuestionCard className="shadow-[0_0_70px_-18px_var(--glacier)]" />
         </div>
       </div>
     </section>

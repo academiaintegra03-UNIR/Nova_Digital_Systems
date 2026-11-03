@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { ArrowLeft, ArrowRight, Check, ClipboardX, Eye, Loader2, Maximize2, Send } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ClipboardX, Eye, Loader2, Maximize2, Send, Timer, WifiOff } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { enviarMateriaPruebaAction } from "@/app/prueba-gratuita/actions";
-import type { ItemPruebaPublico, MateriaPrueba, Opcion } from "@/lib/prueba-gratuita/types";
+import { formatCronometro, formatDuracion, type ItemPruebaPublico, type MateriaPrueba, type Opcion } from "@/lib/prueba-gratuita/types";
 import type { Incidencia, TipoIncidencia } from "@/lib/diagnostico/types";
 
 interface PruebaMateriaProps {
@@ -33,20 +33,28 @@ interface PruebaMateriaProps {
    * esta materia y este estudiante — si recarga la página no pierde lo
    * que llevaba, ni se borran las incidencias ya registradas. */
   storageKey: string;
+  /** Segundos ya usados en las materias enviadas antes — el cronómetro
+   * muestra el total de la prueba, no solo el de esta materia. */
+  segundosPrevios: number;
 }
 
 interface Borrador {
   iniciada: boolean;
+  /** Date.now() al pulsar "Comenzar". Va en el borrador para que el
+   * cronómetro siga corriendo si recarga la página. */
+  iniciadaEn: number | null;
   respuestas: Record<string, Opcion>;
   incidencias: Incidencia[];
 }
 
-const BORRADOR_VACIO: Borrador = { iniciada: false, respuestas: {}, incidencias: [] };
+const BORRADOR_VACIO: Borrador = { iniciada: false, iniciadaEn: null, respuestas: {}, incidencias: [] };
 
 function leerBorrador(key: string): Borrador {
   try {
     const raw = window.localStorage.getItem(key);
-    return raw ? { ...BORRADOR_VACIO, ...(JSON.parse(raw) as Borrador) } : BORRADOR_VACIO;
+    const borrador = raw ? { ...BORRADOR_VACIO, ...(JSON.parse(raw) as Borrador) } : BORRADOR_VACIO;
+    // Un borrador de antes del cronómetro (iniciada sin hora) arranca a contar desde ya.
+    return borrador.iniciada && !borrador.iniciadaEn ? { ...borrador, iniciadaEn: Date.now() } : borrador;
   } catch {
     return BORRADOR_VACIO;
   }
@@ -66,6 +74,38 @@ function borrarBorrador(key: string) {
   } catch {
     // ídem
   }
+}
+
+function ahora(): number {
+  return Date.now();
+}
+
+function segundosDesde(inicio: number | null): number {
+  return inicio ? Math.max(0, Math.floor((Date.now() - inicio) / 1000)) : 0;
+}
+
+/** Cronómetro de la prueba: tiempo acumulado de las materias anteriores
+ * más lo que lleva en esta. Se calcula desde la hora de inicio (no
+ * contando ticks), así no se desfasa si el navegador frena el intervalo
+ * en segundo plano. */
+function Cronometro({ inicio, segundosPrevios }: { inicio: number | null; segundosPrevios: number }) {
+  const [segundos, setSegundos] = React.useState(() => segundosDesde(inicio));
+
+  React.useEffect(() => {
+    const id = window.setInterval(() => setSegundos(segundosDesde(inicio)), 1000);
+    return () => window.clearInterval(id);
+  }, [inicio]);
+
+  return (
+    <span
+      className="font-data flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 font-bold text-heading tabular-nums"
+      title={`Esta materia: ${formatCronometro(segundos)}`}
+    >
+      <Timer className="size-4 text-glacier-strong" aria-hidden="true" />
+      <span className="sr-only">Tiempo total de la prueba: </span>
+      {formatCronometro(segundosPrevios + segundos)}
+    </span>
+  );
 }
 
 /** Un toast a la vez: se descarta el anterior para que siempre se vea el aviso más reciente. */
@@ -91,6 +131,10 @@ const AVISOS: Record<TipoIncidencia, { detalle: string; aviso: string }> = {
     detalle: "El estudiante intentó pegar (Ctrl/Cmd+V o menú)",
     aviso: "Pegar contenido en la prueba no está permitido. Quedó registrado en tu informe.",
   },
+  conexion_perdida: {
+    detalle: "Se perdió la conexión a internet",
+    aviso: "Se perdió la conexión a internet. Puedes seguir respondiendo; quedó registrado en tu informe.",
+  },
 };
 
 export function PruebaMateria({
@@ -100,15 +144,18 @@ export function PruebaMateria({
   totalMaterias,
   items,
   storageKey,
+  segundosPrevios,
 }: PruebaMateriaProps) {
   const router = useRouter();
   // Se renderiza solo en el cliente (ver prueba-materia-cliente.tsx), así
   // que el borrador de localStorage se puede leer al inicializar el estado.
   const [borradorInicial] = React.useState(() => leerBorrador(storageKey));
   const [iniciada, setIniciada] = React.useState(borradorInicial.iniciada);
+  const [iniciadaEn, setIniciadaEn] = React.useState(borradorInicial.iniciadaEn);
   const [indice, setIndice] = React.useState(0);
   const [respuestas, setRespuestas] = React.useState<Record<string, Opcion>>(borradorInicial.respuestas);
   const [incidencias, setIncidencias] = React.useState<Incidencia[]>(borradorInicial.incidencias);
+  const [sinConexion, setSinConexion] = React.useState(() => !navigator.onLine);
   const [confirmando, setConfirmando] = React.useState(false);
   const [imagenAmpliada, setImagenAmpliada] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -124,8 +171,8 @@ export function PruebaMateria({
   const enExamen = iniciada;
 
   React.useEffect(() => {
-    if (!enviadaRef.current) guardarBorrador(storageKey, { iniciada, respuestas, incidencias });
-  }, [storageKey, iniciada, respuestas, incidencias]);
+    if (!enviadaRef.current) guardarBorrador(storageKey, { iniciada, iniciadaEn, respuestas, incidencias });
+  }, [storageKey, iniciada, iniciadaEn, respuestas, incidencias]);
 
   React.useEffect(() => {
     indiceRef.current = indice;
@@ -187,6 +234,56 @@ export function PruebaMateria({
     };
   }, [enExamen, items]);
 
+  // Cortes de internet: la prueba no se cierra (todo vive en el navegador y
+  // el borrador en localStorage); se avisa, se bloquea el envío hasta que
+  // vuelva la conexión y cada corte queda en la bitácora con su duración.
+  React.useEffect(() => {
+    if (!enExamen) return;
+    let caidaEn: number | null = null;
+
+    function onOffline() {
+      caidaEn = Date.now();
+      setSinConexion(true);
+      setIncidencias((prev) => [
+        ...prev,
+        {
+          timestamp: new Date(caidaEn ?? Date.now()).toISOString(),
+          tipo: "conexion_perdida",
+          preguntaId: items[indiceRef.current]?.id ?? null,
+          detalle: AVISOS.conexion_perdida.detalle,
+        },
+      ]);
+      toast.dismiss();
+      toast.warning(AVISOS.conexion_perdida.aviso, { id: "sin-conexion", duration: Infinity });
+    }
+
+    function onOnline() {
+      setSinConexion(false);
+      if (caidaEn !== null) {
+        const segundos = Math.max(1, Math.round((Date.now() - caidaEn) / 1000));
+        const inicio = new Date(caidaEn).toISOString();
+        // Completa el registro del corte con cuánto duró.
+        setIncidencias((prev) =>
+          prev.map((i) =>
+            i.tipo === "conexion_perdida" && i.timestamp === inicio
+              ? { ...i, detalle: `${AVISOS.conexion_perdida.detalle} durante ${formatDuracion(segundos)}` }
+              : i
+          )
+        );
+        caidaEn = null;
+      }
+      toast.dismiss("sin-conexion");
+      toast.success("Volvió la conexión a internet. Ya puedes enviar la materia.");
+    }
+
+    window.addEventListener("offline", onOffline);
+    window.addEventListener("online", onOnline);
+    return () => {
+      window.removeEventListener("offline", onOffline);
+      window.removeEventListener("online", onOnline);
+    };
+  }, [enExamen, items]);
+
   function irA(n: number) {
     setIndice(n);
     setConfirmando(false);
@@ -200,13 +297,27 @@ export function PruebaMateria({
 
   function comenzar() {
     setIniciada(true);
+    setIniciadaEn(ahora());
     requestAnimationFrame(() => tituloRef.current?.focus());
   }
 
   function enviar() {
     setError(null);
+    if (!navigator.onLine) {
+      setError("No tienes conexión a internet. Tus respuestas siguen guardadas: envía la materia cuando vuelva la conexión.");
+      setConfirmando(false);
+      return;
+    }
     startTransition(async () => {
-      const result = await enviarMateriaPruebaAction(materia, respuestas, incidencias);
+      let result: Awaited<ReturnType<typeof enviarMateriaPruebaAction>>;
+      try {
+        result = await enviarMateriaPruebaAction(materia, respuestas, incidencias, segundosDesde(iniciadaEn));
+      } catch {
+        // Falla de red al llamar al servidor: no se pierde nada, el borrador sigue en el navegador.
+        setError("No se pudo enviar por un problema de conexión. Tus respuestas siguen guardadas; intenta de nuevo.");
+        setConfirmando(false);
+        return;
+      }
       if (result.error) {
         setError(result.error);
         setConfirmando(false);
@@ -236,7 +347,7 @@ export function PruebaMateria({
             <ul className="mb-6 space-y-3 text-sm leading-relaxed text-foreground/85">
               <li className="flex gap-3">
                 <Check className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
-                {items.length} preguntas de selección múltiple con una sola respuesta correcta. No hay límite de tiempo.
+                {items.length} preguntas de selección múltiple con una sola respuesta correcta. No hay límite de tiempo, pero un cronómetro mide cuánto tardas y el tiempo aparece en tu informe.
               </li>
               <li className="flex gap-3">
                 <Check className="mt-0.5 size-4 shrink-0 text-glacier-strong" aria-hidden="true" />
@@ -269,6 +380,15 @@ export function PruebaMateria({
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-8">
+      {sinConexion ? (
+        <Alert variant="destructive" className="mb-4">
+          <WifiOff aria-hidden="true" />
+          <AlertDescription>
+            <strong>Sin conexión a internet.</strong> Puedes seguir respondiendo: tus respuestas y el cronómetro se
+            guardan en este navegador. No recargues ni cierres la página. Para enviar la materia necesitas conexión.
+          </AlertDescription>
+        </Alert>
+      ) : null}
       <div className="mb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm">
         <span className="font-bold text-heading">
           {materiaLabel}
@@ -279,8 +399,11 @@ export function PruebaMateria({
             </span>
           ) : null}
         </span>
-        <span className="font-semibold text-muted-foreground" aria-live="polite">
-          {respondidas} de {items.length} respondidas
+        <span className="flex items-center gap-3">
+          <span className="font-semibold text-muted-foreground" aria-live="polite">
+            {respondidas} de {items.length} respondidas
+          </span>
+          <Cronometro inicio={iniciadaEn} segundosPrevios={segundosPrevios} />
         </span>
       </div>
       <Progress
@@ -453,7 +576,7 @@ export function PruebaMateria({
               Seguir revisando
             </Button>
             {pendientes.length === 0 ? (
-              <Button onClick={enviar} disabled={isPending}>
+              <Button onClick={enviar} disabled={isPending || sinConexion}>
                 {isPending ? (
                   <>
                     <Loader2 className="animate-spin" aria-hidden="true" /> Enviando…

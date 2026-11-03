@@ -612,6 +612,7 @@ export interface Database {
           iniciada_en: string;
           respuestas: Json;
           incidencias: Json;
+          tiempos: Json;
           finalizada_en: string | null;
         };
         Insert: {
@@ -619,6 +620,7 @@ export interface Database {
           iniciada_en?: string;
           respuestas?: Json;
           incidencias?: Json;
+          tiempos?: Json;
           finalizada_en?: string | null;
         };
         Update: {
@@ -626,6 +628,7 @@ export interface Database {
           iniciada_en?: string;
           respuestas?: Json;
           incidencias?: Json;
+          tiempos?: Json;
           finalizada_en?: string | null;
         };
         Relationships: [];

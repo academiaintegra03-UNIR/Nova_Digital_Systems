@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { ContactForm } from "@/features/contacto/contact-form";
 import { PendingBadge } from "@/components/shared/pending-badge";
+import { CONTACT_EMAIL } from "@/lib/contact";
 import { getWhatsAppDisplayNumber, getWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = { title: "Contacto" };
@@ -34,7 +35,9 @@ export default function ContactPage() {
         </div>
         <div className="mb-2.5 flex items-start gap-2 text-sm text-foreground/80">
           <span>✉️ Correo de admisiones —</span>
-          <PendingBadge label="Pendiente de validación" />
+          <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-secondary-foreground hover:underline">
+            {CONTACT_EMAIL}
+          </a>
         </div>
         <div className="text-sm text-foreground/80">
           📍 Bogotá (presencial) y modalidad virtual para toda la región
