@@ -8,14 +8,21 @@ import { siteName, siteTagline, trustItems } from "@/lib/data/home-content";
 
 export const metadata: Metadata = { title: "Iniciar sesión" };
 
+const LOGIN_IMAGE = "/images/login.png";
+
 export default function LoginPage() {
   return (
     <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
-      {/* Branding panel — hidden on mobile, mismo fondo oscuro con resplandores Glacier
-          que la portada y los paneles, para que /login se lea como el mismo producto. */}
-      <div className="relative hidden flex-col justify-between overflow-hidden bg-primary px-10 py-10 text-white lg:flex">
-        <div className="tech-glow pointer-events-none absolute -top-40 -left-32 size-[34rem] opacity-60" aria-hidden="true" />
-        <div className="tech-glow pointer-events-none absolute -right-40 -bottom-48 size-[36rem] opacity-40" aria-hidden="true" />
+      {/* Branding panel — hidden on mobile. Foto de fondo (public/images/login.png) bajo un
+          degradado de marca que mantiene el contraste del texto; si la foto no carga, queda
+          el fondo bg-primary de siempre. */}
+      <div className="relative isolate hidden flex-col justify-between overflow-hidden bg-primary px-10 py-10 text-white lg:flex">
+        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+          <Image src={LOGIN_IMAGE} alt="" fill sizes="50vw" quality={90} priority className="object-cover" />
+          <div className="absolute inset-0 bg-linear-to-r from-primary/90 via-primary/70 to-primary/30" />
+          <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-primary/80 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-primary/80 to-transparent" />
+        </div>
 
         <Link href="/" className="relative flex items-center gap-2.5">
           <Image src="/Nova-PNG.png" alt="" width={36} height={36} className="rounded-full" priority />

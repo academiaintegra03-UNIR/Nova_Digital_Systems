@@ -1,10 +1,11 @@
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { preicfes2027 } from "@/lib/data/preicfes-2027";
 import { Card, CardContent } from "@/components/ui/card";
 import { IconTile } from "@/components/shared/icon-tile";
 import { cn } from "@/lib/utils";
 
-/** Tarjetas que llevan a los brochures con los precios del preicfes de
+/** Tarjetas que llevan a la página con los precios del preicfes de
  * grado 11 del próximo año. Se usa en /planes-precios y /colegios. */
 export function Preicfes2027Precios({ className }: { className?: string }) {
   const { grado, anio, brochures } = preicfes2027;
@@ -19,11 +20,9 @@ export function Preicfes2027Precios({ className }: { className?: string }) {
       </p>
       <div className={cn("mx-auto grid max-w-3xl grid-cols-1 gap-4", brochures.length > 1 && "sm:grid-cols-2")}>
         {brochures.map((b) => (
-          <a
-            key={b.href}
+          <Link
+            key={b.titulo}
             href={b.href}
-            target="_blank"
-            rel="noopener noreferrer"
             className="group block h-full rounded-xl focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
           >
             <Card className="h-full transition-colors group-hover:ring-primary">
@@ -35,12 +34,11 @@ export function Preicfes2027Precios({ className }: { className?: string }) {
                 </div>
                 <p className="mb-4 flex-1 text-sm text-muted-foreground">{b.descripcion}</p>
                 <span className="inline-flex items-center gap-1 text-sm font-bold text-heading underline-offset-4 group-hover:underline">
-                  Ver precios <ArrowUpRight className="size-4" aria-hidden="true" />
-                  <span className="sr-only">(se abre en otra pestaña)</span>
+                  Ver precios <ArrowRight className="size-4" aria-hidden="true" />
                 </span>
               </CardContent>
             </Card>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

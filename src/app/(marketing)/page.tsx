@@ -5,7 +5,6 @@ import { Hero } from "@/features/marketing/hero";
 import { ProgramCard } from "@/features/programas/program-card";
 import { ResourceLink } from "@/features/recursos/resource-link";
 import { AccentBar, SectionHeading } from "@/components/shared/section-heading";
-import { PendingBadge } from "@/components/shared/pending-badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { programs } from "@/lib/data/programs";
@@ -187,19 +186,8 @@ export default function HomePage() {
         </div>
       </TechBand>
 
-      {/* Testimonios (vacío, pendiente) */}
-      <section className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-8">
-        <h2 className="mb-2 text-2xl font-extrabold text-heading">Testimonios</h2>
-        <AccentBar className="mx-auto mb-3" />
-        <p className="mb-3 text-sm text-muted-foreground">
-          Aún no publicamos testimonios en esta sección — solo mostraremos historias reales una vez
-          autorizadas por los estudiantes y familias que las compartan.
-        </p>
-        <PendingBadge className="mx-auto" />
-      </section>
-
       {/* Recursos gratuitos */}
-      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-8">
         <div className="mb-5 flex items-baseline justify-between">
           <h2 className="text-xl font-extrabold text-heading sm:text-2xl">Recursos gratuitos</h2>
           <Link href="/recursos" className="flex items-center gap-1 text-sm font-bold text-secondary-foreground">

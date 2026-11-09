@@ -1,7 +1,11 @@
-import { getImageProps } from "next/image";
+import type * as React from "react";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { heroContent } from "@/lib/data/home-content";
+import { noticias, type Noticia } from "@/lib/data/noticias";
 import { Button } from "@/components/ui/button";
+import { HeroCarousel, type HeroSlide } from "@/features/marketing/hero-carousel";
 
 // The headline highlights one word with a hand-drawn-style underline instead
 // of a generic gradient/badge — "matemáticas" is the word being marked up.
@@ -63,47 +67,103 @@ function HeroBackground() {
   );
 }
 
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-5 flex items-center gap-2.5">
+      <span className="h-px w-8 bg-secondary-foreground/60" aria-hidden="true" />
+      <span className="text-xs font-bold tracking-wide text-secondary-foreground uppercase">{children}</span>
+    </div>
+  );
+}
+
+/** Primera diapositiva: la presentación de siempre, con el único <h1> de la portada. */
+function SlidePrincipal() {
+  return (
+    <div className="max-w-2xl">
+      <Eyebrow>{heroContent.eyebrow}</Eyebrow>
+      <h1 className="mb-5 text-3xl leading-tight font-extrabold tracking-tight text-heading sm:text-4xl lg:text-5xl">
+        <Headline text={heroContent.title} />
+      </h1>
+      <p className="mb-8 max-w-md text-base leading-relaxed text-foreground/75">{heroContent.subtitle}</p>
+      <div className="flex flex-wrap items-center gap-3">
+        <Button size="lg" variant="cta" asChild>
+          <Link href="/diagnostico">Realizar diagnóstico gratuito</Link>
+        </Button>
+        <Button size="lg" variant="outline" asChild>
+          <Link href="/programas">Explorar programas</Link>
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+function SlideNoticia({ noticia }: { noticia: Noticia }) {
+  return (
+    <div className="max-w-2xl">
+      <Eyebrow>
+        {noticia.categoria} · {noticia.fecha}
+      </Eyebrow>
+      <h2 className="mb-5 text-3xl leading-tight font-extrabold tracking-tight text-heading text-balance sm:text-4xl lg:text-5xl">
+        {noticia.titulo}
+      </h2>
+      <p className="mb-8 max-w-md text-base leading-relaxed text-foreground/75">{noticia.resumen}</p>
+      <Button size="lg" variant="cta" asChild>
+        <Link href={noticia.cta.href}>
+          {noticia.cta.label} <ArrowRight aria-hidden="true" />
+        </Link>
+      </Button>
+    </div>
+  );
+}
+
+/** Degradados de marca sobre cada foto: aseguran el contraste del texto (arriba en
+ * móvil, a la izquierda en escritorio) y funden la imagen con el fondo de la página. */
+function Fondo({ children }: { children?: React.ReactNode }) {
+  return (
+    <>
+      {children}
+      <div className="absolute inset-0 bg-linear-to-b from-background/75 via-background/35 to-transparent md:bg-linear-to-r md:from-background/90 md:via-background/40 md:to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background to-transparent" />
+    </>
+  );
+}
+
+const slides: HeroSlide[] = [
+  {
+    id: "principal",
+    label: heroContent.eyebrow,
+    background: (
+      <Fondo>
+        <HeroBackground />
+      </Fondo>
+    ),
+    content: <SlidePrincipal />,
+  },
+  ...noticias.map((n) => ({
+    id: n.id,
+    label: n.titulo,
+    background: (
+      <Fondo>
+        {n.imagen ? (
+          // eager: en un carrusel horizontal la carga diferida hacía aparecer la foto tarde al deslizar.
+          <Image src={n.imagen} alt="" fill sizes="100vw" quality={90} loading="eager" className="object-cover" />
+        ) : null}
+      </Fondo>
+    ),
+    content: <SlideNoticia noticia={n} />,
+  })),
+];
+
 /**
- * Hero con foto de fondo (public/images/imagenprincipal.png en escritorio,
- * imagenprincipalmovil.png en móvil) sobre el tema
- * oscuro global. El texto usa los tokens del tema, sin estilos propios; la
- * mitad derecha queda libre para que se vea la foto.
+ * Hero en carrusel: la presentación principal (public/images/imagenprincipal.png en
+ * escritorio, imagenprincipalmovil.png en móvil) y luego las noticias de
+ * lib/data/noticias.ts, cada una con su propia foto de fondo. El texto usa los
+ * tokens del tema; la mitad derecha queda libre para que se vea la foto.
  */
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden border-b border-border text-foreground">
-      {/* Fondo ilustrado: una imagen por formato (art direction), ambas a sangre. La de
-          escritorio conserva el arte a la derecha, detrás de la tarjeta; la móvil, abajo. */}
-      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <HeroBackground />
-        {/* Degradados de marca: aseguran contraste del texto (arriba en móvil, a la izquierda en escritorio) y funden la
-            imagen con el fondo oscuro de la página por abajo. */}
-        <div className="absolute inset-0 bg-linear-to-b from-background/75 via-background/35 to-transparent md:bg-linear-to-r md:from-background/90 md:via-background/40 md:to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background to-transparent" />
-      </div>
-
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-8 sm:py-24 md:min-h-[34rem] lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
-        <div>
-          <div className="mb-5 flex items-center gap-2.5">
-            <span className="h-px w-8 bg-secondary-foreground/60" aria-hidden="true" />
-            <span className="text-xs font-bold tracking-wide text-secondary-foreground uppercase">
-              {heroContent.eyebrow}
-            </span>
-          </div>
-          <h1 className="mb-5 text-3xl leading-tight font-extrabold tracking-tight text-heading sm:text-4xl lg:text-5xl">
-            <Headline text={heroContent.title} />
-          </h1>
-          <p className="mb-8 max-w-md text-base leading-relaxed text-foreground/75">{heroContent.subtitle}</p>
-          <div className="flex flex-wrap items-center gap-3">
-            <Button size="lg" variant="cta" asChild>
-              <Link href="/diagnostico">Realizar diagnóstico gratuito</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/programas">Explorar programas</Link>
-            </Button>
-          </div>
-        </div>
-      </div>
+      <HeroCarousel slides={slides} />
     </section>
   );
 }

@@ -58,18 +58,32 @@ export function PromoPopup() {
   }, []);
 
   // Con el ancla #prueba-gratuita se abre siempre, aunque ya se haya
-  // mostrado: es una invitación explícita (tarjeta de Recursos, enlaces en
-  // redes). Se revisa al cambiar de ruta (navegación con <Link>) y en
-  // hashchange (clic en el ancla estando ya en la misma página).
+  // mostrado: es una invitación explícita (tarjeta de Recursos, carrusel de
+  // la portada, enlaces en redes). Se revisa al cambiar de ruta (navegación
+  // con <Link>), en hashchange y al hacer clic en un enlace al ancla de la
+  // misma página: <Link> cambia el hash con pushState, que no dispara
+  // hashchange, y si el hash ya era #prueba-gratuita tampoco cambia nada.
   React.useEffect(() => {
-    function abrirSiHayAncla() {
-      if (window.location.hash !== `#${PRUEBA_GRATUITA_POPUP_HASH}`) return;
+    function abrir() {
       yaMostrado = true;
       setOpen(true);
     }
+    function abrirSiHayAncla() {
+      if (window.location.hash === `#${PRUEBA_GRATUITA_POPUP_HASH}`) abrir();
+    }
+    function abrirAlHacerClic(e: MouseEvent) {
+      const enlace = (e.target as Element | null)?.closest?.("a[href]");
+      if (!(enlace instanceof HTMLAnchorElement)) return;
+      const url = new URL(enlace.href);
+      if (url.hash === `#${PRUEBA_GRATUITA_POPUP_HASH}` && url.pathname === window.location.pathname) abrir();
+    }
     abrirSiHayAncla();
     window.addEventListener("hashchange", abrirSiHayAncla);
-    return () => window.removeEventListener("hashchange", abrirSiHayAncla);
+    document.addEventListener("click", abrirAlHacerClic);
+    return () => {
+      window.removeEventListener("hashchange", abrirSiHayAncla);
+      document.removeEventListener("click", abrirAlHacerClic);
+    };
   }, [pathname]);
 
   function update<K extends keyof typeof initialForm>(field: K, value: string) {
@@ -177,7 +191,7 @@ export function PromoPopup() {
                   disabled={isPending}
                   className="mt-0.5"
                 />
-                <Label htmlFor="promo-acepta-datos" className="text-xs font-normal text-muted-foreground">
+                <Label htmlFor="promo-acepta-datos" className="block text-xs leading-relaxed font-normal text-muted-foreground">
                   Acepto el tratamiento de mis datos personales conforme a la{" "}
                   <Link
                     href="/politica-de-tratamiento-de-datos"

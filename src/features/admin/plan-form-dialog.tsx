@@ -87,8 +87,8 @@ export function PlanFormDialog({
       }}
     >
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent>
-        <form ref={formRef} onSubmit={onSubmit}>
+      <DialogContent className="grid-rows-[minmax(0,1fr)] overflow-hidden">
+        <form ref={formRef} onSubmit={onSubmit} className="flex min-h-0 flex-col">
           {isEdit ? <input type="hidden" name="id" value={plan!.id} /> : null}
           <DialogHeader>
             <DialogTitle>{isEdit ? "Editar plan" : "Crear plan"}</DialogTitle>
@@ -96,7 +96,7 @@ export function PlanFormDialog({
               Este plan aparece en /planes-precios en cuanto quede activo.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid gap-4 py-4">
+          <div className="-mx-4 grid min-h-0 gap-4 overflow-y-auto overscroll-contain px-4 py-4">
             {error ? (
               <Alert variant="destructive">
                 <AlertDescription>{error}</AlertDescription>
