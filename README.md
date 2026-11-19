@@ -43,3 +43,10 @@ escriben hex; usan tokens semánticos.
 Fuera del navegador (Open Graph, PDF, correos) se usa [src/lib/brand.ts](src/lib/brand.ts),
 espejo de esas primitivas. Tipografía: Inter para texto, JetBrains Mono (`font-data`)
 para datos, preguntas, resultados y precios.
+
+## Documentación
+
+- [Manual de usuario y funcionamiento](docs/manual-usuario.md)
+- [Recordatorios de clases](docs/recordatorios-clases.md)
+- [Evaluación de infraestructura](docs/evaluacion-infraestructura.md)
+- [Roadmap de funcionalidades](docs/roadmap-funcionalidades.md)

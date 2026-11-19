@@ -45,17 +45,3 @@ export const areaPerformance: ProgressItem[] = [
 ];
 
 export const studyHours = [3, 5, 4, 6, 2, 5].map((h, i) => ({ label: `S${i + 1}`, value: h }));
-
-export const tutorIaChat = [
-  {
-    role: "ai" as const,
-    text: "¡Hola! Soy tu tutor con IA. Vi que tuviste algo de dificultad con factorización. ¿Quieres una pista para el último ejercicio?",
-  },
-  { role: "user" as const, text: "Sí, dame una pista" },
-  {
-    role: "ai" as const,
-    text: "Busca dos números que multiplicados den el término independiente y sumados den el coeficiente del término medio. ¿Puedes intentarlo con esa idea?",
-  },
-];
-export const tutorIaWarning = "El tutor con IA puede cometer errores. Si tienes dudas, consulta con tu tutor humano.";
-export const tutorButtons = ["Dame una pista", "Explícamelo de otra forma", "Muéstrame un ejemplo", "Consultar con mi tutor"];

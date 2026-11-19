@@ -116,7 +116,7 @@ function isValidMessage(value: unknown): value is ChatMessage {
 export async function POST(request: NextRequest) {
   const startedAt = Date.now();
 
-  if (isRateLimited(getClientKey(request), RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
+  if (await isRateLimited(`orientacion:${getClientKey(request)}`, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
     await logChatEvent({ success: false, errorReason: "rate_limited", latencyMs: Date.now() - startedAt });
     return NextResponse.json(
       { error: "Demasiados mensajes seguidos. Espera unos minutos e intenta de nuevo." },

@@ -228,6 +228,7 @@ export interface Database {
           status: PaymentStatus;
           raw_webhook: unknown;
           profile_id: string | null;
+          datos_cuenta: Json | null;
           created_at: string;
           updated_at: string;
         };
@@ -242,6 +243,7 @@ export interface Database {
           status?: PaymentStatus;
           raw_webhook?: unknown;
           profile_id?: string | null;
+          datos_cuenta?: Json | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -256,6 +258,7 @@ export interface Database {
           status?: PaymentStatus;
           raw_webhook?: unknown;
           profile_id?: string | null;
+          datos_cuenta?: Json | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -408,6 +411,10 @@ export interface Database {
           estado: "pendiente" | "entregada";
           respuesta_link: string | null;
           entregado_at: string | null;
+          nota: number | null;
+          comentario: string | null;
+          calificada_at: string | null;
+          calificada_por: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -419,6 +426,10 @@ export interface Database {
           estado?: "pendiente" | "entregada";
           respuesta_link?: string | null;
           entregado_at?: string | null;
+          nota?: number | null;
+          comentario?: string | null;
+          calificada_at?: string | null;
+          calificada_por?: string | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -430,6 +441,10 @@ export interface Database {
           estado?: "pendiente" | "entregada";
           respuesta_link?: string | null;
           entregado_at?: string | null;
+          nota?: number | null;
+          comentario?: string | null;
+          calificada_at?: string | null;
+          calificada_por?: string | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -636,6 +651,51 @@ export interface Database {
         };
         Relationships: [];
       };
+      clase_recordatorios: {
+        Row: {
+          id: string;
+          clase_id: string;
+          destinatario_id: string;
+          tipo: string;
+          clase_scheduled_at: string;
+          estado: string;
+          intentos: number;
+          bloqueado_hasta: string | null;
+          ultimo_error: string | null;
+          proveedor_id: string | null;
+          enviado_en: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          clase_id: string;
+          destinatario_id: string;
+          tipo: string;
+          clase_scheduled_at: string;
+          estado?: string;
+          intentos?: number;
+          bloqueado_hasta?: string | null;
+          ultimo_error?: string | null;
+          proveedor_id?: string | null;
+          enviado_en?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          clase_id?: string;
+          destinatario_id?: string;
+          tipo?: string;
+          clase_scheduled_at?: string;
+          estado?: string;
+          intentos?: number;
+          bloqueado_hasta?: string | null;
+          ultimo_error?: string | null;
+          proveedor_id?: string | null;
+          enviado_en?: string | null;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
       materia_recursos: {
         Row: {
           id: string;
@@ -671,7 +731,35 @@ export interface Database {
       };
     };
     Views: Record<string, never>;
-    Functions: Record<string, never>;
+    Functions: {
+      reclamar_recordatorios_clases: {
+        Args: { p_limite?: number; p_ahora?: string };
+        Returns: {
+          recordatorio_id: string;
+          tipo: string;
+          intentos: number;
+          clase_nombre: string;
+          materia_nombre: string;
+          scheduled_at: string;
+          duration_minutes: number | null;
+          meeting_link: string | null;
+          destinatario_nombre: string;
+          destinatario_email: string;
+        }[];
+      };
+      consumir_rate_limit: {
+        Args: { p_clave: string; p_limite: number; p_ventana_ms: number };
+        Returns: boolean;
+      };
+      perfil_id_por_correo: {
+        Args: { p_email: string };
+        Returns: string | null;
+      };
+      liberar_recordatorios_clases: {
+        Args: { p_ids: string[] };
+        Returns: undefined;
+      };
+    };
     Enums: {
       user_role: UserRole;
       plan_type: PlanType;

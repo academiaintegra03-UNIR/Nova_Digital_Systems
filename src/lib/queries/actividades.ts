@@ -1,7 +1,12 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@/lib/supabase/database.types";
-import type { ActividadEntregaEstudiante, ActividadEntregaRoster, ActividadRow } from "@/lib/types/panels";
+import type {
+  ActividadEntregaEstudiante,
+  ActividadEntregaRoster,
+  ActividadRow,
+  EntregaPorCalificar,
+} from "@/lib/types/panels";
 
 /** Actividades de un grupo+materia puntual (la página "curso" ya conoce
  * ambos ids por contexto, a diferencia de clases que se listan por grupo
@@ -96,7 +101,54 @@ export async function getMisEntregas(
         estado: e.estado,
         entregadoAt: e.entregado_at,
         respuestaLink: e.respuesta_link,
+        nota: e.nota,
+        comentario: e.comentario,
       },
     ])
   );
+}
+
+/** Bandeja del tutor: entregas de sus actividades que faltan por calificar,
+ * primero las más antiguas. */
+export async function getEntregasPorCalificar(
+  admin: SupabaseClient<Database>,
+  tutorId: string
+): Promise<EntregaPorCalificar[]> {
+  const { data: entregas, error } = await admin
+    .from("actividad_entregas")
+    .select("id, actividad_id, student_id, respuesta_link")
+    .eq("tutor_id", tutorId)
+    .eq("estado", "entregada")
+    .is("nota", null)
+    .order("entregado_at", { ascending: true })
+    .limit(200);
+  if (error) {
+    console.error("Failed to load entregas por calificar:", error);
+    return [];
+  }
+  if (!entregas || entregas.length === 0) return [];
+
+  const actividadIds = Array.from(new Set(entregas.map((e) => e.actividad_id)));
+  const studentIds = Array.from(new Set(entregas.map((e) => e.student_id)));
+  const [{ data: actividades }, { data: estudiantes }] = await Promise.all([
+    admin.from("actividades").select("id, titulo, materia_id").in("id", actividadIds),
+    admin.from("profiles").select("id, nombre").in("id", studentIds),
+  ]);
+  const materiaIds = Array.from(new Set((actividades ?? []).map((a) => a.materia_id)));
+  const { data: materias } = await admin.from("materias").select("id, name").in("id", materiaIds);
+
+  const actividadById = new Map((actividades ?? []).map((a) => [a.id, a]));
+  const estudianteById = new Map((estudiantes ?? []).map((p) => [p.id, p.nombre]));
+  const materiaById = new Map((materias ?? []).map((m) => [m.id, m.name]));
+
+  return entregas.map((e) => {
+    const actividad = actividadById.get(e.actividad_id);
+    return {
+      id: e.id,
+      actividadTitulo: actividad?.titulo ?? "Actividad",
+      materiaNombre: (actividad && materiaById.get(actividad.materia_id)) ?? "Materia",
+      studentNombre: estudianteById.get(e.student_id) ?? "Estudiante",
+      respuestaLink: e.respuesta_link,
+    };
+  });
 }

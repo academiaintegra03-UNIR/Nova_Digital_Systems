@@ -20,8 +20,8 @@ function confirmacionHtml(nombre: string): string {
       ¡Hola, ${escapeHtml(nombre.split(" ")[0])}!
     </p>
     <p style="font-size:13px;color:${BRAND.glacierStrong};line-height:1.6;">
-      Recibimos tu postulación a la prueba gratuita de ${siteName}. Todavía no la lanzamos — en cuanto esté
-      disponible, te escribimos a este mismo correo con los siguientes pasos.
+      Recibimos tu postulación a la prueba gratuita de ${siteName}. Te escribiremos a este mismo correo con
+      tu acceso para presentarla.
     </p>
     <p style="font-size:11px;color:${BRAND.glacier};margin-top:24px;">
       Este es un correo automático de confirmación — no hace falta que respondas aquí.

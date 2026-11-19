@@ -88,15 +88,14 @@ export interface AssignedStudent {
   tone: StatusTone;
 }
 
-export interface GradingItem {
-  title: string;
-  student: string;
-  course: string;
-}
-
-export interface GeneratedReport {
-  title: string;
-  date: string;
+/** Avance de un grupo en una materia, para el informe del tutor. */
+export interface InformeGrupoTutor {
+  clave: string;
+  grupoNombre: string;
+  materiaNombre: string;
+  totalActividades: number;
+  promedioGrupo: number | null;
+  estudiantes: { studentId: string; nombre: string; entregadas: number; promedio: number | null }[];
 }
 
 // ---- Admin ----
@@ -185,6 +184,17 @@ export interface ActividadEntregaEstudiante {
   actividadId: string;
   estado: ActividadEstado;
   entregadoAt: string | null;
+  respuestaLink: string | null;
+  nota: number | null;
+  comentario: string | null;
+}
+
+/** Entrega recibida que el tutor todavía no ha calificado. */
+export interface EntregaPorCalificar {
+  id: string;
+  actividadTitulo: string;
+  materiaNombre: string;
+  studentNombre: string;
   respuestaLink: string | null;
 }
 

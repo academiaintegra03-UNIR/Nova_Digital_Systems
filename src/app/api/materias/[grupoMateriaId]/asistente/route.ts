@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { esHistorialValido, generarRespuestaGemini } from "@/lib/ai/gemini";
 import { isRateLimited } from "@/lib/rate-limit";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
@@ -8,7 +9,6 @@ import { getRecursosParaGrupoMateria } from "@/lib/queries/recursos";
 
 export const runtime = "nodejs";
 
-const MODEL = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
 const MAX_USER_MESSAGES = 20;
 const MAX_MESSAGE_LENGTH = 2000;
 const RATE_LIMIT = 15;
@@ -16,22 +16,6 @@ const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000;
 
 const FALLBACK_MESSAGE =
   "No pude procesar tu mensaje en este momento. Intenta de nuevo en un momento, o pregúntale directamente a tu tutor en el foro de la materia.";
-
-interface ChatMessage {
-  role: "user" | "model";
-  text: string;
-}
-
-function isValidMessage(value: unknown): value is ChatMessage {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    ((value as ChatMessage).role === "user" || (value as ChatMessage).role === "model") &&
-    typeof (value as ChatMessage).text === "string" &&
-    (value as ChatMessage).text.trim().length > 0 &&
-    (value as ChatMessage).text.length <= MAX_MESSAGE_LENGTH
-  );
-}
 
 function systemPromptFor(materiaNombre: string, recursoTitulos: string[]): string {
   const recursosTexto =
@@ -85,18 +69,12 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
   const profile = await getAuthenticatedProfile();
   if (!profile) return NextResponse.json({ error: "No autenticado." }, { status: 401 });
 
-  if (isRateLimited(profile.id, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
+  if (await isRateLimited(`asistente:${profile.id}`, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
     return NextResponse.json({ error: "Demasiados mensajes seguidos. Espera unos minutos e intenta de nuevo." }, { status: 429 });
   }
 
   const contexto = await resolverContextoMateria(grupoMateriaId);
   if ("error" in contexto) return contexto.error;
-
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    console.error("GEMINI_API_KEY is not set.");
-    return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 500 });
-  }
 
   let body: unknown;
   try {
@@ -106,46 +84,16 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
   }
 
   const messages = (body as { messages?: unknown })?.messages;
-  if (!Array.isArray(messages) || messages.length === 0 || !messages.every(isValidMessage)) {
+  if (!esHistorialValido(messages, { maxMensajesUsuario: MAX_USER_MESSAGES, maxLongitud: MAX_MESSAGE_LENGTH })) {
     return NextResponse.json({ error: "Solicitud inválida." }, { status: 400 });
   }
 
-  const lastMessage = messages[messages.length - 1] as ChatMessage;
-  const userMessageCount = (messages as ChatMessage[]).filter((m) => m.role === "user").length;
-  if (userMessageCount > MAX_USER_MESSAGES || lastMessage.role !== "user") {
-    return NextResponse.json({ error: "Solicitud inválida." }, { status: 400 });
-  }
+  const reply = await generarRespuestaGemini({
+    systemPrompt: systemPromptFor(contexto.materiaNombre, contexto.recursoTitulos),
+    mensajes: messages,
+    etiqueta: "asistente materia",
+  });
+  if (!reply) return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 502 });
 
-  try {
-    const geminiResponse = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: (messages as ChatMessage[]).map((m) => ({ role: m.role, parts: [{ text: m.text }] })),
-          systemInstruction: { parts: [{ text: systemPromptFor(contexto.materiaNombre, contexto.recursoTitulos) }] },
-          generationConfig: { maxOutputTokens: 500, temperature: 0.6, thinkingConfig: { thinkingLevel: "low" } },
-        }),
-      }
-    );
-
-    if (!geminiResponse.ok) {
-      console.error("Gemini API error (asistente materia):", geminiResponse.status, await geminiResponse.text());
-      return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 502 });
-    }
-
-    const data = await geminiResponse.json();
-    const reply: string | undefined = data?.candidates?.[0]?.content?.parts
-      ?.map((p: { text?: string }) => p.text ?? "")
-      .join("")
-      .trim();
-
-    if (!reply) return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 502 });
-
-    return NextResponse.json({ reply });
-  } catch (error) {
-    console.error("Failed to reach Gemini API (asistente materia):", error);
-    return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 502 });
-  }
+  return NextResponse.json({ reply });
 }

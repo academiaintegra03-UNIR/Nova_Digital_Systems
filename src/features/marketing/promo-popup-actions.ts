@@ -36,7 +36,7 @@ export async function postularPruebaGratuitaAction(
   }
 
   const clientKey = (await headers()).get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  if (isRateLimited(`postulacion-prueba-gratuita:${clientKey}`, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
+  if (await isRateLimited(`postulacion-prueba-gratuita:${clientKey}`, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
     return { error: "Enviaste varias postulaciones seguidas. Espera unos minutos e intenta de nuevo." };
   }
 

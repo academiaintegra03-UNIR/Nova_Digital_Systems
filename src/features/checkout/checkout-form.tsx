@@ -137,20 +137,9 @@ export function CheckoutForm({ planId }: { planId: string }) {
           </div>
         </div>
 
-        <div className="space-y-1.5">
-          <Label htmlFor="checkout-password">Contraseña</Label>
-          <IconField
-            icon={Lock}
-            id="checkout-password"
-            name="password"
-            type="password"
-            autoComplete="new-password"
-            minLength={8}
-            required
-            disabled={isPending}
-          />
-          <p className="text-xs text-muted-foreground">La usarás para iniciar sesión después de pagar.</p>
-        </div>
+        <p className="text-xs text-muted-foreground">
+          Cuando se confirme el pago te enviaremos a este correo tus datos para iniciar sesión.
+        </p>
 
         <div className="flex items-start gap-2">
           <Checkbox

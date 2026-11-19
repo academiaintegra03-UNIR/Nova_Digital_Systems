@@ -11,6 +11,49 @@ export interface MateriasActionState {
   id?: string;
 }
 
+const MAX_COMENTARIO = 1000;
+
+/** Guarda la nota de una entrega. El filtro por `tutor_id` garantiza que
+ * solo la califique el tutor dueño de la actividad. */
+export async function calificarEntregaAction(formData: FormData): Promise<MateriasActionState> {
+  const caller = await requireRole("tutor");
+
+  const id = String(formData.get("id") ?? "");
+  const notaRaw = String(formData.get("nota") ?? "").trim().replace(",", ".");
+  const comentario = String(formData.get("comentario") ?? "").trim();
+  const nota = Number(notaRaw);
+
+  if (!id) return { error: "Falta la entrega." };
+  if (!notaRaw || !Number.isFinite(nota) || nota < 0 || nota > 5) {
+    return { error: "La nota debe estar entre 0.0 y 5.0." };
+  }
+  if (comentario.length > MAX_COMENTARIO) return { error: "El comentario es demasiado largo." };
+
+  const admin = createAdminClient();
+  const { data, error } = await admin
+    .from("actividad_entregas")
+    .update({
+      nota: Math.round(nota * 10) / 10,
+      comentario: comentario || null,
+      calificada_at: new Date().toISOString(),
+      calificada_por: caller.id,
+    })
+    .eq("id", id)
+    .eq("tutor_id", caller.id)
+    .eq("estado", "entregada")
+    .select("id")
+    .maybeSingle();
+  if (error) {
+    console.error("Failed to grade entrega:", error);
+    return { error: "No se pudo guardar la calificación." };
+  }
+  if (!data) return { error: "Esa entrega no existe o no es de tus actividades." };
+
+  revalidatePath("/tutores/actividades");
+  revalidatePath("/campus/mis-materias");
+  return { success: true };
+}
+
 async function verifyGrupoIsMine(admin: ReturnType<typeof createAdminClient>, grupoId: string, tutorId: string) {
   const { data: grupo } = await admin.from("grupos").select("tutor_id").eq("id", grupoId).single();
   return Boolean(grupo && grupo.tutor_id === tutorId);

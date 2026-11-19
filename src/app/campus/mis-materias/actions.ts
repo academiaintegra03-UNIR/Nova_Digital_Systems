@@ -30,6 +30,14 @@ export async function entregarActividadAction(formData: FormData): Promise<Entre
     .maybeSingle();
   if (!membership) return { error: "Esa actividad no es de tu grupo." };
 
+  const { data: entregaPrevia } = await admin
+    .from("actividad_entregas")
+    .select("nota")
+    .eq("actividad_id", actividadId)
+    .eq("student_id", caller.id)
+    .maybeSingle();
+  if (entregaPrevia?.nota != null) return { error: "Esta actividad ya fue calificada." };
+
   const { error } = await admin.from("actividad_entregas").upsert(
     {
       actividad_id: actividadId,

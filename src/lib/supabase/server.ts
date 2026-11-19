@@ -9,7 +9,7 @@ import { getSupabaseAnonKey, getSupabaseUrl } from "@/lib/supabase/env";
  * Supabase client for Server Components, Server Actions and Route Handlers.
  * Server Components can't write cookies, so `setAll` there is a no-op wrapped
  * in try/catch — the middleware is what actually refreshes the session cookie
- * on every request (see middleware.ts).
+ * on every request (see proxy.ts).
  */
 export async function createClient() {
   const cookieStore = await cookies();

@@ -13,7 +13,7 @@ const navItems: DashboardNavItem[] = [
   { href: "/admin/clases", label: "Clases", icon: <CalendarClock /> },
   { href: "/admin/planes", label: "Planes", icon: <Tag /> },
   { href: "/admin/pagos", label: "Pagos", icon: <CreditCard /> },
-  { href: "/admin/diagnosticos", label: "Diagnósticos", icon: <ClipboardList /> },
+  { href: "/admin/diagnosticos", label: "Dashboard", icon: <ClipboardList /> },
   { href: "/admin/postulantes", label: "Prueba gratuita", icon: <Gift /> },
   { href: "/admin/ia", label: "IA (Álex)", icon: <Bot /> },
 ];

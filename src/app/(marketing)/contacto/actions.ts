@@ -64,7 +64,7 @@ export async function sendContactMessageAction(formData: FormData): Promise<Cont
   }
 
   const clientKey = (await headers()).get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  if (isRateLimited(`contacto:${clientKey}`, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
+  if (await isRateLimited(`contacto:${clientKey}`, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
     return { error: "Enviaste varios mensajes seguidos. Espera unos minutos e intenta de nuevo." };
   }
 

@@ -5,23 +5,19 @@ import { headers } from "next/headers";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { buildIntegritySignature } from "@/lib/wompi";
 import { readContactoForm } from "@/lib/validation/contacto";
-import type { PlanType, UserRole } from "@/lib/supabase/database.types";
+import { isRateLimited } from "@/lib/rate-limit";
+import type { DatosCuentaPago } from "@/lib/pagos/cuenta-del-pago";
+import type { Json } from "@/lib/supabase/database.types";
 
 export interface CheckoutState {
   error?: string;
   checkoutUrl?: string;
 }
 
-// individual: el comprador es el propio estudiante.
-// grupal: el comprador queda como acudiente; los cupos extra se vinculan
-//   después como sus estudiantes (guardian_students).
-// institucional: el comprador queda como colegio; los cupos extra se
-//   vinculan como profiles.colegio_id.
-const ROLE_BY_PLAN_TYPE: Record<PlanType, UserRole> = {
-  individual: "estudiante",
-  grupal: "acudiente",
-  institucional: "colegio",
-};
+const RATE_LIMIT_IP = 10;
+const RATE_LIMIT_CORREO = 3;
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 /**
  * Derives the real, reachable origin from the incoming request instead of a
@@ -38,23 +34,30 @@ async function getOrigin(): Promise<string> {
 }
 
 /**
- * Creates the account up front (Supabase hashes the password — we never
- * store it) and a `pending` payment row, then hands back a Wompi Web
- * Checkout URL with a server-computed integrity signature. The webhook
- * (api/webhooks/wompi) is what actually grants access on confirmed payment
- * — this action only gets the user to Wompi's hosted page.
+ * Registers a `pending` payment and hands back a Wompi Web Checkout URL with
+ * a server-computed integrity signature. No account exists until the webhook
+ * (api/webhooks/wompi) receives a confirmed payment, so nobody can claim
+ * someone else's email here, and the response never reveals whether an email
+ * is already registered.
  */
 export async function startCheckoutAction(formData: FormData): Promise<CheckoutState> {
   const planId = String(formData.get("plan_id") ?? "");
   const nombre = String(formData.get("nombre") ?? "").trim();
-  const email = String(formData.get("email") ?? "").trim();
-  const password = String(formData.get("password") ?? "");
+  const email = String(formData.get("email") ?? "").trim().toLowerCase();
 
   if (!planId || !nombre || !email) return { error: "Completa todos los campos." };
-  if (password.length < 8) return { error: "La contraseña debe tener al menos 8 caracteres." };
+  if (!EMAIL_REGEX.test(email)) return { error: "El correo no es válido." };
 
   const contacto = readContactoForm(formData);
   if ("error" in contacto) return { error: contacto.error };
+
+  const clientKey = (await headers()).get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  if (
+    (await isRateLimited(`checkout-ip:${clientKey}`, RATE_LIMIT_IP, RATE_LIMIT_WINDOW_MS)) ||
+    (await isRateLimited(`checkout-correo:${email}`, RATE_LIMIT_CORREO, RATE_LIMIT_WINDOW_MS))
+  ) {
+    return { error: "Hiciste varios intentos seguidos. Espera unos minutos e intenta de nuevo." };
+  }
 
   // .trim(): a stray trailing space/newline from copy-pasting the secret out
   // of Wompi's dashboard silently changes the hash and Wompi rejects it as
@@ -70,29 +73,13 @@ export async function startCheckoutAction(formData: FormData): Promise<CheckoutS
   const { data: plan } = await admin.from("plans").select("*").eq("id", planId).eq("active", true).single();
   if (!plan) return { error: "Este plan ya no está disponible." };
 
-  const { data: created, error: createError } = await admin.auth.admin.createUser({
-    email,
-    password,
-    email_confirm: true,
-    user_metadata: {
-      role: ROLE_BY_PLAN_TYPE[plan.type],
-      nombre,
-      telefono: contacto.data.telefono ?? "",
-      tipo_documento: contacto.data.tipoDocumento ?? "",
-      numero_documento: contacto.data.numeroDocumento ?? "",
-    },
-  });
-
-  if (createError || !created.user) {
-    return {
-      error: createError?.message.toLowerCase().includes("already been registered")
-        ? "Ya existe una cuenta con ese correo. Inicia sesión y escríbenos por Contacto para activar el plan."
-        : "No se pudo crear tu cuenta.",
-    };
-  }
-
   const reference = `ai-${randomUUID()}`;
   const amountInCents = plan.price_cop * 100;
+  const datosCuenta: DatosCuentaPago = {
+    telefono: contacto.data.telefono,
+    tipoDocumento: contacto.data.tipoDocumento,
+    numeroDocumento: contacto.data.numeroDocumento,
+  };
 
   const { error: paymentError } = await admin.from("payments").insert({
     reference,
@@ -101,10 +88,13 @@ export async function startCheckoutAction(formData: FormData): Promise<CheckoutS
     nombre,
     amount_cop: plan.price_cop,
     status: "pending",
-    profile_id: created.user.id,
+    datos_cuenta: datosCuenta as unknown as Json,
   });
 
-  if (paymentError) return { error: "No se pudo iniciar el pago." };
+  if (paymentError) {
+    console.error("Failed to create payment:", paymentError.message);
+    return { error: "No se pudo iniciar el pago." };
+  }
 
   const signature = buildIntegritySignature({ reference, amountInCents, currency: "COP", integritySecret });
   const origin = await getOrigin();

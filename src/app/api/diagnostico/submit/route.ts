@@ -125,7 +125,7 @@ Hola, acabo de completar el diagnóstico académico (banco: ${bancoId}). Quiero 
 }
 
 export async function POST(request: NextRequest) {
-  if (isRateLimited(getClientKey(request), RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
+  if (await isRateLimited(`diagnostico:${getClientKey(request)}`, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
     return NextResponse.json({ error: "Demasiados envíos seguidos. Espera unos minutos e intenta de nuevo." }, { status: 429 });
   }
 

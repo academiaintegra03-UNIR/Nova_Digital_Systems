@@ -60,6 +60,16 @@ export default async function CampusMiMateriaActividadesPage({
               {entregada && entrega?.entregadoAt ? (
                 <p className="mb-3 text-xs text-muted-foreground">Entregada el {formatFecha(entrega.entregadoAt)}</p>
               ) : null}
+              {entrega?.nota != null ? (
+                <div className="mb-3 rounded-lg bg-muted px-3 py-2 text-sm">
+                  <div className="font-bold text-heading">
+                    Nota: <span className="font-data">{entrega.nota.toFixed(1)}</span> / 5.0
+                  </div>
+                  {entrega.comentario ? (
+                    <p className="mt-1 text-xs whitespace-pre-line text-foreground/80">{entrega.comentario}</p>
+                  ) : null}
+                </div>
+              ) : null}
               <div className="flex items-center gap-2">
                 {actividad.recursoLink ? (
                   <Button size="sm" variant="outline" asChild>

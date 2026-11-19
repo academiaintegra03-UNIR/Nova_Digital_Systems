@@ -98,7 +98,9 @@ export function PaymentReceiptView({
               <CheckCircle2 className="size-7" aria-hidden="true" />
             </div>
             <h1 className="mb-1 text-xl font-extrabold text-heading">¡Pago confirmado!</h1>
-            <p className="text-sm text-muted-foreground">Tu cuenta ya está activa.</p>
+            <p className="text-sm text-muted-foreground">
+              Tu plan ya está activo. Si eres nuevo, te enviamos tus datos de acceso al correo.
+            </p>
           </div>
 
           <div className="mb-4 rounded-xl bg-muted p-4">
@@ -156,8 +158,8 @@ export function PaymentReceiptView({
         </div>
         <h1 className="mb-1.5 text-lg font-extrabold text-heading">El pago no se completó</h1>
         <p className="mb-5 text-sm text-muted-foreground">
-          Tu cuenta quedó creada, pero el plan no se activó. Puedes intentar de nuevo o escribirnos por
-          Contacto si el problema persiste.
+          No se realizó ningún cobro por este intento. Puedes intentar de nuevo o escribirnos por Contacto
+          si el problema persiste.
         </p>
         <div className="flex gap-2">
           <Button variant="outline" asChild>
